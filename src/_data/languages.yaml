@@ -1,0 +1,42 @@
+languages:
+  en:
+    name: English
+    autonym: English
+  sv:
+    name: Swedish
+    autonym: Svenska
+  is:
+    name: Icelandic
+    autonym: íslenska
+  fo:
+    name: Faroese
+    autonym: føroyskt
+  se:
+    name: Northern Sami
+    autonym: davvisámegiella
+  smj:
+    name: Lule Sami
+    autonym: julevsámegiella
+  sma:
+    name: Southern Sami
+    autonym: åarjelsaemien gïele
+  sjd:
+    name: Kildin Sami
+    autonym: Кӣллт са̄мь кӣлл
+  sms:
+    name: Skolt Sami
+    autonym: nuõrttsääʹmǩiõll
+  smn:
+    name: Inari Sami
+    autonym: anarâškielâ
+  fkv:
+    name: Kven Finnish
+    autonym: Kven Finnish
+  sje:
+    name: Pite Sami
+    autonym: Bidumsámegiella
+default: "en"
+fallbacks:
+  sv: [en]
+  de: [en]
+  se: [en]

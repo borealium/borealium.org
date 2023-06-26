@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+ul,
+ol {
+  all: unset;
+  list-style: none;
+}
+
+sup,
+sub {
+  font-size: unset;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted; /* Safari and iOS */
+}
+
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  outline: 0;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: unset;
+}
+
+input,
+textarea,
+button,
+select {
+  display: block;
+  font-family: inherit;
+  font-size: unset;
+  border: unset;
+  background: transparent;
+  color: unset;
+}
+
+button {
+  cursor: pointer;
+  font-weight: unset; /* iOS */
+  color: inherit; /* iOS */
+}
+
+img {
+  display: block; /* Remove 3px gap in the bottom of images */
+}

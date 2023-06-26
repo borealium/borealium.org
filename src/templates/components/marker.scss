@@ -1,0 +1,19 @@
+.marker {
+  display: inline-flex;
+  background-color: var(--color-green);
+  color: var(--color-text-on-green);
+  padding: 3px 5px 2px;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  gap: 0.4rem;
+
+  & .sepatator {
+    display: inline-block;
+  }
+
+  & .label {
+    font-weight: bold;
+  }
+}

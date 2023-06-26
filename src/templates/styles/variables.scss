@@ -1,0 +1,42 @@
+@use "sass:math";
+
+@function relrem($px, $base: 16px) {
+  @return (math.div($px, $base)) * 1rem;
+}
+
+:root {
+  --font-display: sans-serif;
+  --font-text: sans-serif;
+
+  --font-size-xs: #{relrem(12px)};
+  --line-height-xs: #{relrem(20px)};
+  --font-size-s: #{relrem(14px)};
+  --line-height-s: #{relrem(24px)};
+  --font-size-m: #{relrem(16px)};
+  --line-height-m: #{relrem(24px)};
+  --font-size-xl: #{relrem(29px)};
+  --line-height-xl: #{relrem(34px)};
+
+  --space-xs: #{relrem(4px)};
+  --space-s: #{relrem(8px)};
+  --space-m: #{relrem(16px)};
+  --space-l: #{relrem(24px)};
+  --space-xl: #{relrem(48px)};
+
+  --animation-duration: 0.4s;
+
+  --color-white: rgba(255, 255, 255, 0.95);
+  --color-bg: hsl(180, 19%, 94%);
+  --color-primary-bg: hsl(187, 38%, 86%);
+  --color-primary: hsl(197, 76%, 15%);
+  --color-primary-light: hsl(197, 30%, 30%);
+  --color-primary-dark: hsl(197, 76%, 10%);
+  --color-green: hsl(128, 97%, 66%);
+  --color-text-on-green: hsl(128, 97%, 5%);
+}
+
+@media (prefers-reduced-motion) {
+  :root {
+    --animation-duration: 0s;
+  }
+}

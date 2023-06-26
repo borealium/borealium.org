@@ -1,0 +1,14 @@
+layout: layouts/start.tsx
+url: /
+id: start
+lang: en
+title: Nordic Language Portal
+welcome:
+  headline: Welcome to the Nordic Language Portal
+  content: Lorem ipsum dolor
+featuredTools:
+  divvun-installer:
+    label: Manager
+    headline: Download Divvun Manager
+    description: The Divvun Manager is a tool for downloading and installing
+      Divvun's language tools.

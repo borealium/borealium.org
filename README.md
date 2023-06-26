@@ -7,3 +7,9 @@ This uses [Lume](https://lume.land/docs/overview/about-lume/).
 ```
 deno task serve
 ```
+
+Update tools index:
+
+```
+deno run utils/fetch-tools-index.ts
+```

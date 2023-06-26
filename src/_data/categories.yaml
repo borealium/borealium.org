@@ -1,0 +1,24 @@
+spellers:
+  name:
+    en: Proofing Tools
+    sv: Korrekturprogram
+keyboard-layouts:
+  name:
+    en: Keyboards
+    sv: Tangentbord
+# text-to-speech:
+#   name:
+#     en: Text to Speech
+#     sv: Text-till-tal
+# language-learning:
+#   name:
+#     en: Language Learning
+#     sv: Språkinlärning
+# dictionaries:
+#   name:
+#     en: Dictionaries
+#     sv: Ordböcker
+# translation:
+#   name:
+#     en: Translation
+#     sv: Översättning
