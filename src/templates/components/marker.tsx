@@ -2,8 +2,8 @@ export const Marker = ({
   prefix = "Divvun",
   label,
 }: {
-  prefix?: string;
-  label: string;
+  prefix?: string
+  label: string
 }) => {
   return (
     <span className="marker">
@@ -11,5 +11,5 @@ export const Marker = ({
       <span className="separator">|</span>
       <span className="label">{label}</span>
     </span>
-  );
-};
+  )
+}

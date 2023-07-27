@@ -11,5 +11,5 @@ deno task serve
 Update tools index:
 
 ```
-deno run utils/fetch-tools-index.ts
+deno run --allow-net --allow-write utils/fetch-tools-index.ts
 ```

@@ -6,10 +6,10 @@ import sitemap from "lume/plugins/sitemap.ts"
 import pagefind from "lume/plugins/pagefind.ts"
 import nav from "lume/plugins/nav.ts"
 
-import relatedTools from "./utils/related-tools.ts"
-import toc from "./utils/table-of-contents.ts"
-import multilanguage from "./utils/m12e.ts"
-import { type Languages } from "./utils/data-types.ts"
+import relatedTools from "~utils/related-tools.ts"
+import toc from "~utils/table-of-contents.ts"
+import multilanguage from "~utils/m12e.ts"
+import { type Languages } from "~utils/data-types.ts"
 
 import { parse as yamlParse } from "std/yaml/mod.ts"
 const langs = yamlParse(await Deno.readTextFile("./src/_data/languages.yaml")) as Languages

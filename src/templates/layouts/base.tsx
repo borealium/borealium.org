@@ -1,8 +1,8 @@
-import { Page } from "../../../utils/data-types.ts";
-import { Header } from "../components/header.tsx";
+import { Page } from "~utils/data-types.ts"
+import { Header } from "~/templates/components/header.tsx"
 
 export default (page: Page) => {
-  const { title, children, languages } = page;
+  const { title, children, languages } = page
   return (
     <html>
       <head>
@@ -15,5 +15,5 @@ export default (page: Page) => {
         {children}
       </body>
     </html>
-  );
-};
+  )
+}

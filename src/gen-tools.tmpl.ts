@@ -1,4 +1,4 @@
-import { Languages, type ToolsRepo } from "../utils/data-types.ts"
+import { Languages, type ToolsRepo } from "~utils/data-types.ts"
 
 import { parse as yamlParse } from "std/yaml/mod.ts"
 const langs = yamlParse(await Deno.readTextFile("./src/_data/languages.yaml")) as Languages

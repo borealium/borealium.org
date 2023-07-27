@@ -11,7 +11,8 @@ There are no restrictions. All parts are open source. See the licenses for each 
 
 ## Grammar checkers
 
-There are no restrictions on the use of the grammar checkers. All source code is open. See the license of each languge repository and of the grammar checker components for details.
+There are no restrictions on the use of the grammar checkers. All source code is open. See the license of each languge
+repository and of the grammar checker components for details.
 
 ## Other tools
 

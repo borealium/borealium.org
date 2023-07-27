@@ -1,11 +1,11 @@
-import { Page } from "../../../utils/data-types.ts";
+import { Page } from "~utils/data-types.ts"
 
-export const layout = "layouts/base.tsx";
+export const layout = "layouts/base.tsx"
 
 // export const renderOrder = 2;
 
 export default function ({ title, search }: Page) {
-  const tools = search.pages(`category=tool`);
+  const tools = search.pages(`category=tool`)
 
   return (
     <main>
@@ -18,5 +18,5 @@ export default function ({ title, search }: Page) {
         ))}
       </ul>
     </main>
-  );
+  )
 }

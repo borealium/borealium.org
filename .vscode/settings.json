@@ -16,6 +16,9 @@
   "[typescript]": {
     "editor.defaultFormatter": "denoland.vscode-deno"
   },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }

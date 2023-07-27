@@ -1,11 +1,11 @@
-import React from "react";
-import { Page } from "../../../utils/data-types.ts";
-import { Breadcrumbs } from "../components/breadcrumbs.tsx";
+import React from "react"
+import { Page } from "~utils/data-types.ts"
+import { Breadcrumbs } from "~/templates/components/breadcrumbs.tsx"
 
-export const layout = "layouts/base.tsx";
+export const layout = "layouts/base.tsx"
 
 export default function (page: Page & { showTableOfContents?: boolean }) {
-  const { title, children, showTableOfContents = true } = page;
+  const { title, children, showTableOfContents = true } = page
 
   return (
     <>
@@ -25,5 +25,5 @@ export default function (page: Page & { showTableOfContents?: boolean }) {
         )}
       </main>
     </>
-  );
+  )
 }

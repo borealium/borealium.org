@@ -1,4 +1,4 @@
-import { Categories } from "../utils/data-types.ts"
+import { Categories } from "~utils/data-types.ts"
 
 export const layout = `layouts/category.tsx`
 export const renderOrder = 0 // render before pages that use search

@@ -1,4 +1,4 @@
-import { Languages } from "../utils/data-types.ts"
+import { Languages } from "~utils/data-types.ts"
 
 export const layout = `layouts/language.tsx`
 export const renderOrder = 0 // render before pages that use search

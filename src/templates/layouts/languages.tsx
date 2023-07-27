@@ -1,6 +1,6 @@
-import { Page } from "../../../utils/data-types.ts";
+import { Page } from "~utils/data-types.ts"
 
-export const layout = "layouts/base.tsx";
+export const layout = "layouts/base.tsx"
 
 export default function ({ title, languages }: Page) {
   return (
@@ -14,5 +14,5 @@ export default function ({ title, languages }: Page) {
         ))}
       </ul>
     </main>
-  );
+  )
 }

@@ -1,12 +1,12 @@
-import { Page } from "../../../utils/data-types.ts";
-import { Breadcrumbs } from "../components/breadcrumbs.tsx";
+import { Page } from "~utils/data-types.ts"
+import { Breadcrumbs } from "~/templates/components/breadcrumbs.tsx"
 
-export const layout = "layouts/base.tsx";
+export const layout = "layouts/base.tsx"
 
 export default function (page: Page & { lang_label: string }) {
-  const { title, search, lang_label } = page;
+  const { title, search, lang_label } = page
 
-  const tools = search.pages(`category=tool lang:${lang_label}`);
+  const tools = search.pages(`category=tool lang:${lang_label}`)
 
   return (
     <>
@@ -25,5 +25,5 @@ export default function (page: Page & { lang_label: string }) {
         </article>
       </main>
     </>
-  );
+  )
 }

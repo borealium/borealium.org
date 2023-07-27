@@ -16,6 +16,8 @@
     "serve": "deno task lume -s"
   },
   "imports": {
+    "~/": "./src/",
+    "~utils/": "./utils/",
     "std/": "https://deno.land/std@0.192.0/",
     "react": "https://esm.sh/stable/react@18.2.0/denonext/react.mjs",
     "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
