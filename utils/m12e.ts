@@ -11,6 +11,8 @@ import { getUrl } from "lume/core/source.ts"
 
 import type { PageData, Plugin } from "lume/core.ts"
 
+import { FluentBundle, FluentResource } from "npm:@fluent/bundle"
+
 export interface Options {
   /** The list of extensions used for this plugin */
   extensions: string[]
@@ -47,6 +49,30 @@ export default function multilanguage(userOptions?: Partial<Options>): Plugin {
     options.languages.forEach((lang) => {
       mergedKeys[lang] = "object"
     })
+
+    const enResource = new FluentResource(`
+-brand-name = Divvun
+welcome = Welcome to {-brand-name}!
+`)
+
+    const svResource = new FluentResource(`
+-brand-name = Divvun
+welcome = Välkomna till {-brand-name}!
+`)
+
+    const enBundle = new FluentBundle("en")
+    enBundle.addResource(enResource)
+
+    const svBundle = new FluentBundle("sv")
+    svBundle.addResource(svResource)
+
+    mergedKeys["fluentBundles"] = "object"
+
+    site.data("fluentBundles", {
+      en: enBundle,
+      sv: svBundle,
+    })
+
     site.data("mergedKeys", mergedKeys)
 
     // Preprocessor to setup multilanguage pages
@@ -73,7 +99,6 @@ export default function multilanguage(userOptions?: Partial<Options>): Plugin {
         const customUrl = newData[`url.${lang}`] || newData[lang]?.url
 
         if (customUrl) {
-          newData.url = customUrl
           newData.url = getUrl(newPage, site.options.prettyUrls, basePath)
         } else if (newData.url) {
           newData.url = options.urlProcessor!(newData.url, newPage)
@@ -111,27 +136,27 @@ export default function multilanguage(userOptions?: Partial<Options>): Plugin {
     })
 
     // Preprocessor to (un)prefix all urls with the language code
-    site.preprocess(options.extensions, (page) => {
-      const { lang } = page.data
+    // site.preprocess(options.extensions, (page) => {
+    //   const { lang } = page.data
 
-      if (typeof lang !== "string") {
-        return
-      }
+    //   if (typeof lang !== "string") {
+    //     return
+    //   }
 
-      const url = page.data.url as string | undefined
+    //   const url = page.data.url as string | undefined
 
-      if (!url) {
-        return
-      }
+    //   if (!url) {
+    //     return
+    //   }
 
-      if (!url.startsWith(`/${lang}/`) && lang !== options.defaultLanguage) {
-        page.data.url = options.urlProcessor!(url, page)
-      } else if (
-        url.startsWith(`/${lang}/`) && lang === options.defaultLanguage
-      ) {
-        page.data.url = url.slice(lang.length + 1)
-      }
-    })
+    //   if (!url.startsWith(`/${lang}/`) && lang !== options.defaultLanguage) {
+    //     page.data.url = options.urlProcessor!(url, page)
+    //   } else if (
+    //     url.startsWith(`/${lang}/`) && lang === options.defaultLanguage
+    //   ) {
+    //     page.data.url = url.slice(lang.length + 1)
+    //   }
+    // })
 
     // Preprocessor to build the alternates object
     site.preprocess(options.extensions, (page, pages) => {

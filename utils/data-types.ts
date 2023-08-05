@@ -2,6 +2,7 @@ import React from "react"
 import type { PageData } from "lume/core.ts"
 import { Search } from "lume/plugins/search.ts"
 import { Nav } from "lume/plugins/nav.ts"
+import { FluentBundle } from "npm:@fluent/bundle"
 
 export type Categories = Record<string, {
   name: Record<string, string>
@@ -54,6 +55,10 @@ type Plugins = {
   search: Search
   alternates: PageData[] | undefined
   nav: Nav
+  fluentBundles: {
+    en: FluentBundle
+    sv: FluentBundle
+  }
 }
 
 export type Page =

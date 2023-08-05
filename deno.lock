@@ -355,6 +355,10 @@
     "https://deno.land/x/deno_dom@v0.1.38/src/dom/utils-types.ts": "96db30e3e4a75b194201bb9fa30988215da7f91b380fca6a5143e51ece2a8436",
     "https://deno.land/x/deno_dom@v0.1.38/src/dom/utils.ts": "55f3e9dc71d6c4a54605888d3f99d26fb0cf9973924709f159252a6933ceeabe",
     "https://deno.land/x/deno_dom@v0.1.38/src/parser.ts": "b65eb7e673fa7ca611de871de109655f0aa9fa35ddc1de73df1a5fc2baafc332",
+    "https://deno.land/x/denoflate@1.2.1/mod.ts": "f5628e44b80b3d80ed525afa2ba0f12408e3849db817d47a883b801f9ce69dd6",
+    "https://deno.land/x/denoflate@1.2.1/pkg/denoflate.js": "b9f9ad9457d3f12f28b1fb35c555f57443427f74decb403113d67364e4f2caf4",
+    "https://deno.land/x/denoflate@1.2.1/pkg/denoflate_bg.wasm.js": "d581956245407a2115a3d7e8d85a9641c032940a8e810acbd59ca86afd34d44d",
+    "https://deno.land/x/esbuild@v0.17.19/mod.js": "7f4398625828a42fcb2c32da5eb874f16341d778e473d5403e5ebeee95a5b96b",
     "https://deno.land/x/imagemagick_deno@0.0.24/mod.ts": "85b2099e9ff5ea6e0ada441ce87c43bbd2555359248ae67a92acb0281d5908d5",
     "https://deno.land/x/imagemagick_deno@0.0.24/src/alpha-option.ts": "749a9f3309e491ec09a1d6bc50ce95d9733887d9f57c6863c4ff1c7e9610227b",
     "https://deno.land/x/imagemagick_deno@0.0.24/src/auto-threshold-method.ts": "bb08a00046137e441930e56190b6db10c5fe657cb0a6142cd565a40b1c4250a2",
@@ -476,6 +480,7 @@
     "https://deno.land/x/lume@v1.17.5/deps/crypto.ts": "5343b6aa2496f5226112e8256ff320325e8f241684cf820bba26dd8726b0f94c",
     "https://deno.land/x/lume@v1.17.5/deps/date.ts": "a9320999733700f106ddffa9b457e38e879cc86acfcd51a3d9bd2c6d847aef45",
     "https://deno.land/x/lume@v1.17.5/deps/dom.ts": "c2859fc5e59466367883160b5eeb2e60b2bbe84e0e50edda0bb05111a4c67c51",
+    "https://deno.land/x/lume@v1.17.5/deps/esbuild.ts": "8674408c8a76cd4016f700b764302ae7827e4e7d14be0e53f1c965bc54e7f54a",
     "https://deno.land/x/lume@v1.17.5/deps/flags.ts": "360b7b4cf2001bcdbddd5d58f803cc40760df246207c982dfbe76018fbcc315a",
     "https://deno.land/x/lume@v1.17.5/deps/front_matter.ts": "19abe9da1f14d0e59bba3f584c1bb315d8242b4835d9b385ef55f8e84a3271ec",
     "https://deno.land/x/lume@v1.17.5/deps/fs.ts": "c73ec0799e62b948cd11c83ac22f305b769ade21ea9c6d6c04cc5f36373f3163",
@@ -498,6 +503,7 @@
     "https://deno.land/x/lume@v1.17.5/middlewares/reload.ts": "1162ee5fc3c7e1f6b5fb3da73a648fc71f0a64d30ca48f05ed066c8cb80adbb6",
     "https://deno.land/x/lume@v1.17.5/middlewares/reload_client.js": "34d75e01503fae8180796de882af42b1125fac88f22a010a99d5548de1ba7d72",
     "https://deno.land/x/lume@v1.17.5/mod.ts": "829abdd9fe45f04a6db27caa9e3bcc7f72b65c3810b67ad498582bc05b5e743d",
+    "https://deno.land/x/lume@v1.17.5/plugins/esbuild.ts": "c56e49cae0014d87c46f19478a9bd98928a740b516338c5fc60c85100c77f266",
     "https://deno.land/x/lume@v1.17.5/plugins/imagick.ts": "68fd0fee4f6ff26d0494b1792311ad84a863618d3d3e5af2701b99abceccd1be",
     "https://deno.land/x/lume@v1.17.5/plugins/json.ts": "60f3b8616c282a9c592e1974db143b3461999c55b20235eebced87482ebf16bd",
     "https://deno.land/x/lume@v1.17.5/plugins/jsx.ts": "532a055f1c6c6f00d21d13cb658614d5f6fc56ea28266020d371ba5fb151461a",
@@ -534,6 +540,7 @@
   },
   "npm": {
     "specifiers": {
+      "@fluent/bundle": "@fluent/bundle@0.18.0",
       "autoprefixer@10.4.14": "autoprefixer@10.4.14_postcss@8.4.24",
       "date-fns@2.30.0": "date-fns@2.30.0",
       "markdown-it-attrs@4.1.6": "markdown-it-attrs@4.1.6_markdown-it@13.0.1",
@@ -543,6 +550,7 @@
       "postcss-import@15.1.0": "postcss-import@15.1.0_postcss@8.4.24",
       "postcss-nesting@11.2.2": "postcss-nesting@11.2.2_postcss@8.4.24_postcss-selector-parser@6.0.13",
       "postcss@8.4.24": "postcss@8.4.24",
+      "react-dom": "react-dom@18.2.0_react@18.2.0",
       "react-dom@18.2.0": "react-dom@18.2.0_react@18.2.0",
       "react@18.2.0": "react@18.2.0",
       "sass@1.62.1": "sass@1.62.1"
@@ -559,6 +567,10 @@
         "dependencies": {
           "postcss-selector-parser": "postcss-selector-parser@6.0.13"
         }
+      },
+      "@fluent/bundle@0.18.0": {
+        "integrity": "sha512-8Wfwu9q8F9g2FNnv82g6Ch/E1AW1wwljsUOolH5NEtdJdv0sZTuWvfCM7c3teB9dzNaJA8rn4khpidpozHWYEA==",
+        "dependencies": {}
       },
       "a-sync-waterfall@1.0.1": {
         "integrity": "sha512-RYTOHHdWipFUliRFMCS4X2Yn2X8M87V/OpSqWzKKOGhzqyUxzyVmhHDH9sAvG+ZuQf/TAOFsLCpMw09I1ufUnA==",

@@ -1,8 +1,8 @@
 import { Page } from "~utils/data-types.ts"
-import { Header } from "~/templates/components/header.tsx"
 
-export default (page: Page) => {
+export default function BasePage(page: Page) {
   const { title, children, languages } = page
+
   return (
     <html>
       <head>
@@ -11,7 +11,6 @@ export default (page: Page) => {
         <link rel="stylesheet" href="/styles/index.css" />
       </head>
       <body>
-        <Header {...page} />
         {children}
       </body>
     </html>

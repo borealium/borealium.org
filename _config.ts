@@ -5,6 +5,7 @@ import sass from "lume/plugins/sass.ts"
 import sitemap from "lume/plugins/sitemap.ts"
 import pagefind from "lume/plugins/pagefind.ts"
 import nav from "lume/plugins/nav.ts"
+import esbuild from "lume/plugins/esbuild.ts"
 
 import relatedTools from "~utils/related-tools.ts"
 import toc from "~utils/table-of-contents.ts"
@@ -32,6 +33,9 @@ site.use(nav())
 site.use(sitemap())
 site.use(pagefind())
 site.use(toc())
+site.use(esbuild({
+  extensions: [".client.tsx"],
+}))
 
 site.copy("images")
 
