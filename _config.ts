@@ -17,7 +17,7 @@ const langs = yamlParse(await Deno.readTextFile("./src/_data/languages.yaml")) a
 
 const site = lume({
   src: "./src",
-  includes: "templates",
+  includes: "_templates",
 })
 
 site.use(jsx())
