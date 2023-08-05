@@ -4,7 +4,7 @@ export function Header({ languages, alternates }: Page) {
   return (
     <header className="header">
       <a className="header--page-title" href="/">
-        <img src="/images/divvun-logo.png" alt="Divvun" />
+        <img src="/static/images/divvun-logo.png" alt="Divvun" />
       </a>
       <div id="search"></div>
       <nav className="language-switch">

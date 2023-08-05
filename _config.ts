@@ -6,6 +6,7 @@ import sitemap from "lume/plugins/sitemap.ts"
 import pagefind from "lume/plugins/pagefind.ts"
 import nav from "lume/plugins/nav.ts"
 import esbuild from "lume/plugins/esbuild.ts"
+import mdx from "lume/plugins/mdx.ts"
 
 import relatedTools from "~utils/related-tools.ts"
 import toc from "~utils/table-of-contents.ts"
@@ -21,6 +22,7 @@ const site = lume({
 })
 
 site.use(jsx())
+site.use(mdx())
 site.use(metas())
 site.use(multilanguage({
   defaultLanguage: langs.default,
@@ -37,6 +39,6 @@ site.use(esbuild({
   extensions: [".client.tsx"],
 }))
 
-site.copy("images")
+site.copy("static")
 
 export default site

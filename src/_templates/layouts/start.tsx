@@ -20,7 +20,7 @@ const Category = ({ headline, label }: { headline: string; label: string }) => (
   <a className="start--category" href={`./categories/${label}`}>
     <div className="start--category--icon">
       <img
-        src={`/images/category-${label}.png`}
+        src={`/static/images/category-${label}.png`}
         alt={`Icon for category ${headline}`}
       />
     </div>
