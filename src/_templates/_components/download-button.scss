@@ -1,0 +1,20 @@
+.download-button {
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-text-secondary);
+  border-radius: 8px;
+
+  .button-text {
+    > span {
+      font-weight: 700;
+    }
+
+    > div {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import { Page } from "~utils/data-types.ts"
-import { Marker } from "~/templates/components/marker.tsx"
+import { Marker } from "~/_templates/_components/marker.tsx"
 
 export const layout = "layouts/base.tsx"
 

@@ -24,10 +24,19 @@ export default function relatedTools(userOptions?: Partial<Options>): Plugin {
       pages.forEach((page) => {
         const tags: string[] = page.data?.tags ?? []
         tags.forEach((x) => {
-          if (!x.includes(":")) return
+          if (!x.includes(":")) {
+            return
+          }
           const [prefix, tag] = x.split(":")
-          if (!taxonomies[prefix]) taxonomies[prefix] = {}
-          if (!taxonomies[prefix][tag]) taxonomies[prefix][tag] = []
+
+          if (taxonomies[prefix] != null) {
+            taxonomies[prefix] = {}
+          }
+
+          if (taxonomies[prefix][tag] != null) {
+            taxonomies[prefix][tag] = []
+          }
+
           taxonomies[prefix][tag].push(page.data.id)
         })
       })

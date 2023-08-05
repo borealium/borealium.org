@@ -1,0 +1,24 @@
+.category-label {
+  width: fit-content;
+  padding: 0.25rem;
+  display: flex;
+  gap: 0.5rem;
+  background-color: var(--color-brand);
+  text-transform: uppercase;
+
+  > div {
+    width: 1px;
+    background-color: var(--color-highlight);
+  }
+  > span {
+    font-weight: 700;
+  }
+}
+
+.tag-label {
+  padding: 0.25rem;
+  font-size: 10px;
+  font-weight: 700;
+  background-color: var(--color-text-secondary);
+  text-transform: uppercase;
+}

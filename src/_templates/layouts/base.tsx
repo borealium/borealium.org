@@ -1,4 +1,5 @@
 import { Page } from "~utils/data-types.ts"
+import { Navbar } from "~/_templates/_components/navbar.tsx"
 
 export default function BasePage(page: Page) {
   const { title, children, languages } = page
@@ -11,6 +12,7 @@ export default function BasePage(page: Page) {
         <link rel="stylesheet" href="/styles/index.css" />
       </head>
       <body>
+        <Navbar />
         {children}
       </body>
     </html>

@@ -1,0 +1,38 @@
+.aside {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: scroll;
+
+  .aside-block {
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--color-highlight);
+    }
+
+    .aside-block-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .aside-block-text {
+      padding: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      h3 {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}

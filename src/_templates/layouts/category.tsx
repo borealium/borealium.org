@@ -1,6 +1,6 @@
 import { Page } from "~utils/data-types.ts"
 
-import { Breadcrumbs } from "~/_templates/components/breadcrumbs.tsx"
+import { Breadcrumbs } from "~/_templates/_components/breadcrumbs.tsx"
 
 export const layout = "layouts/base.tsx"
 

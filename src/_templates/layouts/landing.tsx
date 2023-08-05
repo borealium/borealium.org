@@ -1,7 +1,10 @@
 import React from "react"
 import { Page } from "~utils/data-types.ts"
-import { Breadcrumbs } from "~/_templates/components/breadcrumbs.tsx"
 import { FluentBundle } from "npm:@fluent/bundle"
+import { Aside } from "~/_templates/_components/aside.tsx"
+import { CategoryLabel } from "~/_templates/_components/label.tsx"
+import { Square } from "~/_templates/_components/square.tsx"
+import { DownloadButton } from "~/_templates/_components/download-button.tsx"
 
 export const layout = "layouts/base.tsx"
 
@@ -26,45 +29,14 @@ export default function (page: Page & { showTableOfContents?: boolean }) {
   }
 
   return (
-    <div className="landing">
-      <Header />
-      <main>
-        <div className="blocks">
-          <Block {...page} />
-          <Block {...page} />
-          <Block {...page} />
-          <Block {...page} />
-        </div>
-        <Aside />
-      </main>
-    </div>
-  )
-}
-
-function Header() {
-  return (
-    <nav className="header-nav">
-      <div className="nav primary md lg">
-        <div>Icon</div>
-        <div>Divvun</div>
-        <div>Proofing tools</div>
-        <div>Keyboards</div>
-        <div>Dictionaries</div>
+    <main className="landing">
+      <div className="blocks">
+        <OneBlock {...page} />
+        <Block {...page} />
+        <Block {...page} />
       </div>
-      <div className="nav primary xs sm">
-        <div>Icon</div>
-        <div>Borger</div>
-      </div>
-      <div className="nav search xs">
-        <div>Ant burner</div>
-      </div>
-      <div className="nav search sm md lg">
-        <div>Search</div>
-      </div>
-      <div className="nav tertiary md lg">
-        <div>Language</div>
-      </div>
-    </nav>
+      <Aside />
+    </main>
   )
 }
 
@@ -86,35 +58,43 @@ function msg(page: Page, msg: string): string {
 function Block(page: Page) {
   return (
     <div className="main-block">
-      <div>section tag</div>
-      <h2>We are Divvun, blah blah</h2>
+      <CategoryLabel context="divvun" category="manager" />
+      <h2>One download and the rest is handled automatically, including keeping the tools up-to-date.</h2>
       <p>
-        {msg(page, "welcome")}{" "}
-        Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text
-        Some text Some text Some text Some text Some text
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non et erat. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit sed diam non et erat.
       </p>
+      <div className="button-group">
+        <DownloadButton title="Divvun Manager 2.0" description="for Windows" />
+        <DownloadButton title="Divvun Manager 2.0" description="for macOS" />
+      </div>
     </div>
   )
 }
 
-function Aside() {
+function OneBlock(page: Page) {
   return (
-    <section className="aside">
-      <AsideBlock />
-      <AsideBlock />
-      <AsideBlock />
-      <AsideBlock />
-      <AsideBlock />
-    </section>
-  )
-}
-
-function AsideBlock() {
-  return (
-    <div>
-      <div>date</div>
-      <div>tag</div>
-      <h3>title</h3>
+    <div className="one-block">
+      <div className="first-cell">
+        <CategoryLabel context="divvun" category="global" />
+        <h2>We are Divvun, we provide open-source language tools to keep indigenous and minority languages alive.</h2>
+        <p>
+          We help to develop and maintain language and technology tools, including spelling and grammar checkers,
+          keyboards, dictionaries, and other digital and web services - with the vast majority being provided free of
+          charge as open-source software.
+        </p>
+      </div>
+      <div className="second-cell">
+        <h3>Explore more about our tools:</h3>
+        <div className="squares-grid">
+          <Square title="Proofing Tools" description="Lorem ipsum dolor sit amet consecteur." />
+          <Square title="Proofing Tools" description="Lorem ipsum dolor sit amet consecteur." />
+          <Square title="Proofing Tools" description="Lorem ipsum dolor sit amet consecteur." />
+          <Square title="Proofing Tools" description="Lorem ipsum dolor sit amet consecteur." />
+          <Square title="Proofing Tools" description="Lorem ipsum dolor sit amet consecteur." />
+          <Square title="Proofing Tools" description="Lorem ipsum dolor sit amet consecteur." />
+        </div>
+      </div>
     </div>
   )
 }

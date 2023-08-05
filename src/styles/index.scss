@@ -1,8 +1,14 @@
 @import "styles/variables.scss";
 @import "styles/reset.scss";
 
-@import "components/header.scss";
-@import "components/marker.scss";
+@import "_components/header.scss";
+@import "_components/marker.scss";
+@import "_components/navbar.scss";
+@import "_components/aside.scss";
+@import "_components/menu-item.scss";
+@import "_components/label.scss";
+@import "_components/square.scss";
+@import "_components/download-button.scss";
 
 @import "layouts/base.scss";
 @import "layouts/start.scss";

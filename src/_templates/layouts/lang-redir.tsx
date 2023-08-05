@@ -1,6 +1,5 @@
 import React from "react"
 import { Page } from "~utils/data-types.ts"
-import { Breadcrumbs } from "~/_templates/components/breadcrumbs.tsx"
 import { FluentBundle } from "npm:@fluent/bundle"
 
 export const layout = "layouts/base.tsx"

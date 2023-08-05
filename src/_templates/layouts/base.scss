@@ -1,4 +1,18 @@
+:root {
+  --nav-height: 56px;
+  --vh: 100vh;
+
+  --color-brand: #79fa69;
+  --color-highlight: #123a4c;
+  --color-highlight-above: #41616f;
+  --color-background: #d6e8eb;
+  --color-background-above: #eff4f4;
+  --color-text: #123a4c;
+  --color-text-secondary: #ffffff;
+}
+
 body {
   font-family: var(--font-text);
   font-size: 16px;
+  color: var(--color-text);
 }
