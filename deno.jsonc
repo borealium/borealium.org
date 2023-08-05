@@ -18,9 +18,10 @@
   "imports": {
     "~/": "./src/",
     "~utils/": "./utils/",
+    "~plugins/": "./plugins/",
     "std/": "https://deno.land/std@0.192.0/",
     "react": "https://esm.sh/stable/react@18.2.0/denonext/react.mjs",
-    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "react/jsx-runtime": "https://esm.sh/stable/react@18.2.0/jsx-runtime",
     "lume/": "https://deno.land/x/lume@v1.17.5/"
   },
   "fmt": {

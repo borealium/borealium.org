@@ -1,0 +1,24 @@
+spellers:
+  en:
+    name: Proofing tools
+    description: Tools for proofing
+keyboard-layouts:
+  en:
+    name: Keyboard layouts
+    description: Keyboard layouts
+text-to-speech:
+  en: 
+    name: Text to speech
+    description: Text to speech
+language-learning:
+  en: 
+    name: Language learning
+    description: Language learning
+dictionaries:
+  en: 
+    name: Dictionaries
+    description: Dictionaries
+translation:
+  en:
+    name: Translation
+    description: Translation

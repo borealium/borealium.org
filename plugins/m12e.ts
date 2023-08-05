@@ -6,12 +6,7 @@
 
 import { Page } from "lume/core/filesystem.ts"
 import { isPlainObject, merge } from "lume/core/utils.ts"
-import { posix } from "lume/deps/path.ts"
-import { getUrl } from "lume/core/source.ts"
-
 import type { PageData, Plugin } from "lume/core.ts"
-
-import { FluentBundle, FluentResource } from "npm:@fluent/bundle"
 
 export interface Options {
   /** The list of extensions used for this plugin */
@@ -19,9 +14,6 @@ export interface Options {
 
   /** Available languages */
   languages: string[]
-
-  /** A prefix-free language */
-  defaultLanguage?: string
 
   /** Callback to adjust the URL to contain the language */
   urlProcessor?: (url: string, page: Page) => string
@@ -40,72 +32,46 @@ export const defaults: Options = {
   },
 }
 
-export default function multilanguage(userOptions?: Partial<Options>): Plugin {
+export default function multilanguage(chooserLayout: string, userOptions: Partial<Options>): Plugin {
   const options = merge(defaults, userOptions)
 
   return (site) => {
     // Configure the merged keys
     const mergedKeys = site.scopedData.get("/")?.mergedKeys || {}
-    options.languages.forEach((lang) => {
-      mergedKeys[lang] = "object"
-    })
-
-    const enResource = new FluentResource(`
--brand-name = Divvun
-welcome = Welcome to {-brand-name}!
-`)
-
-    const svResource = new FluentResource(`
--brand-name = Divvun
-welcome = Välkomna till {-brand-name}!
-`)
-
-    const enBundle = new FluentBundle("en")
-    enBundle.addResource(enResource)
-
-    const svBundle = new FluentBundle("sv")
-    svBundle.addResource(svResource)
-
-    mergedKeys["fluentBundles"] = "object"
-
-    site.data("fluentBundles", {
-      en: enBundle,
-      sv: svBundle,
-    })
+    // options.languages.forEach((lang) => {
+    //   mergedKeys[lang] = "object"
+    // })
 
     site.data("mergedKeys", mergedKeys)
 
     // Preprocessor to setup multilanguage pages
     site.preprocess(options.extensions, (page, pages) => {
       const { data } = page
-      const languages = data.lang as string | string[] | undefined
+      const languages = options.languages // data.lang as string | string[] | undefined
 
-      // The "lang" variable of the pages must be an array
-      if (!Array.isArray(languages)) {
+      if (data.lang) {
         return
       }
 
       // Create a new page per language
-      const newPages: Page[] = []
       const id: string = data.id || page.src.path.slice(1)
-      const basePath: string = typeof page.data.url === "string" ? posix.dirname(page.data.url) : ""
+      // const basePath: string = typeof page.data.url === "string" ? posix.dirname(page.data.url) : ""
 
+      const newPages = [
+        page.duplicate(0, { ...data, id, layout: chooserLayout }),
+      ]
+
+      let index = 1
       for (const lang of languages) {
         const newData: PageData = { ...data, lang, id }
-        const newPage = page.duplicate(undefined, newData)
-        newPages.push(newPage)
 
-        // Fix the url
-        const customUrl = newData[`url.${lang}`] || newData[lang]?.url
-
-        if (customUrl) {
-          newData.url = getUrl(newPage, site.options.prettyUrls, basePath)
-        } else if (newData.url) {
-          newData.url = options.urlProcessor!(newData.url, newPage)
+        if (data.url) {
+          const newPage = page.duplicate(index++, newData)
+          newData.url = options.urlProcessor!(data.url, newPage)
+          newPages.push(newPage)
         }
       }
 
-      // Replace the current page with the multiple language versions
       pages.splice(pages.indexOf(page), 1, ...newPages)
     })
 
@@ -134,29 +100,6 @@ welcome = Välkomna till {-brand-name}!
 
       page.data = data
     })
-
-    // Preprocessor to (un)prefix all urls with the language code
-    // site.preprocess(options.extensions, (page) => {
-    //   const { lang } = page.data
-
-    //   if (typeof lang !== "string") {
-    //     return
-    //   }
-
-    //   const url = page.data.url as string | undefined
-
-    //   if (!url) {
-    //     return
-    //   }
-
-    //   if (!url.startsWith(`/${lang}/`) && lang !== options.defaultLanguage) {
-    //     page.data.url = options.urlProcessor!(url, page)
-    //   } else if (
-    //     url.startsWith(`/${lang}/`) && lang === options.defaultLanguage
-    //   ) {
-    //     page.data.url = url.slice(lang.length + 1)
-    //   }
-    // })
 
     // Preprocessor to build the alternates object
     site.preprocess(options.extensions, (page, pages) => {

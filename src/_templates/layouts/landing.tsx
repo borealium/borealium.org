@@ -41,12 +41,13 @@ export default function (page: Page & { showTableOfContents?: boolean }) {
 }
 
 function msg(page: Page, msg: string): string {
-  const bundle = page.fluentBundles[page.lang as string] as FluentBundle
+  const bundle = page.fluentBundle as FluentBundle
+
   if (bundle == null) {
     return ""
   }
 
-  const message = bundle.getMessage("welcome")
+  const message = bundle.getMessage(msg)
   if (message?.value) {
     return bundle.formatPattern(message.value)
     // → "Welcome, Anna, to Foo 3000!"

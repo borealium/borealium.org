@@ -22,7 +22,7 @@ export default function (page: Page & { showTableOfContents?: boolean }) {
           const selectedLanguage = localStorage.getItem(KEY) || null
 
           if (selectedLanguage != null) {
-            return location.replace(\`\${selectedLanguage}\${location.pathname}\`)
+            return location.replace(\`/\${selectedLanguage}\${location.pathname}\`)
           }
 
           const supportedLanguages = [
@@ -35,14 +35,14 @@ export default function (page: Page & { showTableOfContents?: boolean }) {
             for (const item of navigator.languages) {
               if (supportedLanguages.includes(item)) {
                 localStorage.setItem(KEY, item)
-                return location.replace(\`\${item}\${location.pathname}\`)
+                return location.replace(\`/\${item}\${location.pathname}\`)
               }
             }
           } else {
             const item = navigator.language.split("-")[0]
             if (supportedLanguage.contains(lang)) {
               localStorage.setItem(KEY, item)
-              return location.replace(\`\${item}\${location.pathname}\`)
+              return location.replace(\`/\${item}\${location.pathname}\`)
             }
           }
         })()

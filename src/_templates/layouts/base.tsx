@@ -2,7 +2,7 @@ import { Page } from "~utils/data-types.ts"
 import { Navbar } from "~/_templates/_components/navbar.tsx"
 
 export default function BasePage(page: Page) {
-  const { title, children, languages } = page
+  const { title, children } = page
 
   return (
     <html>

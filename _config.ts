@@ -10,25 +10,32 @@ import mdx from "lume/plugins/mdx.ts"
 
 import relatedTools from "~utils/related-tools.ts"
 import toc from "~utils/table-of-contents.ts"
-import multilanguage from "~utils/m12e.ts"
-import { type Languages } from "~utils/data-types.ts"
 
-import { parse as yamlParse } from "std/yaml/mod.ts"
-const langs = yamlParse(await Deno.readTextFile("./src/_data/languages.yaml")) as Languages
+import categoryData, { getCategoryData } from "~plugins/category-data.ts"
+import languageData, { getLanguageData } from "~plugins/language-data.ts"
+import multilanguage from "~plugins/m12e.ts"
+import fluent from "~plugins/fluent.ts"
 
 const site = lume({
   src: "./src",
   includes: "_templates",
 })
 
+site.loadData([".yaml", ".yml"])
+
+site.use(categoryData())
+site.use(languageData())
+
+const languages = getLanguageData()
+
 site.use(jsx())
-site.use(mdx())
-site.use(metas())
-site.use(multilanguage({
-  defaultLanguage: langs.default,
-  languages: Object.keys(langs.languages),
+site.use(mdx({}))
+site.use(multilanguage(`layouts/lang-redir.tsx`, {
+  languages: Object.keys(languages.languages),
   urlProcessor: (url, page) => `/${page.data.lang}${url}`,
 }))
+site.use(fluent(languages))
+site.use(metas())
 site.use(relatedTools())
 site.use(sass())
 site.use(nav())
