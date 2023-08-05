@@ -39,6 +39,6 @@ site.use(esbuild({
   extensions: [".client.tsx"],
 }))
 
-site.copy("static")
+site.copy("_static", "static")
 
 export default site
