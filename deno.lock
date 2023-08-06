@@ -371,7 +371,7 @@
     "https://deno.land/x/xml@2.1.1/utils/stringifier.ts": "c701b506835237c0c6c0a08fd94e0a012b644def3f4c819c64788daf2e649ea3",
     "https://deno.land/x/xml@2.1.1/utils/types.ts": "ecaf7785e54a6f1da6f8e56da2bce9853407ceb7d5b3b70f0a60a0890151fe4c",
     "https://esm.sh/@fluent/bundle@0.18.0": "f3092501db4142203d6eccb2e6513a62fc4671a2430074a1a02bcbadc755bc04",
-    "https://esm.sh/stable/react@18.2.0/denonext/jsx-runtime.js": "f8a3b4a4e6150031eea20ac09216edd880f68390f1d0864a1b1fd3f0fa16df9e",
+    "https://esm.sh/stable/react@18.2.0/denonext/jsx-runtime.js": "54d8a51c6ca025380abd2d5302e4a9b38ff835d9759c4657e52314f587eaf6bf",
     "https://esm.sh/stable/react@18.2.0/denonext/react.mjs": "3c4f23bcfc53b256fcfaf6f834fa9f584c3bb7be667b2682c6cb6ba8ef88f8e6",
     "https://esm.sh/stable/react@18.2.0/jsx-runtime": "914a55a07c388d345c5a0c11616ee5282242e8b8dfd0d505b83500ea04fd9870",
     "https://esm.sh/v130/@fluent/bundle@0.18.0/denonext/bundle.mjs": "ac6cbabd193b80ef2b5f4e187bdada0aec6ca2671305a0a2b982e57d24aa4d8a"

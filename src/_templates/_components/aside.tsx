@@ -1,42 +1,22 @@
 import { CategoryLabel, TagLabel } from "~/_templates/_components/label.tsx"
 
-export function Aside() {
+export function Aside(props: { context: string; category: string; posts: SimplePost[] }) {
   return (
     <section className="aside">
-      <CategoryLabel context="updates" category="news" />
-      <AsideBlock
-        date="2020-12-21"
-        tag="something"
-        title="Lorem ipsum dolor sit amet"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non pro id el element
-          euismod tempor"
-      />
-      <AsideBlock
-        date="2020-12-21"
-        tag="something"
-        title="Lorem ipsum dolor sit amet"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non pro id el element
-          euismod tempor"
-      />
-      <AsideBlock
-        date="2020-12-21"
-        tag="something"
-        title="Lorem ipsum dolor sit amet"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non pro id el element
-          euismod tempor"
-      />
-      <AsideBlock
-        date="2020-12-21"
-        tag="something"
-        title="Lorem ipsum dolor sit amet"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non pro id el element
-          euismod tempor"
-      />
+      <CategoryLabel context={props.context} category={props.category} />
+      {props.posts.map((post) => <AsideBlock {...post} />)}
     </section>
   )
 }
 
-function AsideBlock(props: { date: string; tag: string; title: string; description: string }) {
+export type SimplePost = {
+  date: string
+  tag: string
+  title: string
+  description: string
+}
+
+function AsideBlock(props: SimplePost) {
   return (
     <div className="aside-block">
       <div className="aside-block-meta">
