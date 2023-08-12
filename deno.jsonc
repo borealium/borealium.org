@@ -19,6 +19,8 @@
     "~/": "./src/",
     "~utils/": "./utils/",
     "~plugins/": "./plugins/",
+    "~types/": "./types/",
+    "~ext/": "./ext/",
     "std/": "https://deno.land/std@0.192.0/",
     "react": "https://esm.sh/stable/react@18.2.0/denonext/react.mjs",
     "react/jsx-runtime": "https://esm.sh/stable/react@18.2.0/jsx-runtime",

@@ -2,19 +2,11 @@ import { isPlainObject, merge } from "lume/core/utils.ts"
 import type { Logger, Plugin } from "lume/core.ts"
 
 import { parse as yamlParse } from "std/yaml/mod.ts"
+import { CategoriesData } from "~types/category.ts"
 
 const RAW_DATA = yamlParse(await Deno.readTextFile("./categories.yaml")) as Record<string, unknown>
 
 // console.log(RAW_DATA)
-
-type CategoryId = string
-type LangTag = string
-
-export type CategoriesData = Record<CategoryId, Record<LangTag, CategoryData>>
-export type CategoryData = {
-  name: string
-  description: string
-}
 
 export interface Options {
 }

@@ -38,16 +38,19 @@ export default function multilanguage(chooserLayout: string, userOptions: Partia
   return (site) => {
     // Configure the merged keys
     const mergedKeys = site.scopedData.get("/")?.mergedKeys || {}
-    // options.languages.forEach((lang) => {
-    //   mergedKeys[lang] = "object"
-    // })
 
     site.data("mergedKeys", mergedKeys)
 
+    site.process(options.extensions, (page, pages) => {
+      console.log("??1", page.data.id, page.data.url)
+    })
+
     // Preprocessor to setup multilanguage pages
     site.preprocess(options.extensions, (page, pages) => {
+      // console.log("??", page.data.id, page.data.url)
+      console.log("??2", page.data.id, page.data.url)
       const { data } = page
-      const languages = options.languages // data.lang as string | string[] | undefined
+      const languages = options.languages
 
       if (data.lang) {
         return

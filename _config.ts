@@ -8,12 +8,11 @@ import nav from "lume/plugins/nav.ts"
 import esbuild from "lume/plugins/esbuild.ts"
 import mdx from "lume/plugins/mdx.ts"
 
-import relatedTools from "~utils/related-tools.ts"
 import toc from "~utils/table-of-contents.ts"
 
 import categoryData, { getCategoryData } from "~plugins/category-data.ts"
 import languageData, { getLanguageData } from "~plugins/language-data.ts"
-import multilanguage from "~plugins/m12e.ts"
+import multilanguage from "~plugins/multilang.ts"
 import fluent from "~plugins/fluent.ts"
 
 const site = lume({
@@ -30,18 +29,15 @@ const languages = getLanguageData()
 
 site.use(jsx())
 site.use(mdx({}))
-site.use(multilanguage(`layouts/lang-redir.tsx`, {
-  languages: Object.keys(languages.languages),
-  urlProcessor: (url, page) => `/${page.data.lang}${url}`,
-}))
-site.use(fluent(languages))
 site.use(metas())
-site.use(relatedTools())
+// site.use(relatedTools())
 site.use(sass())
 site.use(nav())
 site.use(sitemap())
 site.use(pagefind())
 site.use(toc())
+site.use(multilanguage(languages))
+site.use(fluent(languages))
 site.use(esbuild({
   extensions: [".client.tsx"],
 }))

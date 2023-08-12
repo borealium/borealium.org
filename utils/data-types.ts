@@ -4,10 +4,6 @@ import { Search } from "lume/plugins/search.ts"
 import { Nav } from "lume/plugins/nav.ts"
 import { FluentBundle } from "npm:@fluent/bundle"
 
-export type Categories = Record<string, {
-  name: Record<string, string>
-}>
-
 export type Languages = {
   default: string
   languages: Record<string, {

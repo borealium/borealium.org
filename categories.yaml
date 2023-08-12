@@ -22,3 +22,7 @@ translation:
   en:
     name: Translation
     description: Translation
+examples:
+  en:
+    name: Examples
+    description: Examples for Lume demo
