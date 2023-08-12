@@ -1,9 +1,3 @@
-/**
- * Fork of the multilanguage plugin that generates `/index.${lang}.html` files
- *
- * @see https://deno.land/x/lume@v1.17.5/plugins/multilanguage.ts
- */
-
 import { Page } from "lume/core/filesystem.ts"
 import { isPlainObject, merge } from "lume/core/utils.ts"
 import type { PageData, Plugin } from "lume/core.ts"
