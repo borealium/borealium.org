@@ -1,0 +1,26 @@
+.category-index {
+  padding: 1rem;
+  min-height: calc(var(--vh) - var(--nav-height));
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-background);
+
+  .content {
+    padding: 2rem 0;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h2 {
+      margin: 0.5rem 0;
+    }
+
+    .results {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+}

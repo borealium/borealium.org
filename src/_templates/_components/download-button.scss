@@ -10,7 +10,6 @@
 
   > img {
     width: 24px;
-    height: 24px;
   }
 
   .button-text {
@@ -20,6 +19,7 @@
 
     > div {
       font-size: 12px;
+      white-space: nowrap;
     }
   }
 }

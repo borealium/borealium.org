@@ -1,0 +1,23 @@
+.resource-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--color-background-above);
+
+  .text-group {
+    > span {
+      font-weight: 700;
+    }
+
+    > p {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  > img {
+    width: 64px;
+    height: 64px;
+  }
+}

@@ -188,13 +188,13 @@ function SmallBlock(props: { title: string; description: string }) {
           title="Divvun Manager 2.0"
           description="for Windows"
           href="/"
-          img={{ src: "/static/images/windows-logo.png", alt: "" }}
+          img={{ src: "/static/images/windows-logo.png", alt: "Windows logo" }}
         />
         <DownloadButton
           title="Divvun Manager 2.0"
           description="for macOS"
           href="/"
-          img={{ src: "/static/images/macos-logo.png", alt: "" }}
+          img={{ src: "/static/images/macos-logo.png", alt: "Apple logo" }}
         />
       </div>
     </div>
