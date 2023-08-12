@@ -1,30 +1,29 @@
 import { MenuItem } from "~/_templates/_components/menu-item.tsx"
 import { LanguageSelect } from "~/_templates/_components/language-select.tsx"
+import { Search } from "~/_templates/_components/search.tsx"
 
 export function Navbar() {
+  const icon = (
+    <a className="logo" href="/">
+      <img src="/static/images/divvun-logo.png" alt="divvun logo" />
+    </a>
+  )
+
   return (
     <nav className="header-nav">
-      <div className="nav primary md lg">
-        <a className="logo" href="/">
-          <img src="/static/images/divvun-logo.png" alt="divvun logo" />
-        </a>
+      <div className="nav md lg">
+        {icon}
         <MenuItem text="Divvun" />
-        <MenuItem text="Proofing tools" />
+        <MenuItem text="Proofing" />
         <MenuItem text="Keyboards" />
         <MenuItem text="Dictionaries" />
       </div>
-      <div className="nav primary xs sm">
-        <div>Icon</div>
-        <div>Borger</div>
+      <div className="nav xs sm">
+        {icon}
+        <HamburgerIcon />
       </div>
-      <div className="nav search xs">
-        <div>Ant burner</div>
-      </div>
-      <div className="nav search sm md lg">
-        <label>
-          <SearchIcon />
-          <input type="text" placeholder="Search..." />
-        </label>
+      <div className="nav search-wrapper">
+        <Search />
       </div>
       <div className="nav tertiary md lg">
         <LanguageSelect />
@@ -33,21 +32,18 @@ export function Navbar() {
   )
 }
 
-function SearchIcon() {
+function HamburgerIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="var(--color-brand)"
-      width="24px"
-      height="24px"
+      width="42"
+      height="42"
+      fill="var(--color-brand"
+      viewBox="0 0 16 16"
     >
       <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+        fill-rule="evenodd"
+        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
       />
     </svg>
   )

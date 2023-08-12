@@ -177,14 +177,16 @@ function BigBlock(props: { title: string; description: string; categoriesTitle: 
   return (
     <div className="big-block">
       <div className="first-cell">
-        <CategoryLabel context="divvun" category="global" />
-        <h2>{props.title}</h2>
-        <p>
-          {props.description}
-        </p>
+        <div className="text-group">
+          <CategoryLabel context="divvun" category="global" />
+          <h2>{props.title}</h2>
+          <p>
+            {props.description}
+          </p>
+        </div>
+        <h3>{props.categoriesTitle}</h3>
       </div>
       <div className="second-cell">
-        <h3>{props.categoriesTitle}</h3>
         <div className="squares-grid">
           {props.categories.map((category) => (
             <Square
