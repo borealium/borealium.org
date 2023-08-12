@@ -15,10 +15,8 @@ import multilanguage from "~plugins/multilang.ts"
 import fluent from "~plugins/fluent.ts"
 import outline from "~plugins/outline.ts"
 
-import { repo } from "~ext/pahkat.ts"
-
-// console.log(repo)
-
+// console.log(getCategoryData())
+// Deno.exit()
 const site = lume({
   src: "./src",
   includes: "_templates",

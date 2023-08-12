@@ -1,4 +1,9 @@
-const PAHKAT_API = "https://pahkat.uit.no/graphql"
+import { parse as tomlParse } from "std/toml/mod.ts"
+
+const PAHKAT_URL = "https://pahkat.uit.no"
+
+const GRAPHQL_API = `${PAHKAT_URL}/graphql`
+const stringsUrl = (lang: string) => `${PAHKAT_URL}/main/strings/${lang}.toml`
 
 export type PahkatPackage = {
   id: string
@@ -68,21 +73,48 @@ const query = `query FetchAll {
   }
 }`
 
-const { data, errors } = await fetch(PAHKAT_API, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    Accept: "application/json",
-  },
-  body: JSON.stringify({ query }),
-}).then((r) => r.json())
+async function downloadMainRepo() {
+  const { data, errors } = await fetch(GRAPHQL_API, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({ query }),
+  }).then((r) => r.json())
 
-if (errors) {
-  console.error(errors)
-  Deno.exit(1)
+  if (errors) {
+    console.error(errors)
+    Deno.exit(1)
+  }
+
+  return data.repo as PahkatRepo
 }
 
-export const repo: PahkatRepo = data.repo
+async function downloadStrings() {
+  const [en, nb] = await Promise.all([
+    fetch(stringsUrl("en")).then((r) => r.text()).then(tomlParse),
+    fetch(stringsUrl("nb")).then((r) => r.text()).then(tomlParse),
+  ])
+
+  const process = (input: any) => {
+    const out: any = {}
+    for (const [key, value] of Object.entries(input.tags)) {
+      if (key.startsWith("cat:")) {
+        out[key.slice(4)] = value
+      }
+    }
+    return out
+  }
+
+  return { en: process(en), nb: process(nb) }
+}
+
+export const strings = await downloadStrings()
+// export const categories = Object.keys(strings.en["tags"])
+//   .filter((x) => x.startsWith("cat:"))
+//   .map((x) => x.split(":", 1).pop())
+export const repo = await downloadMainRepo()
 
 // await Deno.mkdir("./src/_data/tools", { recursive: true })
 // await Deno.writeTextFile("./src/_data/tools/status.json", JSON.stringify(data.status, null, 2))
