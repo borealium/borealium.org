@@ -1,4 +1,4 @@
-import { Page } from "~utils/data-types.ts"
+import { Page } from "lume/core.ts"
 import { Navbar } from "~/_templates/_components/navbar.tsx"
 
 export default function BasePage(page: Page) {

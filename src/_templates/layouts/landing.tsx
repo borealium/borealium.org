@@ -1,40 +1,15 @@
 import React from "react"
-import { Page } from "~utils/data-types.ts"
 import { FluentBundle } from "npm:@fluent/bundle"
 import { Aside, SimplePost } from "~/_templates/_components/aside.tsx"
 import { CategoryLabel } from "~/_templates/_components/label.tsx"
 import { Square } from "~/_templates/_components/square.tsx"
 import { DownloadButton } from "~/_templates/_components/download-button.tsx"
+import { Page } from "lume/core.ts"
 
 export const layout = "layouts/base.tsx"
 
-// function script(strings: TemplateStringsArray) {
-//   const text = strings[0]
-//   return (
-//     <script
-//       dangerouslySetInnerHTML={{ __html: text }}
-//     />
-//   )
-// }
-
-// function msg(page: Page, msg: string): string {
-//   const bundle = page.fluentBundle as FluentBundle
-
-//   if (bundle == null) {
-//     return ""
-//   }
-
-//   const message = bundle.getMessage(msg)
-//   if (message?.value) {
-//     return bundle.formatPattern(message.value)
-//     // → "Welcome, Anna, to Foo 3000!"
-//   }
-
-//   return ""
-// }
-
-export default function (page: Page & { showTableOfContents?: boolean }) {
-  const { title, document, children, lang, showTableOfContents = true, fluentBundles } = page
+export default function (page: Page) {
+  const { title, document, children, lang, fluentBundles } = page
 
   if (lang == null) {
     return (

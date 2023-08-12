@@ -1,18 +1,8 @@
 * {
   box-sizing: border-box;
+  // TODO: never this, ever again, or I will find you and fix you
   margin: 0;
   padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: unset;
-}
-
-ul,
-ol {
-  all: unset;
-  list-style: none;
 }
 
 sup,

@@ -9,7 +9,7 @@ type LanguageId = string
 type LangTag = string
 
 export type LanguagesData = {
-  languages: Record<LanguageId, Record<LangTag, LanguageData>>
+  languages: Record<LanguageId, LanguageData>
   fallbacks: Record<LangTag, LangTag[]>
 }
 

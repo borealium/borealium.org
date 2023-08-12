@@ -1,5 +1,5 @@
+import { Page } from "lume/core.ts"
 import { Resource } from "~types/resource.ts"
-import { Page } from "~utils/data-types.ts"
 
 type CategoryIndexProps = {
   resources: Resource[]

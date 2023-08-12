@@ -1,7 +1,6 @@
 @import "styles/variables.scss";
 @import "styles/reset.scss";
 
-@import "_components/header.scss";
 @import "_components/marker.scss";
 @import "_components/navbar.scss";
 @import "_components/aside.scss";
@@ -13,6 +12,4 @@
 @import "_components/search.scss";
 
 @import "layouts/base.scss";
-@import "layouts/start.scss";
-@import "layouts/content.scss";
 @import "layouts/landing.scss";
