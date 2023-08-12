@@ -1,16 +1,9 @@
-$lg-breakpoint: 1280px;
-
 .menu-item {
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--color-text-secondary);
-  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
-
-  @media (min-width: $lg-breakpoint) {
-    font-size: 12px;
-  }
 }

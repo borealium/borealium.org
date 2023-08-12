@@ -4,6 +4,8 @@ $nav-sm: 412px;
 $lg-breakpoint: 1280px;
 
 .header-nav {
+  position: fixed;
+  width: 100%;
   height: var(--nav-height);
   display: grid;
   grid-template-columns: 1fr min-content;
@@ -18,9 +20,11 @@ $lg-breakpoint: 1280px;
   }
 
   .nav {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
+    gap: 1rem;
+
+    --burger-open: tomato;
 
     .logo {
       height: 100%;
@@ -35,55 +39,66 @@ $lg-breakpoint: 1280px;
       }
     }
 
-    @media (min-width: $lg-breakpoint) {
+    .nav-items-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
       gap: 1rem;
-    }
-  }
 
-  .lg,
-  .md,
-  .sm {
-    display: none;
-  }
-  .xs {
-    display: flex;
-    align-items: center;
-  }
+      --hamburger-display: block;
+      @media (min-width: $nav-md) {
+        --hamburger-display: none;
+      }
 
-  @media (min-width: $nav-sm) {
-    .lg,
-    .md,
-    .xs {
-      display: none;
-    }
-    .sm {
-      display: flex;
-    }
-  }
+      input[type="checkbox"] {
+        position: absolute;
+        display: var(--hamburger-display);
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 1000;
 
-  @media (min-width: $nav-md) {
-    .lg,
-    .sm,
-    .xs {
-      display: none;
-    }
-    .md {
-      display: flex;
-    }
-  }
+        &:checked ~ .nav-items {
+          transform: translateX(0);
+        }
+      }
 
-  @media (min-width: $nav-lg) {
-    .sm,
-    .md,
-    .xs {
-      display: none;
-    }
-    .lg {
-      display: flex;
+      .nav-items {
+        font-size: 16px;
+        position: absolute;
+        left: -108px;
+        top: 100%;
+
+        padding: 1rem;
+        width: 70vw;
+        height: calc((var(--vh) - var(--nav-height)));
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: start;
+
+        z-index: 999;
+        transform: translateX(-100%);
+        background-color: var(--color-text);
+        transition: transform 0.15s ease-in-out;
+
+        @media (min-width: $nav-md) {
+          position: static;
+          height: auto;
+          width: auto;
+          flex-direction: row;
+          transform: none;
+          font-size: 10px;
+        }
+        @media (min-width: $nav-lg) {
+          font-size: 12px;
+        }
+      }
     }
   }
 
   .search-wrapper {
+    display: flex;
     background-color: var(--color-highlight-above);
     @media (min-width: $nav-md) {
       margin: 0 1rem;
@@ -92,4 +107,16 @@ $lg-breakpoint: 1280px;
       margin: 0 0.5rem;
     }
   }
+
+  .language-wrapper {
+    display: none;
+
+    @media (min-width: $nav-md) {
+      display: flex;
+    }
+  }
+}
+
+.navbar-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
 }

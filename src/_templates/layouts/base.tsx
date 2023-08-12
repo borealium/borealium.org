@@ -13,7 +13,9 @@ export default function BasePage(page: Page) {
       </head>
       <body>
         <Navbar />
-        {children}
+        <div className="navbar-offset-wrapper">
+          {children}
+        </div>
       </body>
     </html>
   )

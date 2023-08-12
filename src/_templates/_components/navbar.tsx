@@ -3,29 +3,27 @@ import { LanguageSelect } from "~/_templates/_components/language-select.tsx"
 import { Search } from "~/_templates/_components/search.tsx"
 
 export function Navbar() {
-  const icon = (
-    <a className="logo" href="/">
-      <img src="/static/images/divvun-logo.png" alt="divvun logo" />
-    </a>
-  )
-
   return (
     <nav className="header-nav">
-      <div className="nav md lg">
-        {icon}
-        <MenuItem text="Divvun" />
-        <MenuItem text="Proofing" />
-        <MenuItem text="Keyboards" />
-        <MenuItem text="Dictionaries" />
+      <div className="nav">
+        <a className="logo" href="/">
+          <img src="/static/images/divvun-logo.png" alt="divvun logo" />
+        </a>
+        <div className="nav-items-wrapper">
+          <input type="checkbox" />
+          <HamburgerIcon />
+          <div className="nav-items">
+            <MenuItem text="Divvun" />
+            <MenuItem text="Proofing" />
+            <MenuItem text="Keyboards" />
+            <MenuItem text="Dictionaries" />
+          </div>
+        </div>
       </div>
-      <div className="nav xs sm">
-        {icon}
-        <HamburgerIcon />
-      </div>
-      <div className="nav search-wrapper">
+      <div className="search-wrapper">
         <Search />
       </div>
-      <div className="nav tertiary md lg">
+      <div className="language-wrapper">
         <LanguageSelect />
       </div>
     </nav>
@@ -38,8 +36,9 @@ function HamburgerIcon() {
       xmlns="http://www.w3.org/2000/svg"
       width="42"
       height="42"
-      fill="var(--color-brand"
+      fill="var(--color-brand)"
       viewBox="0 0 16 16"
+      display="var(--hamburger-display)"
     >
       <path
         fill-rule="evenodd"
