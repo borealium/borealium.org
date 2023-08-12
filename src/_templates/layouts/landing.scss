@@ -60,6 +60,7 @@ $sm-breakpoint: 412px;
         gap: 1rem;
 
         > h2 {
+          margin: 0;
           font-size: 26px;
           @media (min-width: $xl-main-breakpoint) {
             font-size: 32px;
@@ -67,19 +68,20 @@ $sm-breakpoint: 412px;
         }
 
         > p {
+          margin: 0;
           font-size: 14px;
           line-height: 22px;
         }
+      }
+
+      > h3 {
+        margin: 0;
       }
     }
 
     .second-cell {
       display: flex;
       flex-direction: column;
-
-      > h3 {
-        padding: 1rem 2rem;
-      }
 
       .squares-grid {
         flex-grow: 1;
@@ -104,6 +106,7 @@ $sm-breakpoint: 412px;
     background-color: var(--color-background-above);
 
     > h2 {
+      margin: 0;
       font-size: 26px;
       @media (min-width: $xl-main-breakpoint) {
         font-size: 32px;
@@ -111,6 +114,7 @@ $sm-breakpoint: 412px;
     }
 
     > p {
+      margin: 0;
       font-size: 14px;
       line-height: 22px;
     }

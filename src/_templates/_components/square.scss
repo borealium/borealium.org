@@ -6,6 +6,8 @@
   align-items: center;
   gap: 0.25rem;
   background-color: var(--color-text-secondary);
+  color: var(--color-text);
+  text-decoration: unset;
   text-align: center;
   cursor: pointer;
 
@@ -19,6 +21,7 @@
   }
 
   > p {
+    margin: 0;
     font-size: 12px;
     line-height: 14px;
   }
