@@ -15,7 +15,7 @@ export default function CategoryIndexLayout(page: Page & CategoryIndexProps) {
     <div className="category-index">
       <div className="content">
         <div>
-          <h2>Keyboards</h2>
+          <h2>Resources</h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and

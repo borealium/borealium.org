@@ -14,14 +14,18 @@ export function Navbar() {
           <HamburgerIcon />
           <div className="nav-items">
             <MenuItem text="Divvun" />
-            <MenuItem text="Proofing" />
-            <MenuItem text="Keyboards" />
+            <a href="/category/spellers">
+              <MenuItem text="Proofing" />
+            </a>
+            <a href="/category/keyboard-layouts/">
+              <MenuItem text="Keyboards" />
+            </a>
             <MenuItem text="Dictionaries" />
           </div>
         </div>
       </div>
       <div className="search-wrapper">
-        <SearchForm />
+        <div id="search" />
       </div>
       <div className="language-wrapper">
         <LanguageSelect />
