@@ -1,13 +1,8 @@
 import { MenuItem } from "~/_templates/_components/menu-item.tsx"
 import { LanguageSelect } from "~/_templates/_components/language-select.tsx"
-import { Search } from "~/_templates/_components/search.tsx"
+import { SearchForm } from "~/_templates/_components/search-form.tsx"
 
 export function Navbar() {
-  // function openModal() {
-  //   const modal: any = document.getElementById("themodal")
-  //   modal.showModal()
-  // }
-
   return (
     <nav className="header-nav">
       <div className="nav">
@@ -26,33 +21,12 @@ export function Navbar() {
         </div>
       </div>
       <div className="search-wrapper">
-        <Search />
+        <SearchForm />
       </div>
       <div className="language-wrapper">
         <LanguageSelect />
       </div>
-      {/* <SearchResults /> */}
     </nav>
-  )
-}
-
-function SearchResults() {
-  return (
-    <div className="search-results" id="themodal">
-      <div className="content">
-        <div className="modal-search">
-          <Search />
-        </div>
-        <div className="results">
-          <span>Results:</span>
-          <a href="/">One</a>
-          <a href="/">Two</a>
-          <a href="/">Three</a>
-          <a href="/">Four</a>
-          <a href="/">Five</a>
-        </div>
-      </div>
-    </div>
   )
 }
 
@@ -67,7 +41,7 @@ function HamburgerIcon() {
       display="var(--hamburger-display)"
     >
       <path
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
       />
     </svg>

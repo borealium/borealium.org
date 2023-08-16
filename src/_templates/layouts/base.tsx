@@ -1,8 +1,9 @@
+import { Search } from "lume/plugins/search.ts"
 import { Page } from "lume/core.ts"
 import { Navbar } from "~/_templates/_components/navbar.tsx"
 
 export default function BasePage(page: Page) {
-  const { title, children } = page
+  const { title, children, data } = page
 
   return (
     <html>

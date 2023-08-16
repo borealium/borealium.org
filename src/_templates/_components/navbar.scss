@@ -115,51 +115,6 @@ $lg-breakpoint: 1280px;
       display: flex;
     }
   }
-
-  .search-results {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: 999;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    > .content {
-      width: 80vw;
-      max-width: 500px;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      background-color: var(--color-background);
-      box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
-        rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-
-      > .modal-search {
-        display: flex;
-        background-color: var(--color-highlight-above);
-        height: 50px;
-      }
-
-      > .results {
-        display: flex;
-        flex-direction: column;
-        gap: 0.25rem;
-
-        > span {
-          margin-left: 0.5rem;
-        }
-
-        > a {
-          padding: 1rem;
-          background-color: var(--color-background-above);
-          color: var(--color-text);
-          text-decoration: unset;
-        }
-      }
-    }
-  }
 }
 
 .navbar-container input[type="checkbox"]:checked ~ .menu-items {
