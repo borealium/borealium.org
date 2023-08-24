@@ -22,34 +22,8 @@ export default function fluent(languages: LanguagesData, userOptions?: Partial<O
     const mergedKeys = site.scopedData.get("/")?.mergedKeys || {}
     mergedKeys["fluentBundle"] = "object"
     site.data("mergedKeys", mergedKeys)
-    // const mergedKeys = site.scopedData.get("/")?.mergedKeys || {}
-
-    //     const enResource = new FluentResource(`
-    // -brand-name = Divvun
-    // welcome = Welcome to {-brand-name}!
-    // `)
-
-    //     const svResource = new FluentResource(`
-    // -brand-name = Divvun
-    // welcome = Välkomna till {-brand-name}!
-    // `)
-
-    //     const enBundle = new FluentBundle("en")
-    //     enBundle.addResource(enResource)
-
-    //     const svBundle = new FluentBundle("sv")
-    //     svBundle.addResource(svResource)
-
-    //     mergedKeys["fluentBundles"] = "object"
-
-    //     site.data("fluentBundles", {
-    //       en: enBundle,
-    //       sv: svBundle,
-    //     })
-    //     site.data("mergedKeys", mergedKeys)
 
     site.preprocess(options.extensions, (page, pages) => {
-      // console.log(page.data.url, page.data.lang)
       if (typeof page.data.lang !== "string") {
         return
       }
@@ -61,21 +35,19 @@ export default function fluent(languages: LanguagesData, userOptions?: Partial<O
       const { src } = page.src.entry ?? {}
 
       if (src != null) {
+        const resources = tryLoadFltResources(site.logger, languages, page.data.lang, dirname(src), page.src.slug)
         site.data(
-          "fluentResource",
-          tryLoadFltResource(site.logger, languages, page.data.lang, dirname(src), page.src.slug),
+          "fluentResources",
+          resources,
           page.data.url,
         )
       }
-      // site.data("fluentBundle", fltBundle(site, page.data.lang, page.data.url), page.data.url)
-      // console.log(site.scopedData)
+
       pages.splice(
         pages.indexOf(page),
         1,
         page.duplicate(undefined, { ...page.data, fluentBundle: fltBundle(site, page.data.lang, page.data.url) }),
       )
-
-      // console.log(site.scopedData)
     })
   }
 }
@@ -97,10 +69,10 @@ function* ascendingScopes(site: Site, path: string) {
   for (let i = 0; i <= chunks.length; i++) {
     const scopePath = rebuildPath(chunks.slice(0, i))
     const scopedData = site.scopedData.get(scopePath)
-    const fluentData = scopedData?.["fluentResource"]
+    const fluentData: FluentResource[] = scopedData?.["fluentResources"] ?? []
 
-    if (fluentData != null) {
-      yield fluentData
+    for (const d of fluentData) {
+      yield d
     }
   }
 }
@@ -120,21 +92,21 @@ function fltBundle(
   return bundle
 }
 
-function tryLoadFltResource(
+function tryLoadFltResources(
   logger: Logger,
   languages: LanguagesData,
   baseLang: string,
   path: string,
   slug: string,
-): FluentResource | null {
-  const fallbacks = [baseLang, ...(languages.fallbacks[baseLang] ?? [])]
+): FluentResource[] {
+  const fallbacks = [baseLang, ...(languages.fallbacks[baseLang] ?? (baseLang === "en" ? [] : ["en"]))]
 
+  const resources = []
   for (const lang of fallbacks) {
     const p = join(path, `${slug}.${lang}.flt`)
 
     let fltText
     try {
-      // console.log(p)
       fltText = Deno.readTextFileSync(p)
     } catch (e) {
       if (e.name !== "NotFound") {
@@ -152,10 +124,13 @@ function tryLoadFltResource(
       continue
     }
 
-    const bundle = new FluentBundle("en")
+    const bundle = new FluentBundle(lang)
     const errors = bundle.addResource(fltResource)
-    return fltResource
+    for (const error of errors) {
+      logger.warn(`Could not parse ${slug}.${lang}.flt <red>${error}</red>`)
+    }
+    resources.push(fltResource)
   }
 
-  return null
+  return resources
 }

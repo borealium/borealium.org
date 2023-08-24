@@ -1,11 +1,29 @@
 import { MenuItem } from "~/_templates/_components/menu-item.tsx"
+import { getLanguageData } from "~plugins/language-data.ts"
 
-export function LanguageSelect() {
+const { languages } = getLanguageData()
+
+export function LanguageSelect(props: { url: string }) {
+  if (props.url.includes("divvun-keyboard")) {
+    // console.log(props.url)
+  }
   return (
-    <div className="language-select">
-      <LanguageIcon />
-      <MenuItem text="language" />
-    </div>
+    <>
+      <input className="button" type="checkbox" />
+      <div className="language-select">
+        <LanguageIcon />
+        <MenuItem text="language" />
+      </div>
+      <ul className="list">
+        {Object.entries(languages).map(([code, data]) => (
+          <li key={code}>
+            <a data-multilang href={`/${code}${props.url}`}>
+              {data.autonym}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </>
   )
 }
 

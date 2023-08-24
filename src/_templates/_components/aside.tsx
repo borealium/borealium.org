@@ -14,6 +14,7 @@ export type SimplePost = {
   tag: string
   title: string
   description: string
+  url: string
 }
 
 function AsideBlock(props: SimplePost) {
@@ -24,7 +25,9 @@ function AsideBlock(props: SimplePost) {
         <TagLabel text={props.tag} />
       </div>
       <div className="aside-block-text">
-        <h3>{props.title}</h3>
+        <h3>
+          <a href={props.url}>{props.title}</a>
+        </h3>
         <p>
           {props.description}
         </p>

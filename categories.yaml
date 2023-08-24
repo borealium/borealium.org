@@ -1,8 +1,8 @@
-spellers:
+proofing-tools:
   en:
     name: Proofing tools
     description: Tools for proofing
-keyboard-layouts:
+keyboards:
   en:
     name: Keyboard layouts
     description: Keyboard layouts

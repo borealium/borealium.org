@@ -42,18 +42,7 @@ export default function categoryData(userOptions?: Partial<Options>): Plugin {
   return (site) => {
     const mergedKeys = site.scopedData.get("/")?.mergedKeys || {}
     mergedKeys["categories"] = "object"
-    // const categoriesData: CategoriesData = {}
 
-    // for (const [categoryId, records] of Object.entries(RAW_DATA)) {
-    //   categoriesData[categor]
-    //   for (const [rawLangTag, rawCategory] of Object.entries(RAW_DATA)) {
-    //     if (!isRawCategory(site.logger, rawLangTag, rawCategory)) {
-    //       continue
-    //     }
-
-    //     categoriesData[rawLangTag] = rawCategory
-    //   }
-    // }
     site.data("categories", EXT_DATA)
     site.data("mergedKeys", mergedKeys)
   }

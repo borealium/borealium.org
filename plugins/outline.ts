@@ -35,8 +35,10 @@ export default function outline(): Plugin {
         return
       }
 
+      const contextEl = document.querySelector("[data-toc-context]") ?? document
+
       const elements: HTMLElement[] = Array.from(
-        document.querySelectorAll("h1, h2, h3, h4, h5, h6"),
+        contextEl.querySelectorAll("h1, h2, h3, h4, h5, h6"),
       ) as unknown as HTMLElement[]
       const outline = generateOutlineData(elements)
 
@@ -137,7 +139,7 @@ function generateOutlineData(elements: HTMLElement[]): TocData {
   return outline
 }
 
-// ### /en/blog/beep-boop/
+// ### /en/post/beep-boop/
 // 1  This is the h1
 // 2  h2 1
 // 2  h2 3

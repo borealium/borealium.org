@@ -28,16 +28,20 @@ site.use(slugifyUrls())
 
 const languages = getLanguageData()
 
+site.use(multilanguage(languages))
+site.use(fluent(languages))
 site.use(outline())
 site.use(jsx())
 site.use(mdx({}))
-site.use(metas())
+// site.use(metas())
 site.use(sass())
 site.use(nav())
 site.use(sitemap())
-site.use(pagefind())
-site.use(multilanguage(languages))
-site.use(fluent(languages))
+site.use(pagefind({
+  indexing: {
+    verbose: true,
+  },
+}))
 site.use(esbuild({
   extensions: [".client.tsx"],
 }))

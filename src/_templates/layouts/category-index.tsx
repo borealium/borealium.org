@@ -9,20 +9,26 @@ type CategoryIndexProps = {
 }
 
 export default function CategoryIndexLayout(page: Page & CategoryIndexProps) {
-  const { resources } = page
+  const { resources, category, categoryId } = page
+
+  // console.log(category)
+  // Deno.exit(1)
 
   return (
-    <div className="category-index">
+    <div data-pagefind-meta={`category:${categoryId}`} className="category-index">
       <div className="content">
         <div>
-          <h2>Resources</h2>
+          <h1 data-pagefind-filter="category">{category["en"].name}</h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.
+            {category["en"].description}
           </p>
         </div>
         <div className="results">
+          {resources.length === 0 && (
+            <div>
+              There are currently no resources in this category.
+            </div>
+          )}
           {resources.map((resource) => (
             <ResourceSummary
               name={resource.name["en"]}

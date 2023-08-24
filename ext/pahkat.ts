@@ -36,85 +36,91 @@ export type PahkatRepo = {
   packages: Array<PahkatPackage>
 }
 
-const query = `query FetchAll {
-  repo(id: "main") {
-    url
-    name
-    description
-    packages {
-      ... on PackageDescriptor {
-        id
-        name
-        description
-        tags
-        release {
-          version
-          channel
-          target {
-            platform
-            arch
-            dependencies
-            payload {
-              __typename
-              ... on MacOSPackage {
-                url
-              }
-              ... on WindowsExecutable {
-                url
-              }
-              ... on TarballPackage{
-                url
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}`
+// const query = `query FetchAll {
+//   repo(id: "main") {
+//     url
+//     name
+//     description
+//     packages {
+//       ... on PackageDescriptor {
+//         id
+//         name
+//         description
+//         tags
+//         release {
+//           version
+//           channel
+//           target {
+//             platform
+//             arch
+//             dependencies
+//             payload {
+//               __typename
+//               ... on MacOSPackage {
+//                 url
+//               }
+//               ... on WindowsExecutable {
+//                 url
+//               }
+//               ... on TarballPackage{
+//                 url
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }`
 
-async function downloadMainRepo() {
-  const { data, errors } = await fetch(GRAPHQL_API, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify({ query }),
-  }).then((r) => r.json())
+// async function downloadMainRepo() {
+//   const { data, errors } = await fetch(GRAPHQL_API, {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//       Accept: "application/json",
+//     },
+//     body: JSON.stringify({ query }),
+//   }).then((r) => r.json())
 
-  if (errors) {
-    console.error(errors)
-    Deno.exit(1)
-  }
+//   if (errors) {
+//     console.error(errors)
+//     Deno.exit(1)
+//   }
 
-  return data.repo as PahkatRepo
-}
+//   return data.repo as PahkatRepo
+// }
 
-async function downloadStrings() {
-  const [en, nb] = await Promise.all([
-    fetch(stringsUrl("en")).then((r) => r.text()).then(tomlParse),
-    fetch(stringsUrl("nb")).then((r) => r.text()).then(tomlParse),
-  ])
+// async function downloadStrings() {
+//   const [en, nb] = await Promise.all([
+//     fetch(stringsUrl("en")).then((r) => r.text()).then(tomlParse),
+//     fetch(stringsUrl("nb")).then((r) => r.text()).then(tomlParse),
+//   ])
 
-  const process = (input: any) => {
-    const out: any = {}
-    for (const [key, value] of Object.entries(input.tags)) {
-      if (key.startsWith("cat:")) {
-        out[key.slice(4)] = value
-      }
-    }
-    return out
-  }
+//   const process = (input: any) => {
+//     const out: any = {}
+//     for (const [key, value] of Object.entries(input.tags)) {
+//       if (key.startsWith("cat:")) {
+//         out[key.slice(4)] = value
+//       }
+//     }
+//     return out
+//   }
 
-  return { en: process(en), nb: process(nb) }
-}
+//   return { en: process(en), nb: process(nb) }
+// }
 
-export const strings = await downloadStrings()
-// export const categories = Object.keys(strings.en["tags"])
-//   .filter((x) => x.startsWith("cat:"))
-//   .map((x) => x.split(":", 1).pop())
-export const repo = await downloadMainRepo()
+// export const strings = await downloadStrings()
+// export const repo = await downloadMainRepo()
+
+// Deno.writeTextFileSync("./dump.json", JSON.stringify({ strings, repo }, null, 2))
+
+const raw = JSON.parse(Deno.readTextFileSync("./dump.json"))
+
+export const strings = raw.strings
+export const repo = raw.repo
+
+// export const strings;
 
 // await Deno.mkdir("./src/_data/tools", { recursive: true })
 // await Deno.writeTextFile("./src/_data/tools/status.json", JSON.stringify(data.status, null, 2))

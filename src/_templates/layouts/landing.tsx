@@ -9,7 +9,7 @@ import { Page } from "lume/core.ts"
 export const layout = "layouts/base.tsx"
 
 export default function (page: Page) {
-  const { title, document, children, lang, fluentBundles } = page
+  const { title, document, children, url, lang, fluentBundle, blogExcerpts } = page
 
   if (lang == null) {
     return (
@@ -23,7 +23,7 @@ export default function (page: Page) {
     {
       title: "Proofing Tools",
       description: "Lorem ipsum dolor sit amet consecteur.",
-      href: "/",
+      href: "/category/proofing-tools",
       img: {
         src: "/static/images/category-dictionaries.png",
         alt: "test",
@@ -32,7 +32,7 @@ export default function (page: Page) {
     {
       title: "Keyboards",
       description: "Lorem ipsum dolor sit amet consecteur.",
-      href: "/",
+      href: "/category/keyboards",
       img: {
         src: "/static/images/category-keyboard-layouts.png",
         alt: "test",
@@ -41,7 +41,7 @@ export default function (page: Page) {
     {
       title: "Text-to-speech",
       description: "Lorem ipsum dolor sit amet consecteur.",
-      href: "/",
+      href: "/category/text-to-speech",
       img: {
         src: "/static/images/category-language-learning.png",
         alt: "test",
@@ -50,7 +50,7 @@ export default function (page: Page) {
     {
       title: "Language Learning",
       description: "Lorem ipsum dolor sit amet consecteur.",
-      href: "/",
+      href: "/category/language-learning",
       img: {
         src: "/static/images/category-spellers.png",
         alt: "test",
@@ -59,7 +59,7 @@ export default function (page: Page) {
     {
       title: "Dictionaries",
       description: "Lorem ipsum dolor sit amet consecteur.",
-      href: "/",
+      href: "/category/dictionaries",
       img: {
         src: "/static/images/category-text-to-speech.png",
         alt: "test",
@@ -68,7 +68,7 @@ export default function (page: Page) {
     {
       title: "Translation",
       description: "Lorem ipsum dolor sit amet consecteur.",
-      href: "/",
+      href: "/category/translation",
       img: {
         src: "/static/images/category-translation.png",
         alt: "test",
@@ -80,9 +80,9 @@ export default function (page: Page) {
     {
       date: "2020-08-05",
       tag: "lorem",
-      title: "Lorem ipsum dolor sit amet",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non pro id el element euismod tempor",
+      title: "Beep Boop",
+      description: "Some excerpt",
+      url: "/post/beep-boop",
     },
     {
       date: "2020-08-04",
@@ -118,10 +118,8 @@ export default function (page: Page) {
     <main className="landing">
       <div className="blocks">
         <BigBlock
-          title="We are Divvun, we provide open-source language tools to keep indigenous and minority languages alive."
-          description="We help to develop and maintain language and technology tools, including spelling and grammar checkers,
-          keyboards, dictionaries, and other digital and web services - with the vast majority being provided free of
-          charge as open-source software."
+          title={fluentBundle.getMessage("block-1-title")?.value as string}
+          description={fluentBundle.getMessage("block-1-description")?.value as string}
           categoriesTitle="Explore more about our tools:"
           categories={CATEGORIES}
         />
@@ -129,11 +127,38 @@ export default function (page: Page) {
           title="One download and the rest is handled automatically, including keeping the tools up-to-date."
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non et erat. Lorem ipsum dolor sit amet,
           consectetur adipiscing elit sed diam non et erat."
+          category="manager"
+          buttons={
+            <>
+              <DownloadButton
+                title="Divvun Manager"
+                description="for Windows"
+                href="https://pahkat.uit.no/divvun-installer/download/divvun-installer?platform=windows"
+                img={{ src: "/static/images/windows-logo.png", alt: "Windows logo" }}
+              />
+              <DownloadButton
+                title="Divvun Manager"
+                description="for macOS"
+                href="https://pahkat.uit.no/divvun-installer/download/divvun-installer?platform=macos"
+                img={{ src: "/static/images/macos-logo.png", alt: "Apple logo" }}
+              />
+            </>
+          }
         />
         <SmallBlock
           title="North, Inari, Julev, Skolt and South Sámi desktop and mobile keyboards."
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non et erat. Lorem ipsum dolor sit amet,
           consectetur adipiscing elit sed diam non et erat."
+          category="keyboards"
+          buttons={
+            <>
+              <DownloadButton
+                title="Divvun Keyboards"
+                description="For iOS and Android"
+                href="/resource/divvun-keyboard"
+              />
+            </>
+          }
         />
       </div>
       <Aside context="updates" category="news" posts={POSTS} />
@@ -177,25 +202,26 @@ function BigBlock(props: { title: string; description: string; categoriesTitle: 
   )
 }
 
-function SmallBlock(props: { title: string; description: string }) {
+// function SmallBlock(props: { title: string; description: string }) {
+//   return (
+//     <div className="small-block">
+//       <CategoryLabel context="divvun" category="manager" />
+//       <h2>{props.title}</h2>
+//       <p>{props.description}</p>
+//       <div className="button-group">
+//       </div>
+//     </div>
+//   )
+// }
+
+function SmallBlock(props: { title: string; category: string; description: string; buttons: JSX.Element }) {
   return (
     <div className="small-block">
-      <CategoryLabel context="divvun" category="manager" />
+      <CategoryLabel context="divvun" category={props.category} />
       <h2>{props.title}</h2>
       <p>{props.description}</p>
       <div className="button-group">
-        <DownloadButton
-          title="Divvun Manager 2.0"
-          description="for Windows"
-          href="/"
-          img={{ src: "/static/images/windows-logo.png", alt: "Windows logo" }}
-        />
-        <DownloadButton
-          title="Divvun Manager 2.0"
-          description="for macOS"
-          href="/"
-          img={{ src: "/static/images/macos-logo.png", alt: "Apple logo" }}
-        />
+        {props.buttons}
       </div>
     </div>
   )

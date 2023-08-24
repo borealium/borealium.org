@@ -1,3 +1,4 @@
+import { FluentBundle } from "https://esm.sh/@fluent/bundle@0.18.0"
 import { Page } from "lume/core.ts"
 import { DownloadButton } from "~/_templates/_components/download-button.tsx"
 import { LinkType, Resource } from "~types/resource.ts"
@@ -6,10 +7,11 @@ export const layout = "layouts/base.tsx"
 
 type ResourceProps = {
   resource: Resource
+  fluentBundle: FluentBundle
 }
 
 export default function ResourceLayout(page: Page & ResourceProps) {
-  const { resource } = page
+  const { resource, fluentBundle } = page
 
   function parseLinkType(type: LinkType) {
     switch (type) {
@@ -26,13 +28,16 @@ export default function ResourceLayout(page: Page & ResourceProps) {
     <div className="resource">
       <div className="content">
         <div>
-          <h2>{resource.name["en"]}</h2>
+          <h1>{resource.name["en"]}</h1>
           <p>
-            {resource.description["en"] + " lorem Ipsum is simply dummy text of the printing and typesetting industry."}
+            {resource.description["en"]}
           </p>
         </div>
+        <div>
+          Category: <span data-pagefind-filter="category">{resource.category}</span>
+        </div>
         <div className="downloads">
-          <h3>Downloads</h3>
+          <h3>{fluentBundle.getMessage("downloads")?.value as string}</h3>
           <div className="links">
             {resource.links?.map((link) => {
               const info = parseLinkType(link.type!)

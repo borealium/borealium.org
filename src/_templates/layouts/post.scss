@@ -1,0 +1,19 @@
+.post {
+  padding-top: 70px;
+  display: grid;
+  grid-template-columns: 250px minmax(10px, 1fr);
+  row-gap: 16px;
+  column-gap: 40px;
+  max-width: 1050px;
+  padding-right: 250px;
+  margin: 0 auto;
+  align-items: start;
+  // position: relative;
+}
+
+.post > nav {
+  position: -webkit-sticky; /* Required for Safari */
+  position: sticky;
+  top: 180px;
+  align-self: start;
+}

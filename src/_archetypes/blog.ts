@@ -4,7 +4,7 @@ export default function createBlogPost(title: string, author: string) {
   const dateString = now.toISOString().split("T")[0]
 
   return {
-    path: `/blog/${dateString}_${slug}/index.mdx`,
+    path: `/post/${dateString}_${slug}/index.mdx`,
     content: {
       title,
       author,

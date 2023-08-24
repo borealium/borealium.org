@@ -5,13 +5,9 @@ import { getLanguageData } from "~plugins/language-data.ts"
 
 export const layout = "layouts/base.tsx"
 
-function script(string: string) {
+export function script(string: string) {
   const text = string
-  return (
-    <script
-      dangerouslySetInnerHTML={{ __html: text }}
-    />
-  )
+  return <script type="module" dangerouslySetInnerHTML={{ __html: text }} />
 }
 
 const languages = getLanguageData()
@@ -51,7 +47,7 @@ export default function (pageish: Page) {
   return (
     <>
       {script(SCRIPT)}
-      <div>
+      <div data-pagefind-ignore>
         <h2>Pick a language, any language:</h2>
         <ul>
           {Object.entries(languages.languages).map(([key, value]) => {
