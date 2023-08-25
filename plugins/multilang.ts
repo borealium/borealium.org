@@ -91,7 +91,7 @@ export default function multilanguage(languagesData: LanguagesData): Plugin {
               [MULTILANG_GENERATED]: true,
             }
             newPage = fallbackPage.duplicate(undefined, newData)
-            console.log(newPage)
+            // console.log(newPage)
             break
           }
         }
