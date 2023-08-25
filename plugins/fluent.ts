@@ -1,8 +1,7 @@
 import { Page } from "lume/core/filesystem.ts"
 import { isPlainObject, merge } from "lume/core/utils.ts"
 import type { Logger, PageData, Plugin, Site } from "lume/core.ts"
-import { FluentBundle, FluentResource } from "https://esm.sh/@fluent/bundle@0.18.0"
-// import { parse } from "https://esm.sh/@fluent/syntax@0.19.0"
+import { FluentBundle, FluentResource } from "@fluent/bundle"
 
 import { dirname, join } from "std/path/mod.ts"
 import { LanguagesData } from "~plugins/language-data.ts"

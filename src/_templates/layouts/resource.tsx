@@ -1,4 +1,4 @@
-import { FluentBundle } from "https://esm.sh/@fluent/bundle@0.18.0"
+import { FluentBundle } from "@fluent/bundle"
 import { Page } from "lume/core.ts"
 import { DownloadButton } from "~/_templates/_components/download-button.tsx"
 import { LinkType, Resource } from "~types/resource.ts"

@@ -1,5 +1,4 @@
 import React from "react"
-import { FluentBundle } from "npm:@fluent/bundle"
 import { Page, Site } from "lume/core.ts"
 import { getLanguageData } from "~plugins/language-data.ts"
 

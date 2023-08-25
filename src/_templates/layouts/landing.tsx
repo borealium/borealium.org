@@ -1,5 +1,4 @@
 import React from "react"
-import { FluentBundle } from "npm:@fluent/bundle"
 import { Square } from "~/_templates/_components/square.tsx"
 import { DownloadButton } from "~/_templates/_components/download-button.tsx"
 import { Page } from "lume/core.ts"
