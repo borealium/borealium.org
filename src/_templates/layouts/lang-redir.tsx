@@ -46,18 +46,23 @@ export default function (pageish: Page) {
   return (
     <>
       {script(SCRIPT)}
-      <div data-pagefind-ignore>
-        <h2>Pick a language, any language:</h2>
-        <ul>
-          {Object.entries(languages.languages).map(([key, value]) => {
-            return (
-              <li key={key}>
-                <a href={`/${key}${page.data.url}`}>{value.autonym}</a>
-              </li>
-            )
-          })}
-        </ul>
+      <div className="app" data-pagefind-ignore>
+        <noscript>
+          <h2>Pick a language, any language:</h2>
+          <ul>
+            {Object.entries(languages.languages).map(([key, value]) => {
+              return (
+                <li key={key}>
+                  <a href={`/${key}${page.data.url}`}>{value.autonym}</a>
+                </li>
+              )
+            })}
+          </ul>
+        </noscript>
       </div>
+      <script>
+        document.querySelector(".app").innerText = "Redirecting..."
+      </script>
     </>
   )
 }
