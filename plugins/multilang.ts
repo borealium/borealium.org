@@ -1,7 +1,6 @@
 import { Page } from "lume/core/filesystem.ts"
-import { isPlainObject, merge } from "lume/core/utils.ts"
 import type { PageData, Plugin } from "lume/core.ts"
-import { LanguageData, LanguagesData } from "~plugins/language-data.ts"
+import { LanguagesData } from "~plugins/language-data.ts"
 
 const MULTILANG_GENERATED = Symbol("multilang-generated")
 

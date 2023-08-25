@@ -14,6 +14,8 @@ import { getLanguageData } from "~plugins/language-data.ts"
 import multilanguage from "~plugins/multilang.ts"
 import fluent from "~plugins/fluent.ts"
 import outline from "~plugins/outline.ts"
+import search from "lume/plugins/search.ts"
+import excerpt from "~plugins/excerpt.ts"
 
 // console.log(getCategoryData())
 // Deno.exit()
@@ -28,6 +30,8 @@ site.use(slugifyUrls())
 
 const languages = getLanguageData()
 
+site.use(excerpt())
+site.use(search({ returnPageData: true }))
 site.use(multilanguage(languages))
 site.use(fluent(languages))
 site.use(outline())

@@ -1,15 +1,19 @@
 import React from "react"
 import { FluentBundle } from "npm:@fluent/bundle"
-import { Aside, SimplePost } from "~/_templates/_components/aside.tsx"
-import { CategoryLabel } from "~/_templates/_components/label.tsx"
 import { Square } from "~/_templates/_components/square.tsx"
 import { DownloadButton } from "~/_templates/_components/download-button.tsx"
 import { Page } from "lume/core.ts"
+import search from "lume/plugins/search.ts"
+import { CategoryLabel, TagLabel } from "~/_templates/_components/label.tsx"
 
 export const layout = "layouts/base.tsx"
 
 export default function (page: Page) {
-  const { title, document, children, url, lang, fluentBundle, blogExcerpts } = page
+  const { title, document, children, url, lang, fluentBundle, search } = page
+
+  const posts = search.pages(["type=post", `lang=${lang}`], "data=desc")
+  // console.log("WAT", posts[0].page)
+  // Deno.exit(1)
 
   if (lang == null) {
     return (
@@ -76,43 +80,43 @@ export default function (page: Page) {
     },
   ]
 
-  const POSTS: SimplePost[] = [
-    {
-      date: "2020-08-05",
-      tag: "lorem",
-      title: "Beep Boop",
-      description: "Some excerpt",
-      url: "/post/beep-boop",
-    },
-    {
-      date: "2020-08-04",
-      tag: "ipsum",
-      title: "Lorem ipsum dolor sit amet",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non pro id el element euismod tempor",
-    },
-    {
-      date: "2020-08-03",
-      tag: "dolor",
-      title: "Lorem ipsum dolor sit amet",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non pro id el element euismod tempor",
-    },
-    {
-      date: "2020-08-02",
-      tag: "sit",
-      title: "Lorem ipsum dolor sit amet",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non pro id el element euismod tempor",
-    },
-    {
-      date: "2023-08-01",
-      tag: "amet",
-      title: "Lorem ipsum dolor sit amet",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non pro id el element euismod tempor",
-    },
-  ]
+  // const POSTS: SimplePost[] = [
+  //   {
+  //     date: "2020-08-05",
+  //     tag: "lorem",
+  //     title: "Beep Boop",
+  //     description: "Some excerpt",
+  //     url: "/post/beep-boop",
+  //   },
+  //   {
+  //     date: "2020-08-04",
+  //     tag: "ipsum",
+  //     title: "Lorem ipsum dolor sit amet",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non pro id el element euismod tempor",
+  //   },
+  //   {
+  //     date: "2020-08-03",
+  //     tag: "dolor",
+  //     title: "Lorem ipsum dolor sit amet",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non pro id el element euismod tempor",
+  //   },
+  //   {
+  //     date: "2020-08-02",
+  //     tag: "sit",
+  //     title: "Lorem ipsum dolor sit amet",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non pro id el element euismod tempor",
+  //   },
+  //   {
+  //     date: "2023-08-01",
+  //     tag: "amet",
+  //     title: "Lorem ipsum dolor sit amet",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non pro id el element euismod tempor",
+  //   },
+  // ]
 
   return (
     <main className="landing">
@@ -161,7 +165,13 @@ export default function (page: Page) {
           }
         />
       </div>
-      <Aside context="updates" category="news" posts={POSTS} />
+      <section className="aside">
+        <CategoryLabel context="updates" category="news" />
+        {posts.map((post) => {
+          const { id, title, category, date, lang, originalUrl, author } = post
+          return <AsideBlock id={id} date={date.toISOString()} tag={category} title={title} url={originalUrl} />
+        })}
+      </section>
     </main>
   )
 }
@@ -222,6 +232,34 @@ function SmallBlock(props: { title: string; category: string; description: strin
       <p>{props.description}</p>
       <div className="button-group">
         {props.buttons}
+      </div>
+    </div>
+  )
+}
+
+export type SimplePost = {
+  date: string
+  tag: string
+  title: string
+  // description: string
+  url: string
+  id: string
+}
+
+function AsideBlock(props: SimplePost) {
+  return (
+    <div className="aside-block">
+      <div className="aside-block-meta">
+        <div>{props.date}</div>
+        <TagLabel text={props.tag} />
+      </div>
+      <div className="aside-block-text">
+        <h3>
+          <a href={props.url}>{props.title}</a>
+        </h3>
+        <p data-excerpt-id={props.id}>
+          {/* {props.description} */}
+        </p>
       </div>
     </div>
   )
