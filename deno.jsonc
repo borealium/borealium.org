@@ -23,7 +23,7 @@
     "~ext/": "./ext/",
     "std/": "https://deno.land/std@0.196.0/",
     "react": "https://esm.sh/stable/react@18.2.0/denonext/react.mjs",
-    "react/jsx-runtime": "https://esm.sh/stable/react@18.2.0/jsx-runtime",
+    "react/jsx-runtime": "https://esm.sh/stable/react@18.2.0/denonext/jsx-runtime.mjs",
     "lume/": "https://deno.land/x/lume@v1.18.4/",
     "@fluent/bundle": "https://esm.sh/stable/@fluent/bundle@0.18.0/denonext/bundle.mjs"
   },
