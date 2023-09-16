@@ -4,8 +4,11 @@ import { DownloadButton } from "~/_templates/_components/download-button.tsx"
 import { Page } from "lume/core.ts"
 import search from "lume/plugins/search.ts"
 import { CategoryLabel, TagLabel } from "~/_templates/_components/label.tsx"
+import { getLanguageData } from "~plugins/language-data.ts"
 
 export const layout = "layouts/base.tsx"
+
+const { languages } = getLanguageData()
 
 export default function (page: Page) {
   const { title, document, children, url, lang, fluentBundle, search } = page
@@ -196,7 +199,17 @@ function BigBlock(props: { title: string; description: string; categoriesTitle: 
         <h3>{props.categoriesTitle}</h3>
       </div>
       <div className="second-cell">
-        <div className="squares-grid">
+        <ul className="list">
+          {Object.entries(languages).map(([code, data]) => (
+            <li key={code}>
+              <a href={`/language/${code}`}>
+                {data.autonym}
+              </a>
+            </li>
+          ))}
+        </ul>
+        {
+          /* <div className="squares-grid">
           {props.categories.map((category) => (
             <Square
               title={category.title}
@@ -205,7 +218,8 @@ function BigBlock(props: { title: string; description: string; categoriesTitle: 
               img={category.img ? { src: category.img.src, alt: category.img.alt } : undefined}
             />
           ))}
-        </div>
+        </div> */
+        }
       </div>
     </div>
   )
