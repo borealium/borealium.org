@@ -23,9 +23,12 @@ languages:
   smj:
     name: Lule Sami
     autonym: julevsámegiella
-  sma:
-    name: Southern Sami
-    autonym: åarjelsaemien gïele
+  sma-NO:
+    name: Southern Sami (Norway)
+    autonym: åarjelsaemien gïele (no)
+  sma-SE:
+    name: Southern Sami (Sweden)
+    autonym: åarjelsaemien gïele (se)
   sjd:
     name: Kildin Sami
     autonym: Кӣллт са̄мь кӣлл

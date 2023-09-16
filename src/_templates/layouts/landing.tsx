@@ -10,7 +10,7 @@ export const layout = "layouts/base.tsx"
 export default function (page: Page) {
   const { title, document, children, url, lang, fluentBundle, search } = page
 
-  const posts = search.pages(["type=post", `lang=${lang}`], "data=desc")
+  const posts = search.pages(["type=post", `lang=${lang}`], "date=desc")
   // console.log("WAT", posts[0].page)
   // Deno.exit(1)
 

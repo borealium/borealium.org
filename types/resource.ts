@@ -4,12 +4,13 @@ export type Resource = {
   id: string
   type: ResourceType
   category: CategoryId
+  languages: LangTag[]
   tags?: string[]
   name: Record<LangTag, string>
   description: Record<LangTag, string>
   externalDocumentationUrl?: URL
   links?: Link[]
-} & ({ language: LangTag } | { languages: LangTag[] })
+}
 
 export type Link = {
   type?: LinkType
