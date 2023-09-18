@@ -450,7 +450,7 @@
     "https://deno.land/x/xml@2.1.1/utils/stringifier.ts": "c701b506835237c0c6c0a08fd94e0a012b644def3f4c819c64788daf2e649ea3",
     "https://deno.land/x/xml@2.1.1/utils/types.ts": "ecaf7785e54a6f1da6f8e56da2bce9853407ceb7d5b3b70f0a60a0890151fe4c",
     "https://esm.sh/@fluent/bundle@0.18.0": "f3092501db4142203d6eccb2e6513a62fc4671a2430074a1a02bcbadc755bc04",
-    "https://esm.sh/stable/react@18.2.0/denonext/jsx-runtime.js": "54d8a51c6ca025380abd2d5302e4a9b38ff835d9759c4657e52314f587eaf6bf",
+    "https://esm.sh/stable/react@18.2.0/denonext/jsx-runtime.js": "f8a3b4a4e6150031eea20ac09216edd880f68390f1d0864a1b1fd3f0fa16df9e",
     "https://esm.sh/stable/react@18.2.0/denonext/react.mjs": "3c4f23bcfc53b256fcfaf6f834fa9f584c3bb7be667b2682c6cb6ba8ef88f8e6",
     "https://esm.sh/stable/react@18.2.0/jsx-runtime": "914a55a07c388d345c5a0c11616ee5282242e8b8dfd0d505b83500ea04fd9870",
     "https://esm.sh/v130/@fluent/bundle@0.18.0/denonext/bundle.mjs": "ac6cbabd193b80ef2b5f4e187bdada0aec6ca2671305a0a2b982e57d24aa4d8a"
@@ -477,10 +477,10 @@
       "unified@10.1.2": "unified@10.1.2"
     },
     "packages": {
-      "@babel/runtime@7.22.6": {
-        "integrity": "sha512-wDb5pWm4WDdF6LFUde3Jl8WzPA+3ZbxYqkC6xAXuD3irdEHN1k0NfTRrJD8ZD378SJ61miMLCqIOXYhd8x+AJQ==",
+      "@babel/runtime@7.22.11": {
+        "integrity": "sha512-ee7jVNlWN09+KftVOu9n7S8gQzD/Z6hN/I8VBRXW4P1+Xe7kJGXMwu8vds4aGIMHZnNbdpSWCfZZtinytpcAvA==",
         "dependencies": {
-          "regenerator-runtime": "regenerator-runtime@0.13.11"
+          "regenerator-runtime": "regenerator-runtime@0.14.0"
         }
       },
       "@fluent/bundle@0.18.0": {
@@ -491,7 +491,7 @@
         "integrity": "sha512-jLuwRlz8DQfQNiUCJR50Y09CGPq3fLtmtUQfVrj79E0JWu3dvsVcxVIcfhR5h0iXu+/z++zDrYeiJqifRynJkA==",
         "dependencies": {
           "@types/estree-jsx": "@types/estree-jsx@1.0.0",
-          "@types/mdx": "@types/mdx@2.0.5",
+          "@types/mdx": "@types/mdx@2.0.7",
           "estree-util-build-jsx": "estree-util-build-jsx@2.2.2",
           "estree-util-is-identifier-name": "estree-util-is-identifier-name@2.1.0",
           "estree-util-to-js": "estree-util-to-js@1.2.0",
@@ -543,8 +543,8 @@
           "@types/unist": "@types/unist@2.0.7"
         }
       },
-      "@types/mdx@2.0.5": {
-        "integrity": "sha512-76CqzuD6Q7LC+AtbPqrvD9AqsN0k8bsYo2bM2J8pmNldP1aIPAbzUQ7QbobyXL4eLr1wK5x8FZFe8eF/ubRuBg==",
+      "@types/mdx@2.0.7": {
+        "integrity": "sha512-BG4tyr+4amr3WsSEmHn/fXPqaCba/AYZ7dsaQTiavihQunHSIxk+uAtqsjvicNpyHN6cm+B9RVrUOtW9VzIKHw==",
         "dependencies": {}
       },
       "@types/ms@0.7.31": {
@@ -631,7 +631,7 @@
         "dependencies": {
           "anymatch": "anymatch@3.1.3",
           "braces": "braces@3.0.2",
-          "fsevents": "fsevents@2.3.2",
+          "fsevents": "fsevents@2.3.3",
           "glob-parent": "glob-parent@5.1.2",
           "is-binary-path": "is-binary-path@2.1.0",
           "is-glob": "is-glob@4.0.3",
@@ -650,7 +650,7 @@
       "date-fns@2.30.0": {
         "integrity": "sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==",
         "dependencies": {
-          "@babel/runtime": "@babel/runtime@7.22.6"
+          "@babel/runtime": "@babel/runtime@7.22.11"
         }
       },
       "debug@4.3.4": {
@@ -730,8 +730,8 @@
           "to-regex-range": "to-regex-range@5.0.1"
         }
       },
-      "fsevents@2.3.2": {
-        "integrity": "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==",
+      "fsevents@2.3.3": {
+        "integrity": "sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==",
         "dependencies": {}
       },
       "glob-parent@5.1.2": {
@@ -845,8 +845,8 @@
         "integrity": "sha512-0quDb7s97CfemeJAnW9wC0hw78MtW7NU3hqtCD75g2vFlDLt36llsYD7uB7SUzojLMP24N5IatXf7ylGXiGG9A==",
         "dependencies": {}
       },
-      "immutable@4.3.2": {
-        "integrity": "sha512-oGXzbEDem9OOpDWZu88jGiYCvIsLHMvGw+8OXlpsvTFvIQplQbjg1B1cvKg8f7Hoch6+NGjpPsH1Fr+Mc2D1aA==",
+      "immutable@4.3.3": {
+        "integrity": "sha512-808ZFYMsIRAjLAu5xkKo0TsbY9LBy9H5MazTKIEHerNkg0ymgilGfBPMR/3G7d/ihGmuK2Hw8S1izY2d3kd3wA==",
         "dependencies": {}
       },
       "inline-style-parser@0.1.1": {
@@ -1539,8 +1539,8 @@
           "picomatch": "picomatch@2.3.1"
         }
       },
-      "regenerator-runtime@0.13.11": {
-        "integrity": "sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==",
+      "regenerator-runtime@0.14.0": {
+        "integrity": "sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==",
         "dependencies": {}
       },
       "rehype-raw@6.1.1": {
@@ -1610,7 +1610,7 @@
         "integrity": "sha512-TnDlfc+CRnUAgLO9D8cQLFu/GIjJIzJCGkE7o4ekIGQOH7T3GetiRR/PsTWJUHhkzcSPrARkPI+gNWn5alCzDg==",
         "dependencies": {
           "chokidar": "chokidar@3.5.3",
-          "immutable": "immutable@4.3.2",
+          "immutable": "immutable@4.3.3",
           "source-map-js": "source-map-js@1.0.2"
         }
       },
