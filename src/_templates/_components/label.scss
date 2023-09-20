@@ -7,18 +7,19 @@ $lg-nav-breakpoint: 1024px;
   gap: 0.5rem;
   font-size: 12px;
   background-color: var(--color-brand);
+  color: var(--color-text-secondary);
   text-transform: uppercase;
 
   > div {
     width: 1px;
-    background-color: var(--color-highlight);
+    background-color: var(--color-text-secondary);
   }
   > span {
     font-weight: 700;
   }
 
   @media (min-width: $lg-nav-breakpoint) {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -27,5 +28,6 @@ $lg-nav-breakpoint: 1024px;
   font-size: 10px;
   font-weight: 700;
   background-color: var(--color-brand);
+  color: var(--color-text-secondary);
   text-transform: uppercase;
 }
