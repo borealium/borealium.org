@@ -7,7 +7,7 @@ $sm-breakpoint: 412px;
 .landing {
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  // overflow: auto;
   background-color: var(--color-background);
 
   @media (min-width: $md-breakpoint) {
@@ -16,7 +16,7 @@ $sm-breakpoint: 412px;
   }
 
   @media (min-width: $lg-main-breakpoint) {
-    height: calc(var(--vh) - var(--nav-height));
+    min-height: calc(var(--vh) - var(--nav-height));
   }
 
   .blocks {

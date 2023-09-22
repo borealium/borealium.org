@@ -1,31 +1,135 @@
 .resource {
-  padding: 1rem;
-  min-height: calc(var(--vh) - var(--nav-height));
-  height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  // overflow: auto;
   background-color: var(--color-background);
 
-  .content {
-    padding: 2rem 0;
-    max-width: 600px;
+  @media (min-width: $md-breakpoint) {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+  }
+
+  @media (min-width: $lg-main-breakpoint) {
+    min-height: calc(var(--vh) - var(--nav-height));
+  }
+
+  .content-wrapper {
+    margin-right: 8px;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    justify-content: space-between;
+    background-color: var(--color-background-above);
 
-    h2 {
-      margin: 0.5rem 0;
-    }
+    .content {
+      flex-grow: 1;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
 
-    .downloads {
+      h1 {
+        margin: 4px 0;
+      }
+
       h3 {
-        margin: 1rem 0;
+        margin: 0;
       }
 
-      .links {
+      p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .tags-wrapper {
+        margin-top: 12px;
         display: flex;
-        gap: 0.5rem;
+        gap: 8px;
+
+        .tag {
+          text-decoration: none;
+          padding: 4px;
+          font-size: 12px;
+          font-weight: 700;
+          border: 2px solid var(--color-brand);
+          border-radius: 4px;
+          color: var(--color-text);
+          background: color-mix(in srgb, var(--color-brand) 10%, transparent);
+          text-transform: uppercase;
+
+          &:hover {
+            background: color-mix(in srgb, var(--color-brand) 30%, transparent);
+          }
+        }
+      }
+
+      .meta-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        .meta {
+          span {
+            font-weight: 700;
+          }
+          p {
+            margin: 4px 0;
+          }
+        }
+      }
+
+      .documentation {
+        .description {
+          margin-top: 12px;
+        }
+      }
+
+      .downloads {
+        padding: 16px 0;
+        h3 {
+          margin: 8px 0;
+        }
+
+        .links {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, 125px);
+          gap: 24px;
+        }
       }
     }
+    .related-documentation {
+      padding: 16px 32px;
+      background-color: var(--color-background-brand);
+
+      .categories {
+        display: flex;
+        gap: 32px;
+
+        dl {
+          margin: 16px 0;
+
+          dt {
+            margin: 8px 0;
+            font-weight: 700;
+          }
+
+          dd {
+            display: inline-block;
+            margin: 0;
+            margin-right: 8px;
+            margin-bottom: 8px;
+
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--color-text);
   }
 }

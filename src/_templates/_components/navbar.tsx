@@ -42,7 +42,7 @@ function HamburgerIcon() {
       xmlns="http://www.w3.org/2000/svg"
       width="42"
       height="42"
-      fill="var(--color-brand)"
+      fill="var(--color-text-secondary)"
       viewBox="0 0 16 16"
       display="var(--hamburger-display)"
     >
