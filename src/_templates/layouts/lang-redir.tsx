@@ -14,7 +14,7 @@ const supportedLanguages = JSON.stringify(Object.keys(languages.languages))
 
 const SCRIPT = `
 (() => {
-  const KEY = "divvun:language"
+  const KEY = "borealium:language"
   const selectedLanguage = localStorage.getItem(KEY) || null
 
   if (selectedLanguage != null) {

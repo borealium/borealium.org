@@ -160,7 +160,7 @@ function BigBlock(props: { title: string; description: string; categoriesTitle: 
     <div className="big-block">
       <div className="first-cell">
         <div className="text-group">
-          <CategoryLabel context="divvun" category="global" />
+          <CategoryLabel context="borealium" category="global" />
           <h2>{props.title}</h2>
           <p>
             {props.description}
@@ -210,7 +210,7 @@ function BigBlock(props: { title: string; description: string; categoriesTitle: 
 function SmallBlock(props: { title: string; category: string; description: string; buttons: JSX.Element }) {
   return (
     <div className="small-block">
-      <CategoryLabel context="divvun" category={props.category} />
+      <CategoryLabel context="borealium" category={props.category} />
       <h2>{props.title}</h2>
       <p>{props.description}</p>
       <div className="button-group">
