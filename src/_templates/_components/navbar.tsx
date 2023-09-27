@@ -15,7 +15,7 @@ export function Navbar(props: { url: string }) {
           <input type="checkbox" />
           <HamburgerIcon />
           <div className="nav-items">
-            <MenuItem text="Divvun" />
+            <MenuItem text="Borealium" />
             <a href="/category/spellers">
               <MenuItem text="Proofing" />
             </a>

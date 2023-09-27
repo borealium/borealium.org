@@ -1,5 +1,5 @@
 export const Marker = ({
-  prefix = "Divvun",
+  prefix = "Borealium",
   label,
 }: {
   prefix?: string
