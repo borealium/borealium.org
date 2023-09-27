@@ -1,7 +1,7 @@
 export function Footer(props: { url: string }) {
   return (
     <footer className="footer">
-      <span>Divvun Web Portal</span>
+      <span>Borealium</span>
       <div className="links">
         <div className="link-group">
           <span>About us</span>
