@@ -83,7 +83,7 @@ export default function (page: Page) {
   ]
 
   return (
-    <main className="landing">
+    <main className="landing" data-pagefind-ignore>
       <div className="blocks">
         <BigBlock
           title={fluentBundle.getMessage("block-1-title")?.value as string}

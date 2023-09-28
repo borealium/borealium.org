@@ -30,7 +30,7 @@ export default function ResourceLayout(page: Page & ResourceProps) {
   const posts = [] // search.pages(["type=post", `lang=${lang}`], "date=desc")
 
   return (
-    <div className="resource">
+    <div className="resource" data-pagefind-filter={`type:resource`}>
       <div className="content-wrapper">
         <div className="content">
           <div>
@@ -41,9 +41,10 @@ export default function ResourceLayout(page: Page & ResourceProps) {
             </p>
           </div>
           <div className="tags-wrapper">
-            <a className="tag" href="/" data-pagefind-filter="category">TOP CATEGORY 1</a>
-            <a className="tag" href="/" data-pagefind-filter="category">{resource.category}</a>
-            <a className="tag" href="/" data-pagefind-filter="category">{resource.category}</a>
+            <a className="tag" href="/" data-pagefind-filter={`category:${resource.category}`}>{resource.category}</a>
+            {resource.languages.map((lang, key) => {
+              return <a key={key} className="tag" href="/" data-pagefind-filter={`language:${lang}`}>{lang}</a>
+            })}
           </div>
           <div className="meta-wrapper section">
             <div className="meta">

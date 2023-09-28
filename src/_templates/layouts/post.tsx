@@ -26,7 +26,7 @@ export default function BlogLayout(page: Page & BlogProps) {
   )
 
   return (
-    <article className="post">
+    <article className="post" data-pagefind-filter={`type:post`}>
       <nav>
         <ol id="toc"></ol>
         <br />

@@ -45,9 +45,10 @@ site.use(pagefind({
   indexing: {
     verbose: true,
   },
+  ui: false,
 }))
 site.use(esbuild({
-  extensions: [".client.tsx"],
+  extensions: [".client.ts"],
 }))
 
 site.copy("_static", "static")

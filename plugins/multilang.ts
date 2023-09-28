@@ -137,6 +137,16 @@ export default function multilanguage(languagesData: LanguagesData): Plugin {
           a.setAttribute("href", `/${lang}${href}`)
         }
       }
+
+      const forms = Array.from(
+        document?.querySelectorAll("form:not([data-multilang])") ?? [],
+      ) as unknown as HTMLAnchorElement[]
+      for (const a of forms) {
+        const href = a.getAttribute("action")
+        if (href != null && href.startsWith("/")) {
+          a.setAttribute("action", `/${lang}${href}`)
+        }
+      }
     })
   }
 }

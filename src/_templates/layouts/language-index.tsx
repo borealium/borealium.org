@@ -15,15 +15,20 @@ export default function LanguageIndexLayout(page: Page & LanguageIndexProps) {
   // Deno.exit(1)
 
   return (
-    <div data-pagefind-meta={`lang:${languageId}`} className="category-index">
+    <div
+      data-language={languageId}
+      data-type="language-index"
+      data-pagefind-filter="type[data-type], language[data-language]"
+      className="category-index"
+    >
       <div className="content">
         <div>
-          <h1 data-pagefind-filter="category">{language.name}</h1>
+          <h1>{language.name}</h1>
           <p>
             {/* {category["en"].description} */}
           </p>
         </div>
-        <div className="results">
+        <div className="results" data-pagefind-ignore>
           {resources.length === 0 && (
             <div>
               There are currently no resources in this category.

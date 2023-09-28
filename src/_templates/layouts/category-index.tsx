@@ -15,15 +15,20 @@ export default function CategoryIndexLayout(page: Page & CategoryIndexProps) {
   // Deno.exit(1)
 
   return (
-    <div data-pagefind-meta={`category:${categoryId}`} className="category-index">
+    <div
+      data-category={categoryId}
+      data-type="category-index"
+      data-pagefind-filter="type[data-type], category[data-category]"
+      className="category-index"
+    >
       <div className="content">
         <div>
-          <h1 data-pagefind-filter="category">{category["en"].name}</h1>
+          <h1>{category["en"].name}</h1>
           <p>
             {category["en"].description}
           </p>
         </div>
-        <div className="results">
+        <div className="results" data-pagefind-ignore>
           {resources.length === 0 && (
             <div>
               There are currently no resources in this category.
