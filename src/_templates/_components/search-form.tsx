@@ -1,12 +1,18 @@
+import Tag from "~/_templates/_components/tag.tsx"
+
 export function SearchForm() {
   return (
     <form action="/search/" className="search">
       <SearchIcon />
       <input id="search" placeholder="Search..." name="q" type="text" />
       {
-        /* <div id="search-results" className="results">
-          {results.filter((x) => x.includes("")).map((result) => <a href="/">{result}</a>)}
-        </div> */
+        /* <div className="results">
+        <a className="result" href="/">
+          <Tag text="Category" href="/" />
+          <p>Keyboard layouts</p>
+        </a>
+        <a className="see-more" href="/">See more results...</a>
+      </div> */
       }
     </form>
   )

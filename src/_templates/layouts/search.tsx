@@ -52,7 +52,7 @@ export default function SearchPage() {
     },
   ]
 
-  // const posts = [] // TODO: this
+  const posts = [] // TODO: this
 
   return (
     <div className="search-page">
@@ -77,9 +77,19 @@ export default function SearchPage() {
       <Aside
         context="explore"
         category="related"
-        posts={[]}
+        posts={posts.map((post) => {
+          const { id, title, category, date, lang, originalUrl, author } = post
+
+          return {
+            id: id,
+            date: date.toISOString(),
+            tag: category,
+            title: title,
+            url: originalUrl,
+          } as SimplePost
+        })}
       />
-      {/* <pre id="search-results" style={{ "font-size": "4px" }}></pre> */}
+      {/* <pre id="search-results"></pre> */}
     </div>
   )
 }
@@ -97,7 +107,9 @@ function Result(props: SearchResult) {
       <div className="result-title">
         <div className="left">
           <Tag text={props.category} href="/" />
-          <h2>{props.title}</h2>
+          <h2>
+            <a href="/">{props.title}</a>
+          </h2>
         </div>
         <div className="right">
           {props.tags.map((tag) => <Tag text={tag} href="/" />)}
