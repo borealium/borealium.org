@@ -27,9 +27,7 @@ export function Navbar(props: { url: string }) {
         </div>
       </div>
       <div className="search-wrapper">
-        <form action="/search/">
-          <input id="search" style={{ backgroundColor: "white", height: "100%" }} name="q" type="text" />
-        </form>
+        <SearchForm />
       </div>
       <div className="language-wrapper">
         <LanguageSelect url={props.url} />

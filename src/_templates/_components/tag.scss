@@ -1,0 +1,15 @@
+.tag {
+  text-decoration: none;
+  padding: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 2px solid var(--color-brand);
+  border-radius: 4px;
+  color: var(--color-text);
+  background: color-mix(in srgb, var(--color-brand) 10%, transparent);
+  text-transform: uppercase;
+
+  &:hover {
+    background: color-mix(in srgb, var(--color-brand) 30%, transparent);
+  }
+}

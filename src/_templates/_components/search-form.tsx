@@ -1,24 +1,13 @@
-const results = [
-  "Home",
-  "Proofing",
-  "Keyboards",
-  "Dictionaries",
-  "Documentation",
-  "News",
-]
-
 export function SearchForm() {
   return (
-    <form action="/en/search/" method="GET" className="search-form">
-      <label className="search">
-        <SearchIcon />
-        <input name="q" id="search-input" type="text" placeholder="Search..."></input>
-        {
-          /* <div id="search-results" className="results">
+    <form action="/search/" className="search">
+      <SearchIcon />
+      <input id="search" placeholder="Search..." name="q" type="text" />
+      {
+        /* <div id="search-results" className="results">
           {results.filter((x) => x.includes("")).map((result) => <a href="/">{result}</a>)}
         </div> */
-        }
-      </label>
+      }
     </form>
   )
 }
@@ -30,7 +19,7 @@ function SearchIcon() {
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth="1.5"
-      stroke="var(--color-brand)"
+      stroke="var(--color-text-secondary)"
       width="24px"
       height="24px"
     >

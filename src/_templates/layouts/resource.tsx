@@ -4,6 +4,7 @@ import { DownloadButton } from "~/_templates/_components/download-button.tsx"
 import { LinkType, Resource } from "~types/resource.ts"
 import { CategoryLabel } from "~/_templates/_components/label.tsx"
 import Aside, { SimplePost } from "~/_templates/_components/aside.tsx"
+import Tag from "~/_templates/_components/tag.tsx"
 
 export const layout = "layouts/base.tsx"
 
@@ -43,7 +44,7 @@ export default function ResourceLayout(page: Page & ResourceProps) {
           <div className="tags-wrapper">
             <a className="tag" href="/" data-pagefind-filter={`category:${resource.category}`}>{resource.category}</a>
             {resource.languages.map((lang, key) => {
-              return <a key={key} className="tag" href="/" data-pagefind-filter={`language:${lang}`}>{lang}</a>
+              return <Tag key={key} text={lang} href="/" pagefindFilter={`language:${lang}`} />
             })}
           </div>
           <div className="meta-wrapper section">
