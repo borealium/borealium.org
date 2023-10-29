@@ -21,18 +21,15 @@ export default function Aside(props: { context: string; category: string; posts:
 function AsideBlock(props: SimplePost) {
   return (
     <div className="aside-block">
-      <div className="aside-block-meta">
-        <div>{props.date}</div>
-        <TagLabel text={props.tag} />
-      </div>
       <div className="aside-block-text">
         <h3>
-          <a href={props.url}>{props.title}</a>
+          {props.title}
         </h3>
         <p data-excerpt-id={props.id}>
           {/* {props.description} */}
         </p>
       </div>
+      <a href={props.url}>Read more</a>
     </div>
   )
 }

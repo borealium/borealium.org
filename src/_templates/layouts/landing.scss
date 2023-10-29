@@ -22,22 +22,22 @@ $sm-breakpoint: 412px;
   .blocks {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    gap: 1rem;
 
-    @media (min-width: $sm-breakpoint) {
-      > * {
-        margin: 0 1rem;
-      }
-    }
+    // @media (min-width: $sm-breakpoint) {
+    //   > * {
+    //     margin: 0 1rem;
+    //   }
+    // }
 
     @media (min-width: $lg-main-breakpoint) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
 
-      > * {
-        margin: 0 0.5rem;
-      }
+      // > * {
+      //   margin: 0 0.5rem;
+      // }
     }
   }
 

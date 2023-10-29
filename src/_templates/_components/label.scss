@@ -6,7 +6,7 @@ $lg-nav-breakpoint: 1024px;
   display: flex;
   gap: 0.5rem;
   font-size: 12px;
-  background-color: var(--color-brand);
+  background-color: var(--color-highlight);
   color: var(--color-text-secondary);
   text-transform: uppercase;
 
@@ -27,7 +27,7 @@ $lg-nav-breakpoint: 1024px;
   padding: 0.25rem;
   font-size: 10px;
   font-weight: 700;
-  background-color: var(--color-brand);
+  background-color: var(--color-highlight);
   color: var(--color-text-secondary);
   text-transform: uppercase;
 }

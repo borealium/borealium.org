@@ -1,5 +1,3 @@
-import React from "react"
-import { Square } from "~/_templates/_components/square.tsx"
 import { DownloadButton } from "~/_templates/_components/download-button.tsx"
 import { Page } from "lume/core.ts"
 import { CategoryLabel, TagLabel } from "~/_templates/_components/label.tsx"
@@ -14,8 +12,6 @@ export default function (page: Page) {
   const { title, document, children, url, lang, fluentBundle, search } = page
 
   const posts = search.pages(["type=post", `lang=${lang}`], "date=desc")
-  // console.log("WAT", posts[0].page)
-  // Deno.exit(1)
 
   if (lang == null) {
     return (
