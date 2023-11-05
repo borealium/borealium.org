@@ -1,6 +1,6 @@
 :root {
   --nav-height: 120px;
-  --vh: 95vh;
+  --vh: 95vh; // Here we go...
 
   --color-brand: #04bf93;
   --color-highlight: #10131a;
@@ -24,6 +24,11 @@ body {
   color: var(--color-text);
 }
 
-// .navbar-offset-wrapper {
-//   margin-top: var(--nav-height);
-// }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}

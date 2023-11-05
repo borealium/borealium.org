@@ -35,7 +35,7 @@ export default function ResourceLayout(page: Page & ResourceProps) {
       <div className="content-wrapper">
         <div className="content">
           <div>
-            <CategoryLabel context="Divvun" category={resource.category} />
+            <CategoryLabel context="Borealium" category={resource.category} />
             <h1>{resource.name["en"]}</h1>
             <p>
               {resource.description["en"]}

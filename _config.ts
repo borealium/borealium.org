@@ -23,6 +23,9 @@ const site = lume({
   src: "./src",
   includes: "_templates",
 })
+site.ignore((path) => {
+  return path.match(/\.client\.ts$/) !== null
+})
 
 site.loadData([".yaml", ".yml"])
 

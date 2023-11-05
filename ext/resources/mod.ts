@@ -26,15 +26,4 @@ const pahkatResources: Resource[] = repo.packages
     }
   })
 
-// export type Resource = {
-//   id: string
-//   type: ResourceType
-//   category: CategoryId
-//   tags?: string[]
-//   name: Record<LangTag, string>
-//   description: Record<LangTag, string>
-//   externalDocumentationUrl?: URL
-//   links?: Link[]
-// } & ({ language: LangTag } | { languages: LangTag[] })
-
 export default [...externalResources, ...pahkatResources]

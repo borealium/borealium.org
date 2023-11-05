@@ -110,18 +110,16 @@ async function downloadStrings() {
   return { en: process(en), nb: process(nb) }
 }
 
-export const strings = await downloadStrings()
-export const repo = await downloadMainRepo()
+console.log("Downloading Pahkat repo data...")
+
+// export const strings = await downloadStrings()
+// export const repo = await downloadMainRepo()
 
 // Deno.writeTextFileSync("./dump.json", JSON.stringify({ strings, repo }, null, 2))
 
-// const raw = JSON.parse(Deno.readTextFileSync("./dump.json"))
+const raw = JSON.parse(Deno.readTextFileSync("./dump.json"))
 
-// export const strings = raw.strings
-// export const repo = raw.repo
+export const strings = raw.strings
+export const repo = raw.repo
 
-// export const strings;
-
-// await Deno.mkdir("./src/_data/tools", { recursive: true })
-// await Deno.writeTextFile("./src/_data/tools/status.json", JSON.stringify(data.status, null, 2))
-// await Deno.writeTextFile("./src/_data/tools/repo.json", JSON.stringify(data.repo, null, 2))
+console.log("Pahkat data loaded.")

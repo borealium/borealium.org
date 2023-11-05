@@ -31,7 +31,8 @@ export function Navbar(props: { url: string }) {
           <div className="nav-items-wrapper">
             <input type="checkbox" />
             <HamburgerIcon />
-            <div className="nav-items">
+            {
+              /* <div className="nav-items">
               <MenuItem text="Borealium" />
               <a href="/category/spellers">
                 <MenuItem text="Proofing" />
@@ -40,11 +41,43 @@ export function Navbar(props: { url: string }) {
                 <MenuItem text="Keyboards" />
               </a>
               <MenuItem text="Dictionaries" />
-            </div>
+            </div> */
+            }
           </div>
         </div>
         <div className="search-wrapper">
           <SearchForm />
+          <div className="search-popover">
+            <ul className="search-results">
+              <li>
+                <a href="#">
+                  <span className="search-tag search-tag-resource">Resource</span>
+                  <span>
+                    Some <strong>search</strong> result
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span className="search-tag search-tag-category">Category</span>
+                  <span>
+                    <strong>Keyboard</strong> layouts
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span className="search-tag search-tag-language">Language</span>
+                  <span>
+                    North <strong>Sami</strong>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <div className="search-see-more">
+              <a className="search-see-more-button" href="#">See more results</a>
+            </div>
+          </div>
         </div>
         <div className="language-wrapper">
           <LanguageSelect url={props.url} />

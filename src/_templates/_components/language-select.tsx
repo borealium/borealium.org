@@ -12,7 +12,7 @@ export function LanguageSelect(props: { url: string }) {
       <input className="button" type="checkbox" />
       <div className="language-select">
         <LanguageIcon />
-        <MenuItem text="language" />
+        <MenuItem text="" />
       </div>
       <ul className="list">
         {Object.entries(languages).map(([code, data]) => (

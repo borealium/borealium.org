@@ -5,8 +5,8 @@
 }
 
 :root {
-  --font-display: sans-serif;
-  --font-text: sans-serif;
+  --font-display: "Inter", "Noto Sans", sans-serif;
+  --font-text: "Noto Sans", sans-serif;
 
   --font-size-xs: #{relrem(12px)};
   --line-height-xs: #{relrem(20px)};
