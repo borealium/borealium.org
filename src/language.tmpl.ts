@@ -4,8 +4,7 @@ import { getLanguageData } from "~plugins/language-data.ts"
 
 const languageData = getLanguageData()
 
-export default function* (page: PageData) {
-  // console.log(categoryData)
+export default function* (_page: PageData) {
   for (const tag of Object.keys(languageData.languages)) {
     const filteredResources = resources
       .filter((resource) => resource.languages.includes(tag))

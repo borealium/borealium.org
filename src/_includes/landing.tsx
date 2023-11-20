@@ -9,7 +9,6 @@ export const layout = "base.tsx"
 
 export default function (page: PageData & FluentPage) {
   const { lang, t, search, comp } = page
-  console.log(lang)
   const posts = search.pages(["type=post", `lang="${lang}"`], "date=desc").slice(0, 3)
 
   return (

@@ -1,9 +1,12 @@
 import { parse as tomlParse } from "std/toml/mod.ts"
+import { getLanguageData } from "~plugins/language-data.ts"
 
 const PAHKAT_URL = "https://pahkat.uit.no"
 
 const GRAPHQL_API = `${PAHKAT_URL}/graphql`
 const stringsUrl = (lang: string) => `${PAHKAT_URL}/main/strings/${lang}.toml`
+
+const languageData = getLanguageData()
 
 export type PahkatPackage = {
   id: string
@@ -80,10 +83,18 @@ async function downloadMainRepo() {
 }
 
 async function downloadStrings() {
-  const [en, nb] = await Promise.all([
-    fetch(stringsUrl("en")).then((r) => r.text()).then(tomlParse),
-    fetch(stringsUrl("nb")).then((r) => r.text()).then(tomlParse),
-  ])
+  const strings: Array<[string, any]> = (await Promise.all(
+    Object.keys(languageData.languages).map((lang) => {
+      return (async () => {
+        const res = await fetch(stringsUrl(lang))
+        if (!res.ok) {
+          return [lang, null]
+        }
+        const text = await res.text()
+        return [lang, tomlParse(text)]
+      })()
+    }),
+  )).filter(([_, value]) => value != null)
 
   const process = (input: any) => {
     const out: any = {}
@@ -95,19 +106,24 @@ async function downloadStrings() {
     return out
   }
 
-  return { en: process(en), nb: process(nb) }
+  const out: Record<string, any> = {}
+
+  for (const [lang, data] of strings) {
+    out[lang] = process(data)
+  }
+
+  return out
 }
 
 console.log("Downloading Pahkat repo data...")
 
-// export const strings = await downloadStrings()
-// export const repo = await downloadMainRepo()
+export const strings = await downloadStrings()
+export const repo = await downloadMainRepo()
 
 // Deno.writeTextFileSync("./dump.json", JSON.stringify({ strings, repo }, null, 2))
+// const raw = JSON.parse(Deno.readTextFileSync("./dump.json"))
 
-const raw = JSON.parse(Deno.readTextFileSync("./dump.json"))
-
-export const strings: Record<string, any> = raw.strings
-export const repo: PahkatRepo = raw.repo
+// export const strings: Record<string, any> = raw.strings
+// export const repo: PahkatRepo = raw.repo
 
 console.log("Pahkat data loaded.")

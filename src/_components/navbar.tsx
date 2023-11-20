@@ -5,7 +5,6 @@ import { Page } from "lume/core.ts"
 import { TranslateFn } from "~plugins/fluent.ts"
 
 export function Navbar(props: { url: string; t: TranslateFn }) {
-  // console.log("NAV", props.url)
   return (
     <div className="header-nav-wrapper">
       <div className="header-gradient" />

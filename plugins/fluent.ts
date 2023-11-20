@@ -246,7 +246,6 @@ function fltBundleTree(rootPath: string, languages: LanguagesData) {
 
           for (const l of fallbacks[lang]) {
             if (res[l] != null) {
-              // console.log(`${k}: ${p} = ${l}`)
               bundle.addResource(res[l])
             }
           }
@@ -264,7 +263,6 @@ function fltBundleTree(rootPath: string, languages: LanguagesData) {
 
         for (const l of fallbacks[lang]) {
           if (res[l] != null) {
-            // console.log(`${k}: 'index' = ${l}`)
             bundle.addResource(res[l])
           }
         }

@@ -8,7 +8,6 @@ export default function LandingMainBlock(
   page: Page & FluentPage,
 ) {
   const t = page.fluentBundle(page.lang, "_components/landing/MainBlock")
-  // console.log(page.lang, t("welcome"), page.t("welcome"))
   const { languages, uiOnly } = getLanguageData()
 
   return (
