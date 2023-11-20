@@ -126,6 +126,24 @@ export default function BasePage(page: PageData & FluentPage) {
             return filtered
           }
 
+          function updateLanguageSelectorHrefs(query) {
+            const languageSelector = document.querySelector(".language-wrapper .list")
+            
+            if (languageSelector == null) {
+              return
+            }
+            
+            const links = Array.from(languageSelector.querySelectorAll("a"))
+            links.forEach(link => {
+              const href = link.getAttribute("href")
+              if (href == null) {
+                return
+              }
+              
+              link.setAttribute("href", href + "?" + query.toString())
+            })
+          }
+
           console.log("Search loaded")
           window.pagefind = pagefind
 
@@ -165,10 +183,11 @@ export default function BasePage(page: PageData & FluentPage) {
 
             const element = document.querySelector(".search-page-results")
             if (element != null) {
-              const query = new URLSearchParams(location.search).get('q')
+              const query = new URLSearchParams(location.search)
               if (query != null) {
-                const results = await searchResults(query)
-                createSearchResults(query, results)
+                const results = await searchResults(query.get('q'))
+                createSearchResults(query.get('q'), results)
+                updateLanguageSelectorHrefs(query)
               }
             }
           }
