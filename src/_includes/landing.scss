@@ -7,7 +7,6 @@ $sm-breakpoint: 412px;
 .landing {
   display: flex;
   flex-direction: column;
-  // overflow: auto;
   background-color: var(--color-background);
 
   @media (min-width: $md-breakpoint) {
@@ -25,10 +24,16 @@ $sm-breakpoint: 412px;
     grid-template-columns: 7fr 2fr;
   }
 
+  @media (min-width: $lg-main-breakpoint) {
+    height: calc(max(100vh, var(--nav-height) * 8) - var(--nav-height));
+    contain: paint;
+  }
+
   .blocks {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    height: inherit;
 
     // @media (min-width: $sm-breakpoint) {
     //   > * {
