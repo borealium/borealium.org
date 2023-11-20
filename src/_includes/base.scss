@@ -19,8 +19,11 @@
   display: none;
 }
 
+:target {
+  scroll-margin-top: 60px;
+}
+
 html {
-  scroll-padding-top: 60px;
   background-color: var(--color-highlight);
 }
 
