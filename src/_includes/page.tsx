@@ -14,7 +14,7 @@ export const layout = "base.tsx"
 export default function PageLayout(page: PageData & PageProps & FluentPage) {
   const { title, lang, content, search, t } = page
 
-  const posts = search.pages(["type=post", `lang=${lang}`], "date=desc")
+  const posts = search.pages(["type=post", `lang=${lang}`], "date=desc").slice(0, 3)
 
   return (
     <article className="post" data-pagefind-filter={`type:post`}>

@@ -70,7 +70,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
   const categories = getCategoryData()
   const languages = getLanguageData()
 
-  const posts = search.pages(["type=post", `lang=${lang}`], "date=desc")
+  const posts = search.pages(["type=post", `lang=${lang}`], "date=desc").slice(0, 3)
 
   const name = selectLocale(lang, resource.name)
   const description = selectLocale(lang, resource.description)

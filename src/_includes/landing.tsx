@@ -4,16 +4,13 @@ import { CategoryLabel } from "../_components/label.tsx"
 import { getLanguageData } from "~plugins/language-data.ts"
 import Aside, { SimplePost } from "../_components/aside.tsx"
 import { FluentPage } from "~plugins/fluent.ts"
-// import SecondaryBlock2 from "~/_partials/landing/secondary-block-2.mdx"
 
 export const layout = "base.tsx"
 
-const { uiOnly, languages } = getLanguageData()
-
 export default function (page: PageData & FluentPage) {
-  const { document, lang, t, search, comp } = page
-
-  const posts = search.pages(["type=post", `lang=${lang}`], "date=desc").slice(0, 3)
+  const { lang, t, search, comp } = page
+  console.log(lang)
+  const posts = search.pages(["type=post", `lang="${lang}"`], "date=desc").slice(0, 3)
 
   return (
     <main className="landing" data-pagefind-ignore>

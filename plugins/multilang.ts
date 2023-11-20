@@ -52,9 +52,9 @@ export default function multilanguage(languagesData: LanguagesData): Plugin {
           Object.keys(langData.regions).forEach((regionId) => {
             pageLanguages.push(`${langId}-${regionId}`)
           })
+        } else {
+          pageLanguages.push(langId)
         }
-
-        pageLanguages.push(langId)
       })
 
       for (const lang of pageLanguages) {
@@ -116,6 +116,7 @@ export default function multilanguage(languagesData: LanguagesData): Plugin {
       }
 
       if (!document?.documentElement?.getAttribute("lang")) {
+        // This will make the language tag lowercase for some reason after post-processing.
         document?.documentElement?.setAttribute("lang", lang)
       }
 

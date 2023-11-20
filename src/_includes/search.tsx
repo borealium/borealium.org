@@ -8,7 +8,7 @@ export const layout = "base.tsx"
 export default function SearchPage(page: PageData) {
   const { lang, search } = page
   const t = page.fluentBundle(lang, "_includes/search")
-  const posts = search.pages(["type=post", `lang=${lang}`], "date=desc")
+  const posts = search.pages(["type=post", `lang=${lang}`], "date=desc").slice(0, 3)
 
   return (
     <div className="search-page" data-pagefind-ignore>
