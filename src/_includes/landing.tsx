@@ -1,5 +1,5 @@
 import { DownloadButton } from "../_components/download-button.tsx"
-import { Page } from "lume/core.ts"
+import { Data, Page, PageData } from "lume/core.ts"
 import { CategoryLabel } from "../_components/label.tsx"
 import { getLanguageData } from "~plugins/language-data.ts"
 import Aside, { SimplePost } from "../_components/aside.tsx"
@@ -10,7 +10,7 @@ export const layout = "base.tsx"
 
 const { uiOnly, languages } = getLanguageData()
 
-export default function (page: Page & FluentPage) {
+export default function (page: PageData & FluentPage) {
   const { document, lang, t, search, comp } = page
 
   const posts = search.pages(["type=post", `lang=${lang}`], "date=desc").slice(0, 3)
@@ -53,14 +53,14 @@ export default function (page: Page & FluentPage) {
         }
       </div>
       <Aside
-        context="updates"
-        category="news"
+        t={t}
+        category={t("news")}
         posts={posts.map((post) => {
-          const { id, title, category, date, lang, originalUrl, author } = post
+          const { id, title, category, date, originalUrl } = post as Data<PageData>
 
           return {
             id: id,
-            date: date.toISOString(),
+            date: date?.toISOString(),
             tag: category,
             title: title,
             url: originalUrl,

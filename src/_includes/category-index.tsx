@@ -1,19 +1,22 @@
 import { Page } from "lume/core.ts"
 import { Resource } from "~types/resource.ts"
-import { ResourceSummary } from "~/_components/resource-summary.tsx"
 import { selectLocale } from "~plugins/language-data.ts"
 import { CategoryLabel } from "~/_components/label.tsx"
+import { LangTag } from "~types/category.ts"
+import { FluentPage } from "~plugins/fluent.ts"
 
 export const layout = "base.tsx"
 
 type CategoryIndexProps = {
   resources: Resource[]
+  category: Record<LangTag, { name: string; description: string }>
+  categoryId: string
 }
 
-export default function CategoryIndexLayout(page: Page & CategoryIndexProps) {
+export default function CategoryIndexLayout(page: Page & CategoryIndexProps & FluentPage) {
   const { resources, lang, category, categoryId, t } = page
 
-  const cat = selectLocale(lang, category)
+  const cat = selectLocale(lang, category) ?? category["en"]
 
   return (
     <div
@@ -33,12 +36,13 @@ export default function CategoryIndexLayout(page: Page & CategoryIndexProps) {
         <div className="search-page-results" data-pagefind-ignore>
           {resources.length === 0 && (
             <div>
-              There are currently no resources in this category.
+              {t("no-resources-in-category")}
             </div>
           )}
           {resources.map((resource) => {
             const resName = selectLocale(lang, resource.name)
             const resDescription = selectLocale(lang, resource.description)
+
             let cls = "tag-resource"
             if (resource.type === "resource") {
               cls = "tag-resource"

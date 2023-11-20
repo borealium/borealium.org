@@ -1,20 +1,19 @@
-import { Page } from "lume/core.ts"
+import { Page, PageData } from "lume/core.ts"
 import { Resource } from "~types/resource.ts"
-import { ResourceSummary } from "~/_components/resource-summary.tsx"
 import { selectLocale } from "~plugins/language-data.ts"
 import { CategoryLabel } from "~/_components/label.tsx"
+import { FluentPage } from "~plugins/fluent.ts"
 
 export const layout = "base.tsx"
 
 type LanguageIndexProps = {
   resources: Resource[]
+  language: { autonym: string }
+  languageId: string
 }
 
-export default function LanguageIndexLayout(page: Page & LanguageIndexProps) {
+export default function LanguageIndexLayout(page: PageData & LanguageIndexProps & FluentPage) {
   const { resources, lang, languageId, language, t } = page
-
-  // console.log(category)
-  // Deno.exit(1)
 
   return (
     <div
@@ -27,16 +26,11 @@ export default function LanguageIndexLayout(page: Page & LanguageIndexProps) {
         <div>
           <CategoryLabel category={t("language")} />
           <h1>{language.autonym}</h1>
-          {
-            /* <p>
-            {cat.description}
-          </p> */
-          }
         </div>
         <div className="search-page-results" data-pagefind-ignore>
           {resources.length === 0 && (
             <div>
-              There are currently no resources in this category.
+              {t("no-resources-in-category")}
             </div>
           )}
           {resources.map((resource) => {

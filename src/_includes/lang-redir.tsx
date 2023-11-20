@@ -1,5 +1,5 @@
 import React from "react"
-import { Page, Site } from "lume/core.ts"
+import { Page, PageData, Site } from "lume/core.ts"
 import { getLanguageData } from "~plugins/language-data.ts"
 
 export const layout = "base.tsx"
@@ -41,20 +41,17 @@ const SCRIPT = `
 })()
 `
 
-export default function (pageish: Page) {
-  const { page } = pageish
-
+export default function (page: PageData) {
   return (
     <>
       {script(SCRIPT)}
       <div className="app" data-pagefind-ignore>
         <noscript>
-          <h2>Choose a language from the list below:</h2>
           <ul>
             {Object.entries(languages.languages).map(([key, value]) => {
               return (
                 <li key={key}>
-                  <a href={`/${key}${page.data.url}`}>{value.autonym}</a>
+                  <a href={`/${key}${page.url}`}>{value.autonym}</a>
                 </li>
               )
             })}

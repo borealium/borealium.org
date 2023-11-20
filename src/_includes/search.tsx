@@ -7,6 +7,7 @@ export const layout = "base.tsx"
 
 export default function SearchPage(page: PageData) {
   const { lang, search } = page
+  const t = page.fluentBundle(lang, "_includes/search")
   const posts = search.pages(["type=post", `lang=${lang}`], "date=desc")
 
   return (
@@ -14,24 +15,24 @@ export default function SearchPage(page: PageData) {
       <div className="content">
         <div className="title">
           <h1>
-            Search: <q className="search-query">...</q>
+            {t("search")}: <q className="search-query">...</q>
           </h1>
           <div>
-            <span className="result-count">...</span> results.
+            <span className="result-count">...</span> {t("results")}.
           </div>
         </div>
         <ul className="search-page-results">
           <noscript>You must enable JavaScript for search to function.</noscript>
           <div>
-            Loading...
+            {t("loading")}
           </div>
         </ul>
       </div>
       <Aside
-        context="explore"
-        category="related"
+        t={t}
+        category={t("news")}
         posts={posts.map((post) => {
-          const { id, title, category, date, lang, originalUrl, author } = post as Data<PageData>
+          const { id, title, category, date, originalUrl } = post as Data<PageData>
 
           return {
             id: id,
@@ -42,35 +43,6 @@ export default function SearchPage(page: PageData) {
           } as SimplePost
         })}
       />
-      {/* <pre id="search-results"></pre> */}
     </div>
   )
 }
-
-// type SearchResult = {
-//   category: string
-//   title: string
-//   tags: string[]
-//   description: string
-// }
-
-// function Result(props: SearchResult) {
-//   return (
-//     <div className="result">
-//       <div className="result-title">
-//         <div className="left">
-//           <Tag text={props.category} href="/" />
-//           <h2>
-//             <a href="/">{props.title}</a>
-//           </h2>
-//         </div>
-//         <div className="right">
-//           {props.tags.map((tag) => <Tag text={tag} href="/" />)}
-//         </div>
-//       </div>
-//       <p>
-//         {props.description}
-//       </p>
-//     </div>
-//   )
-// }

@@ -11,28 +11,9 @@
   border: 2px solid var(--color-brand);
   border-radius: 4px;
   color: var(--color-text);
-  // background: color-mix(in srgb, var(--color-brand) 10%, transparent);
   text-transform: uppercase;
   margin-top: 2px;
-
-  // &:hover {
-  //   background: color-mix(in srgb, var(--color-brand) 30%, transparent);
-  // }
 }
-
-// .tag {
-//   display: flex;
-//   font-family: var(--font-display);
-//   font-weight: 600;
-//   padding: 4px 8px;
-//   justify-content: center;
-//   align-items: center;
-//   border-radius: 4px;
-//   min-width: 76px;
-//   font-size: 12px;
-//   text-transform: uppercase;
-//   margin-top: 2px;
-// }
 
 .tag-resource {
   border: 1px solid #471adf;

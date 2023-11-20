@@ -68,7 +68,7 @@ export default function fluent(languages: LanguagesData, userOptions?: Partial<O
       validateFltFiles()
 
       const bundleTree = fltBundleTree(`${Deno.cwd()}/src`, languages)
-      console.log("\nLoaded Fluent files:")
+      console.log("Loaded Fluent files:")
       for (const k in bundleTree) {
         if (k == "") {
           console.log("  - index")
@@ -240,7 +240,7 @@ function fltBundleTree(rootPath: string, languages: LanguagesData) {
 
           for (const l of fallbacks[lang]) {
             if (res[l] != null) {
-              console.log(`${k}: ${p} = ${l}`)
+              // console.log(`${k}: ${p} = ${l}`)
               bundle.addResource(res[l])
             }
           }
@@ -258,7 +258,7 @@ function fltBundleTree(rootPath: string, languages: LanguagesData) {
 
         for (const l of fallbacks[lang]) {
           if (res[l] != null) {
-            console.log(`${k}: 'index' = ${l}`)
+            // console.log(`${k}: 'index' = ${l}`)
             bundle.addResource(res[l])
           }
         }

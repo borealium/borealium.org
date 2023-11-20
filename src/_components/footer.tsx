@@ -42,11 +42,12 @@ function LinkGroup(props: { links: LinkGroupType; t: TranslateFn }) {
 }
 
 export function Footer(props: { t: TranslateFn }) {
+  const currentYear = new Date().getFullYear().toString()
   return (
     <footer className="footer">
       <div>
         <FullLogo />
-        <p className="copyright">© 2023 UiT The Arctic University of Norway</p>
+        <p className="copyright">Copyright © {currentYear} {props.t("website-copyright")}</p>
       </div>
       <div style={{ flexGrow: 1 }}>
         <div className="links">

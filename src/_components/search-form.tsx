@@ -1,5 +1,3 @@
-import LanguageTag from "~/_components/tag.tsx"
-
 export function SearchForm() {
   return (
     <form action="/search/" className="search">

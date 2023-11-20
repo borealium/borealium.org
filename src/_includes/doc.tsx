@@ -1,4 +1,5 @@
-import { Page } from "lume/core.ts"
+import { PageData } from "lume/core.ts"
+import { FluentPage } from "~plugins/fluent.ts"
 
 type BlogProps = {
   title: string
@@ -11,26 +12,15 @@ type BlogProps = {
 
 export const layout = "base.tsx"
 
-export default function DocLayout(page: Page & BlogProps) {
-  const { title, slug, author, date, layout, content } = page
-  const raw = JSON.stringify(
-    {
-      title,
-      author,
-      slug,
-      date,
-      layout,
-    },
-    null,
-    2,
-  )
+export default function DocLayout(page: PageData & BlogProps & FluentPage) {
+  const { title, slug, author, date, layout, content, t } = page
 
   return (
     <article className="doc" data-pagefind-filter={`type:doc`}>
       <nav className="toc">
         <ol id="toc"></ol>
         <div style={{ height: "64px" }} />
-        <a href="#top" className="back-to-top">Back to top</a>
+        <a href="#top" className="back-to-top">{t("back-to-top")}</a>
       </nav>
       <div className="content">
         <header>

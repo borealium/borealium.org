@@ -22,3 +22,21 @@ maintaining-this-website = Maintaining this website
 resource = Resource
 category = Category
 language = Language
+
+back-to-top = Back to top
+read-more = Read more
+see-more-results = See more results
+no-resources-in-category = No resources were found in this category.
+
+news = News
+available-on-divvun-manager = Available on Divvun Manager
+divvun-manager-description = Divvun Manager is a free and open source tool for managing linguistic resources such as spell checkers, keyboards and dictionaries. It supports macOS and Windows.
+platforms = Platform(s)
+release = release
+languages = Languages
+categories = Categories
+
+for-apple-app-store = for iOS
+for-play-store = for Android
+
+website-copyright = UiT The Arctic University of Norway

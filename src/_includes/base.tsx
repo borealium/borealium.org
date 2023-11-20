@@ -5,7 +5,7 @@ import { Footer } from "~/_components/footer.tsx"
 import { FluentPage } from "~plugins/fluent.ts"
 
 export default function BasePage(page: PageData & FluentPage) {
-  const { title, children, lang, url, originalUrl, t } = page
+  const { title, children, url, originalUrl, t } = page
 
   if (t == null) {
     throw new Error("t not available")
@@ -111,7 +111,6 @@ export default function BasePage(page: PageData & FluentPage) {
               return null
             }
             const results = await Promise.all(search.results.map(x => x.data()))
-            console.log(results)
             const filtered = results.map(x => ({
               url: x.url,
               title: x.meta.title,
@@ -168,7 +167,6 @@ export default function BasePage(page: PageData & FluentPage) {
             if (element != null) {
               const query = new URLSearchParams(location.search).get('q')
               if (query != null) {
-
                 const results = await searchResults(query)
                 createSearchResults(query, results)
               }
@@ -183,7 +181,7 @@ export default function BasePage(page: PageData & FluentPage) {
         `)}
       </head>
       <body id="top">
-        <Navbar url={originalUrl || url || "/"} />
+        <Navbar url={originalUrl || url || "/"} t={t} />
         <div className="navbar-offset-wrapper">
           {children}
         </div>

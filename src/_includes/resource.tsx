@@ -1,5 +1,5 @@
 import { FluentBundle } from "@fluent/bundle"
-import { Page } from "lume/core.ts"
+import { Data, Page, PageData } from "lume/core.ts"
 import { DownloadButton } from "~/_components/download-button.tsx"
 import { LinkType, Resource, ResourceType } from "~types/resource.ts"
 import { CategoryLabel } from "~/_components/label.tsx"
@@ -17,21 +17,21 @@ type ResourceProps = {
   lang: string
 }
 
-function PahkatInfo() {
+function PahkatInfo({ t }: { t: TranslateFn }) {
   return (
     <div className="downloads">
-      <h3>Available on Divvun Manager</h3>
-      <p>In order to access this resource, you need to use Divvun Manager.</p>
+      <h3>{t("available-on-divvun-manager")}</h3>
+      <p>{t("divvun-manager-description")}</p>
     </div>
   )
 }
 
-function parseLinkType(type: LinkType) {
+function parseLinkType(type: LinkType, t: TranslateFn) {
   switch (type) {
     case LinkType.AppleAppStore:
-      return { text: "for iOS", img: { src: "/static/images/ios-logo.png", alt: "iOS logo" } }
+      return { text: t("for-apple-app-store"), img: { src: "/static/images/ios-logo.png", alt: "iOS logo" } }
     case LinkType.GooglePlayStore:
-      return { text: "for Android", img: { src: "/static/images/android-logo.png", alt: "Android logo" } }
+      return { text: t("for-play-store"), img: { src: "/static/images/android-logo.png", alt: "Android logo" } }
     default:
       return null
   }
@@ -44,7 +44,7 @@ function DownloadLinks(props: { t: TranslateFn; resource: Resource; lang: string
       <h3>{t("downloads")}</h3>
       <div className="links">
         {resource.links?.map((link) => {
-          const info = parseLinkType(link.type!)
+          const info = parseLinkType(link.type!, props.t)
           const text = selectLocale(lang, link.text)
           if (info == null) {
             return <DownloadButton title={text ?? ""} href={link.url.href} large={true} />
@@ -64,9 +64,9 @@ function DownloadLinks(props: { t: TranslateFn; resource: Resource; lang: string
   )
 }
 
-export default function ResourceLayout(page: Page & ResourceProps & FluentPage) {
-  // const { resource, fluentBundle, lang, search } = page
-  const { resource, lang, t, search } = page
+export default function ResourceLayout(page: PageData & ResourceProps & FluentPage) {
+  const { resource, lang, search } = page
+  const t = page.fluentBundle(lang, "_includes/resource")
   const categories = getCategoryData()
   const languages = getLanguageData()
 
@@ -112,23 +112,23 @@ export default function ResourceLayout(page: Page & ResourceProps & FluentPage) 
             {resource.release && (
               <>
                 <div className="meta">
-                  <span>Release</span>
+                  <span>{t("release")}</span>
                   <p>{resource.release.version}</p>
                 </div>
                 <div className="meta">
-                  <span>Platform(s)</span>
+                  <span>{t("platforms")}</span>
                   <p>{resource.release.platforms.join(", ")}</p>
                 </div>
                 {resource.release.authors.length > 0 && (
                   <div className="meta">
-                    <span>Author(s)</span>
+                    <span>{t("authors")}</span>
                     <p>{resource.release.authors.join(", ")}</p>
                   </div>
                 )}
               </>
             )}
           </div>
-          {isPahkat ? <PahkatInfo /> : <DownloadLinks t={t} resource={resource} lang={lang} />}
+          {isPahkat ? <PahkatInfo t={t} /> : <DownloadLinks t={t} resource={resource} lang={lang} />}
           {
             /* <p className="section">
             Duis sit amet nibh nunc. Pellentesque vel est eget lorem posuere pellentesque nec sit amet nunc. Curabitur
@@ -153,11 +153,11 @@ export default function ResourceLayout(page: Page & ResourceProps & FluentPage) 
 
         <div className="related-documentation">
           <p className="description">
-            Borealium is an index of minority language resources. See the categories and supported languages below.
+            {t("borealium-description")}
           </p>
           <div className="categories">
             <dl>
-              <dt>Categories</dt>
+              <dt>{t("categories")}</dt>
               {Object.entries(categories).map(([key, value]) => {
                 return (
                   <dd key={key}>
@@ -167,7 +167,7 @@ export default function ResourceLayout(page: Page & ResourceProps & FluentPage) 
               })}
             </dl>
             <dl>
-              <dt>Languages</dt>
+              <dt>{t("languages")}</dt>
               {Object.entries(languages.languages)
                 .filter(([key, value]) => !languages.uiOnly.includes(key))
                 .map(
@@ -184,14 +184,14 @@ export default function ResourceLayout(page: Page & ResourceProps & FluentPage) 
         </div>
       </div>
       <Aside
-        context="updates"
-        category="news"
+        t={t}
+        category={t("news")}
         posts={posts.map((post) => {
-          const { id, title, category, date, lang, originalUrl, author } = post
+          const { id, title, category, date, originalUrl } = post as Data<PageData>
 
           return {
             id: id,
-            date: date.toISOString(),
+            date: date?.toISOString(),
             tag: category,
             title: title,
             url: originalUrl,
