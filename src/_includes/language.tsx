@@ -1,6 +1,6 @@
 import { Page } from "lume/core.ts"
 
-export const layout = "layouts/base.tsx"
+export const layout = "base.tsx"
 
 export default function LanguageLayout(page: Page & { id: string }) {
   return (

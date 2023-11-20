@@ -1,0 +1,71 @@
+.tag {
+  text-decoration: none;
+  width: fit-content;
+  font-size: 12px;
+  display: flex;
+  font-family: var(--font-display);
+  font-weight: 600;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--color-brand);
+  border-radius: 4px;
+  color: var(--color-text);
+  // background: color-mix(in srgb, var(--color-brand) 10%, transparent);
+  text-transform: uppercase;
+  margin-top: 2px;
+
+  // &:hover {
+  //   background: color-mix(in srgb, var(--color-brand) 30%, transparent);
+  // }
+}
+
+// .tag {
+//   display: flex;
+//   font-family: var(--font-display);
+//   font-weight: 600;
+//   padding: 4px 8px;
+//   justify-content: center;
+//   align-items: center;
+//   border-radius: 4px;
+//   min-width: 76px;
+//   font-size: 12px;
+//   text-transform: uppercase;
+//   margin-top: 2px;
+// }
+
+.tag-resource {
+  border: 1px solid #471adf;
+  background: rgb(232, 228, 248);
+
+  &:hover {
+    background: color-mix(in srgb, rgb(232, 228, 248) 30%, transparent);
+  }
+}
+
+.tag-category {
+  border: 1px solid #159ed7;
+  background: #ddeff7;
+
+  &:hover {
+    background: color-mix(in srgb, #ddeff7 30%, transparent);
+  }
+}
+
+.tag-post {
+  border: 1px solid #04bfbc;
+  background: #d0fbf4;
+
+  &:hover {
+    background: color-mix(in srgb, #d0fbf4 30%, transparent);
+  }
+}
+
+.tag-language {
+  border: 1px solid #04bf93;
+  background: #d0fbf0;
+
+  &:hover {
+    background: color-mix(in srgb, #d0fbf0 30%, transparent);
+  }
+}

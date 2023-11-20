@@ -2,8 +2,9 @@ import type { Plugin } from "lume/core.ts"
 
 import { CategoriesData } from "~types/category.ts"
 import { strings } from "~ext/pahkat.ts"
+import { selectLocale } from "~plugins/language-data.ts"
 
-const EXT_DATA: CategoriesData = {
+const RAW_DATA: CategoriesData = {
   // "proofing-tools": {
   //   "en": {
   //     "name": "Proofing tools",
@@ -52,7 +53,7 @@ const pahkatCategoryIds = Object.keys(strings.en)
 
 // TODO: iterate over all languages that the website supports.
 for (const id of pahkatCategoryIds) {
-  EXT_DATA[id] = {
+  RAW_DATA[id] = {
     en: {
       name: strings.en[id],
       description: strings.en[id],
@@ -74,11 +75,18 @@ export default function categoryData(): Plugin {
     const mergedKeys = site.scopedData.get("/")?.mergedKeys || {}
     mergedKeys["categories"] = "object"
 
-    site.data("categories", EXT_DATA)
+    site.data("categories", RAW_DATA)
     site.data("mergedKeys", mergedKeys)
   }
 }
 
 export function getCategoryData(): CategoriesData {
-  return EXT_DATA as CategoriesData
+  return RAW_DATA as CategoriesData
+}
+
+export function translateCategoryName(lang: string, categoryId: string): string {
+  if (RAW_DATA[categoryId] == null) {
+    return categoryId
+  }
+  return selectLocale(lang, RAW_DATA[categoryId])?.name ?? categoryId
 }

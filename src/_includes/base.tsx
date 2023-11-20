@@ -1,7 +1,7 @@
 import { Page, PageData } from "lume/core.ts"
-import { Navbar } from "~/_templates/_components/navbar.tsx"
-import { script } from "~/_templates/layouts/lang-redir.tsx"
-import { Footer } from "~/_templates/_components/footer.tsx"
+import { Navbar } from "~/_components/navbar.tsx"
+import { script } from "~/_includes/lang-redir.tsx"
+import { Footer } from "~/_components/footer.tsx"
 import { FluentPage } from "~plugins/fluent.ts"
 
 export default function BasePage(page: PageData & FluentPage) {
@@ -167,8 +167,11 @@ export default function BasePage(page: PageData & FluentPage) {
             const element = document.querySelector(".search-page-results")
             if (element != null) {
               const query = new URLSearchParams(location.search).get('q')
-              const results = await searchResults(query)
-              createSearchResults(query, results)
+              if (query != null) {
+
+                const results = await searchResults(query)
+                createSearchResults(query, results)
+              }
             }
           }
 

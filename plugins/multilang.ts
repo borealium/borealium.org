@@ -46,7 +46,7 @@ export default function multilanguage(languagesData: LanguagesData): Plugin {
 
       // console.log(data.url, data.t)
       const newPages = [
-        page.duplicate(undefined, { ...data, id, layout: "layouts/lang-redir.tsx" }),
+        page.duplicate(undefined, { ...data, id, layout: "lang-redir.tsx" }),
       ]
 
       // let index = 1

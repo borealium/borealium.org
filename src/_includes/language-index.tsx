@@ -1,34 +1,37 @@
 import { Page } from "lume/core.ts"
 import { Resource } from "~types/resource.ts"
-import { ResourceSummary } from "~/_templates/_components/resource-summary.tsx"
+import { ResourceSummary } from "~/_components/resource-summary.tsx"
 import { selectLocale } from "~plugins/language-data.ts"
-import { CategoryLabel } from "~/_templates/_components/label.tsx"
+import { CategoryLabel } from "~/_components/label.tsx"
 
-export const layout = "layouts/base.tsx"
+export const layout = "base.tsx"
 
-type CategoryIndexProps = {
+type LanguageIndexProps = {
   resources: Resource[]
 }
 
-export default function CategoryIndexLayout(page: Page & CategoryIndexProps) {
-  const { resources, lang, category, categoryId, t } = page
+export default function LanguageIndexLayout(page: Page & LanguageIndexProps) {
+  const { resources, lang, languageId, language, t } = page
 
-  const cat = selectLocale(lang, category)
+  // console.log(category)
+  // Deno.exit(1)
 
   return (
     <div
-      data-category={categoryId}
-      data-type="category-index"
-      data-pagefind-filter="type[data-type], category[data-category]"
+      data-language={languageId}
+      data-type="language-index"
+      data-pagefind-filter="type[data-type], language[data-language]"
       className="category-index"
     >
       <div className="content">
         <div>
-          <CategoryLabel category={t("category")} />
-          <h1>{cat.name}</h1>
-          <p>
+          <CategoryLabel category={t("language")} />
+          <h1>{language.autonym}</h1>
+          {
+            /* <p>
             {cat.description}
-          </p>
+          </p> */
+          }
         </div>
         <div className="search-page-results" data-pagefind-ignore>
           {resources.length === 0 && (
@@ -46,8 +49,8 @@ export default function CategoryIndexLayout(page: Page & CategoryIndexProps) {
               cls = "tag-category"
             } else if (resource.type === "language-index") {
               cls = "tag-language"
-            } else if (resource.type === "post" || resource.type === "doc") {
-              cls = "tag-page"
+            } else if (resource.type === "post") {
+              cls = "tag-post"
             }
 
             return (

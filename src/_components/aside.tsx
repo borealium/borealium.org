@@ -1,4 +1,4 @@
-import { CategoryLabel, TagLabel } from "~/_templates/_components/label.tsx"
+import { CategoryLabel, TagLabel } from "./label.tsx"
 
 export type SimplePost = {
   date: string
@@ -9,10 +9,14 @@ export type SimplePost = {
   id: string
 }
 
-export default function Aside(props: { context: string; category: string; posts: SimplePost[] }) {
+export default function Aside(props: {
+  context: string
+  category: string
+  posts: SimplePost[]
+}) {
   return (
     <div className="aside">
-      <CategoryLabel context={props.context} category={props.category} />
+      <CategoryLabel category={props.category} />
       {props.posts.map((post) => <AsideBlock {...post} />)}
     </div>
   )

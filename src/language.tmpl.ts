@@ -16,7 +16,7 @@ export default function* (page: PageData) {
       languageId: tag,
       language: languageData.languages[tag],
       resources: filteredResources,
-      layout: "layouts/language-index.tsx",
+      layout: "language-index.tsx",
     }
   }
 }

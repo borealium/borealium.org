@@ -9,7 +9,7 @@ type BlogProps = {
   layout: string
 }
 
-export const layout = "layouts/base.tsx"
+export const layout = "base.tsx"
 
 export default function DocLayout(page: Page & BlogProps) {
   const { title, slug, author, date, layout, content } = page

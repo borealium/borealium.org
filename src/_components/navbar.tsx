@@ -1,6 +1,6 @@
-import { MenuItem } from "~/_templates/_components/menu-item.tsx"
-import { LanguageSelect } from "~/_templates/_components/language-select.tsx"
-import { SearchForm } from "~/_templates/_components/search-form.tsx"
+import { MenuItem } from "~/_components/menu-item.tsx"
+import { LanguageSelect } from "~/_components/language-select.tsx"
+import { SearchForm } from "~/_components/search-form.tsx"
 import { Page } from "lume/core.ts"
 
 export function Navbar(props: { url: string }) {

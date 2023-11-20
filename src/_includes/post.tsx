@@ -1,5 +1,5 @@
 import { Data, Page, PageData } from "lume/core.ts"
-import Aside, { SimplePost } from "~/_templates/_components/aside.tsx"
+import Aside, { SimplePost } from "~/_components/aside.tsx"
 
 type BlogProps = {
   title: string
@@ -10,7 +10,7 @@ type BlogProps = {
   layout: string
 }
 
-export const layout = "layouts/base.tsx"
+export const layout = "base.tsx"
 
 export default function BlogLayout(page: PageData & BlogProps) {
   const { title, slug, author, date, lang, layout, content, search } = page

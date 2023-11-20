@@ -17,5 +17,5 @@ deno run --allow-net --allow-write utils/fetch-tools-index.ts
 All the JSX being red and angry?
 
 ```
-deno cache src/_templates/layouts/*.tsx
+deno cache src/_includes/*.tsx
 ```

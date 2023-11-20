@@ -2,6 +2,7 @@ import { join } from "std/path/posix.ts"
 import { Resource, ResourceRelease, ResourceType } from "~types/resource.ts"
 
 import { PahkatRelease, repo } from "~ext/pahkat.ts"
+import { getLanguageData } from "~plugins/language-data.ts"
 
 const externalResources: Resource[] = await Promise.all(
   Array.from(Deno.readDirSync("./ext/resources"))
@@ -34,6 +35,10 @@ function toResourceRelease(rel?: PahkatRelease): ResourceRelease | undefined {
   }
 }
 
+const languages = getLanguageData()
+const languageKeys = Object.keys(languages.languages)
+  .filter((x) => !languages.uiOnly.includes(x))
+
 const pahkatResources: Resource[] = repo.packages
   .map((pkg): Resource => {
     return {
@@ -50,5 +55,9 @@ const pahkatResources: Resource[] = repo.packages
       release: toResourceRelease(findStable(pkg.release)),
     }
   })
+  .filter((x) =>
+    x.languages.length === 0 ||
+    x.languages.some((x) => languageKeys.includes(x))
+  )
 
 export default [...externalResources, ...pahkatResources]

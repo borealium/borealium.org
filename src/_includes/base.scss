@@ -75,37 +75,3 @@ code {
   padding: 4px 6px;
   font-size: 76%;
 }
-
-.tag {
-  display: flex;
-  font-family: var(--font-display);
-  font-weight: 600;
-  padding: 4px 8px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  min-width: 76px;
-  font-size: 12px;
-  text-transform: uppercase;
-  margin-top: 2px;
-}
-
-.tag-resource {
-  border: 1px solid #471adf;
-  background: rgb(232, 228, 248);
-}
-
-.tag-category {
-  border: 1px solid #159ed7;
-  background: #ddeff7;
-}
-
-.tag-post {
-  border: 1px solid #04bfbc;
-  background: #d0fbf4;
-}
-
-.tag-language {
-  border: 1px solid #04bf93;
-  background: #d0fbf0;
-}

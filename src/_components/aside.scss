@@ -2,6 +2,7 @@
   padding: 2rem 1rem;
   overflow-y: auto;
   background-color: #ffffff;
+  align-self: stretch;
 
   @media (min-width: $md-breakpoint) {
     height: calc(100vh - 120px);

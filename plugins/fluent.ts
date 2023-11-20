@@ -18,9 +18,9 @@ const defaults: Options = {
 export type TranslateFn = (key: string, args?: Record<string, FluentVariable>) => string
 
 export type FluentPage = {
-  fluentBundle: FluentBundle
   lang: string
   t: TranslateFn
+  fluentBundle: (lang: string, path: string) => TranslateFn
 }
 
 function downloadStringly() {
@@ -50,30 +50,73 @@ export default function fluent(languages: LanguagesData, userOptions?: Partial<O
       downloadStringly()
     }
 
-    console.log("Validating .flt files...")
-    const cmd = new Deno.Command(`${Deno.cwd()}/_cargo/bin/stringly`, {
-      args: ["validate", "-r", "-i", ".", "-f", "flt"],
-      stdout: "piped",
-    })
+    function validateFltFiles() {
+      console.log("Validating .flt files...")
+      const cmd = new Deno.Command(`${Deno.cwd()}/_cargo/bin/stringly`, {
+        args: ["validate", "-r", "-i", ".", "-f", "flt"],
+        stdout: "piped",
+      })
 
-    const output = cmd.outputSync()
-    console.log(new TextDecoder().decode(output.stderr))
-    if (!output.success) {
-      throw new Error("Failed to validate .flt files")
-    }
-
-    const bundleTree = fltBundleTree(`${Deno.cwd()}/src`, languages)
-    console.log("Loaded Fluent files:")
-    for (const k in bundleTree) {
-      console.log(`  - '${k}'`)
-      for (const l in bundleTree[k]) {
-        console.log(`    - ${l}`)
+      const output = cmd.outputSync()
+      console.log(new TextDecoder().decode(output.stderr))
+      if (!output.success) {
+        throw new Error("Failed to validate .flt files")
       }
     }
 
-    const mergedKeys = site.scopedData.get("/")?.mergedKeys || {}
-    mergedKeys["t"] = "object"
-    site.data("mergedKeys", mergedKeys)
+    function loadFluentFiles() {
+      validateFltFiles()
+
+      const bundleTree = fltBundleTree(`${Deno.cwd()}/src`, languages)
+      console.log("\nLoaded Fluent files:")
+      for (const k in bundleTree) {
+        if (k == "") {
+          console.log("  - index")
+        } else {
+          console.log(`  - ${k}`)
+        }
+      }
+      return bundleTree
+    }
+
+    let bundleTree = loadFluentFiles()
+
+    site.addEventListener("beforeUpdate", (event) => {
+      if (Array.from(event.files).some((x) => x.endsWith(".flt"))) {
+        site.logger.log("Regenerating Fluent data...")
+        bundleTree = loadFluentFiles()
+      }
+    })
+
+    const fluentBundle = (key: string, fallbacks: string[]) => {
+      // console.log("BUNDRE: '" + key + "' " + JSON.stringify(fallbacks))
+      const chunks = key === "" ? [] : key.split("/")
+
+      while (chunks.length > 0) {
+        const k = chunks.join("/")
+        for (const l of fallbacks) {
+          if (bundleTree[k]?.[l]) {
+            return bundleTree[k][l]
+          }
+        }
+        chunks.pop()
+      }
+
+      for (const l of fallbacks) {
+        if (bundleTree[""]?.[l]) {
+          return bundleTree[""][l]
+        }
+      }
+
+      throw new Error(`Could not find any bundle for path '${key}'`)
+    }
+
+    site.data(
+      "fluentBundle",
+      (lang: string, key: string) => {
+        return _t(site, key, fluentBundle.bind(null, key, makeFallbacks(lang, languages)))
+      },
+    )
 
     site.preprocess(options.extensions, (page, pages) => {
       const lang = page.data.lang as string ?? "en"
@@ -87,37 +130,12 @@ export default function fluent(languages: LanguagesData, userOptions?: Partial<O
       const fltResKey = relative(`${Deno.cwd()}/src`, dirname(src ?? ""))
       const fallbacks = makeFallbacks(lang, languages)
 
-      // console.log(`'${fltResKey}'`)
-
-      const fluentBundle = () => {
-        const chunks = fltResKey === "" ? [] : fltResKey.split("/")
-
-        while (chunks.length > 0) {
-          const k = chunks.join("/")
-          for (const l of fallbacks) {
-            if (bundleTree[k]?.[l]) {
-              return bundleTree[k][l]
-            }
-          }
-          chunks.pop()
-        }
-
-        for (const l of fallbacks) {
-          if (bundleTree[""]?.[l]) {
-            return bundleTree[""][l]
-          }
-        }
-
-        throw new Error(`Could not find any bundle for path '${fltResKey}'`)
-      }
-
       pages.splice(
         pages.indexOf(page),
         1,
         page.duplicate(undefined, {
           ...page.data,
-          // fluentBundle,
-          t: _t(site, page.data.url, fluentBundle),
+          t: _t(site, page.data.url, fluentBundle.bind(null, fltResKey, fallbacks)),
         }),
       )
     })
@@ -199,8 +217,8 @@ function fltBundleTree(rootPath: string, languages: LanguagesData) {
   const resKeys = Object.keys(resources)
 
   for (const k of resKeys) {
-    const langs = Object.keys(resources[k])
-    const fallbacks = Object.keys(resources[k]).reduce((acc, lang) => {
+    const langs = Object.keys(languages.languages)
+    const fallbacks = langs.reduce((acc, lang) => {
       acc[lang] = makeFallbacks(lang, languages)
       return acc
     }, {} as Record<string, string[]>)
@@ -222,6 +240,7 @@ function fltBundleTree(rootPath: string, languages: LanguagesData) {
 
           for (const l of fallbacks[lang]) {
             if (res[l] != null) {
+              console.log(`${k}: ${p} = ${l}`)
               bundle.addResource(res[l])
             }
           }
@@ -239,6 +258,7 @@ function fltBundleTree(rootPath: string, languages: LanguagesData) {
 
         for (const l of fallbacks[lang]) {
           if (res[l] != null) {
+            console.log(`${k}: 'index' = ${l}`)
             bundle.addResource(res[l])
           }
         }

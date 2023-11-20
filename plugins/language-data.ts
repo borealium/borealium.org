@@ -125,3 +125,7 @@ export function selectLocale<T>(langId: LangTag, input: Record<string, T>): T | 
     }
   }
 }
+
+export function autonym(tag: LangTag): string {
+  return RAW_DATA.languages[tag]?.autonym ?? tag
+}

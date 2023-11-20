@@ -16,7 +16,7 @@ export default function* (page: PageData) {
       categoryId: id,
       category: categoryData[id],
       resources: filteredResources,
-      layout: "layouts/category-index.tsx",
+      layout: "category-index.tsx",
     }
   }
 }

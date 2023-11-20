@@ -1,18 +1,17 @@
-import { DownloadButton } from "~/_templates/_components/download-button.tsx"
+import { DownloadButton } from "../_components/download-button.tsx"
 import { Page } from "lume/core.ts"
-import { CategoryLabel } from "~/_templates/_components/label.tsx"
+import { CategoryLabel } from "../_components/label.tsx"
 import { getLanguageData } from "~plugins/language-data.ts"
-import Aside, { SimplePost } from "~/_templates/_components/aside.tsx"
+import Aside, { SimplePost } from "../_components/aside.tsx"
 import { FluentPage } from "~plugins/fluent.ts"
 // import SecondaryBlock2 from "~/_partials/landing/secondary-block-2.mdx"
 
-export const layout = "layouts/base.tsx"
+export const layout = "base.tsx"
 
 const { uiOnly, languages } = getLanguageData()
 
 export default function (page: Page & FluentPage) {
-  console.log(arguments)
-  const { document, lang, t, search } = page
+  const { document, lang, t, search, comp } = page
 
   const posts = search.pages(["type=post", `lang=${lang}`], "date=desc").slice(0, 3)
 
@@ -20,34 +19,13 @@ export default function (page: Page & FluentPage) {
     <main className="landing" data-pagefind-ignore>
       <div className="blocks">
         <div className="big-block">
-          <div className="first-cell">
-            <div className="text-group">
-              <CategoryLabel category="welcome" />
-              <h2>{t("main-block-title")}</h2>
-              <p>
-                {t("main-block-description")}
-              </p>
-            </div>
-          </div>
-          <div className="second-cell">
-            <h3 style={{ marginTop: "8px" }}>{t("main-block-subtitle")}</h3>
-            <div className="language-group">
-              {Object.entries(languages)
-                .filter(([code]) => !uiOnly.includes(code))
-                .map(([code, data]) => <DownloadButton title={data.autonym} href={`/language/${code}`} />)}
-            </div>
-          </div>
+          <comp.landing.MainBlock t={t} lang={lang} />
         </div>
         <div className="small-block">
-          {/* <SecondaryBlock2 /> */}
-          {
-            /* <CategoryLabel category={props.category} />
-          <h2>{props.title}</h2>
-          <p>{props.description}</p>
-          <div className="button-group">
-            {props.buttons}
-          </div> */
-          }
+          <comp.landing.SecondaryBlock1 t={t} lang={lang} />
+        </div>
+        <div className="small-block">
+          <comp.landing.SecondaryBlock2 t={t} lang={lang} />
         </div>
         {
           /* <SmallBlock
@@ -73,21 +51,6 @@ export default function (page: Page & FluentPage) {
           }
         /> */
         }
-        <SmallBlock
-          title="North, Inari, Julev, Skolt and South Sámi desktop and mobile keyboards."
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non et erat. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit sed diam non et erat."
-          category="keyboards"
-          buttons={
-            <>
-              <DownloadButton
-                title="Divvun Keyboards"
-                description="For iOS and Android"
-                href="/resource/divvun-keyboard"
-              />
-            </>
-          }
-        />
       </div>
       <Aside
         context="updates"

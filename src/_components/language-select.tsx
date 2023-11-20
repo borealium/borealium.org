@@ -1,6 +1,6 @@
-import { MenuItem } from "~/_templates/_components/menu-item.tsx"
+import { MenuItem } from "~/_components/menu-item.tsx"
 import { getLanguageData } from "~plugins/language-data.ts"
-import { TranslateIcon } from "~/_templates/_components/icons.tsx"
+import { TranslateIcon } from "~/_components/icons.tsx"
 
 const { languages } = getLanguageData()
 

@@ -1,4 +1,4 @@
-import Tag from "~/_templates/_components/tag.tsx"
+import LanguageTag from "~/_components/tag.tsx"
 
 export function SearchForm() {
   return (

@@ -1,15 +1,15 @@
 import { FluentBundle } from "@fluent/bundle"
 import { Page } from "lume/core.ts"
-import { DownloadButton } from "~/_templates/_components/download-button.tsx"
+import { DownloadButton } from "~/_components/download-button.tsx"
 import { LinkType, Resource, ResourceType } from "~types/resource.ts"
-import { CategoryLabel } from "~/_templates/_components/label.tsx"
-import Aside, { SimplePost } from "~/_templates/_components/aside.tsx"
-import Tag from "~/_templates/_components/tag.tsx"
+import { CategoryLabel } from "~/_components/label.tsx"
+import Aside, { SimplePost } from "~/_components/aside.tsx"
+import LanguageTag from "~/_components/tag.tsx"
 import { FluentPage, TranslateFn } from "~plugins/fluent.ts"
-import { getLanguageData, selectLocale } from "~plugins/language-data.ts"
-import { getCategoryData } from "~plugins/category-data.ts"
+import { autonym, getLanguageData, selectLocale } from "~plugins/language-data.ts"
+import { getCategoryData, translateCategoryName } from "~plugins/category-data.ts"
 
-export const layout = "layouts/base.tsx"
+export const layout = "base.tsx"
 
 type ResourceProps = {
   resource: Resource
@@ -91,14 +91,21 @@ export default function ResourceLayout(page: Page & ResourceProps & FluentPage) 
           </div>
           <div className="tags-wrapper">
             <a
-              className="tag"
+              className="tag tag-category"
               href={`/category/${resource.category}`}
               data-pagefind-filter={`category:${resource.category}`}
             >
-              {resource.category}
+              {translateCategoryName(lang, resource.category)}
             </a>
             {resource.languages.map((lang, key) => {
-              return <Tag key={key} text={lang} href={`/language/${lang}`} pagefindFilter={`language:${lang}`} />
+              return (
+                <LanguageTag
+                  key={key}
+                  text={autonym(lang)}
+                  href={`/language/${lang}`}
+                  pagefindFilter={`language:${lang}`}
+                />
+              )
             })}
           </div>
           <div className="meta-wrapper section">

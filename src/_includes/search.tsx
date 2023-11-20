@@ -1,9 +1,9 @@
-import Tag from "~/_templates/_components/tag.tsx"
-import Aside, { SimplePost } from "~/_templates/_components/aside.tsx"
-import { script } from "~/_templates/layouts/lang-redir.tsx"
+import LanguageTag from "~/_components/tag.tsx"
+import Aside, { SimplePost } from "~/_components/aside.tsx"
+import { script } from "~/_includes/lang-redir.tsx"
 import { Data, PageData } from "lume/core.ts"
 
-export const layout = "layouts/base.tsx"
+export const layout = "base.tsx"
 
 export default function SearchPage(page: PageData) {
   const { lang, search } = page

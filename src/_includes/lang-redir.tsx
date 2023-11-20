@@ -2,7 +2,7 @@ import React from "react"
 import { Page, Site } from "lume/core.ts"
 import { getLanguageData } from "~plugins/language-data.ts"
 
-export const layout = "layouts/base.tsx"
+export const layout = "base.tsx"
 
 export function script(string: string) {
   const text = string
