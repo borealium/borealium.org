@@ -13,13 +13,27 @@ export function LanguageSelect(props: { url: string }) {
         <MenuItem text="" />
       </div>
       <ul className="list">
-        {Object.entries(languages).map(([code, data]) => (
-          <li key={code}>
-            <a data-multilang href={`/${code}${props.url}`}>
-              {data.autonym}
-            </a>
-          </li>
-        ))}
+        {Object.entries(languages).map(([code, data]) => {
+          if (data.regions != null) {
+            return Object.entries(data.regions).map(([regionCode, regionText]) => {
+              return (
+                <li key={code}>
+                  <a data-multilang href={`/${code}-${regionCode.toLowerCase()}${props.url}`}>
+                    {data.autonym} ({regionText})
+                  </a>
+                </li>
+              )
+            })
+          }
+
+          return (
+            <li key={code}>
+              <a data-multilang href={`/${code}${props.url}`}>
+                {data.autonym}
+              </a>
+            </li>
+          )
+        })}
       </ul>
     </>
   )

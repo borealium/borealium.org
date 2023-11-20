@@ -27,7 +27,7 @@ function AsideBlock(props: { post: SimplePost; t: TranslateFn }) {
     <div className="aside-block">
       <div className="aside-block-text">
         <h3>
-          {props.post.title}
+          <img style={{ height: "16px" }} src={"/static/images/tag-page.svg"} alt="" /> {props.post.title}
         </h3>
         <p data-excerpt-id={props.post.id}>
           {/* This is filled by a plugin, so leave it empty. */}

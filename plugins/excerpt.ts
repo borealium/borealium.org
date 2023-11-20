@@ -1,10 +1,7 @@
-import type { PageData, Plugin } from "lume/core.ts"
+import type { Plugin } from "lume/core.ts"
 
 export default function excerpt(): Plugin {
   return (site) => {
-    // site.preprocess([".html"], (page, pages) => {
-    //   page.data.hello = true
-    // })
     site.process([".html"], (page, pages) => {
       const { document } = page
 

@@ -36,21 +36,11 @@ export default function LanguageIndexLayout(page: PageData & LanguageIndexProps 
           {resources.map((resource) => {
             const resName = selectLocale(lang, resource.name)
             const resDescription = selectLocale(lang, resource.description)
-            let cls = "tag-resource"
-            if (resource.type === "resource") {
-              cls = "tag-resource"
-            } else if (resource.type === "category-index") {
-              cls = "tag-category"
-            } else if (resource.type === "language-index") {
-              cls = "tag-language"
-            } else if (resource.type === "post") {
-              cls = "tag-post"
-            }
 
             return (
               <li className="search-result">
                 <a href={`/resource/${resource.id}`}>
-                  <img src={"/static/images/" + cls + ".svg"} alt="" />
+                  <img src={"/static/images/tag-resource.svg"} alt="" />
                   {resName}
                 </a>
                 {resDescription && (

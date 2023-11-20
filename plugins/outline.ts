@@ -1,7 +1,4 @@
-import { Page } from "lume/core/filesystem.ts"
-import { isPlainObject, merge } from "lume/core/utils.ts"
-import type { PageData, Plugin } from "lume/core.ts"
-import { LanguageData, LanguagesData } from "~plugins/language-data.ts"
+import type { Plugin } from "lume/core.ts"
 import createSlugifier from "lume/core/slugifier.ts"
 import { StringInfo } from "https://deno.land/x/imagemagick_deno@0.0.24/src/internal/string-info.ts"
 
@@ -41,10 +38,6 @@ export default function outline(): Plugin {
         contextEl.querySelectorAll("h1, h2, h3, h4, h5, h6"),
       ) as unknown as HTMLElement[]
       const outline = generateOutlineData(elements)
-
-      // const pre = document.createElement("pre") as unknown as HTMLPreElement
-      // pre.innerText = JSON.stringify(outline, null, 2)
-      // tocRoot.appendChild(pre)
 
       const rec = (node: TocData, parent: HTMLElement) => {
         for (const child of node.children) {
@@ -138,13 +131,3 @@ function generateOutlineData(elements: HTMLElement[]): TocData {
   const outline = rec(root)
   return outline
 }
-
-// ### /en/post/beep-boop/
-// 1  This is the h1
-// 2  h2 1
-// 2  h2 3
-// 4  h4 because I have no respect
-// 3  another level
-// 2  Another 2
-// 1  A one because fuck
-// 3  lol

@@ -157,7 +157,9 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
           </p>
           <div className="categories">
             <dl>
-              <dt>{t("categories")}</dt>
+              <dt>
+                <img style={{ height: "16px" }} src={"/static/images/tag-category.svg"} alt="" /> {t("categories")}
+              </dt>
               {Object.entries(categories).map(([key, value]) => {
                 return (
                   <dd key={key}>
@@ -167,7 +169,9 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
               })}
             </dl>
             <dl>
-              <dt>{t("languages")}</dt>
+              <dt>
+                <img style={{ height: "16px" }} src={"/static/images/tag-language.svg"} alt="" /> {t("languages")}
+              </dt>
               {Object.entries(languages.languages)
                 .filter(([key, value]) => !languages.uiOnly.includes(key))
                 .map(

@@ -37,12 +37,12 @@ const RAW_DATA: LanguagesData = {
     "smj": {
       name: "Lule Sami",
       autonym: "julevsámegiella",
-      "regions": ["NO", "SE"],
+      "regions": { "NO": "Norway", "SE": "Sweden" },
     },
     "sma": {
       name: "Southern Sami",
       autonym: "åarjelsaemien gïele",
-      "regions": ["NO", "SE"],
+      "regions": { "NO": "Norway", "SE": "Sweden" },
     },
     "sjd": {
       name: "Kildin Sami",
@@ -67,14 +67,14 @@ const RAW_DATA: LanguagesData = {
   },
   fallbacks: {
     "se": ["nb", "en"],
-    "sma-SE": ["sv", "en"],
-    "sma-NO": ["nb", "en"],
+    "sma-SE": ["sma", "sv", "en"],
+    "sma-NO": ["sma", "nb", "en"],
     "sms": ["fi", "en"],
     "smn": ["fi", "en"],
     "sje": ["sv", "en"],
     "fkv": ["sv", "en"],
-    "smj-SE": ["sv", "en"],
-    "smj-NO": ["nb", "en"],
+    "smj-SE": ["smj", "sv", "en"],
+    "smj-NO": ["smj", "nb", "en"],
     "nb": ["nn", "en"],
     "nn": ["nb", "en"],
   },
@@ -94,7 +94,7 @@ export type LanguagesData = {
 export type LanguageData = {
   name: string
   autonym: string
-  regions?: RegionId[]
+  regions?: Record<RegionId, string>
 }
 
 export default function languageData(): Plugin {

@@ -6,13 +6,13 @@ const MULTILANG_GENERATED = Symbol("multilang-generated")
 
 export default function multilanguage(languagesData: LanguagesData): Plugin {
   return (site) => {
-    site.preprocess([".html", ".mdx", ".md"], (page, pages) => {
-      const [basePath, lang] = page.data.url ? page.data.url.split(".") : []
-
-      // console.log("basePath", basePath)
+    site.preprocess([".html", ".mdx", ".md"], (page) => {
+      let [basePath, lang] = page.data.url ? page.data.url.split(".") : []
 
       if (lang != null) {
-        // console.log(page.src, basePath, lang)
+        // Langs with a region for some reason get a final slash...
+        lang = lang.replace(/\/$/, "")
+
         const data: PageData & { [MULTILANG_GENERATED]?: boolean } = page.data
         const id: string = data.id || page.src.path.slice(1).split(".")[0]
 
@@ -22,10 +22,10 @@ export default function multilanguage(languagesData: LanguagesData): Plugin {
         if (basePath.endsWith("/index")) {
           const chunks = basePath.split("/")
           chunks.pop()
-          data.url = `/${lang}${chunks.join("/")}/`
+          data.url = `/${lang.toLowerCase()}${chunks.join("/")}/`
           data.originalUrl = `${chunks.join("/")}/`
         } else {
-          data.url = `/${lang}/${basePath}`
+          data.url = `/${lang.toLowerCase()}/${basePath}`
           data.originalUrl = `/${basePath}`
         }
 
@@ -34,7 +34,6 @@ export default function multilanguage(languagesData: LanguagesData): Plugin {
     })
 
     site.preprocess([".html"], (page, pages) => {
-      // console.log("??2", page.outputPath, page.data.id, page.data.url, page.data.lang)
       const data: PageData & { [MULTILANG_GENERATED]?: boolean } = page.data
 
       if (data[MULTILANG_GENERATED]) {
@@ -42,47 +41,38 @@ export default function multilanguage(languagesData: LanguagesData): Plugin {
       }
 
       const id: string = data.id || page.src.path.slice(1)
-      // console.log("id", id)
 
-      // console.log(data.url, data.t)
       const newPages = [
         page.duplicate(undefined, { ...data, id, layout: "lang-redir.tsx" }),
       ]
 
-      // let index = 1
-      for (const lang of Object.keys(languagesData.languages)) {
-        const newUrl = `/${lang}${data.url}`
+      const pageLanguages: string[] = []
+      Object.entries(languagesData.languages).forEach(([langId, langData]) => {
+        if (langData.regions != null) {
+          Object.keys(langData.regions).forEach((regionId) => {
+            pageLanguages.push(`${langId}-${regionId}`)
+          })
+        }
+
+        pageLanguages.push(langId)
+      })
+
+      for (const lang of pageLanguages) {
+        const newUrl = `/${lang.toLowerCase()}${data.url}`
 
         if (pages.find((p) => p.data.url === newUrl)) {
-          // console.log("Page already set for lang " + lang)
           continue
         }
 
-        // Find closest fallback
-
-        // if (data.url.includes("beep-boop")) {
-        //   console.log(data.url, newUrl, lang)
-        // }
-
         let newPage: Page | undefined
         const fallbacks = [lang, ...(languagesData.fallbacks[lang] ?? (lang === "en" ? [] : ["en"]))]
+
         for (const fallback of fallbacks) {
           const fallbackPage = pages.find((p) => {
             return p.data.originalUrl === data.url && p.data.lang === fallback
           })
 
-          // if (data.url.includes("beep-boop")) {
-          //   console.log(fallbackPage)
-          // }
           if (fallbackPage != null) {
-            // console.log(
-            //   "Found fallback page for ",
-            //   lang,
-            //   ": ",
-            //   fallbackPage.data.url,
-            //   fallbackPage.data.lang,
-            //   fallbackPage.content,
-            // )
             const newData: PageData = {
               ...fallbackPage.data,
               lang,
@@ -94,7 +84,6 @@ export default function multilanguage(languagesData: LanguagesData): Plugin {
               [MULTILANG_GENERATED]: true,
             }
             newPage = fallbackPage.duplicate(undefined, newData)
-            // console.log(newPage)
             break
           }
         }
@@ -121,7 +110,6 @@ export default function multilanguage(languagesData: LanguagesData): Plugin {
     site.process([".html"], (page) => {
       const { document } = page
       const lang = page.data.lang as string | undefined
-      // console.log(page)
 
       if (!lang) {
         return
@@ -137,7 +125,7 @@ export default function multilanguage(languagesData: LanguagesData): Plugin {
       for (const a of anchors) {
         const href = a.getAttribute("href")
         if (href != null && href.startsWith("/")) {
-          a.setAttribute("href", `/${lang}${href}`)
+          a.setAttribute("href", `/${lang.toLowerCase()}${href}`)
         }
       }
 
@@ -147,7 +135,7 @@ export default function multilanguage(languagesData: LanguagesData): Plugin {
       for (const a of forms) {
         const href = a.getAttribute("action")
         if (href != null && href.startsWith("/")) {
-          a.setAttribute("action", `/${lang}${href}`)
+          a.setAttribute("action", `/${lang.toLowerCase()}${href}`)
         }
       }
     })

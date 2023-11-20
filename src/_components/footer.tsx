@@ -10,7 +10,7 @@ const LINKS: LinkGroupType[] = [
     id: "information",
     urls: [
       { id: "about-us", url: "/about" },
-      { id: "history", url: "/history" },
+      { id: "privacy", url: "/privacy" },
       { id: "divvun", url: "https://divvun.no/" },
     ],
   },
@@ -47,7 +47,7 @@ export function Footer(props: { t: TranslateFn }) {
     <footer className="footer">
       <div>
         <FullLogo />
-        <p className="copyright">Copyright © {currentYear} {props.t("website-copyright")}</p>
+        <p className="copyright">{props.t("website-copyright", { year: currentYear })}</p>
       </div>
       <div style={{ flexGrow: 1 }}>
         <div className="links">

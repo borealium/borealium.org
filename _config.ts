@@ -38,7 +38,7 @@ site.use(fluent(languages))
 site.use(outline())
 site.use(pagefind({
   indexing: {
-    verbose: true,
+    verbose: false,
   },
   ui: false,
 }))

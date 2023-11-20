@@ -82,7 +82,13 @@
     }
     .related-documentation {
       padding: 16px 32px;
+      font-family: var(--font-display);
       background-color: var(--color-background-brand);
+
+      .description {
+        font-weight: 300;
+        font-size: 18px;
+      }
 
       .categories {
         display: flex;
@@ -99,6 +105,9 @@
           dt {
             margin: 8px 0;
             font-weight: 700;
+            display: flex;
+            gap: 8px;
+            align-items: center;
           }
 
           dd {

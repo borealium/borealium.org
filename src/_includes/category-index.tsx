@@ -43,21 +43,10 @@ export default function CategoryIndexLayout(page: Page & CategoryIndexProps & Fl
             const resName = selectLocale(lang, resource.name)
             const resDescription = selectLocale(lang, resource.description)
 
-            let cls = "tag-resource"
-            if (resource.type === "resource") {
-              cls = "tag-resource"
-            } else if (resource.type === "category-index") {
-              cls = "tag-category"
-            } else if (resource.type === "language-index") {
-              cls = "tag-language"
-            } else if (resource.type === "post" || resource.type === "doc") {
-              cls = "tag-page"
-            }
-
             return (
               <li className="search-result">
                 <a href={`/resource/${resource.id}`}>
-                  <img src={"/static/images/" + cls + ".svg"} alt="" />
+                  <img src={"/static/images/tag-resource.svg"} alt="" />
                   {resName}
                 </a>
                 {resDescription && (

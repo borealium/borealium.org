@@ -23,7 +23,14 @@ export default function LandingMainBlock(
         </div>
       </div>
       <div className="second-cell">
-        <h3>{t("subtitle")}</h3>
+        <h3>
+          <img
+            style={{ float: "left", marginTop: "-1px", marginRight: "8px" }}
+            src={"/static/images/tag-language.svg"}
+            alt=""
+          />
+          {t("subtitle")}
+        </h3>
         <div className="language-group">
           {Object.entries(languages)
             .filter(([code]) => !uiOnly.includes(code))

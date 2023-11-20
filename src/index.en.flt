@@ -13,7 +13,7 @@ landing-block-main-subtitle =
 
 about-us = About us
 divvun = Divvun
-history = History
+privacy = Privacy
 
 information = Information
 documentation = Documentation
@@ -38,5 +38,4 @@ categories = Categories
 
 for-apple-app-store = for iOS
 for-play-store = for Android
-
-website-copyright = UiT The Arctic University of Norway
+website-copyright = Copyright © { $year } UiT The Arctic University of Norway

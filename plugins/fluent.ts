@@ -1,9 +1,9 @@
 import { merge } from "lume/core/utils.ts"
-import type { Logger, Plugin, Site } from "lume/core.ts"
+import type { Plugin, Site } from "lume/core.ts"
 import { FluentBundle, FluentResource, FluentVariable } from "@fluent/bundle"
 import { existsSync, walkSync } from "std/fs/mod.ts"
 
-import { dirname, join } from "std/path/mod.ts"
+import { dirname } from "std/path/mod.ts"
 import { LanguagesData } from "~plugins/language-data.ts"
 import { relative } from "lume/deps/path.ts"
 
@@ -89,7 +89,6 @@ export default function fluent(languages: LanguagesData, userOptions?: Partial<O
     })
 
     const fluentBundle = (key: string, fallbacks: string[]) => {
-      // console.log("BUNDRE: '" + key + "' " + JSON.stringify(fallbacks))
       const chunks = key === "" ? [] : key.split("/")
 
       while (chunks.length > 0) {
@@ -154,18 +153,25 @@ function _t(site: Site, url: string, bundleFn: () => FluentBundle) {
 
       if (pattern == null) {
         logger.warn(`[${url}] Could not find Fluent expression for '${key}'; falling back to raw key.`)
-        // console.log(key, bundle)
         return key
       }
 
       if (args != null) {
-        return bundle.formatPattern(key, args)
+        const errors: Error[] = []
+        const result = bundle.formatPattern(pattern, args, errors)
+
+        if (errors.length > 0) {
+          logger.warn(`[${url}] Could not format Fluent expression for '${key}'; falling back to raw key.`)
+          logger.warn(`<red>${errors[0].toString()}</red>`)
+          return key
+        }
+
+        return result
       } else {
         return pattern
       }
     } else {
       logger.warn(`[${url}] Could not find Fluent expression for '${key}'; falling back to raw key.`)
-      // console.log(key, bundle)
       return key
     }
   }
