@@ -4,12 +4,13 @@ $nav-sm: 412px;
 $lg-breakpoint: 1280px;
 
 .header-nav-wrapper {
+  z-index: 999;
   height: var(--nav-height);
   display: flex;
   flex-direction: column;
   position: -webkit-sticky; /* Required for Safari */
   position: sticky;
-  top: -75px;
+  top: calc(var(--nav-gradient-height) * -1);
   box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
 
   .header-gradient {
@@ -36,7 +37,7 @@ $lg-breakpoint: 1280px;
 
   .nav-control {
     width: 100%;
-    height: 45px;
+    height: var(--nav-links-height);
     display: grid;
     grid-template-columns: 3fr 2fr min-content;
     background-color: var(--color-highlight);
@@ -57,7 +58,7 @@ $lg-breakpoint: 1280px;
       position: relative;
       display: flex;
       gap: 1rem;
-      height: 45px;
+      height: var(--nav-links-height);
 
       .logo {
         position: relative;
@@ -107,7 +108,7 @@ $lg-breakpoint: 1280px;
 
           // padding: 1rem;
           width: 70vw;
-          height: calc((var(--vh) - 45px));
+          height: calc((var(--vh) - var(--nav-links-height)));
           display: flex;
           flex-direction: column;
           gap: 0.5rem;
@@ -161,7 +162,7 @@ $lg-breakpoint: 1280px;
     .language-wrapper {
       display: flex;
       margin: 0 4px;
-      height: 45px;
+      height: var(--nav-links-height);
       padding: 0 8px;
       position: relative;
 

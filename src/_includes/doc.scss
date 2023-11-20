@@ -19,8 +19,8 @@
 .doc > .toc {
   position: -webkit-sticky; /* Required for Safari */
   position: sticky;
-  top: calc(45px + 2rem);
-  margin-top: 2rem;
+  top: calc(var(--nav-links-height) + 2rem);
+  margin: 2rem 0;
   align-self: start;
   padding-right: 2rem;
 

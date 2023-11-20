@@ -25,10 +25,6 @@ $sm-breakpoint: 412px;
     grid-template-columns: 7fr 2fr;
   }
 
-  @media (min-width: $lg-main-breakpoint) {
-    height: calc(max(100vh, var(--nav-height) * 8) - var(--nav-height));
-  }
-
   .blocks {
     display: flex;
     flex-direction: column;

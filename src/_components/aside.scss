@@ -5,7 +5,11 @@
   align-self: stretch;
 
   @media (min-width: $md-breakpoint) {
-    height: calc(100vh - 120px);
+    position: sticky;
+    top: var(--nav-links-height);
+    z-index: 1;
+    height: calc(100vh - var(--nav-links-height));
+    padding-bottom: 96px;
   }
 
   .aside-block {

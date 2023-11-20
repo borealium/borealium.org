@@ -24,17 +24,17 @@
 
     @media (max-width: 768px) {
       position: absolute;
-      top: 75px;
+      top: var(--nav-gradient-height);
       left: unset;
       right: 0;
       width: 90px;
-      height: 45px;
+      height: var(--nav-links-height);
     }
   }
 
   .list {
     position: absolute;
-    top: 45px;
+    top: var(--nav-links-height);
     left: -4px;
     right: -4px;
     list-style: none;
