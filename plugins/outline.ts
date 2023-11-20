@@ -2,7 +2,7 @@ import { Page } from "lume/core/filesystem.ts"
 import { isPlainObject, merge } from "lume/core/utils.ts"
 import type { PageData, Plugin } from "lume/core.ts"
 import { LanguageData, LanguagesData } from "~plugins/language-data.ts"
-import { createSlugifier } from "lume/plugins/slugify_urls.ts"
+import createSlugifier from "lume/core/slugifier.ts"
 import { StringInfo } from "https://deno.land/x/imagemagick_deno@0.0.24/src/internal/string-info.ts"
 
 const slugify = createSlugifier()

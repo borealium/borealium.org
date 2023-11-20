@@ -6,11 +6,11 @@
 
   @media (min-width: $md-breakpoint) {
     display: grid;
-    grid-template-columns: 8fr 2fr;
+    grid-template-columns: 7fr 2fr;
   }
 
   @media (min-width: $lg-main-breakpoint) {
-    min-height: calc(var(--vh) - var(--nav-height));
+    height: calc(max(100vh, var(--nav-height) * 8) - var(--nav-height));
   }
 
   .content-wrapper {
@@ -20,7 +20,7 @@
     background-color: var(--color-background-above);
 
     .content {
-      flex-grow: 1;
+      // flex-grow: 1;
       padding: 32px;
       display: flex;
       flex-direction: column;
@@ -47,9 +47,9 @@
 
       .meta-wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-wrap: wrap;
-        gap: 12px;
+        gap: 24px;
 
         .meta {
           span {
@@ -87,6 +87,11 @@
       .categories {
         display: flex;
         gap: 32px;
+
+        @media (max-width: $md-breakpoint) {
+          gap: 0px;
+          flex-direction: column;
+        }
 
         dl {
           margin: 16px 0;

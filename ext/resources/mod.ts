@@ -1,7 +1,7 @@
 import { join } from "std/path/posix.ts"
-import { Resource, ResourceType } from "~types/resource.ts"
+import { Resource, ResourceRelease, ResourceType } from "~types/resource.ts"
 
-import { repo } from "~ext/pahkat.ts"
+import { PahkatRelease, repo } from "~ext/pahkat.ts"
 
 const externalResources: Resource[] = await Promise.all(
   Array.from(Deno.readDirSync("./ext/resources"))
@@ -9,6 +9,30 @@ const externalResources: Resource[] = await Promise.all(
     .map((x) => join("~ext/resources", x.name))
     .map((x) => import(x).then((x) => x.default)),
 )
+
+function findStable(rels: PahkatRelease[]) {
+  return rels.find((x) => x.channel === null)
+}
+
+function toResourceRelease(rel?: PahkatRelease): ResourceRelease | undefined {
+  if (rel == null) {
+    return undefined
+  }
+
+  return {
+    version: rel.version,
+    platforms: rel.target.map((x) => {
+      if (x.arch != null) {
+        return `${x.platform}/${x.arch}`
+      } else {
+        return x.platform
+      }
+    }),
+    authors: rel.authors,
+    license: rel.license,
+    licenseUrl: rel.licenseUrl,
+  }
+}
 
 const pahkatResources: Resource[] = repo.packages
   .map((pkg): Resource => {
@@ -23,6 +47,7 @@ const pahkatResources: Resource[] = repo.packages
         .find((x) => x.startsWith("cat:"))?.replace("cat:", "") ?? "",
       name: pkg.name,
       description: pkg.description,
+      release: toResourceRelease(findStable(pkg.release)),
     }
   })
 

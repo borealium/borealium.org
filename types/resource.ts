@@ -8,8 +8,17 @@ export type Resource = {
   tags?: string[]
   name: Record<LangTag, string>
   description: Record<LangTag, string>
+  release?: ResourceRelease
   externalDocumentationUrl?: URL
   links?: Link[]
+}
+
+export type ResourceRelease = {
+  version: string
+  platforms: string[]
+  authors: string[]
+  license?: string
+  licenseUrl?: URL
 }
 
 export type Link = {

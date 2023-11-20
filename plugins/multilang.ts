@@ -6,7 +6,7 @@ const MULTILANG_GENERATED = Symbol("multilang-generated")
 
 export default function multilanguage(languagesData: LanguagesData): Plugin {
   return (site) => {
-    site.preprocess([".mdx", ".md", ".html"], (page, pages) => {
+    site.preprocess([".html", ".mdx", ".md"], (page, pages) => {
       const [basePath, lang] = page.data.url ? page.data.url.split(".") : []
 
       // console.log("basePath", basePath)
@@ -44,6 +44,7 @@ export default function multilanguage(languagesData: LanguagesData): Plugin {
       const id: string = data.id || page.src.path.slice(1)
       // console.log("id", id)
 
+      // console.log(data.url, data.t)
       const newPages = [
         page.duplicate(undefined, { ...data, id, layout: "layouts/lang-redir.tsx" }),
       ]
@@ -88,6 +89,8 @@ export default function multilanguage(languagesData: LanguagesData): Plugin {
               id,
               url: newUrl,
               originalUrl: data.url,
+              fluentBundle: data.fluentBundle,
+              t: data.t,
               [MULTILANG_GENERATED]: true,
             }
             newPage = fallbackPage.duplicate(undefined, newData)

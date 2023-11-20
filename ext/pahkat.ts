@@ -16,16 +16,14 @@ export type PahkatPackage = {
 export type PahkatTarget = {
   platform: string
   arch: null | string
-  dependencies: Record<string, string>
-  payload: {
-    __typename: "MacOSPackage" | "WindowsExecutable" | "TarballPackage"
-    url: string
-  }
 }
 
 export type PahkatRelease = {
   version: string
   channel: null | "nightly" | "beta" | string
+  authors: string[]
+  license?: string
+  licenseUrl?: URL
   target: Array<PahkatTarget>
 }
 
@@ -50,22 +48,12 @@ const query = `query FetchAll {
         release {
           version
           channel
+          authors
+          license
+          licenseUrl
           target {
             platform
             arch
-            dependencies
-            payload {
-              __typename
-              ... on MacOSPackage {
-                url
-              }
-              ... on WindowsExecutable {
-                url
-              }
-              ... on TarballPackage{
-                url
-              }
-            }
           }
         }
       }
@@ -119,7 +107,7 @@ console.log("Downloading Pahkat repo data...")
 
 const raw = JSON.parse(Deno.readTextFileSync("./dump.json"))
 
-export const strings = raw.strings
-export const repo = raw.repo
+export const strings: Record<string, any> = raw.strings
+export const repo: PahkatRepo = raw.repo
 
 console.log("Pahkat data loaded.")

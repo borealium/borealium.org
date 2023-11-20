@@ -1,0 +1,60 @@
+.doc {
+  display: flex;
+  flex-direction: column;
+  background-color: #fdfdfd;
+
+  @media (min-width: $md-breakpoint) {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+  }
+
+  .content {
+    background-color: var(--color-background-above);
+    padding: 2rem;
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+
+.doc > .toc {
+  position: -webkit-sticky; /* Required for Safari */
+  position: sticky;
+  margin-top: 2rem;
+  top: calc(45px + 2rem);
+  align-self: start;
+
+  ol {
+    list-style: none;
+    margin: 0;
+    margin-left: 32px;
+    padding: 0;
+
+    li {
+      line-height: 28px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #1395c4;
+  }
+
+  a:hover {
+    color: #10131a;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+  }
+
+  .back-to-top {
+    margin-left: 32px;
+  }
+
+  @media (max-width: 420px) {
+    position: inherit;
+
+    .back-to-top {
+      display: none;
+    }
+  }
+}

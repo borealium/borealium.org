@@ -25,9 +25,10 @@ const SCRIPT = `
 
   if (navigator.languages != null) {
     for (const item of navigator.languages) {
-      if (supportedLanguages.includes(item)) {
-        localStorage.setItem(KEY, item)
-        return location.replace(\`/\${item}\${location.pathname}\`)
+      const lang = item.split("-")[0]
+      if (supportedLanguages.includes(lang)) {
+        localStorage.setItem(KEY, lang)
+        return location.replace(\`/\${lang}\${location.pathname}\`)
       }
     }
   } else {
@@ -48,7 +49,7 @@ export default function (pageish: Page) {
       {script(SCRIPT)}
       <div className="app" data-pagefind-ignore>
         <noscript>
-          <h2>Pick a language, any language:</h2>
+          <h2>Choose a language from the list below:</h2>
           <ul>
             {Object.entries(languages.languages).map(([key, value]) => {
               return (
@@ -60,9 +61,9 @@ export default function (pageish: Page) {
           </ul>
         </noscript>
       </div>
-      <script>
+      {script(`
         document.querySelector(".app").innerText = "Redirecting..."
-      </script>
+      `)}
     </>
   )
 }

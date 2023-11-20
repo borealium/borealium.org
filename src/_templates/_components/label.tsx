@@ -1,8 +1,6 @@
-export function CategoryLabel(props: { context: string; category: string }) {
+export function CategoryLabel(props: { category: string }) {
   return (
     <div className="category-label">
-      {props.context}
-      <div className="category-divider" />
       <span>{props.category}</span>
     </div>
   )

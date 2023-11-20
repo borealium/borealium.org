@@ -12,7 +12,7 @@ function ChevronDown() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
-      fill="var(--color-text-secondary)"
+      fill="#01FDC1"
       width="24px"
       height="24px"
     >

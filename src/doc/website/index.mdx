@@ -1,0 +1,68 @@
+---
+title: Maintaining and developing this website
+author: Brendan Molloy
+date: '2023-11-09'
+type: doc
+category: website
+layout: layouts/doc.tsx
+---
+
+## Introduction
+
+This documentation describes how to maintain and develop this website (Borealium). The website is open source and hosted on [GitHub](https://github.com/borealium/website).
+
+The purpose of this documentation is to describe the general structure of the website, how localisation functions and can be extended, key data sources that affect the website generation, and how to add or change content.
+
+This website uses the Lume framework. For specifics of using Lume, please read their documentation -- this document will only describe the specifics of maintaining this website, not all specifics about the framework used.
+
+## Structure
+
+TODO describe the entire structure
+
+## Adding content
+
+### Localisation
+
+There are two options for localisation of content:
+
+For predominantly static content, such as titles of sections reused on multiple pages, or other reusable strings, this website uses Fluent files. These files are composable based
+on their position within the directory tree, so if an `index.en.flt` file exists in `src/`, and an `index.en.flt` exists at `src/foo/`, then all files in `src/foo/` will have all
+the strings defined in `src/index.en.flt` with `src/foo/index.en.flt` layered on top.
+
+It is recommended that the majority of the strings use the root definitions, and only using nested definitions when it makes sense to do so -- the goal is to promote string reuse, not clutter.
+
+
+## Development
+
+### Prerequisites
+
+Install Deno. The codebase does not require any external dependencies.
+
+### Quickstart
+
+You can run the 
+
+### Custom plugins
+
+#### category-data
+
+#### excerpt
+
+#### Fluent
+
+#### language-data
+
+#### multilang
+
+#### outline
+
+
+### Client-side JavaScript
+
+This website uses as little client-side JavaScript as possible. There are limited exceptions to this:
+
+- The search functionality only works with JavaScript enabled
+
+Client-side JavaScript is injected using a `script` helper function, which converts the provided string input into the body of a `<script>` element.
+
+Should the need for client-side JavaScript change in the future, there are techniques to embed React client-side hydration as necessary, but is currently out of scope for this document.

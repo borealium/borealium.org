@@ -12,11 +12,21 @@ $sm-breakpoint: 412px;
 
   @media (min-width: $md-breakpoint) {
     display: grid;
-    grid-template-columns: 8fr 2fr;
+    grid-template-columns: 7fr 3fr;
   }
 
   @media (min-width: $lg-main-breakpoint) {
-    min-height: calc(var(--vh) - var(--nav-height));
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+  }
+
+  @media (min-width: $lg-nav-breakpoint) {
+    display: grid;
+    grid-template-columns: 7fr 2fr;
+  }
+
+  @media (min-width: $lg-main-breakpoint) {
+    height: calc(max(100vh, var(--nav-height) * 8) - var(--nav-height));
   }
 
   .blocks {
@@ -44,8 +54,13 @@ $sm-breakpoint: 412px;
   .big-block {
     grid-row: 1 / 3;
     display: grid;
+    // flex-direction: column;
     grid-template-rows: 1fr 1fr;
     background-color: var(--color-background-above);
+
+    @media (max-width: $lg-main-breakpoint) {
+      grid-template-rows: 1fr;
+    }
 
     .first-cell {
       padding: 2rem;
@@ -82,19 +97,20 @@ $sm-breakpoint: 412px;
     .second-cell {
       display: flex;
       flex-direction: column;
+      padding: 2rem;
+      // gap: 2rem;
+      // .squares-grid {
+      //   flex-grow: 1;
+      //   display: grid;
+      //   grid-template-columns: 1fr 1fr;
+      //   grid-template-rows: 1fr 1fr 1fr;
+      //   gap: 1rem;
 
-      .squares-grid {
-        flex-grow: 1;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 1rem;
-
-        @media (min-width: $sm-breakpoint) {
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-template-rows: 1fr 1fr;
-        }
-      }
+      //   @media (min-width: $sm-breakpoint) {
+      //     grid-template-columns: 1fr 1fr 1fr;
+      //     grid-template-rows: 1fr 1fr;
+      //   }
+      // }
     }
   }
 
@@ -118,15 +134,31 @@ $sm-breakpoint: 412px;
       font-size: 14px;
       line-height: 22px;
     }
+  }
+}
 
-    .button-group {
-      margin-top: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      @media (min-width: $sm-breakpoint) {
-        flex-direction: row;
-      }
-    }
+.button-group {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  @media (min-width: $sm-breakpoint) {
+    flex-direction: row;
+  }
+}
+
+.language-group {
+  display: grid;
+  // flex-direction: column;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 16px;
+  @media (max-width: 490px) {
+    grid-template-columns: 1fr;
+  }
+
+  .download-button {
+    width: 100%;
   }
 }
