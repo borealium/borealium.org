@@ -184,9 +184,10 @@ export default function BasePage(page: PageData & FluentPage) {
             const element = document.querySelector(".search-page-results")
             if (element != null) {
               const query = new URLSearchParams(location.search)
-              if (query != null) {
-                const results = await searchResults(query.get('q'))
-                createSearchResults(query.get('q'), results)
+              const q = query.get('q')
+              if (q != null) {
+                const results = await searchResults(q)
+                createSearchResults(q, results)
                 updateLanguageSelectorHrefs(query)
               }
             }

@@ -1,15 +1,5 @@
-welcome = Hello!
+welcome = Welcome
 downloads = Downloads
-
-landing-block-main-title =
-  This is Borealium, a registry of linguistic resources for Nordic minority languages.
-landing-block-main-description = 
-  We help to develop and maintain language and technology tools, 
-  including spelling and grammar checkers, keyboards, dictionaries, and other 
-  digital and web services - with the vast majority being provided free of charge 
-  as open-source software.
-landing-block-main-subtitle =
-  Discover resources for the following languages:
 
 about-us = About us
 divvun = Divvun
@@ -32,10 +22,14 @@ news = News
 available-on-divvun-manager = Available on Divvun Manager
 divvun-manager-description = Divvun Manager is a free and open source tool for managing linguistic resources such as spell checkers, keyboards and dictionaries. It supports macOS and Windows.
 platforms = Platform(s)
-release = release
+release = Release
 languages = Languages
 categories = Categories
 
 for-apple-app-store = for iOS
 for-play-store = for Android
+for-windows = for Windows
+for-macos = for macOS
+dm-button-title = Divvun Manager
+dm-button-description = for Windows and macOS
 website-copyright = Copyright © { $year } UiT The Arctic University of Norway

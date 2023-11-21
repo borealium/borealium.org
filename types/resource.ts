@@ -9,7 +9,7 @@ export type Resource = {
   name: Record<LangTag, string>
   description: Record<LangTag, string>
   release?: ResourceRelease
-  externalDocumentationUrl?: URL
+  externalDocumentationUrl?: string
   links?: Link[]
 }
 
@@ -31,6 +31,8 @@ export enum LinkType {
   Normal = "normal",
   AppleAppStore = "apple-app-store",
   GooglePlayStore = "google-play-store",
+  MacOS = "macos",
+  Windows = "windows",
 }
 
 export enum ResourceType {

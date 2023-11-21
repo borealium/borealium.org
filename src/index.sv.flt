@@ -1,8 +1,37 @@
-welcome = Vælkomna
+welcome = Välkommen
 downloads = Nedladdningar
 
-landing-block-main-title =
-  Vi är Borealium.
-landing-block-main-description = 
-  Svenska beskrivning på Borealium.
-  
+about-us = Om oss
+divvun = Divvun
+privacy = Integritetspolicy
+
+information = Upplysning
+documentation = Dokumentation
+maintaining-this-website = Underhåll av denna webbplats
+
+resource = Resurs
+category = Kategori
+language = Språk
+
+back-to-top = Tillbaka till toppen
+read-more = Läs mer
+see-more-results = Se fler sökresultat
+no-resources-in-category = Inga resurser hittades i denna kategori.
+
+news = Nyheter
+available-on-divvun-manager = Tillgänglig på Divvun Manager
+divvun-manager-description =
+  Divvun Manager är ett gratis och öppen källkodsverktyg för att hantera språkliga resurser som stavningskontroller,
+  tangentbord och ordböcker. Den stöder macOS och Windows.
+platforms = Plattformar
+release = Utgivningen
+languages = Språk
+categories = Kategorier
+
+for-apple-app-store = på iOS
+for-play-store = på Android
+for-windows = på Windows
+for-macos = på macOS
+dm-button-title = Divvun Manager
+dm-button-description = på Windows och macOS
+website-copyright = Copyright © { $year } UiT Norges arktiska universitet

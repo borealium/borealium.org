@@ -7,6 +7,12 @@ import { getLanguageData, selectLocale } from "~plugins/language-data.ts"
 const languageData = getLanguageData()
 
 const RAW_DATA: CategoriesData = {
+  "package-management": {
+    en: {
+      name: "Package Management",
+      description: "Tools for installing, uninstalling and updating packages on your computer.",
+    },
+  },
   // "proofing-tools": {
   //   "en": {
   //     "name": "Proofing tools",
@@ -57,12 +63,10 @@ for (const id of pahkatCategoryIds) {
   RAW_DATA[id] = {}
   for (const lang of Object.keys(languageData.languages)) {
     if (strings[lang]?.[id] != null) {
-      RAW_DATA[id][lang] = strings[lang][id]
+      RAW_DATA[id][lang] = { name: strings[lang][id], description: "" }
     }
   }
 }
-
-console.log(RAW_DATA)
 
 export type CategoryData = {
   name: string

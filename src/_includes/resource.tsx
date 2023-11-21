@@ -22,6 +22,13 @@ function PahkatInfo({ t }: { t: TranslateFn }) {
     <div className="downloads">
       <h3>{t("available-on-divvun-manager")}</h3>
       <p>{t("divvun-manager-description")}</p>
+      <div style={{ marginTop: "8px" }}>
+        <DownloadButton
+          title={t("dm-button-title")}
+          description={t("dm-button-description")}
+          href="/resource/divvun-manager"
+        />
+      </div>
     </div>
   )
 }
@@ -29,9 +36,13 @@ function PahkatInfo({ t }: { t: TranslateFn }) {
 function parseLinkType(type: LinkType, t: TranslateFn) {
   switch (type) {
     case LinkType.AppleAppStore:
-      return { text: t("for-apple-app-store"), img: { src: "/static/images/ios-logo.png", alt: "iOS logo" } }
+      return { text: t("for-apple-app-store"), img: { src: "/static/images/ios-logo.png", alt: "" } }
     case LinkType.GooglePlayStore:
-      return { text: t("for-play-store"), img: { src: "/static/images/android-logo.png", alt: "Android logo" } }
+      return { text: t("for-play-store"), img: { src: "/static/images/android-logo.png", alt: "" } }
+    case LinkType.MacOS:
+      return { text: t("for-macos"), img: { src: "/static/images/macos-logo.png", alt: "" } }
+    case LinkType.Windows:
+      return { text: t("for-windows"), img: { src: "/static/images/windows-logo.png", alt: "" } }
     default:
       return null
   }
@@ -128,9 +139,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
               </>
             )}
           </div>
-          {isPahkat ? <PahkatInfo t={t} /> : <DownloadLinks t={t} resource={resource} lang={lang} />}
-          {
-            /* <p className="section">
+          <p className="section">
             Duis sit amet nibh nunc. Pellentesque vel est eget lorem posuere pellentesque nec sit amet nunc. Curabitur
             ligula enim, ornare eu mauris vitae, pellentesque laoreet nisi. Proin id mi at sapien condimentum laoreet.
             Pellentesque ligula magna, venenatis fringilla tempus ut, posuere a erat. Morbi non odio hendrerit, mollis
@@ -147,8 +156,8 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
               Pellentesque ligula magna, venenatis fringilla tempus ut, posuere a erat. Morbi non odio hendrerit, mollis
               mi ac, suscipit dolor. Donec ut posuere quam. Phasellus purus erat, commodo nec congue eu, porta id enim.
             </p>
-          </div> */
-          }
+          </div>
+          {isPahkat ? <PahkatInfo t={t} /> : <DownloadLinks t={t} resource={resource} lang={lang} />}
         </div>
 
         <div className="related-documentation">

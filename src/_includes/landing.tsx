@@ -23,30 +23,6 @@ export default function (page: PageData & FluentPage) {
         <div className="small-block">
           <comp.landing.SecondaryBlock2 t={t} lang={lang} />
         </div>
-        {
-          /* <SmallBlock
-          title="One download and the rest is handled automatically, including keeping the tools up-to-date."
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non et erat. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit sed diam non et erat."
-          category="manager"
-          buttons={
-            <>
-              <DownloadButton
-                title="Divvun Manager"
-                description="for Windows"
-                href="https://pahkat.uit.no/divvun-installer/download/divvun-installer?platform=windows"
-                img={{ src: "/static/images/windows-logo.png", alt: "Windows logo" }}
-              />
-              <DownloadButton
-                title="Divvun Manager"
-                description="for macOS"
-                href="https://pahkat.uit.no/divvun-installer/download/divvun-installer?platform=macos"
-                img={{ src: "/static/images/macos-logo.png", alt: "Apple logo" }}
-              />
-            </>
-          }
-        /> */
-        }
       </div>
       <Aside
         t={t}

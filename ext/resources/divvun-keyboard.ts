@@ -4,7 +4,7 @@ const resource: Resource = {
   id: "divvun-keyboard",
   type: ResourceType.External,
   languages: [],
-  category: "examples",
+  category: "keyboard-layouts",
   name: {
     en: "Divvun Keyboard",
   },

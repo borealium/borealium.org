@@ -83,7 +83,7 @@ async function downloadMainRepo() {
 }
 
 async function downloadStrings() {
-  const strings: Array<[string, any]> = (await Promise.all(
+  const strings = (await Promise.all(
     Object.keys(languageData.languages).map((lang) => {
       return (async () => {
         const res = await fetch(stringsUrl(lang))
@@ -94,7 +94,7 @@ async function downloadStrings() {
         return [lang, tomlParse(text)]
       })()
     }),
-  )).filter(([_, value]) => value != null)
+  )).filter(([_, value]) => value != null) as Array<[string, any]>
 
   const process = (input: any) => {
     const out: any = {}

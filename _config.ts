@@ -42,9 +42,6 @@ site.use(pagefind({
   },
   ui: false,
 }))
-// site.use(esbuild({
-//   extensions: [".client.ts"],
-// }))
 
 site.copy("_static", "static")
 
