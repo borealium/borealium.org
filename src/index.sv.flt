@@ -30,6 +30,7 @@ categories = Kategorier
 
 for-apple-app-store = på iOS
 for-play-store = på Android
+for-ios-and-android = på iOS och Android
 for-windows = på Windows
 for-macos = på macOS
 dm-button-title = Divvun Manager

@@ -30,6 +30,7 @@ for-apple-app-store = for iOS
 for-play-store = for Android
 for-windows = for Windows
 for-macos = for macOS
+for-ios-and-android = for iOS and Android
 dm-button-title = Divvun Manager
 dm-button-description = for Windows and macOS
 website-copyright = Copyright © { $year } UiT The Arctic University of Norway

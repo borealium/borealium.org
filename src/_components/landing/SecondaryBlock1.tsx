@@ -14,7 +14,7 @@ export default function SecondaryBlock1(page: Page & FluentPage) {
       <div className="button-group">
         <DownloadButton
           title="Divvun Keyboards"
-          description="for iOS and Android"
+          description={t("for-ios-and-android")}
           href="/resource/divvun-keyboard"
         />
       </div>
