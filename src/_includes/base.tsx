@@ -200,11 +200,13 @@ export default function BasePage(page: PageData & FluentPage) {
         `)}
       </head>
       <body id="top">
-        <Navbar url={originalUrl || url || "/"} t={t} />
-        <div className="navbar-offset-wrapper">
-          {children}
+        <div className="wrapper">
+          <Navbar url={originalUrl || url || "/"} t={t} />
+          <div className="navbar-offset-wrapper">
+            {children}
+          </div>
+          <Footer t={t} />
         </div>
-        <Footer t={t} />
       </body>
     </html>
   )

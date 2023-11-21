@@ -11,6 +11,7 @@
 
   @media (min-width: $lg-main-breakpoint) {
     height: calc(max(100vh, var(--nav-height) * 8) - var(--nav-height));
+    contain: paint;
   }
 
   .content-wrapper {
@@ -18,9 +19,9 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--color-background-above);
+    height: inherit;
 
     .content {
-      // flex-grow: 1;
       padding: 32px;
       display: flex;
       flex-direction: column;
