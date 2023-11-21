@@ -9,7 +9,7 @@ $md-breakpoint: 768px;
   background-color: var(--color-highlight);
   color: var(--color-text-secondary);
 
-  @media (min-width: $md-breakpoint) {
+  @media (min-width: 600px) {
     flex-direction: row;
   }
 
@@ -51,9 +51,10 @@ $md-breakpoint: 768px;
   .footer-info {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 32px;
 
     .info-text {
+      text-align: right;
       > span {
         font-size: 18px;
         font-weight: 700;
@@ -62,6 +63,11 @@ $md-breakpoint: 768px;
         font-size: 14px;
         color: inherit;
       }
+    }
+
+    .star {
+      margin-top: 8px;
+      align-self: flex-start;
     }
   }
 }
