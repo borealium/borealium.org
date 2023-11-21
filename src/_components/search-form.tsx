@@ -1,8 +1,10 @@
-export function SearchForm() {
+import { TranslateFn } from "~plugins/fluent.ts"
+
+export function SearchForm(props: { t: TranslateFn }) {
   return (
     <form action="/search/" className="search">
       <SearchIcon />
-      <input id="search" className="search-input" name="q" type="text" />
+      <input id="search" className="search-input" placeholder={props.t("search")} name="q" type="text" />
     </form>
   )
 }
