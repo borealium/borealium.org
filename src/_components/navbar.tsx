@@ -17,7 +17,7 @@ export function Navbar(props: { url: string; t: TranslateFn }) {
           </div>
         </div>
         <div className="search-wrapper">
-          <SearchForm t={props.t} />
+          <SearchForm />
           <div className="search-popover" hidden>
             <ul className="search-results" />
             <div className="search-see-more">
