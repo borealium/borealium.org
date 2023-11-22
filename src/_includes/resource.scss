@@ -6,11 +6,15 @@
 
   @media (min-width: $md-breakpoint) {
     display: grid;
+    grid-template-columns: 7fr 3fr;
+  }
+
+  @media (min-width: $lg-nav-breakpoint) {
     grid-template-columns: 7fr 2fr;
   }
 
   @media (min-width: $lg-main-breakpoint) {
-    height: calc(max(100vh, var(--nav-height) * 8) - var(--nav-height));
+    // height: calc(max(100vh, var(--nav-height) * 8) - var(--nav-height));
     contain: paint;
   }
 

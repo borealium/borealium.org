@@ -17,57 +17,79 @@ $md-breakpoint: 768px;
     font-size: 10px;
   }
 
-  .links {
+  .footer-content {
     padding: 16px 0;
+    flex-grow: 1;
     display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
 
-    .link-group {
-      > span {
-        font-size: 18px;
-        font-weight: 700;
-      }
+    @media (min-width: 450px) {
+      flex-direction: row;
+    }
 
-      ul {
-        font-size: 14px;
-        padding-left: 16px;
-        li {
-          margin: 4px 0;
+    .links {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+
+      .link-group {
+        > span {
+          font-size: 18px;
+          font-weight: 700;
         }
-        li,
-        a {
-          text-decoration: none;
-          color: inherit;
 
-          &:hover {
-            text-decoration: underline;
+        ul {
+          font-size: 14px;
+          padding-left: 16px;
+          li {
+            margin: 4px 0;
+          }
+          li,
+          a {
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
     }
-  }
 
-  .footer-info {
-    display: flex;
-    align-items: center;
-    gap: 32px;
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
 
-    .info-text {
-      text-align: right;
-      > span {
-        font-size: 18px;
-        font-weight: 700;
+      @media (min-width: 450px) {
+        flex-direction: row;
       }
-      > p {
-        font-size: 14px;
-        color: inherit;
-      }
-    }
 
-    .star {
-      margin-top: 8px;
-      align-self: flex-start;
+      .info-text {
+        @media (min-width: 450px) {
+          flex-direction: row;
+        }
+
+        > span {
+          font-size: 18px;
+          font-weight: 700;
+        }
+        > p {
+          font-size: 14px;
+          color: inherit;
+        }
+      }
+
+      .star {
+        margin-top: 8px;
+        align-self: center;
+        @media (min-width: 450px) {
+          align-self: flex-start;
+        }
+      }
     }
   }
 }

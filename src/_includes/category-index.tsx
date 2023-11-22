@@ -1,9 +1,10 @@
-import { Page } from "lume/core.ts"
+import { Data, PageData } from "lume/core.ts"
 import { Resource } from "~types/resource.ts"
 import { selectLocale } from "~plugins/language-data.ts"
 import { CategoryLabel } from "~/_components/label.tsx"
 import { LangTag } from "~types/category.ts"
 import { FluentPage } from "~plugins/fluent.ts"
+import Aside, { SimplePost } from "~/_components/aside.tsx"
 
 export const layout = "base.tsx"
 
@@ -13,8 +14,10 @@ type CategoryIndexProps = {
   categoryId: string
 }
 
-export default function CategoryIndexLayout(page: Page & CategoryIndexProps & FluentPage) {
-  const { resources, lang, category, categoryId, t } = page
+export default function CategoryIndexLayout(page: PageData & CategoryIndexProps & FluentPage) {
+  const { resources, lang, category, categoryId, search, t } = page
+
+  const posts = search.pages(["type=post", `lang=${lang}`], "date=desc").slice(0, 3)
 
   const cat = selectLocale(lang, category) ?? category["en"]
 
@@ -59,6 +62,21 @@ export default function CategoryIndexLayout(page: Page & CategoryIndexProps & Fl
           })}
         </div>
       </div>
+      <Aside
+        t={t}
+        category={t("news")}
+        posts={posts.map((post) => {
+          const { id, title, category, date, originalUrl } = post as Data<PageData>
+
+          return {
+            id: id,
+            date: date?.toISOString(),
+            tag: category,
+            title: title,
+            url: originalUrl,
+          } as SimplePost
+        })}
+      />
     </div>
   )
 }

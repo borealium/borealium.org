@@ -15,12 +15,10 @@ $sm-breakpoint: 412px;
   }
 
   @media (min-width: $lg-main-breakpoint) {
-    display: grid;
     grid-template-columns: 6fr 3fr;
   }
 
   @media (min-width: $lg-nav-breakpoint) {
-    display: grid;
     grid-template-columns: 7fr 2fr;
   }
 

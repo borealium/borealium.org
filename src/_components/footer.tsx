@@ -49,19 +49,19 @@ export function Footer(props: { t: TranslateFn }) {
         <FullLogo />
         <p className="copyright">{props.t("website-copyright", { year: currentYear })}</p>
       </div>
-      <div style={{ flexGrow: 1 }}>
+      <div className="footer-content">
         <div className="links">
           {LINKS.map((x) => <LinkGroup links={x} t={props.t} />)}
         </div>
-      </div>
-      <div className="footer-info">
-        <div className="info-text">
-          <span>UiT The Arctic University of Norway</span>
-          <p>PO Box 6050 Langnes</p>
-          <p>N-9037 Tromsø</p>
-          <p>Norway</p>
+        <div className="footer-info">
+          <div className="info-text">
+            <span>UiT The Arctic University of Norway</span>
+            <p>PO Box 6050 Langnes</p>
+            <p>N-9037 Tromsø</p>
+            <p>Norway</p>
+          </div>
+          <Star />
         </div>
-        <Star />
       </div>
     </footer>
   )
