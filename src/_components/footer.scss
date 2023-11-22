@@ -71,6 +71,7 @@ $md-breakpoint: 768px;
       .info-text {
         @media (min-width: 450px) {
           flex-direction: row;
+          text-align: right;
         }
 
         > span {
