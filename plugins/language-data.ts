@@ -2,26 +2,6 @@ import type { Plugin } from "lume/core.ts"
 
 const RAW_DATA: LanguagesData = {
   languages: {
-    "en": {
-      name: "English",
-      autonym: "English",
-    },
-    "sv": {
-      name: "Swedish",
-      autonym: "Svenska",
-    },
-    "nb": {
-      name: "Norwegian (Bokmål)",
-      autonym: "norsk bokmål",
-    },
-    "nn": {
-      name: "Norwegian (Nynorsk)",
-      autonym: "norsk nynorsk",
-    },
-    "fi": {
-      name: "Finnish",
-      autonym: "suomi",
-    },
     "is": {
       name: "Icelandic",
       autonym: "íslenska",
@@ -63,6 +43,26 @@ const RAW_DATA: LanguagesData = {
     "sje": {
       name: "Pite Sami",
       autonym: "Bidumsámegiella",
+    },
+    "en": {
+      name: "English",
+      autonym: "English",
+    },
+    "sv": {
+      name: "Swedish",
+      autonym: "Svenska",
+    },
+    "nb": {
+      name: "Norwegian (Bokmål)",
+      autonym: "norsk bokmål",
+    },
+    "nn": {
+      name: "Norwegian (Nynorsk)",
+      autonym: "norsk nynorsk",
+    },
+    "fi": {
+      name: "Finnish",
+      autonym: "suomi",
     },
   },
   fallbacks: {

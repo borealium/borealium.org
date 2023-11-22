@@ -42,23 +42,3 @@ export default function (page: PageData & FluentPage) {
     </main>
   )
 }
-
-type Category = {
-  title: string
-  description: string
-  href: string
-  img?: { src: string; alt: string }
-}
-
-function SmallBlock(props: { title: string; category: string; description: string; buttons: JSX.Element }) {
-  return (
-    <div className="small-block">
-      <CategoryLabel category={props.category} />
-      <h2>{props.title}</h2>
-      <p>{props.description}</p>
-      <div className="button-group">
-        {props.buttons}
-      </div>
-    </div>
-  )
-}

@@ -11,6 +11,28 @@ const resource: Resource = {
   description: {
     en: "Divvun Keyboard for iOS and Android",
   },
+  moreInfo: {
+    en: `
+        ## This is a test
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
+        augue nunc commodo nunc, vitae accumsan nunc augue eu magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
+        augue nunc commodo nunc, vitae accumsan nunc augue eu magna.
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
+        augue nunc commodo nunc, vitae accumsan nunc augue eu magna.
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
+        augue nunc commodo nunc, vitae accumsan nunc augue eu magna.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
+        augue nunc commodo nunc, vitae accumsan nunc augue eu magna.
+
+        ## Potato
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
+        augue nunc commodo nunc, vitae accumsan nunc augue eu magna.
+    `,
+  },
   links: [
     {
       type: LinkType.AppleAppStore,

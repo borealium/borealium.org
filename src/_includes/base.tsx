@@ -15,7 +15,7 @@ export default function BasePage(page: PageData & FluentPage) {
     <html>
       <head>
         <meta charSet="utf-8" />
-        <title>{title}</title>
+        <title>{title ? `Borealium | ${title}` : "Borealium"}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />

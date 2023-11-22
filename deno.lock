@@ -2363,11 +2363,13 @@
     "https://esm.sh/@fluent/bundle@0.18.0": "f3092501db4142203d6eccb2e6513a62fc4671a2430074a1a02bcbadc755bc04",
     "https://esm.sh/stable/@fluent/bundle@0.18.0": "dd780c45bd64735c85c0b273f0b586d65c7ec0da2395fea929b572fd762a28b1",
     "https://esm.sh/stable/@fluent/bundle@0.18.0/denonext/bundle.mjs": "ac6cbabd193b80ef2b5f4e187bdada0aec6ca2671305a0a2b982e57d24aa4d8a",
+    "https://esm.sh/stable/dedent@1.5.1": "7e918ed4beee6f8aff6820e01492b3f4d1d59426c685abbbcecf5a4e953ac1f7",
     "https://esm.sh/stable/react@18.2.0/denonext/jsx-runtime.js": "f8a3b4a4e6150031eea20ac09216edd880f68390f1d0864a1b1fd3f0fa16df9e",
     "https://esm.sh/stable/react@18.2.0/denonext/jsx-runtime.mjs": "54d8a51c6ca025380abd2d5302e4a9b38ff835d9759c4657e52314f587eaf6bf",
     "https://esm.sh/stable/react@18.2.0/denonext/react.mjs": "3c4f23bcfc53b256fcfaf6f834fa9f584c3bb7be667b2682c6cb6ba8ef88f8e6",
     "https://esm.sh/stable/react@18.2.0/jsx-runtime": "914a55a07c388d345c5a0c11616ee5282242e8b8dfd0d505b83500ea04fd9870",
     "https://esm.sh/v130/@fluent/bundle@0.18.0/denonext/bundle.mjs": "ac6cbabd193b80ef2b5f4e187bdada0aec6ca2671305a0a2b982e57d24aa4d8a",
-    "https://esm.sh/v133/@fluent/bundle@0.18.0/denonext/bundle.mjs": "ac6cbabd193b80ef2b5f4e187bdada0aec6ca2671305a0a2b982e57d24aa4d8a"
+    "https://esm.sh/v133/@fluent/bundle@0.18.0/denonext/bundle.mjs": "ac6cbabd193b80ef2b5f4e187bdada0aec6ca2671305a0a2b982e57d24aa4d8a",
+    "https://esm.sh/v134/dedent@1.5.1/denonext/dedent.mjs": "09c3d5dbda66b1c315a738cb8d57b12e93c07422fd263d67497431ec90224931"
   }
 }

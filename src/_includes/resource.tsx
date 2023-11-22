@@ -8,6 +8,8 @@ import LanguageTag from "~/_components/tag.tsx"
 import { FluentPage, TranslateFn } from "~plugins/fluent.ts"
 import { autonym, getLanguageData, selectLocale } from "~plugins/language-data.ts"
 import { getCategoryData, translateCategoryName } from "~plugins/category-data.ts"
+import { markdownIt } from "lume/deps/markdown_it.ts"
+import dedent from "dedent"
 
 export const layout = "base.tsx"
 
@@ -85,6 +87,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
 
   const name = selectLocale(lang, resource.name)
   const description = selectLocale(lang, resource.description)
+  const moreInfo = resource.moreInfo != null ? selectLocale(lang, resource.moreInfo) : null
   const isPahkat = resource.type === ResourceType.Pahkat
 
   return (
@@ -139,24 +142,12 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
               </>
             )}
           </div>
-          <p className="section">
-            Duis sit amet nibh nunc. Pellentesque vel est eget lorem posuere pellentesque nec sit amet nunc. Curabitur
-            ligula enim, ornare eu mauris vitae, pellentesque laoreet nisi. Proin id mi at sapien condimentum laoreet.
-            Pellentesque ligula magna, venenatis fringilla tempus ut, posuere a erat. Morbi non odio hendrerit, mollis
-            mi ac, suscipit dolor. Donec ut posuere quam. Phasellus purus erat, commodo nec congue eu, porta id enim.
-          </p>
-          <div className="documentation section">
-            <h3>
-              Documentation
-            </h3>
-            <p>Last updated: 2023-07-16, 23:37</p>
-            <p className="description">
-              Duis sit amet nibh nunc. Pellentesque vel est eget lorem posuere pellentesque nec sit amet nunc. Curabitur
-              ligula enim, ornare eu mauris vitae, pellentesque laoreet nisi. Proin id mi at sapien condimentum laoreet.
-              Pellentesque ligula magna, venenatis fringilla tempus ut, posuere a erat. Morbi non odio hendrerit, mollis
-              mi ac, suscipit dolor. Donec ut posuere quam. Phasellus purus erat, commodo nec congue eu, porta id enim.
-            </p>
-          </div>
+          {moreInfo != null && (
+            <div
+              className="section"
+              dangerouslySetInnerHTML={{ __html: markdownIt().render(dedent(moreInfo)) }}
+            />
+          )}
           {isPahkat ? <PahkatInfo t={t} /> : <DownloadLinks t={t} resource={resource} lang={lang} />}
         </div>
 

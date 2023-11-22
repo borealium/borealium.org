@@ -12,7 +12,7 @@ const resource: Resource = {
     en:
       "Divvun Manager is a package manager for installing and updating language resources on your Windows or Mac computer.",
   },
-  externalDocumentationUrl: "/doc/divvun-manager/",
+  documentationUrl: "/doc/divvun-manager/",
   links: [
     {
       type: LinkType.Windows,

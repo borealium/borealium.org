@@ -13,48 +13,6 @@ const RAW_DATA: CategoriesData = {
       description: "Tools for installing, uninstalling and updating packages on your computer.",
     },
   },
-  // "proofing-tools": {
-  //   "en": {
-  //     "name": "Proofing tools",
-  //     "description": "Tools for proofing",
-  //   },
-  // },
-  // "keyboards": {
-  //   "en": {
-  //     "name": "Keyboard layouts",
-  //     "description": "Keyboard layouts",
-  //   },
-  // },
-  // "text-to-speech": {
-  //   "en": {
-  //     "name": "Text to speech",
-  //     "description": "Text to speech",
-  //   },
-  // },
-  // "language-learning": {
-  //   "en": {
-  //     "name": "Language learning",
-  //     "description": "Language learning",
-  //   },
-  // },
-  // "dictionaries": {
-  //   "en": {
-  //     "name": "Dictionaries",
-  //     "description": "Dictionaries",
-  //   },
-  // },
-  // "translation": {
-  //   "en": {
-  //     "name": "Translation",
-  //     "description": "Translation",
-  //   },
-  // },
-  // "examples": {
-  //   "en": {
-  //     "name": "Examples",
-  //     "description": "Examples for Lume demo",
-  //   },
-  // },
 }
 
 const pahkatCategoryIds = Object.keys(strings.en)
