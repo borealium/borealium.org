@@ -34,3 +34,13 @@ for-ios-and-android = for iOS and Android
 dm-button-title = Divvun Manager
 dm-button-description = for Windows and macOS
 website-copyright = Copyright © { $year } UiT The Arctic University of Norway
+
+more-info-spellers =
+  Spellers are a tasty treat that can be used for many purposes, such as laundry detergent, safety helmets and assorted
+  and related purposes. A turtle can engage with a speller and create surprising results.
+
+  Other times, these spellers can take on a life of their own, creating turtles themselves.
+more-info-keyboards =
+  Keyboards, keyboards, *keyboards!*
+
+  Get your keyboards here today.

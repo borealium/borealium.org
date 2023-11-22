@@ -1,10 +1,11 @@
 import { parse as tomlParse } from "std/toml/mod.ts"
 import { getLanguageData } from "~plugins/language-data.ts"
+import deepmerge from "npm:deepmerge"
 
 const PAHKAT_URL = "https://pahkat.uit.no"
 
 const GRAPHQL_API = `${PAHKAT_URL}/graphql`
-const stringsUrl = (lang: string) => `${PAHKAT_URL}/main/strings/${lang}.toml`
+const stringsUrl = (lang: string, repo: string) => `${PAHKAT_URL}/${repo}/strings/${lang}.toml`
 
 const languageData = getLanguageData()
 
@@ -37,8 +38,35 @@ export type PahkatRepo = {
   packages: Array<PahkatPackage>
 }
 
-const query = `query FetchAll {
+const queryMain = `query FetchAll {
   repo(id: "main") {
+    url
+    name
+    description
+    packages {
+      ... on PackageDescriptor {
+        id
+        name
+        description
+        tags
+        release {
+          version
+          channel
+          authors
+          license
+          licenseUrl
+          target {
+            platform
+            arch
+          }
+        }
+      }
+    }
+  }
+}`
+
+const queryTools = `query FetchAll {
+  repo(id: "tools") {
     url
     name
     description
@@ -71,7 +99,7 @@ async function downloadMainRepo() {
       "Content-Type": "application/json",
       Accept: "application/json",
     },
-    body: JSON.stringify({ query }),
+    body: JSON.stringify({ query: queryMain }),
   }).then((r) => r.json())
 
   if (errors) {
@@ -82,11 +110,29 @@ async function downloadMainRepo() {
   return data.repo as PahkatRepo
 }
 
-async function downloadStrings() {
+async function downloadToolsRepo() {
+  const { data, errors } = await fetch(GRAPHQL_API, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({ query: queryTools }),
+  }).then((r) => r.json())
+
+  if (errors) {
+    console.error(errors)
+    Deno.exit(1)
+  }
+
+  return data.repo as PahkatRepo
+}
+
+async function downloadStrings(repo: string) {
   const strings = (await Promise.all(
     Object.keys(languageData.languages).map((lang) => {
       return (async () => {
-        const res = await fetch(stringsUrl(lang))
+        const res = await fetch(stringsUrl(lang, repo))
         if (!res.ok) {
           return [lang, null]
         }
@@ -117,7 +163,7 @@ async function downloadStrings() {
 
 console.log("Downloading Pahkat repo data...")
 
-export const strings = await downloadStrings()
+export const strings = await downloadStrings("main")
 export const repo = await downloadMainRepo()
 
 // Deno.writeTextFileSync("./dump.json", JSON.stringify({ strings, repo }, null, 2))

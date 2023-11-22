@@ -8,9 +8,8 @@ import nav from "lume/plugins/nav.ts"
 import slugifyUrls from "lume/plugins/slugify_urls.ts"
 import favicon from "lume/plugins/favicon.ts"
 
-import { getLanguageData } from "~plugins/language-data.ts"
 import multilanguage from "~plugins/multilang.ts"
-import fluent from "~plugins/fluent.ts"
+import fluent, { init as initFluent } from "~plugins/fluent.ts"
 import outline from "~plugins/outline.ts"
 import search from "lume/plugins/search.ts"
 import excerpt from "~plugins/excerpt.ts"
@@ -19,12 +18,11 @@ const site = lume({
   src: "./src",
 })
 
+initFluent()
+
 site.loadData([".yaml", ".yml"])
 
 site.use(slugifyUrls())
-
-const languages = getLanguageData()
-
 site.use(favicon())
 site.use(excerpt())
 site.use(search({ returnPageData: true }))
@@ -33,8 +31,8 @@ site.use(mdx({}))
 site.use(sass())
 site.use(nav())
 site.use(sitemap())
-site.use(multilanguage(languages))
-site.use(fluent(languages))
+site.use(multilanguage())
+site.use(fluent())
 site.use(outline())
 site.use(pagefind({
   indexing: {

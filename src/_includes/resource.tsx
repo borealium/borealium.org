@@ -8,7 +8,8 @@ import LanguageTag from "~/_components/tag.tsx"
 import { FluentPage, TranslateFn } from "~plugins/fluent.ts"
 import { autonym, getLanguageData, selectLocale } from "~plugins/language-data.ts"
 import { getCategoryData, translateCategoryName } from "~plugins/category-data.ts"
-import { markdownIt } from "lume/deps/markdown_it.ts"
+// import { markdownIt } from "lume/deps/markdown_it.ts"
+import * as marked from "marked"
 import dedent from "dedent"
 
 export const layout = "base.tsx"
@@ -24,7 +25,7 @@ function PahkatInfo({ t }: { t: TranslateFn }) {
     <div className="downloads">
       <h3>{t("available-on-divvun-manager")}</h3>
       <p>{t("divvun-manager-description")}</p>
-      <div style={{ marginTop: "8px" }}>
+      <div style={{ marginTop: "16px" }}>
         <DownloadButton
           title={t("dm-button-title")}
           description={t("dm-button-description")}
@@ -98,7 +99,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
             <CategoryLabel category={t("resource")} />
             <h1>{name}</h1>
             {description != null && (
-              <p>
+              <p className="description">
                 {description}
               </p>
             )}
@@ -145,7 +146,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
           {moreInfo != null && (
             <div
               className="section"
-              dangerouslySetInnerHTML={{ __html: markdownIt().render(dedent(moreInfo)) }}
+              dangerouslySetInnerHTML={{ __html: marked.parse(dedent(moreInfo)) }}
             />
           )}
           {isPahkat ? <PahkatInfo t={t} /> : <DownloadLinks t={t} resource={resource} lang={lang} />}

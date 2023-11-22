@@ -12,6 +12,28 @@ const resource: Resource = {
     en:
       "Divvun Manager is a package manager for installing and updating language resources on your Windows or Mac computer.",
   },
+  moreInfo: {
+    en: `
+        ## This is a test
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
+        augue nunc commodo nunc, vitae accumsan nunc augue eu magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
+        augue nunc commodo nunc, vitae accumsan nunc augue eu magna.
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
+        augue nunc commodo nunc, vitae accumsan nunc augue eu magna.
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
+        augue nunc commodo nunc, vitae accumsan nunc augue eu magna.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
+        augue nunc commodo nunc, vitae accumsan nunc augue eu magna.
+
+        ## Potato
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
+        augue nunc commodo nunc, vitae accumsan nunc augue eu magna.
+    `,
+  },
   documentationUrl: "/doc/divvun-manager/",
   links: [
     {

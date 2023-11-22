@@ -38,10 +38,15 @@
         margin: 0;
       }
 
-      p {
+      .description {
         margin: 0;
         font-size: 14px;
         line-height: 20px;
+      }
+
+      .section {
+        padding: 16px 0;
+        border-bottom: 1px solid var(--color-border);
       }
 
       .tags-wrapper {
@@ -129,10 +134,5 @@
         }
       }
     }
-  }
-
-  .section {
-    padding: 16px 0;
-    border-bottom: 1px solid var(--color-border);
   }
 }

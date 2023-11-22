@@ -3,6 +3,8 @@ import { Resource, ResourceRelease, ResourceType } from "~types/resource.ts"
 
 import { PahkatRelease, repo } from "~ext/pahkat.ts"
 import { getLanguageData } from "~plugins/language-data.ts"
+import { fluentBundle, message } from "~plugins/fluent.ts"
+import { LangTag } from "~types/category.ts"
 
 const externalResources: Resource[] = await Promise.all(
   Array.from(Deno.readDirSync("./ext/resources"))
@@ -13,6 +15,10 @@ const externalResources: Resource[] = await Promise.all(
 
 function findStable(rels: PahkatRelease[]) {
   return rels.find((x) => x.channel === null)
+}
+
+function findNightly(rels: PahkatRelease[]) {
+  return rels.find((x) => x.channel === "nightly")
 }
 
 function toResourceRelease(rel?: PahkatRelease): ResourceRelease | undefined {
@@ -40,24 +46,52 @@ const languageKeys = Object.keys(languages.languages)
   .filter((x) => !languages.uiOnly.includes(x))
 
 const pahkatResources: Resource[] = repo.packages
+  .filter((pkg) => pkg.release.length > 0)
   .map((pkg): Resource => {
     return {
       id: pkg.id,
       type: ResourceType.Pahkat,
       languages: pkg.tags
-        .filter((x) => x.startsWith("lang:"))
+        .filter((x) => x.startsWith("lang:") && x !== "lang:zxx")
         .map((x) => x.replace("lang:", "")),
       category: pkg
         .tags
         .find((x) => x.startsWith("cat:"))?.replace("cat:", "") ?? "",
       name: pkg.name,
       description: pkg.description,
-      release: toResourceRelease(findStable(pkg.release)),
+      release: toResourceRelease(findStable(pkg.release) ?? findNightly(pkg.release)),
     }
   })
   .filter((x) =>
     x.languages.length === 0 ||
     x.languages.some((x) => languageKeys.includes(x))
   )
+
+// Inject more info for specific cases
+pahkatResources
+  .filter((x) => x.category === "spellers")
+  .forEach((x) => {
+    if (x.moreInfo == null) {
+      const moreInfo: Record<LangTag, string> = {}
+      for (const lang of Object.keys(languages.languages)) {
+        const bundle = fluentBundle("", lang)
+        moreInfo[lang] = message(bundle, null, "~ext/resources", "more-info-spellers")
+      }
+      x.moreInfo = moreInfo
+    }
+  })
+
+pahkatResources
+  .filter((x) => x.category === "keyboard-layouts")
+  .forEach((x) => {
+    if (x.moreInfo == null) {
+      const moreInfo: Record<LangTag, string> = {}
+      for (const lang of Object.keys(languages.languages)) {
+        const bundle = fluentBundle("", lang)
+        moreInfo[lang] = message(bundle, null, "~ext/resources", "more-info-keyboards")
+      }
+      x.moreInfo = moreInfo
+    }
+  })
 
 export default [...externalResources, ...pahkatResources]

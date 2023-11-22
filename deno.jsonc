@@ -26,7 +26,8 @@
     "react/jsx-runtime": "https://esm.sh/stable/react@18.2.0/denonext/jsx-runtime.mjs",
     "lume/": "https://deno.land/x/lume@v1.19.3/",
     "@fluent/bundle": "https://esm.sh/stable/@fluent/bundle@0.18.0",
-    "dedent": "https://esm.sh/stable/dedent@1.5.1"
+    "dedent": "https://esm.sh/stable/dedent@1.5.1",
+    "marked": "https://esm.sh/stable/marked@10.0.0"
   },
   "fmt": {
     "options": {

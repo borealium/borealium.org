@@ -38,7 +38,7 @@ export default function BasePage(page: PageData & FluentPage) {
             li.setAttribute("class", "search-result")
             a.setAttribute("href", input.url)
             
-            let cls = "tag-resource"
+            let cls = "tag-page"
             if (input.type === "resource") {
               cls = "tag-resource"
             } else if (input.type === "category-index") {

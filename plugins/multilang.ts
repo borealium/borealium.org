@@ -1,10 +1,12 @@
 import { Page } from "lume/core/filesystem.ts"
 import type { PageData, Plugin } from "lume/core.ts"
-import { LanguagesData } from "~plugins/language-data.ts"
+import { getLanguageData } from "~plugins/language-data.ts"
 
 const MULTILANG_GENERATED = Symbol("multilang-generated")
 
-export default function multilanguage(languagesData: LanguagesData): Plugin {
+const languagesData = getLanguageData()
+
+export default function multilanguage(): Plugin {
   return (site) => {
     site.preprocess([".html", ".mdx", ".md"], (page) => {
       let [basePath, lang] = page.data.url ? page.data.url.split(".") : []
