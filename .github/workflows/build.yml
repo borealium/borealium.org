@@ -16,6 +16,20 @@ jobs:
       - name: Setup repo
         uses: actions/checkout@v4
 
+      - name: Cache Deno
+        id: cache-deno
+        uses: actions/cache@v3
+        with:
+          path: /home/runner/.deno
+          key: ${{ runner.os }}-deno
+
+      - name: Cache Cargo
+        id: cache-cargo
+        uses: actions/cache@v3
+        with:
+          path: _cargo
+          key: ${{ runner.os }}-cargo
+
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
 
