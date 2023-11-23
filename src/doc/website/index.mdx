@@ -31,6 +31,20 @@ as multilingualisation, Fluent translations, blog excerpts, etc.
 
 ## Adding content
 
+### Quickstart
+
+#### Adding a blog post
+
+#### Adding a static page
+
+#### Adding a new external resource
+
+#### Adding documentation for a resource
+
+#### Adding a new language
+
+#### Adding a new category
+
 ### Localisation
 
 There are two options for localisation of content:
@@ -90,15 +104,29 @@ effectively and supplies type handling and error detection.
 
 ### Custom plugins
 
-#### category-data
+The below describes what each plugin is for, and is not of particular interest or use to those simply adding content
+to the website.
 
-#### excerpt
+#### `category-data`
 
-#### Fluent
+Provides the category data to Lume pages where required. Not particularly interesting.
 
-#### language-data
+#### `excerpt`
 
-#### multilang
+This plugin generates the single paragraph summaries for the sidebar present on most pages on the website.
+
+#### `fluent`
+
+This plugin implements the Fluent wrappers so that `.flt` files can be used with this website.
+
+#### `language-data`
+
+Provides the language data to Lume pages where required. Not particularly interesting.
+
+#### `multilang`
+
+This plugin implements the support for generating a separate subsite for every provided language, and implements
+the fallback mechanisms that allow individual pages to fallback to the next closest translated language.
 
 #### outline
 
