@@ -35,6 +35,7 @@ jobs:
           key: ${{ runner.os }}-cargo
 
       - name: Install Rust toolchain
+        if: ${{ !steps.cache-cargo.outputs.cache-hit }}
         uses: dtolnay/rust-toolchain@stable
 
       - name: Setup Deno
