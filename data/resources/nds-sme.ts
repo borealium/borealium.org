@@ -4,50 +4,24 @@ const resource: Resource = {
   id: "nds-sme",
   type: ResourceType.External,
   languages: ["se"],
-  category: "keyboard-layouts",
+  category: "dictionary",
   name: {
-    en: "Divvun Keyboard",
+    en: "NDS for North Sámi",
   },
   description: {
-    en: "Divvun Keyboard for iOS and Android",
-  },
-  release: {
-    platforms: ["mobile"],
-    authors: [],
+    en: "Dictionary resources for North Sámi",
   },
   moreInfo: {
     en: `
-      Divvun Keyboards contains keyboards for most Sámi languages and a number of other indigenous or minority languages.
+      NDS — Neahttadigisánit — for North Sámi contains dictionaries translating to and from North Sámi.
     `,
   },
   links: [
     {
-      type: LinkType.AppleAppStore,
       text: {
         en: "Stable",
       },
-      url: new URL("https://apps.apple.com/app/divvun-keyboards/id948386025"),
-    },
-    {
-      type: LinkType.GooglePlayStore,
-      text: {
-        en: "Stable",
-      },
-      url: new URL("https://play.google.com/store/apps/details?id=no.uit.giella.keyboards.Sami"),
-    },
-    {
-      type: LinkType.AppleAppStore,
-      text: {
-        en: "Development",
-      },
-      url: new URL("https://apps.apple.com/us/app/divvun-dev-keyboards/id1518256662"),
-    },
-    {
-      type: LinkType.GooglePlayStore,
-      text: {
-        en: "Development",
-      },
-      url: new URL("https://play.google.com/store/apps/details?id=no.uit.giella.keyboards.dev"),
+      url: new URL("https://sanit.oahpa.no"),
     },
   ],
 }
