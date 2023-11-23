@@ -33,7 +33,16 @@
     padding: 0;
 
     li {
-      line-height: 28px;
+      line-height: 22px;
+      margin: 8px 0px;
+
+      code {
+        background: inherit;
+        color: inherit;
+        border-radius: inherit;
+        padding: inherit;
+        font-size: inherit;
+      }
     }
   }
 

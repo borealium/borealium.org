@@ -44,7 +44,7 @@ export default function outline(): Plugin {
           const li = document.createElement("li") as unknown as HTMLLIElement
           const a: HTMLAnchorElement = document.createElement("a") as unknown as HTMLAnchorElement
           a.setAttribute("href", `#${child.id}`)
-          a.textContent = child.text
+          a.innerHTML = child.text
           li.appendChild(a)
 
           if (child.children.length > 0) {
@@ -78,7 +78,7 @@ function generateOutlineData(elements: HTMLElement[]): TocData {
   let cur = root
 
   for (const element of elements) {
-    const text = element.textContent
+    const text = element.innerHTML
     if (text == null || text.trim().length === 0) {
       continue
     }
