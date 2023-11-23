@@ -33,7 +33,7 @@ const resource: Resource = {
       text: {
         en: "Stable",
       },
-      url: new URL("https://play.google.com/store/apps/details?id=no.uit.giella.keyboards"),
+      url: new URL("https://play.google.com/store/apps/details?id=no.uit.giella.keyboards.Sami"),
     },
     {
       type: LinkType.AppleAppStore,
