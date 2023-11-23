@@ -76,7 +76,7 @@ const languagesData: LanguagesData = {
     "nb": ["nn", "en"],
     "nn": ["nb", "en"],
   },
-  uiOnly: ["en", "nb", "nn", "sv"],
+  uiOnly: ["en", "fi", "nb", "nn", "sv"],
 }
 
 export default languagesData
