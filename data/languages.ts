@@ -4,24 +4,24 @@ const languagesData: LanguagesData = {
   languages: {
     "is": {
       name: "Icelandic",
-      autonym: "íslenska",
+      autonym: "Íslenska",
     },
     "fo": {
       name: "Faroese",
-      autonym: "føroyskt",
+      autonym: "Føroyskt",
     },
     "se": {
       name: "Northern Sami",
-      autonym: "davvisámegiella",
+      autonym: "Davvisámegiella",
     },
     "smj": {
       name: "Lule Sami",
-      autonym: "julevsámegiella",
+      autonym: "Julevsámegiella",
       "regions": { "NO": "Norway", "SE": "Sweden" },
     },
     "sma": {
       name: "Southern Sami",
-      autonym: "åarjelsaemien gïele",
+      autonym: "Åarjelsaemien gïele",
     },
     "sjd": {
       name: "Kildin Sami",
@@ -29,15 +29,15 @@ const languagesData: LanguagesData = {
     },
     "sms": {
       name: "Skolt Sami",
-      autonym: "nuõrttsääʹmǩiõll",
+      autonym: "Nuõrttsääʹmǩiõll",
     },
     "smn": {
       name: "Inari Sami",
-      autonym: "anarâškielâ",
+      autonym: "Anarâškielâ",
     },
     "fkv": {
       name: "Kven",
-      autonym: "kväänin kieli",
+      autonym: "Kväänin kieli",
     },
     "sje": {
       name: "Pite Sami",
@@ -53,15 +53,15 @@ const languagesData: LanguagesData = {
     },
     "nb": {
       name: "Norwegian (Bokmål)",
-      autonym: "norsk bokmål",
+      autonym: "Norsk bokmål",
     },
     "nn": {
       name: "Norwegian (Nynorsk)",
-      autonym: "norsk nynorsk",
+      autonym: "Norsk nynorsk",
     },
     "fi": {
       name: "Finnish",
-      autonym: "suomi",
+      autonym: "Suomi",
     },
   },
   fallbacks: {
