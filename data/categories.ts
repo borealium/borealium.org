@@ -7,6 +7,12 @@ const categoriesData: CategoriesData = {
       description: "Tools for installing, uninstalling and updating packages on your computer.",
     },
   },
+  "dictionary": {
+    en: {
+      name: "Dictionary",
+      description: "Resources for translating between languages.",
+    },
+  },
 }
 
 export default categoriesData
