@@ -20,10 +20,12 @@ jobs:
 
       - name: Cache Deno
         id: cache-deno
-        uses: actions/cache@v3
+        uses: actions/cache@v3 
         with:
-          path: ~/.deno
-          key: ${{ runner.os }}-deno
+          path: |
+            ~/.deno
+            ~/.cache/deno
+          key: ${{ runner.os }}-deno-${{ hashFiles('**/deps.ts') }}
 
       - name: Cache Cargo
         id: cache-cargo
