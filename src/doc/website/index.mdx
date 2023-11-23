@@ -13,11 +13,21 @@ This documentation describes how to maintain and develop this website (Borealium
 
 The purpose of this documentation is to describe the general structure of the website, how localisation functions and can be extended, key data sources that affect the website generation, and how to add or change content.
 
-This website uses the Lume framework. For specifics of using Lume, please read their documentation -- this document will only describe the specifics of maintaining this website, not all specifics about the framework used.
+This website uses the [Lume framework](https://lume.land). For specifics of using Lume, please read their documentation -- this document will only describe the specifics of maintaining this website, not all specifics about the framework used.
 
 ## Structure
 
-TODO describe the entire structure
+The core website functionality (pages, layouts, etc) are in `src/`.
+
+Data from Pahkat (the package management service used by Divvun) is found in the `data/` directory, alongside those
+resources specified as external dependencies. The language and category data is also defined in this directory.
+
+The language data specifies which languages are supported by the website, but also which languages are supported by the UI only 
+(i.e. do not show search results for resources in those languages). The category data specifies categories that cannot be derived
+from Divvun's repositories.
+
+Plugins used by Lume are found in the `plugins/` directory. These plugins extend Lume to provide support for things such
+as multilingualisation, Fluent translations, blog excerpts, etc.
 
 ## Adding content
 
@@ -25,22 +35,58 @@ TODO describe the entire structure
 
 There are two options for localisation of content:
 
+When creating a long prose file, such as a blog post, use an `.mdx` file (Markdown extended with TypeScript) with a special naming convention that includes the language. Consider a blog post that is
+translated to English, Swedish and Finnish. Your directory structure should look like this:
+
+```
+src/post
+└── 2023-08-12_beep-boop
+    ├── index.mdx
+    ├── index.fi.mdx
+    └── index.sv.mdx
+```
+
 For predominantly static content, such as titles of sections reused on multiple pages, or other reusable strings, this website uses Fluent files. These files are composable based
 on their position within the directory tree, so if an `index.en.flt` file exists in `src/`, and an `index.en.flt` exists at `src/foo/`, then all files in `src/foo/` will have all
 the strings defined in `src/index.en.flt` with `src/foo/index.en.flt` layered on top.
 
-It is recommended that the majority of the strings use the root definitions, and only using nested definitions when it makes sense to do so -- the goal is to promote string reuse, not clutter.
+In order to create a new Fluent translation, just create a file with the same name but a different language tag, e.g. `src/index.se.flt`. The system will automatically detect it and use 
+it where necessary.
 
+In order to access these translations from an `.mdx` file, use the `t` function which is always accessible in that scope:
+
+```javascript
+{t("my-i18n-id")}
+```
+
+If your translation includes a variable, you can specify that like so:
+
+```javascript
+{t("some-id", { someVar: "some value" })}
+```
+
+Within `.tsx` templates, the `t` function is a child of the `page` variable.
+
+It is recommended that the majority of the strings use the root definitions, and only using nested definitions when it makes 
+sense to do so -- the goal is to promote string reuse, not clutter.
 
 ## Development
 
 ### Prerequisites
 
-Install Deno. The codebase does not require any external dependencies.
+- Install [Rust](https://rustup.rs) — this is needed for validating the `.flt` files
+- Install [Deno](https://docs.deno.com/runtime/manual/getting_started/installation) — this is the JavaScript engine used by Lume
 
 ### Quickstart
 
-You can run the 
+```
+deno task serve
+```
+
+That's it! Now you have a local dev environment setup.
+
+It is recommended to use Visual Studio Code for developing this website, as it supported Deno
+effectively and supplies type handling and error detection.
 
 ### Custom plugins
 
@@ -55,7 +101,6 @@ You can run the
 #### multilang
 
 #### outline
-
 
 ### Client-side JavaScript
 
