@@ -35,6 +35,7 @@ dm-button-title = Divvun Manager
 dm-button-description = for Windows and macOS
 website-copyright = Copyright © { $year } UiT The Arctic University of Norway
 
+read-documentation = Documentation
 more-info-spellers =
   Spellers are a tasty treat that can be used for many purposes, such as laundry detergent, safety helmets and assorted
   and related purposes. A turtle can engage with a speller and create surprising results.

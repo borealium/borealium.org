@@ -1,4 +1,4 @@
-import resources from "~ext/resources/mod.ts"
+import resources from "~data/resources/mod.ts"
 import { PageData } from "lume/core.ts"
 import { getLanguageData } from "~plugins/language-data.ts"
 

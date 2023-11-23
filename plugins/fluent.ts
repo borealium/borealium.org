@@ -4,8 +4,9 @@ import { FluentBundle, FluentResource, FluentVariable } from "@fluent/bundle"
 import { existsSync, walkSync } from "std/fs/mod.ts"
 
 import { dirname } from "std/path/mod.ts"
-import { getLanguageData, LanguagesData } from "~plugins/language-data.ts"
+import { getLanguageData } from "~plugins/language-data.ts"
 import { relative } from "lume/deps/path.ts"
+import { LanguagesData } from "~types/language.ts"
 
 const languages = getLanguageData()
 
@@ -138,7 +139,6 @@ export default function fluent(userOptions?: Partial<Options>): Plugin {
 
       const src = page.src.entry?.src ?? `${Deno.cwd()}/src`
       const fltResKey = relative(`${Deno.cwd()}/src`, dirname(src ?? ""))
-      // const fallbacks = makeFallbacks(lang, languages)
 
       pages.splice(
         pages.indexOf(page),

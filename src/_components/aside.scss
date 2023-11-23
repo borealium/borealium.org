@@ -8,7 +8,7 @@
     position: sticky;
     top: var(--nav-links-height);
     z-index: 1;
-    height: calc(100vh - var(--nav-links-height));
+    height: calc(100vh - var(--nav-height));
     padding-bottom: 96px;
   }
 

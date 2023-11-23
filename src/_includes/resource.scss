@@ -1,7 +1,6 @@
 .resource {
   display: flex;
   flex-direction: column;
-  // overflow: auto;
   background-color: var(--color-background);
 
   @media (min-width: $md-breakpoint) {
@@ -14,7 +13,6 @@
   }
 
   @media (min-width: $lg-main-breakpoint) {
-    // height: calc(max(100vh, var(--nav-height) * 8) - var(--nav-height));
     contain: paint;
   }
 
@@ -53,6 +51,7 @@
         margin-top: 12px;
         display: flex;
         gap: 8px;
+        align-items: center;
       }
 
       .meta-wrapper {
@@ -62,6 +61,12 @@
         gap: 24px;
 
         .meta {
+          code {
+            background-color: transparent;
+            color: inherit;
+            border: 0;
+            padding: 0;
+          }
           span {
             font-weight: 700;
           }

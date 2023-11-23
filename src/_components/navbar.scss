@@ -106,7 +106,6 @@ $lg-breakpoint: 1280px;
           left: -108px;
           top: 100%;
 
-          // padding: 1rem;
           width: 70vw;
           height: calc((var(--vh) - var(--nav-links-height)));
           display: flex;
@@ -138,12 +137,10 @@ $lg-breakpoint: 1280px;
 
       @media (min-width: $nav-md) {
         margin-left: 0.5rem;
-        // margin-right: 4rem;
       }
 
       @media (min-width: $lg-breakpoint) {
         margin-left: 0.5rem;
-        // margin-right: 4rem;
       }
 
       @media (max-width: 450px) {

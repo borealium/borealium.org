@@ -1,7 +1,4 @@
-import { DownloadButton } from "../_components/download-button.tsx"
-import { Data, Page, PageData } from "lume/core.ts"
-import { CategoryLabel } from "../_components/label.tsx"
-import { getLanguageData } from "~plugins/language-data.ts"
+import { Data, PageData } from "lume/core.ts"
 import Aside, { SimplePost } from "../_components/aside.tsx"
 import { FluentPage } from "~plugins/fluent.ts"
 

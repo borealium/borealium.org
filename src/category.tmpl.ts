@@ -1,5 +1,5 @@
 import { getCategoryData } from "~plugins/category-data.ts"
-import resources from "~ext/resources/mod.ts"
+import resources from "~data/resources/mod.ts"
 import { PageData } from "lume/core.ts"
 
 const categoryData = getCategoryData()

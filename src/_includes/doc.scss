@@ -33,9 +33,6 @@
     padding: 0;
 
     li {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
       line-height: 28px;
     }
   }
@@ -48,8 +45,6 @@
 
   a:hover {
     color: #10131a;
-    font-weight: 600;
-    letter-spacing: -0.4px;
   }
 
   .back-to-top {

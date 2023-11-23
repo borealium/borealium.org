@@ -2,7 +2,7 @@ import lume from "lume/mod.ts"
 import jsx from "lume/plugins/jsx.ts"
 import mdx from "lume/plugins/mdx.ts"
 import sass from "lume/plugins/sass.ts"
-import sitemap from "lume/plugins/sitemap.ts"
+// import sitemap from "lume/plugins/sitemap.ts"
 import pagefind from "lume/plugins/pagefind.ts"
 import nav from "lume/plugins/nav.ts"
 import slugifyUrls from "lume/plugins/slugify_urls.ts"
@@ -30,7 +30,7 @@ site.use(jsx())
 site.use(mdx({}))
 site.use(sass())
 site.use(nav())
-site.use(sitemap())
+// site.use(sitemap())
 site.use(multilanguage())
 site.use(fluent())
 site.use(outline())

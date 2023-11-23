@@ -1,4 +1,4 @@
-import resources from "~ext/resources/mod.ts"
+import resources from "~data/resources/mod.ts"
 
 export const layout = "resource.tsx"
 

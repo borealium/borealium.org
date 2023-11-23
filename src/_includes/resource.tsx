@@ -8,7 +8,6 @@ import LanguageTag from "~/_components/tag.tsx"
 import { FluentPage, TranslateFn } from "~plugins/fluent.ts"
 import { autonym, getLanguageData, selectLocale } from "~plugins/language-data.ts"
 import { getCategoryData, translateCategoryName } from "~plugins/category-data.ts"
-// import { markdownIt } from "lume/deps/markdown_it.ts"
 import * as marked from "marked"
 import dedent from "dedent"
 
@@ -20,9 +19,13 @@ type ResourceProps = {
   lang: string
 }
 
-function PahkatInfo({ t }: { t: TranslateFn }) {
-  return (
-    <div className="downloads">
+function PahkatInfo({ resource, t }: { resource: Resource; t: TranslateFn }) {
+  if (resource.release == null) {
+    return <></>
+  }
+
+  const dm = (
+    <>
       <h3>{t("available-on-divvun-manager")}</h3>
       <p>{t("divvun-manager-description")}</p>
       <div style={{ marginTop: "16px" }}>
@@ -32,6 +35,32 @@ function PahkatInfo({ t }: { t: TranslateFn }) {
           href="/resource/divvun-manager"
         />
       </div>
+    </>
+  )
+
+  const dk = (
+    <>
+      <h3>{t("available-in-divvun-keyboard-app")}</h3>
+      <p>{t("divvun-keyboard-description")}</p>
+      <div style={{ marginTop: "16px" }}>
+        <DownloadButton
+          title={t("dk-button-title")}
+          description={t("dk-button-description")}
+          href="/resource/divvun-keyboard"
+        />
+      </div>
+    </>
+  )
+
+  const isRelevantCategory = resource.category === "keyboard-layouts" || resource.category === "spellers"
+  const isMobileKeyboard = isRelevantCategory && resource.release.platforms.includes("mobile")
+  const isOnDivvunManager = resource.release.platforms.includes("macos") ||
+    resource.release.platforms.includes("windows")
+
+  return (
+    <div className="downloads">
+      {isOnDivvunManager && dm}
+      {isMobileKeyboard && dk}
     </div>
   )
 }
@@ -126,10 +155,14 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
           <div className="meta-wrapper section">
             {resource.release && (
               <>
-                <div className="meta">
-                  <span>{t("release")}</span>
-                  <p>{resource.release.version}</p>
-                </div>
+                {resource.release.version && (
+                  <div className="meta">
+                    <span>{t("release")}</span>
+                    <p>
+                      <code>{resource.release.version}</code>
+                    </p>
+                  </div>
+                )}
                 <div className="meta">
                   <span>{t("platforms")}</span>
                   <p>{resource.release.platforms.join(", ")}</p>
@@ -138,6 +171,21 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
                   <div className="meta">
                     <span>{t("authors")}</span>
                     <p>{resource.release.authors.join(", ")}</p>
+                  </div>
+                )}
+                {resource.documentationUrl && (
+                  <div className="meta">
+                    <span>{t("documentation")}</span>
+                    <p>
+                      <a href={resource.documentationUrl}>
+                        <img
+                          style={{ height: "16px", float: "left", marginTop: "3px", marginRight: "6px" }}
+                          src={"/static/images/tag-page.svg"}
+                          alt=""
+                        />{" "}
+                        {name}
+                      </a>
+                    </p>
                   </div>
                 )}
               </>
@@ -149,7 +197,9 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
               dangerouslySetInnerHTML={{ __html: marked.parse(dedent(moreInfo)) }}
             />
           )}
-          {isPahkat ? <PahkatInfo t={t} /> : <DownloadLinks t={t} resource={resource} lang={lang} />}
+          {isPahkat
+            ? <PahkatInfo resource={resource} t={t} />
+            : <DownloadLinks t={t} resource={resource} lang={lang} />}
         </div>
 
         <div className="related-documentation">

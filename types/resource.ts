@@ -15,9 +15,9 @@ export type Resource = {
 }
 
 export type ResourceRelease = {
-  version: string
+  version?: string
   platforms: string[]
-  authors: string[]
+  authors?: string[]
   license?: string
   licenseUrl?: URL
 }

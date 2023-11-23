@@ -2,7 +2,7 @@
   --nav-height: 120px;
   --nav-gradient-height: 75px;
   --nav-links-height: 45px;
-  --vh: 95vh; // Here we go...
+  --vh: 95vh;
 
   --color-brand: #04bf93;
   --color-highlight: #10131a;
@@ -68,7 +68,6 @@ pre {
 }
 
 code {
-  // display: inline-flex;
   background: #494947;
   color: #fdfdfd;
   border-radius: 6px;
@@ -88,7 +87,14 @@ code {
   }
 }
 
-html[lang="sma-no"],
-html[lang="sma-NO"] q {
-  quotes: "«" "»" "‹" "›";
+html[lang*="sma"],
+html[lang*="smj"],
+html[lang="se"],
+html[lang="sje"],
+html[lang="sjd"],
+html[lang="sms"],
+html[lang="smn"] {
+  q {
+    quotes: "”" "”";
+  }
 }
