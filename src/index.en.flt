@@ -21,6 +21,9 @@ no-resources-in-category = No resources were found in this category.
 news = News
 available-on-divvun-manager = Available on Divvun Manager
 divvun-manager-description = Divvun Manager is a free and open source tool for managing linguistic resources such as spell checkers, keyboards and dictionaries. It supports macOS and Windows.
+available-in-divvun-keyboard-app = Available in Divvun Keyboard
+divvun-keyboard-description = Divvun Keyboard is a free and open source app for iOS and Android that provides Sámi keyboards and other minority and indigenous language keyboards. It includes spell checking.
+
 platforms = Platform(s)
 release = Release
 languages = Languages
@@ -33,6 +36,8 @@ for-macos = for macOS
 for-ios-and-android = for iOS and Android
 dm-button-title = Divvun Manager
 dm-button-description = for Windows and macOS
+dk-button-title = Divvun Keyboard
+dk-button-description = for iOS and Android
 website-copyright = Copyright © { $year } UiT The Arctic University of Norway
 
 read-documentation = Documentation

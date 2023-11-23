@@ -14,24 +14,47 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Setup repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
 
       - name: Setup Deno
         uses: denoland/setup-deno@v1
         with:
-          deno-version: v1.x
+          deno-version: v1.37.2
 
       - name: Build portal
-        run: deno task build  
+        run: deno task build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
+      
         
-      - name: Install SSH Key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          name: github_actions
-          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
-          config: ${{ secrets.SSH_CONFIG }}
+      # - name: Install SSH Key
+      #   uses: shimataro/ssh-key-action@v2
+      #   with:
+      #     key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #     name: github_actions
+      #     known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+      #     config: ${{ secrets.SSH_CONFIG }}
 
-      - name: Deploy with rsync
-        run: rsync -avz ./_site/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}
+      # - name: Deploy with rsync
+      #   run: rsync -avz ./_site/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}
+  deploy:
+    needs: build
 
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

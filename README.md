@@ -8,12 +8,6 @@ This uses [Lume](https://lume.land/docs/overview/about-lume/).
 deno task serve
 ```
 
-Update tools index:
-
-```
-deno run --allow-net --allow-write utils/fetch-tools-index.ts
-```
-
 All the JSX being red and angry?
 
 ```
