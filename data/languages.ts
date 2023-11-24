@@ -67,6 +67,10 @@ const languagesData: LanguagesData = {
       name: "Finnish",
       autonym: "Suomi",
     },
+    "da": {
+      name: "Danish",
+      autonym: "Dansk",
+    },
   },
   fallbacks: {
     "se": ["nb", "en"],
@@ -75,12 +79,13 @@ const languagesData: LanguagesData = {
     "smn": ["fi", "en"],
     "sje": ["sv", "en"],
     "fkv": ["sv", "en"],
+    "fkv": ["nb", "en"],
     "smj-SE": ["smj", "sv", "en"],
     "smj-NO": ["smj", "nb", "en"],
     "nb": ["nn", "en"],
     "nn": ["nb", "en"],
   },
-  uiOnly: ["en", "fi", "nb", "nn", "sv"],
+  uiOnly: ["da", "en", "fi", "nb", "nn", "sv"],
 }
 
 export default languagesData
