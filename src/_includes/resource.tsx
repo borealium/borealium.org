@@ -25,7 +25,7 @@ function PahkatInfo({ resource, t }: { resource: Resource; t: TranslateFn }) {
   }
 
   const dm = (
-    <>
+    <div>
       <h3>{t("available-on-divvun-manager")}</h3>
       <p>{t("divvun-manager-description")}</p>
       <div style={{ marginTop: "16px" }}>
@@ -35,11 +35,11 @@ function PahkatInfo({ resource, t }: { resource: Resource; t: TranslateFn }) {
           href="/resource/divvun-manager"
         />
       </div>
-    </>
+    </div>
   )
 
   const dk = (
-    <>
+    <div>
       <h3>{t("available-in-divvun-keyboard-app")}</h3>
       <p>{t("divvun-keyboard-description")}</p>
       <div style={{ marginTop: "16px" }}>
@@ -49,7 +49,7 @@ function PahkatInfo({ resource, t }: { resource: Resource; t: TranslateFn }) {
           href="/resource/divvun-keyboard"
         />
       </div>
-    </>
+    </div>
   )
 
   const isRelevantCategory = resource.category === "keyboard-layouts" || resource.category === "spellers"
