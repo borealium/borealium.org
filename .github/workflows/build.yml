@@ -41,7 +41,7 @@ jobs:
       - name: Setup Deno
         uses: denoland/setup-deno@v1
         with:
-          deno-version: v1.37.2
+          deno-version: v1.38.3
 
       - name: Build portal
         run: deno task build
