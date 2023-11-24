@@ -97,7 +97,7 @@ const languagesData: LanguagesData = {
     "kl": ["da", "en"],
   },
   uiOnly: ["da", "en", "fi", "nb", "nn", "sv"],
-  excludeFromUi: ["sje", "sju"],
+  excludeFromUi: ["fit", "fkv", "sjd", "sje", "sju", "sms"],
 }
 
 export default languagesData
