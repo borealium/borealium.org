@@ -5,7 +5,7 @@ about-us = Om oss
 divvun = Divvun
 privacy = Integritetspolicy
 
-information = Upplysning
+information = Information
 documentation = Dokumentation
 maintaining-this-website = Underhåll av denna webbplats
 
@@ -21,10 +21,13 @@ no-resources-in-category = Inga resurser hittades i denna kategori.
 news = Nyheter
 available-on-divvun-manager = Tillgänglig på Divvun Manager
 divvun-manager-description =
-  Divvun Manager är ett gratis och öppen källkodsverktyg för att hantera språkliga resurser som stavningskontroller,
-  tangentbord och ordböcker. Den stöder macOS och Windows.
-platforms = Plattformar
-release = Utgivningen
+  Divvun Manager är ett gratis och öppet källkodsverktyg för att hantera språkliga resurser som stavningskontroller,
+  tangentbord och ordböcker. Det stöder macOS och Windows.
+available-in-divvun-keyboard-app = Available in Divvun Keyboard
+divvun-keyboard-description = Divvun Keyboard is a free and open source app for iOS and Android that provides Sámi keyboards and other minority and indigenous language keyboards. It includes spell checking.
+
+platforms = Plattformer
+release = Utgivning
 languages = Språk
 categories = Kategorier
 
@@ -35,4 +38,17 @@ for-windows = på Windows
 for-macos = på macOS
 dm-button-title = Divvun Manager
 dm-button-description = på Windows och macOS
+dk-button-title = Divvun Keyboard
+dk-button-description = for iOS and Android
 website-copyright = Copyright © { $year } UiT Norges arktiska universitet
+
+read-documentation = Dokumentation
+more-info-spellers =
+  Spellers are a tasty treat that can be used for many purposes, such as laundry detergent, safety helmets and assorted
+  and related purposes. A turtle can engage with a speller and create surprising results.
+
+  Other times, these spellers can take on a life of their own, creating turtles themselves.
+more-info-keyboards =
+  Keyboards, keyboards, *keyboards!*
+
+  Get your keyboards here today.
