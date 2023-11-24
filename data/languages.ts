@@ -85,6 +85,8 @@ const languagesData: LanguagesData = {
     "smj-NO": ["smj", "nb", "en"],
     "nb": ["nn", "en"],
     "nn": ["nb", "en"],
+    "fo": ["da", "en"],
+    "kl": ["da", "en"],
   },
   uiOnly: ["da", "en", "fi", "nb", "nn", "sv"],
 }
