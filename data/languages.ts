@@ -10,6 +10,10 @@ const languagesData: LanguagesData = {
       name: "Faroese",
       autonym: "Føroyskt",
     },
+    "kl": {
+      name: "Greenlandic",
+      autonym: "Kalaallisut",
+    },
     "se": {
       name: "North Sámi",
       autonym: "Davvisámegiella",
