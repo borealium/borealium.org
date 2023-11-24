@@ -42,11 +42,12 @@
     padding: 0;
     display: none;
     background-color: var(--color-highlight);
+    height: calc(100vh - 45px);
+    overflow: auto;
 
     @media (max-width: 768px) {
       top: 120px;
       height: calc(100vh - 200px);
-      overflow: auto;
     }
 
     li {
