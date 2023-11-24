@@ -1,1 +1,38 @@
+welcome = Velkommen
 downloads = Lenker
+
+about-us = Om oss
+divvun = Divvun
+privacy = Personvern
+
+information = Informasjon
+documentation = Dokumentasjon
+maintaining-this-website = Vedlikehold av denne portalen
+
+resource = Ressurs
+category = Kategori
+language = Språk
+
+back-to-top = Tilbake til toppen
+read-more = Les mer
+see-more-results = Se flere søkeresultat
+no-resources-in-category = Ingen ressurser ble funnet i denne kategorien.
+
+news = Nyheter
+available-on-divvun-manager = Tilgengelig via Divvun Manager
+divvun-manager-description =
+  Divvun Manager er et gratis verktøy laget med åpen kildekode for å installere og oppdatere språklige ressurser som stavekontroll,
+  tastatur og ordbøker. Det støtter macOS og Windows.
+platforms = Plattformer
+release = Utgivelse
+languages = Språk
+categories = Kategorier
+
+for-apple-app-store = på iOS
+for-play-store = på Android
+for-ios-and-android = på iOS og Android
+for-windows = på Windows
+for-macos = på macOS
+dm-button-title = Divvun Manager
+dm-button-description = på Windows og macOS
+website-copyright = Copyright © { $year } UiT Norges arktiske universitet
