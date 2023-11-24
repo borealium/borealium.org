@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: ["main"]
   schedule:
-    # Run every 15 minutes
-    - cron:  '*/15 * * * *'
+    # Run every hour:
+    - cron:  '0 * * * *'
 permissions:
   contents: read
 
