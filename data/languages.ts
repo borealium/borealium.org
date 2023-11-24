@@ -11,28 +11,28 @@ const languagesData: LanguagesData = {
       autonym: "Føroyskt",
     },
     "se": {
-      name: "Northern Sami",
+      name: "North Sámi",
       autonym: "Davvisámegiella",
     },
     "smj": {
-      name: "Lule Sami",
+      name: "Lule Sámi",
       autonym: "Julevsámegiella",
       "regions": { "NO": "Norway", "SE": "Sweden" },
     },
     "sma": {
-      name: "Southern Sami",
+      name: "South Sámi",
       autonym: "Åarjelsaemien gïele",
     },
     "sjd": {
-      name: "Kildin Sami",
+      name: "Kildin Sámi",
       autonym: "Кӣллт са̄мь кӣлл",
     },
     "sms": {
-      name: "Skolt Sami",
+      name: "Skolt Sámi",
       autonym: "Nuõrttsääʹmǩiõll",
     },
     "smn": {
-      name: "Inari Sami",
+      name: "Inari Sámi",
       autonym: "Anarâškielâ",
     },
     "fkv": {
@@ -44,7 +44,7 @@ const languagesData: LanguagesData = {
       autonym: "Meänkieli",
     },
     "sje": {
-      name: "Pite Sami",
+      name: "Pite Sámi",
       autonym: "Bidumsámegiella",
     },
     "en": {
