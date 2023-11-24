@@ -4,7 +4,7 @@ const resource: Resource = {
   id: "nds-sme",
   type: ResourceType.External,
   languages: ["se"],
-  category: "dictionary",
+  category: "dictionaries",
   name: {
     en: "NDS for North Sámi",
   },
