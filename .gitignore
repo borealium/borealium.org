@@ -3,3 +3,6 @@ _site/
 _bin/
 _cargo/
 .DS_Store
+node_modules
+package-lock.json
+package.json
