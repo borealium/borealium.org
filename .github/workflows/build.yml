@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: ["main"]
   schedule:
-    # Run every hour:
+    # Run every hour to get the latest updates in Páhkat:
     - cron:  '0 * * * *'
 permissions:
   contents: read
