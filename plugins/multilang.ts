@@ -49,15 +49,17 @@ export default function multilanguage(): Plugin {
       ]
 
       const pageLanguages: string[] = []
-      Object.entries(languagesData.languages).forEach(([langId, langData]) => {
-        if (langData.regions != null) {
-          Object.keys(langData.regions).forEach((regionId) => {
-            pageLanguages.push(`${langId}-${regionId}`)
-          })
-        } else {
-          pageLanguages.push(langId)
-        }
-      })
+      Object.entries(languagesData.languages)
+        .filter(([x]) => !languagesData.excludeFromUi.includes(x))
+        .forEach(([langId, langData]) => {
+          if (langData.regions != null) {
+            Object.keys(langData.regions).forEach((regionId) => {
+              pageLanguages.push(`${langId}-${regionId}`)
+            })
+          } else {
+            pageLanguages.push(langId)
+          }
+        })
 
       for (const lang of pageLanguages) {
         const newUrl = `/${lang.toLowerCase()}${data.url}`
