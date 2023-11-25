@@ -49,6 +49,9 @@ more-info-spellers =
 
   Other times, these spellers can take on a life of their own, creating turtles themselves.
 more-info-keyboards =
-  Keyboards, keyboards, *keyboards!*
+  De flesta tangentborden i Borealium är bygda i GiellaLT-infrastrukturen, och gjorda av Divvun och
+  Giellatekno. Tangentborden blir bygda för Windows och macOS automatiskt, och distribuerade via
+  Divvun Manager. Tangentbord för ChromeOS måste läggas in i vår ChromeOS-app manuelt.
 
-  Get your keyboards here today.
+  Många språk har också tangentbord för Android och iOS. Dessa blir distribuerade via våra
+  tangentbordsappar.
