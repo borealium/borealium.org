@@ -21,7 +21,7 @@ const resource: Resource = {
       text: {
         en: "Sátni.org",
       },
-      url: new URL("https://santi.org"),
+      url: new URL("https://satni.org"),
     },
   ],
 }
