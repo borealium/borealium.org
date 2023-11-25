@@ -3,7 +3,7 @@ import { LinkType, Resource, ResourceType } from "~types/resource.ts"
 const resource: Resource = {
   id: "satni",
   type: ResourceType.External,
-  languages: ["se", "sma", "smj", "smn", "smn"],
+  languages: ["se", "sma", "smj", "smn", "sms"],
   category: "dictionaries",
   name: {
     en: "Sátni.org",
