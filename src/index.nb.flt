@@ -39,3 +39,17 @@ for-macos = på macOS
 dm-button-title = Divvun Manager
 dm-button-description = på Windows og macOS
 website-copyright = Copyright © { $year } UiT Norges arktiske universitet
+
+read-documentation = Dokumentasjon
+more-info-spellers =
+  Spellers are a tasty treat that can be used for many purposes, such as laundry detergent, safety helmets and assorted
+  and related purposes. A turtle can engage with a speller and create surprising results.
+
+  Other times, these spellers can take on a life of their own, creating turtles themselves.
+more-info-keyboards =
+  De fleste tastaturene i Borealium er bygde med GiellaLT-infrastrukturen, og laga av Divvun og
+  Giellatekno. Tastaturene blir bygde for Windows og macOS automatiskt, og distribuerte via
+  Divvun Manager. Tangentbord for ChromeOS må legges inn i vår ChromeOS-app manuelt.
+ 
+  Mange språk har også tastatur for Android og iOS. Disse blir distribuerte via våre
+  tastaturapper.
