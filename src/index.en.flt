@@ -44,10 +44,12 @@ website-copyright = Copyright © { $year } UiT The Arctic University of Norway
 
 read-documentation = Documentation
 more-info-spellers =
-  Spellers are a tasty treat that can be used for many purposes, such as laundry detergent, safety helmets and assorted
-  and related purposes. A turtle can engage with a speller and create surprising results.
+  Most spellers in Borealium are built using the GiellaLT infrastructure, based
+  on open source code. The spellers work in most macOS apps, and in MS Office,
+  LibreOffice and several other apps on Windows.
 
-  Other times, these spellers can take on a life of their own, creating turtles themselves.
+  The spellers from GiellaLT are installed using Divvun Manager, and they are
+  also kept up-to-date automatically by Divvun Manager.
 more-info-keyboards =
   Most keyboards found in Borealium are built in the GiellaLT infrastructure by Divvun
   and Giellatekno. These keyboards are built for Windows and macOS automatically, and distributed
