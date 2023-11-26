@@ -1,8 +1,9 @@
-title = This is Borealium, the Nordic language data repository.
+title = Borealium -- tools for the small languages of the Nordics.
 description =
-  We help to develop and maintain language and technology tools, 
-  including spelling and grammar checkers, keyboards, dictionaries, and other 
-  digital and web services - with the vast majority being provided free of charge 
-  as open-source software.
+  Borealium gathers all tools and language support
+  for small, Nordic languages in one place.
+  One can search, choose a language below, or just
+  explore everything available: spelling checkers, grammar checkers,
+  dictionaries, keyboards and more.
+  Almost everything is for free, and built with open source.
 subtitle = Find resources for the languages below:
-  
