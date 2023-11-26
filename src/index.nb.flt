@@ -46,6 +46,10 @@ more-info-spellers =
   GiellaLT-infrastrukturen, og er åpen kildekode.
   Stavekontrollene fungerer i de fleste program på macOS,
   og i MS Office, LibreOffice og flere andre program på Windows.
+  
+  Stavekontrollene fra GiellaLT installeres med
+  Divvun Manager, som også automatisk holder alle
+  verktøyene oppdaterte.
 more-info-keyboards =
   De fleste tastaturene i Borealium er bygde med GiellaLT-infrastrukturen, og laga av Divvun og
   Giellatekno. Tastaturene blir bygde for Windows og macOS automatiskt, og distribuerte via
