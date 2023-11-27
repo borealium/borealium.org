@@ -2,5 +2,9 @@ tag = Manager
 title =
   One download and the rest is handled automatically, including keeping the tools up-to-date.
 description =
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit sed diam non et erat. Lorem ipsum dolor sit amet,
-  consectetur adipiscing elit sed diam non et erat.
+  Divvun Manager is used to install proofing
+  tools, keyboards and more on Windows and
+  macOS computers. After installation of
+  the tools you wand, Divvun Manager ensures
+  the tools are kept updated by installing
+  updates automatically in the background.
