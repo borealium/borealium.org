@@ -1,2 +1,9 @@
 tag = Pakethanterare
 title = En nedladdning och resten hanteras automatiskt, inklusive att hålla verktygen uppdaterade.
+description =
+  Divvun Manager används för att installera
+  rättskrivningsverktyg,  tangentbord med mera
+  på datorer. När verktygen har installerats,
+  håller Divvun Manager dem uppdaterade genom
+  att automatiskt installera nya versioner i
+  bakgrunden.
