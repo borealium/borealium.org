@@ -24,6 +24,7 @@ export default function BasePage(page: PageData & FluentPage) {
           rel="stylesheet"
         />
         <link rel="stylesheet" href="/styles/index.css" />
+        <script defer data-domain="borealium.org" src="https://plausible.io/js/script.js"></script>
         {script(`
           if (document.documentElement.hasAttribute("lang")) {
             localStorage.setItem("borealium:language", document.documentElement.getAttribute("lang"))
