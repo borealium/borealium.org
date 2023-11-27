@@ -16,10 +16,7 @@ const resource: Resource = {
   },
   moreInfo: {
     en: `
-      On Windows, use Divvun Manager to install this plugin. It is installed automatically if you:
-      
-      1. have LibreOffice installed
-      1. install a speller for any language using Divvun Manager
+      On Windows, use Divvun Manager to install this plugin. It is installed automatically if you have LibreOffice on your computer.
 
       ### Installation on macOS
 
