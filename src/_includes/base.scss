@@ -87,6 +87,18 @@ code {
   }
 }
 
+figure {
+  img {
+    width: 100%;
+  }
+
+  figcaption {
+    font-size: 75%;
+    text-align: center;
+    margin-top: 4px;
+  }
+}
+
 html[lang*="sma"],
 html[lang*="smj"],
 html[lang="se"],
