@@ -47,7 +47,13 @@ const languageKeys = Object.keys(languages.languages)
 
 const pahkatResources: Resource[] = repo.packages
   .filter((pkg) => pkg.release.length > 0)
-  .map((pkg): Resource => {
+  .map((pkg): Resource | null => {
+    const stable = findStable(pkg.release)
+
+    if (stable == null) {
+      return null
+    }
+
     return {
       id: pkg.id,
       type: ResourceType.Pahkat,
@@ -59,9 +65,10 @@ const pahkatResources: Resource[] = repo.packages
         .find((x) => x.startsWith("cat:"))?.replace("cat:", "") ?? "",
       name: pkg.name,
       description: pkg.description,
-      release: toResourceRelease(findStable(pkg.release)),
+      release: toResourceRelease(stable),
     }
   })
+  .filter((x): x is Resource => x != null)
   .filter((x) =>
     x.languages.length === 0 ||
     x.languages.some((x) => languageKeys.includes(x))

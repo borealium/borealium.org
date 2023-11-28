@@ -162,13 +162,13 @@ async function downloadStrings(repo: string) {
 
 console.log("Downloading Pahkat repo data...")
 
-export const strings = await downloadStrings("main")
-export const repo = await downloadMainRepo()
+// export const strings = await downloadStrings("main")
+// export const repo = await downloadMainRepo()
 
 // Deno.writeTextFileSync("./dump.json", JSON.stringify({ strings, repo }, null, 2))
-// const raw = JSON.parse(Deno.readTextFileSync("./dump.json"))
+const raw = JSON.parse(Deno.readTextFileSync("./dump.json"))
 
-// export const strings: Record<string, any> = raw.strings
-// export const repo: PahkatRepo = raw.repo
+export const strings: Record<string, any> = raw.strings
+export const repo: PahkatRepo = raw.repo
 
 console.log("Pahkat data loaded.")
