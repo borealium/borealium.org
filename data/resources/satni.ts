@@ -8,6 +8,7 @@ const resource: Resource = {
   name: {
     en: "Sátni.org",
   },
+  tags: ["satni", "baakoe"],
   description: {
     en: "Terminology and dictionaries fot the Sámi languages",
   },

@@ -134,6 +134,14 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
             )}
           </div>
           <div className="tags-wrapper">
+            {resource.tags != null && (
+              <div aria-hidden style={{ display: "none" }}>
+                {resource.tags.map((x) => {
+                  return <div className="tag">{x}</div>
+                })}
+              </div>
+            )}
+
             <a
               className="tag tag-category"
               href={`/category/${resource.category}`}
