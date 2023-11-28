@@ -59,7 +59,7 @@ const pahkatResources: Resource[] = repo.packages
         .find((x) => x.startsWith("cat:"))?.replace("cat:", "") ?? "",
       name: pkg.name,
       description: pkg.description,
-      release: toResourceRelease(findStable(pkg.release) ?? findNightly(pkg.release)),
+      release: toResourceRelease(findStable(pkg.release)),
     }
   })
   .filter((x) =>
