@@ -169,8 +169,10 @@ export default function BasePage(page: PageData & FluentPage) {
             })
             
             document.querySelector("#search").addEventListener("input", async (e) => {
-              if (e.target.value == null && e.target.value.trim() === "") {
+              if (e.target.value == null || e.target.value.trim() === "") {
                 hidePopover()
+                thisDebounceId = +new Date()
+                return
               }
 
               const thisDebounceId = +new Date()

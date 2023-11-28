@@ -2,7 +2,11 @@
   position: relative;
   padding-left: 1rem;
   width: 100%;
-  height: var(--nav-links-height);
+
+  // These two deal with a gradient overlapping bug.
+  height: calc(var(--nav-links-height) + 1px);
+  margin-top: -1px;
+
   display: flex;
   align-items: center;
   gap: 0.5rem;

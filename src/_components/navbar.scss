@@ -134,6 +134,7 @@ $lg-breakpoint: 1280px;
 
     .search-wrapper {
       min-width: 55px;
+      // margin-top: -1px;
 
       @media (min-width: $nav-md) {
         margin-left: 0.5rem;
