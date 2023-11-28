@@ -52,6 +52,7 @@
         display: flex;
         gap: 8px;
         align-items: center;
+        flex-wrap: wrap;
       }
 
       .meta-wrapper {
@@ -111,7 +112,6 @@
 
       .categories {
         display: flex;
-        flex-wrap: wrap;
         gap: 32px;
 
         @media (max-width: $md-breakpoint) {
