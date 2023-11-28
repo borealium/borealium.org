@@ -88,6 +88,10 @@ code {
 }
 
 figure {
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+
   img {
     width: 100%;
   }
