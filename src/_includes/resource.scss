@@ -111,6 +111,7 @@
 
       .categories {
         display: flex;
+        flex-wrap: wrap;
         gap: 32px;
 
         @media (max-width: $md-breakpoint) {
