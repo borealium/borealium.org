@@ -19,6 +19,7 @@ function SearchIcon() {
       stroke="var(--color-text-secondary)"
       width="24px"
       height="24px"
+      style={{ minWidth: "24px", minHeight: "24px" }}
     >
       <path
         strokeLinecap="round"

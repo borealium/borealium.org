@@ -11,8 +11,10 @@ export function Navbar(props: { url: string; t: TranslateFn }) {
           <a className="logo" href="/">
             <img src="/static/images/borealium-small-logo.svg" alt="Borealium" />
           </a>
-          <div className="nav-items-wrapper">
-          </div>
+          {
+            /* <div className="nav-items-wrapper">
+          </div> */
+          }
         </div>
         <div className="search-wrapper">
           <SearchForm />
