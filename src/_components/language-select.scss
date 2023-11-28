@@ -42,7 +42,8 @@
     padding: 0;
     display: none;
     background-color: var(--color-highlight);
-    height: calc(100vh - 45px);
+    height: fit-content;
+    max-height: calc(100vh - 45px);
     overflow: auto;
 
     @media (max-width: 768px) {
