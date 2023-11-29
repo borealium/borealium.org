@@ -14,19 +14,21 @@ const resource: Resource = {
   links: [
     {
       text: {
-        en: "Martha TTS (English)",
+        en: "Martha TTS (in English)",
       },
       url: new URL("https://oqaasileriffik.gl/en/langtech/martha/"),
     },
     {
       text: {
         kl: "Martha TTS (kalaallisut)",
+        en: "Martha TTS (in Greenlandic)",
       },
       url: new URL("https://oqaasileriffik.gl/oqaaserpassualerineq/martha/"),
     },
     {
       text: {
-        da: "Martha TTS (dansk)",
+        da: "Martha TTS (på dansk)",
+        en: "Martha TTS (in Danish)",
       },
       url: new URL("https://oqaasileriffik.gl/da/sprogteknologi/martha/"),
     },
