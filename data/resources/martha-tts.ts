@@ -22,3 +22,4 @@ const resource: Resource = {
 }
 
 export default resource
+
