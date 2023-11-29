@@ -16,7 +16,7 @@ const resource: Resource = {
   links: [
     {
       text: {
-        en: "Nútímamálsorðabók",
+        en: "Nútímamáls-orðabók",
       },
       url: new URL("https://islenskordabok.arnastofnun.is"),
     },
