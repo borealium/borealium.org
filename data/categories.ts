@@ -23,6 +23,6 @@ const categoriesData: CategoriesData = {
       description: "Tools to convert text to speech",
     },
   },
-}x
+}
 
 export default categoriesData
