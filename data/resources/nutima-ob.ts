@@ -7,11 +7,11 @@ const resource: Resource = {
   category: "dictionaries",
   name: {
     en: "Icelandic modern dictionary",
-    is: "Íslensk nútímamálsorðabók",
+    is: "Nútímamálsorðabók",
   },
   description: {
-    en: "Online dictionary for Icelandic",
-    is: "Íslensk nútímamálsorðabók",
+    en: "Online dictionary for modern Icelandic",
+    is: "Íslensk nútímamálsorðabók á netinu",
   },
   links: [
     {
