@@ -12,6 +12,11 @@ const categoriesData: CategoriesData = {
       name: "Dictionaries",
       description: "Resources for translating between languages.",
     },
+  "text-to-speech": {
+    en: {
+      name: "Text-to-speech systems",
+      description: "Tools to convert text to speech",
+    },
   },
 }
 
