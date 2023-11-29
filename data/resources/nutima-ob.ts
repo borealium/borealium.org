@@ -1,7 +1,7 @@
 import { LinkType, Resource, ResourceType } from "~types/resource.ts"
 
 const resource: Resource = {
-  id: "nutima_ob",
+  id: "nutimaordabok",
   type: ResourceType.External,
   languages: ["is"],
   category: "dictionaries",
