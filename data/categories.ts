@@ -6,6 +6,10 @@ const categoriesData: CategoriesData = {
       name: "Package Management",
       description: "Tools for installing, uninstalling and updating packages on your computer.",
     },
+    nb: {
+      name: "Ordbøker",
+      description: "Ressurser for å oversette mellom språk.",
+    },
   },
   "dictionaries": {
     en: {
