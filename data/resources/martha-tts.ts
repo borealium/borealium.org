@@ -14,7 +14,7 @@ const resource: Resource = {
   links: [
     {
       text: {
-        en: "Martha",
+        en: "Martha TTS",
       },
       url: new URL("https://oqaasileriffik.gl/en/langtech/martha/"),
     },
