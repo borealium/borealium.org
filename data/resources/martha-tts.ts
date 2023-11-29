@@ -1,7 +1,7 @@
 import { LinkType, Resource, ResourceType } from "~types/resource.ts"
 
 const resource: Resource = {
-  id: "martha_tts",
+  id: "marthatts",
   type: ResourceType.External,
   languages: ["kl"],
   category: "text-to-speech",
