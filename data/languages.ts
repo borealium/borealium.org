@@ -51,10 +51,10 @@ const languagesData: LanguagesData = {
       name: "Pite Sámi",
       autonym: "Bidumsámegiella",
     },
-    "sju": {
+/*    "sju": {
       name: "Ume Sámi",
       autonym: "Ubmejesámiengiälla",
-    },
+    }, */
     "en": {
       name: "English",
       autonym: "English",
