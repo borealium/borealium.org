@@ -27,11 +27,11 @@ const languagesData: LanguagesData = {
       name: "South Sámi",
       autonym: "Åarjelsaemien gïele",
     },
-    /*     "sjd": {
+    "sjd": {
       name: "Kildin Sámi",
       autonym: "Кӣллт са̄мь кӣлл",
     },
- */ "sms": {
+    "sms": {
       name: "Skolt Sámi",
       autonym: "Nuõrttsääʹmǩiõll",
     },
