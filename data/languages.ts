@@ -67,18 +67,18 @@ const languagesData: LanguagesData = {
       name: "Norwegian (Bokmål)",
       autonym: "Norsk bokmål",
     },
-    "nn": {
+    /*     "nn": {
       name: "Norwegian (Nynorsk)",
       autonym: "Norsk nynorsk",
-    },
-    "fi": {
+    }, */
+    /*     "fi": {
       name: "Finnish",
       autonym: "Suomi",
-    },
-    "da": {
+    }, */
+    /*     "da": {
       name: "Danish",
       autonym: "Dansk",
-    },
+    }, */
   },
   fallbacks: {
     "se": ["nb", "en"],
