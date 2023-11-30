@@ -43,7 +43,7 @@ const languagesData: LanguagesData = {
       name: "Kven",
       autonym: "Kväänin kieli",
     },
-/*    "fit": {
+    /*    "fit": {
       name: "Meänkieli",
       autonym: "Meänkieli",
     }, */
@@ -51,10 +51,10 @@ const languagesData: LanguagesData = {
       name: "Pite Sámi",
       autonym: "Bidumsámegiella",
     },
-/*    "sju": {
+    "sju": {
       name: "Ume Sámi",
       autonym: "Ubmejesámiengiälla",
-    }, */
+    },
     "en": {
       name: "English",
       autonym: "English",
