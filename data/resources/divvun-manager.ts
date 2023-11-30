@@ -11,6 +11,10 @@ const resource: Resource = {
   description: {
     en:
       "Divvun Manager is a package manager for installing and updating language resources on your Windows or Mac computer.",
+    sv:
+      "Divvun Manager är en pakethanterare för att installera och uppdatera språkverktyg för din Windows- eller Mac-dator.",
+    nb:
+      "Divvun Manager er en pakkehåndterer for å installere og uppdatere språkverktøy for Windows- eller Mac-datamaskinen din.",
   },
   release: {
     platforms: ["windows", "macos"],
