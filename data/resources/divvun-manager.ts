@@ -17,24 +17,9 @@ const resource: Resource = {
   },
   moreInfo: {
     en: `
-        ## This is a test
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
-        augue nunc commodo nunc, vitae accumsan nunc augue eu magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
-        augue nunc commodo nunc, vitae accumsan nunc augue eu magna.
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
-        augue nunc commodo nunc, vitae accumsan nunc augue eu magna.
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
-        augue nunc commodo nunc, vitae accumsan nunc augue eu magna.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
-        augue nunc commodo nunc, vitae accumsan nunc augue eu magna.
-
-        ## Potato
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, augue eu facilisis accumsan,
-        augue nunc commodo nunc, vitae accumsan nunc augue eu magna.
+        In Divvun Manager you choose a language, and then install the available tools. After installation,
+        Divvun Manager periodically checks for updates, and installs them automatically in the background
+        if any is available.
     `,
   },
   documentationUrl: "/doc/divvun-manager/",
