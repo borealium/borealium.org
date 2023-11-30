@@ -19,7 +19,7 @@ const resource: Resource = {
   links: [
     {
       text: {
-        en: "NDS",
+        en: "NDS Davvi",
       },
       url: new URL("https://sanit.oahpa.no"),
     },
