@@ -13,3 +13,9 @@ All the JSX being red and angry?
 ```
 deno cache src/_includes/*.tsx
 ```
+
+## Site traffic
+
+See [borealium.org@plausible](https://plausible.io/borealium.org) (requires login for the time being).
+
+[Plausible](https://plausible.io/) is fully GDPR compliant, does not track, and is open source.
