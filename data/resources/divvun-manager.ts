@@ -25,6 +25,16 @@ const resource: Resource = {
         Divvun Manager periodically checks for updates, and installs them automatically in the background
         if any is available.
     `,
+    sv: `
+        I Divvun Manager väljer du språk, och därefter installerar du verktygen som finns. Efter installationen
+        vil Divvun Manager med jämna mellanrum kolla om det finns nya versioner av verktygen, och i fall det
+        finns vil de installeras automatiskt.
+    `,
+    nb: `
+        I Divvun Manager velger du språk, og deretter installerer du verktöyene for språket. Etter installasjonen
+        vil Divvun Manager med jevne mellomrom sjekke om det finnes nye versjoner av verktöyene, og i så fall
+        installere dem automatisk.
+    `,
   },
   documentationUrl: "/doc/divvun-manager/",
   links: [
