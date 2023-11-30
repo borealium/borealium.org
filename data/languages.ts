@@ -43,10 +43,10 @@ const languagesData: LanguagesData = {
       name: "Kven",
       autonym: "Kväänin kieli",
     },
-    "fit": {
+/*    "fit": {
       name: "Meänkieli",
       autonym: "Meänkieli",
-    },
+    }, */
     "sje": {
       name: "Pite Sámi",
       autonym: "Bidumsámegiella",
