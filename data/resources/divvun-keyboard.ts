@@ -8,12 +8,12 @@ const resource: Resource = {
   name: {
     en: "Divvun Keyboard",
     sv: "Divvun Tangentbord",
-    nb: "Divvun-tastaturer",
+    nb: "Divvun Tastaturer",
   },
   description: {
     en: "Divvun Keyboard for iOS and Android",
-    sv: "Divvun-tangentbord för iOS och Android",
-    nb: "Divvun-tastaturer for iOS og Android",
+    sv: "Divvun Tangentbord för iOS och Android",
+    nb: "Divvun Tastaturer for iOS og Android",
   },
   release: {
     platforms: ["mobile"],
@@ -24,7 +24,7 @@ const resource: Resource = {
       Divvun Keyboards contains keyboards for most Sámi languages and a number of other indigenous or minority languages.
     `,
     sv: `
-      Divvun Tangentbord innehåller tangentbord för alla samiska språk, och tangentbord för ett antal andra urfolks- och minoritetsspråk.
+      Divvun Tangentbord har tangentbord för alla samiska språk, samt tangentbord för ett antal andra urfolks- och minoritetsspråk.
     `,
     nb: `
       Divvun Tastaturer inneholder tastaturer for alle samiske språk, og tastaturer for en rekke andre urfolks- og minoritetsspråk.
