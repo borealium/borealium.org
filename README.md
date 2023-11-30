@@ -14,7 +14,7 @@ All the JSX being red and angry?
 deno cache src/_includes/*.tsx
 ```
 
-## Site traffic
+## Site analytics
 
 See [borealium.org@plausible](https://plausible.io/borealium.org) (requires login for the time being).
 
