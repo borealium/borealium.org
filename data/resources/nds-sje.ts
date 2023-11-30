@@ -19,7 +19,7 @@ const resource: Resource = {
   links: [
     {
       text: {
-        en: "NDS Åarjel",
+        en: "NDS Bidum-sámegiella",
       },
       url: new URL("https://bahkogirrje.oahpa.no"),
     },
