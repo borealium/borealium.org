@@ -36,9 +36,9 @@ for-windows = Windowsij
 for-macos = macOS:aj
 for-ios-and-android = iOS:an ja Androidaj
 dm-button-title = Divvun Manager
-dm-button-description =  Windowsij and macOS:aj
+dm-button-description =  Windowsij ja macOS:aj
 dk-button-title = Divvun Keyboard
-dk-button-description = iOS:aj and Androidaj
+dk-button-description = iOS:aj ja Androidaj
 website-copyright = Dahkkerievtesvuode © { $year } UiT Vuona arktalasj universitiehtta
 
 read-documentation = Dokumentasjåvnnå
