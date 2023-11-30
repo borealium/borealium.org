@@ -3,7 +3,7 @@ import { LinkType, Resource, ResourceType } from "~types/resource.ts"
 const resource: Resource = {
   id: "nds-sms",
   type: ResourceType.External,
-  languages: ["sma"],
+  languages: ["sms"],
   category: "dictionaries",
   name: {
     en: "NDS for Skolt Sámi",
