@@ -35,6 +35,12 @@ const categoriesData: CategoriesData = {
       description: "Tools to convert speech to text, dictate, create subtitling and more",
     },
   },
+  "korp": {
+    en: {
+      name: "Korp",
+      description: "Corpus resources presented with the Korp web interface.",
+    },
+  },
 }
 
 export default categoriesData
