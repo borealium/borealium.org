@@ -29,6 +29,12 @@ const categoriesData: CategoriesData = {
       description: "Tools to convert text to speech",
     },
   },
+  "speech-recognition": {
+    en: {
+      name: "Automatic speech recognition (ASR)",
+      description: "Tools to convert speech to text, dictate, create subtitling and more",
+    },
+  },
 }
 
 export default categoriesData
