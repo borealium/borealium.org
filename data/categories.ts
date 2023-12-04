@@ -38,7 +38,7 @@ const categoriesData: CategoriesData = {
   "korp": {
     en: {
       name: "Korp",
-      description: "Corpus resources presented with the Korp web interface.",
+      description: "Corpus resources presented in the Korp web interface.",
     },
   },
 }
