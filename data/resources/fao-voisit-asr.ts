@@ -18,6 +18,20 @@ const resource: Resource = {
       },
       url: new URL("https://voisit.fo"),
     },
+    {
+      type: LinkType.AppleAppStore,
+      text: {
+        en: "VoisIT",
+      },
+      url: new URL("https://apps.apple.com/dk/app/voisit/id6459887023?l=da"),
+    },
+    {
+      type: LinkType.GooglePlayStore,
+      text: {
+        en: "VoisIT",
+      },
+      url: new URL("https://play.google.com/store/apps/details?id=net.isolveit.voisit"),
+    },
   ],
 }
 
