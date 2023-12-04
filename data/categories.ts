@@ -17,16 +17,16 @@ const categoriesData: CategoriesData = {
       description: "Resources for translating between languages.",
     },
   },
-  "text-to-speech": {
-    en: {
-      name: "Text-to-speech systems",
-      description: "Tools to convert text to speech",
-    },
-  },
   "grammar-checkers": {
     en: {
       name: "Grammar checkers",
       description: "Tools for checking grammar errors, formatting errors and more.",
+    },
+  },
+  "text-to-speech": {
+    en: {
+      name: "Text-to-speech systems",
+      description: "Tools to convert text to speech",
     },
   },
 }
