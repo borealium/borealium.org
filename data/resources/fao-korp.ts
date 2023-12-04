@@ -9,7 +9,7 @@ const resource: Resource = {
     en: "Korp for Faroese",
   },
   description: {
-    en: "In the text corpus Korp, you can search for Faroese texts. The text corpus is gramatically annotated.",
+    en: "In Korp for Faroese, you can search for Faroese texts. The text corpus is gramatically annotated.",
   },
   links: [
     {
