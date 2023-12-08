@@ -9,19 +9,44 @@ import { LangTag } from "~types/category.ts"
 const externalResources: Resource[] = await Promise.all(
   Array.from(Deno.readDirSync("./data/resources"))
     .filter((x) => x.isFile && x.name.endsWith(".ts") && x.name !== "mod.ts")
-    .map((x) => join("~data/resources", x.name))
     .filter((x) => {
-      const isValid = /^[a-z0-9-]+\.ts$/.test(x)
+      const isValid = /^[a-z0-9-]+\.ts$/.test(x.name)
       if (!isValid) {
-        console.error(`ERROR: Resource file ${x} is not a valid identifier. Only dashes (-), a-z and 0-9 are accepted.`)
+        console.error(
+          `ERROR: Resource file ${x.name} is not a valid identifier. Only dashes (-), a-z and 0-9 are accepted.`,
+        )
       }
       return isValid
     })
+    .map((x) => join("~data/resources", x.name))
     .map((x) => import(x).then((x) => x.default)),
 )
 
 function findStable(rels: PahkatRelease[]) {
-  return rels.find((x) => x.channel === null)
+  const targets = new Set(
+    rels
+      .map((x) => {
+        return x.target.map((y) => {
+          if (y.arch != null) {
+            return `${y.platform}/${y.arch}`
+          } else {
+            return y.platform
+          }
+        })
+      }).flat(),
+  )
+
+  const rel = rels.find((x) => x.channel === null)
+  if (rel == null) {
+    return
+  }
+
+  rel.target = Array.from(targets).map((x) => {
+    const [platform, arch] = x.split("/")
+    return { platform, arch }
+  })
+
+  return rel
 }
 
 function findNightly(rels: PahkatRelease[]) {

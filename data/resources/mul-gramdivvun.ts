@@ -12,7 +12,7 @@ const resource: Resource = {
     en: "Divvun Grammar checkers",
   },
   release: {
-    platforms: ["desktop", "mobile"],
+    platforms: ["macos", "windows", "mobile"],
     authors: [],
   },
   moreInfo: {
