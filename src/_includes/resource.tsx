@@ -173,7 +173,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
                 )}
                 <div className="meta">
                   <span>{t("platforms")}</span>
-                  <p>{resource.release.platforms.join(", ")}</p>
+                  <p>{resource.release.platforms.map((p) => t(p)).join(", ")}</p>
                 </div>
                 {resource.release.authors && resource.release.authors.length > 0 && (
                   <div className="meta">
