@@ -3,10 +3,6 @@
   flex-direction: column;
   background-color: var(--color-background-above);
 
-  // @media (min-width: $md-breakpoint) {
-  //   display: grid;
-  //   grid-template-columns: 7fr 3fr;
-  // }
   @media (min-width: $md-breakpoint) {
     display: grid;
     grid-template-columns: 7fr 3fr;
