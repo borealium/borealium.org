@@ -10,6 +10,13 @@ const externalResources: Resource[] = await Promise.all(
   Array.from(Deno.readDirSync("./data/resources"))
     .filter((x) => x.isFile && x.name.endsWith(".ts") && x.name !== "mod.ts")
     .map((x) => join("~data/resources", x.name))
+    .filter((x) => {
+      const isValid = /^[a-z0-9-]+\.ts$/.test(x)
+      if (!isValid) {
+        console.error(`ERROR: Resource file ${x} is not a valid identifier. Only dashes (-), a-z and 0-9 are accepted.`)
+      }
+      return isValid
+    })
     .map((x) => import(x).then((x) => x.default)),
 )
 
