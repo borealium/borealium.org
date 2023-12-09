@@ -21,10 +21,14 @@ no-resources-in-category = Ingen ressurser ble funnet i denne kategorien.
 news = Nyheter
 available-on-divvun-manager = Tilgengelig via Divvun Manager
 divvun-manager-description =
-  Divvun Manager er et gratis verktøy laget med åpen kildekode for å installere og oppdatere språklige ressurser som stavekontroll,
+  Divvun Manager er et gratis verktøy laget med åpen kildekode for å
+  installere og oppdatere språklige ressurser som stavekontroll,
   tastatur og ordbøker. Det støtter macOS og Windows.
 available-in-divvun-keyboard-app = Tilgengelig i appen Divvun Keyboards
-divvun-keyboard-description = Divvun Keyboard er en gratis app laget med åpen kildekode for iOS og Android som inneholder tastatur for samiske og andre urfolks- og minoritetsspråk. Mange tastatur har også innebygd stavekontroll.
+divvun-keyboard-description = Divvun Keyboard er en gratis app laget med
+  åpen kildekode for iOS og Android som inneholder tastatur for samiske
+  og andre urfolks- og minoritetsspråk.
+  Mange tastatur har også innebygd stavekontroll.
 
 platforms = Plattformer
 release = Utgivelse

@@ -21,10 +21,14 @@ no-resources-in-category = Ekkert fannst í þessum flokki.
 news = Fréttir
 available-on-divvun-manager = Aðgengilegt í Divvun Manager
 divvun-manager-description =
-  Divvun Manager er ókeypis og opinn hugbúnaður fyrir umsýslu málfanga á borð við leiðréttingarforrit,
-  lyklaborð og orðabækur. Það styður bæði macOS og Windows.
+  Divvun Manager er ókeypis og opinn hugbúnaður fyrir umsýslu málfanga á
+  borð við leiðréttingarforrit, lyklaborð og orðabækur.
+  Það styður bæði macOS og Windows.
 available-in-divvun-keyboard-app = Aðgengilegt í Divvun Keyboard
-divvun-keyboard-description = Divvun Keyboard er ókeypis og opinn hugbúnaður fyrir iOS og Android sem veitir aðgang að samískum lyklaborðum og lyklaborðum fyrir önnur minnihlutamál og frumbyggjamál. Forritinu fylgir leiðréttingarforrit.
+divvun-keyboard-description = Divvun Keyboard er ókeypis og opinn hugbúnaður
+  fyrir iOS og Android sem veitir aðgang að samískum lyklaborðum og
+  lyklaborðum fyrir önnur minnihlutamál og frumbyggjamál.
+  Forritinu fylgir leiðréttingarforrit.
 
 platforms = Stýrikerfi
 release = Útgáfa
@@ -44,7 +48,8 @@ website-copyright = Höfundarréttur © { $year } UiT The Arctic University of N
 
 read-documentation = Skráning
 more-info-spellers =
-  Flest þau leiðréttingarforrit sem finna má í Borealium eru búin til með GiellaLT-búnaðinum og byggja
+  Flest þau leiðréttingarforrit sem finna má í Borealium eru búin til með
+  GiellaLT-búnaðinum og byggja
   á opnum hugbúnaði. Leiðréttingarforritin virka í flestum macOS-forritum sem og í MS Office,
   LibreOffice og þónokkrum öðrum Windows-forritum.
 
