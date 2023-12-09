@@ -61,3 +61,7 @@ more-info-keyboards =
  
   Mange språk har også tastatur for Android og iOS. Disse blir distribuerte via våre
   tastaturapper.
+
+macos = macOS
+windows = Windows
+mobile = Mobil

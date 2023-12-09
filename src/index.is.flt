@@ -62,3 +62,7 @@ more-info-keyboards =
 
   Mörg tungumál búa einnig að lyklaborðum fyrir Android og iOS. Þeim er dreift með
   lyklaborðsforritinu okkar.
+
+macos = macOS
+windows = Windows
+mobile = Mobile

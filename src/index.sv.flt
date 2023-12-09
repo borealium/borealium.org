@@ -59,3 +59,7 @@ more-info-keyboards =
 
   Många språk har också tangentbord för Android och iOS. Dessa blir distribuerade via våra
   tangentbordsappar.
+
+macos = macOS
+windows = Windows
+mobile = Mobil
