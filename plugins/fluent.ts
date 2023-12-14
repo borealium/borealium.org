@@ -7,6 +7,9 @@ import { dirname } from "std/path/mod.ts"
 import { getLanguageData } from "~plugins/language-data.ts"
 import { relative } from "lume/deps/path.ts"
 import { LanguagesData } from "~types/language.ts"
+import dedent from "dedent"
+import { React } from "lume/deps/react.ts"
+import { marked } from "marked"
 
 const languages = getLanguageData()
 
@@ -23,6 +26,7 @@ export type TranslateFn = (key: string, args?: Record<string, FluentVariable>) =
 export type FluentPage = {
   lang: string
   t: TranslateFn
+  tmd: TranslateFn
   fluentBundle: (lang: string, path: string) => TranslateFn
 }
 
@@ -140,12 +144,19 @@ export default function fluent(userOptions?: Partial<Options>): Plugin {
       const src = page.src.entry?.src ?? `${Deno.cwd()}/src`
       const fltResKey = relative(`${Deno.cwd()}/src`, dirname(src ?? ""))
 
+      const t = _t(site, page.data.url, fluentBundle.bind(null, fltResKey, lang))
+
       pages.splice(
         pages.indexOf(page),
         1,
         page.duplicate(undefined, {
           ...page.data,
-          t: _t(site, page.data.url, fluentBundle.bind(null, fltResKey, lang)),
+          t,
+          tmd: (key: string, args?: Record<string, FluentVariable>) => {
+            return React.createElement("div", {
+              dangerouslySetInnerHTML: { __html: marked.parse(dedent(t(key, args))) },
+            })
+          },
         }),
       )
     })
