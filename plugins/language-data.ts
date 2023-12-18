@@ -32,5 +32,5 @@ export function selectLocale<T>(langId: LangTag, input: Record<string, T>): T | 
 }
 
 export function autonym(tag: LangTag): string {
-  return languagesData.languages[tag]?.autonym ?? tag
+  return languagesData.languages[tag]?.name[tag] ?? tag
 }

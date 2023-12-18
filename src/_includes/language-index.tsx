@@ -1,19 +1,20 @@
 import { Page, PageData } from "lume/core.ts"
 import { Resource } from "~types/resource.ts"
-import { selectLocale } from "~plugins/language-data.ts"
+import { autonym, getLanguageData, selectLocale } from "~plugins/language-data.ts"
 import { CategoryLabel } from "~/_components/label.tsx"
 import { FluentPage } from "~plugins/fluent.ts"
 
 export const layout = "base.tsx"
 
+const languagesData = getLanguageData()
+
 type LanguageIndexProps = {
   resources: Resource[]
-  language: { autonym: string }
   languageId: string
 }
 
 export default function LanguageIndexLayout(page: PageData & LanguageIndexProps & FluentPage) {
-  const { resources, lang, languageId, language, t } = page
+  const { resources, lang, languageId, t } = page
 
   return (
     <div
@@ -25,7 +26,9 @@ export default function LanguageIndexLayout(page: PageData & LanguageIndexProps 
       <div className="content">
         <div>
           <CategoryLabel category={t("language")} />
-          <h1>{language.autonym}</h1>
+          <h1 title={selectLocale(lang, languagesData.languages[languageId].name)}>
+            {autonym(languageId)}
+          </h1>
         </div>
         <div className="search-page-results" data-pagefind-ignore>
           {resources.length === 0 && (

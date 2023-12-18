@@ -232,12 +232,17 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
                 <img style={{ height: "16px" }} src={"/static/images/tag-language.svg"} alt="" /> {t("languages")}
               </dt>
               {Object.entries(languages.languages)
-                .filter(([key, value]) => !languages.uiOnly.includes(key))
+                .filter(([key]) => !languages.uiOnly.includes(key))
                 .map(
-                  ([key, value]) => {
+                  ([key]) => {
                     return (
                       <dd key={key}>
-                        <a href={`/language/${key}`}>{value.autonym}</a>
+                        <a
+                          title={selectLocale(lang, languages.languages[key].name)}
+                          href={`/language/${key}`}
+                        >
+                          {autonym(key)}
+                        </a>
                       </dd>
                     )
                   },

@@ -1,4 +1,4 @@
-import { getLanguageData, selectLocale } from "~plugins/language-data.ts"
+import { autonym, getLanguageData, selectLocale } from "~plugins/language-data.ts"
 import { FluentPage } from "~plugins/fluent.ts"
 import { Page } from "lume/core.ts"
 import { CategoryLabel } from "~/_components/label.tsx"
@@ -36,7 +36,7 @@ export default function LandingMainBlock(
             .map(([code, data]) => {
               return (
                 <DownloadButton
-                  title={data.autonym}
+                  title={autonym(code)}
                   tooltip={selectLocale(page.lang, data.name)}
                   href={`/language/${code}`}
                 />

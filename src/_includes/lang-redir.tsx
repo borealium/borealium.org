@@ -1,6 +1,6 @@
 import React from "react"
 import { Page, PageData, Site } from "lume/core.ts"
-import { getLanguageData } from "~plugins/language-data.ts"
+import { autonym, getLanguageData } from "~plugins/language-data.ts"
 
 export const layout = "base.tsx"
 
@@ -48,10 +48,10 @@ export default function (page: PageData) {
       <div className="app" data-pagefind-ignore>
         <noscript>
           <ul>
-            {Object.entries(languages.languages).map(([key, value]) => {
+            {Object.entries(languages.languages).map(([key]) => {
               return (
                 <li key={key}>
-                  <a href={`/${key}${page.url}`}>{value.autonym}</a>
+                  <a href={`/${key}${page.url}`}>{autonym(key)}</a>
                 </li>
               )
             })}

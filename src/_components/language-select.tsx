@@ -1,5 +1,5 @@
 import { MenuItem } from "~/_components/menu-item.tsx"
-import { getLanguageData, selectLocale } from "~plugins/language-data.ts"
+import { autonym, getLanguageData, selectLocale } from "~plugins/language-data.ts"
 import { TranslateIcon } from "~/_components/icons.tsx"
 
 const languagesData = getLanguageData()
@@ -11,7 +11,7 @@ export function LanguageSelect(props: { lang: string; url: string }) {
       <div className="language-select">
         <TranslateIcon />
         <MenuItem
-          text={languagesData.languages[props.lang?.split("-")[0]]?.autonym}
+          text={autonym(props.lang?.split("-")[0])}
           smallText={props.lang}
         />
       </div>
@@ -20,15 +20,19 @@ export function LanguageSelect(props: { lang: string; url: string }) {
           .filter(([code]) => !languagesData.excludeFromUi.includes(code))
           .map(([code, data]) => {
             if (data.regions != null) {
-              return Object.entries(data.regions).map(([regionCode, regionText]) => {
+              return data.regions.map((regionCode) => {
+                const regionText = selectLocale(code, languagesData.regions[regionCode])
+
                 return (
                   <li key={code}>
                     <a
                       data-multilang
-                      title={selectLocale(props.lang, data.name)}
+                      title={`${selectLocale(props.lang, data.name)} (${
+                        selectLocale(props.lang, languagesData.regions[regionCode])
+                      })`}
                       href={`/${code}-${regionCode.toLowerCase()}${props.url}`}
                     >
-                      {data.autonym} ({regionText})
+                      {autonym(code)} ({regionText})
                     </a>
                   </li>
                 )
@@ -38,7 +42,7 @@ export function LanguageSelect(props: { lang: string; url: string }) {
             return (
               <li key={code}>
                 <a data-multilang title={selectLocale(props.lang, data.name)} href={`/${code}${props.url}`}>
-                  {data.autonym}
+                  {autonym(code)}
                 </a>
               </li>
             )
