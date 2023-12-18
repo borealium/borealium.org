@@ -38,6 +38,8 @@ const SCRIPT = `
       return location.replace(\`/\${item}\${location.pathname}\`)
     }
   }
+
+  location.replace(\`/en\${location.pathname}\`)
 })()
 `
 
