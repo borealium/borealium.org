@@ -47,7 +47,7 @@ export default function (page: PageData) {
   return (
     <>
       {script(SCRIPT)}
-      <div className="app" data-pagefind-ignore>
+      <div className="app" style={{ height: "90vh" }} data-pagefind-ignore>
         <noscript>
           <ul>
             {Object.entries(languages.languages).map(([key]) => {
