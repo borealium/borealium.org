@@ -10,7 +10,7 @@ export type LanguagesData = {
 }
 
 export type LanguageData = {
-  name: string
+  name: Record<LangTag, string>
   autonym: string
   regions?: Record<RegionId, string>
 }

@@ -2,7 +2,7 @@ import { LanguageSelect } from "~/_components/language-select.tsx"
 import { SearchForm } from "~/_components/search-form.tsx"
 import { TranslateFn } from "~plugins/fluent.ts"
 
-export function Navbar(props: { url: string; t: TranslateFn }) {
+export function Navbar(props: { url: string; t: TranslateFn; lang: string }) {
   return (
     <div className="header-nav-wrapper">
       <div className="header-gradient" />
@@ -26,7 +26,7 @@ export function Navbar(props: { url: string; t: TranslateFn }) {
           </div>
         </div>
         <div className="language-wrapper">
-          <LanguageSelect url={props.url} />
+          <LanguageSelect url={props.url} lang={props.lang} />
         </div>
       </nav>
     </div>

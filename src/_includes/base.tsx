@@ -5,7 +5,7 @@ import { Footer } from "~/_components/footer.tsx"
 import { FluentPage } from "~plugins/fluent.ts"
 
 export default function BasePage(page: PageData & FluentPage) {
-  const { title, children, url, originalUrl, t } = page
+  const { title, children, url, originalUrl, lang, t } = page
 
   if (t == null) {
     throw new Error("t not available")
@@ -205,7 +205,7 @@ export default function BasePage(page: PageData & FluentPage) {
       </head>
       <body id="top">
         <div className="wrapper">
-          <Navbar url={originalUrl || url || "/"} t={t} />
+          <Navbar url={originalUrl || url || "/"} t={t} lang={lang} />
           <div className="navbar-offset-wrapper">
             {children}
           </div>

@@ -3,80 +3,80 @@ import { LanguagesData } from "~types/language.ts"
 const languagesData: LanguagesData = {
   languages: {
     "is": {
-      name: "Icelandic",
+      name: { en: "Icelandic" },
       autonym: "Íslenska",
     },
     "fo": {
-      name: "Faroese",
+      name: { en: "Faroese" },
       autonym: "Føroyskt",
     },
     "kl": {
-      name: "Greenlandic",
+      name: { en: "Greenlandic" },
       autonym: "Kalaallisut",
     },
     "se": {
-      name: "North Sámi",
+      name: { en: "North Sámi" },
       autonym: "Davvisámegiella",
     },
     "smj": {
-      name: "Lule Sámi",
+      name: { en: "Lule Sámi" },
       autonym: "Julevsámegiella",
-      "regions": { "NO": "Norway", "SE": "Sweden" },
+      regions: { "NO": "Norway", "SE": "Sweden" },
     },
     "sma": {
-      name: "South Sámi",
+      name: { en: "South Sámi" },
       autonym: "Åarjelsaemien gïele",
     },
     "sjd": {
-      name: "Kildin Sámi",
+      name: { en: "Kildin Sámi" },
       autonym: "Кӣллт са̄мь кӣлл",
     },
     "sms": {
-      name: "Skolt Sámi",
+      name: { en: "Skolt Sámi" },
       autonym: "Nuõrttsääʹmǩiõll",
     },
     "smn": {
-      name: "Inari Sámi",
+      name: { en: "Inari Sámi" },
       autonym: "Anarâškielâ",
     },
     "fkv": {
-      name: "Kven",
+      name: { en: "Kven" },
       autonym: "Kväänin kieli",
     },
     "fit": {
-      name: "Meänkieli",
+      name: { en: "Meänkieli" },
       autonym: "Meänkieli",
     },
     "sje": {
-      name: "Pite Sámi",
+      name: { en: "Pite Sámi" },
       autonym: "Bidumsámegiella",
     },
     "sju": {
-      name: "Ume Sámi",
+      name: { en: "Ume Sámi" },
       autonym: "Ubmejesámiengiälla",
     },
     "en": {
-      name: "English",
+      name: { en: "English" },
       autonym: "English",
     },
     "sv": {
-      name: "Swedish",
+      name: { en: "Swedish" },
       autonym: "Svenska",
     },
     "nb": {
-      name: "Norwegian (Bokmål)",
+      name: { en: "Norwegian (Bokmål)" },
       autonym: "Norsk bokmål",
     },
     /*     "nn": {
-      name: "Norwegian (Nynorsk)",
+      name: { en: "Norwegian (Nynorsk)" },
       autonym: "Norsk nynorsk",
     }, */
     /*     "fi": {
-      name: "Finnish",
+      name: { en: "Finnish" },
       autonym: "Suomi",
     }, */
     /*     "da": {
-      name: "Danish",
+      name: { en: "Danish" },
       autonym: "Dansk",
     }, */
   },
