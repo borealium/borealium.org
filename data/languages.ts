@@ -119,7 +119,7 @@ const languagesData: LanguagesData = {
     }, */
     "fi": {
       name: {
-        en: "Finnish"
+        en: "Finnish",
         fi: "Suomi",
         nb: "Finsk",
         sv: "Finska",
