@@ -2,9 +2,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--color-text-secondary);
+  color: #01fdc1;
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
+
+  @media (max-width: 767px) {
+    .sm {
+      display: block;
+    }
+    .lg {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .lg {
+      display: block;
+    }
+    .sm {
+      display: none;
+    }
+  }
 }

@@ -13,6 +13,7 @@ const resource: Resource = {
   },
   links: [
     {
+      type: LinkType.Normal,
       text: {
         en: "Online speller",
       },

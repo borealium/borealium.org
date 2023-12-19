@@ -1,82 +1,124 @@
 import { LanguagesData } from "~types/language.ts"
 
 const languagesData: LanguagesData = {
+  regions: {
+    "NO": {
+      en: "Norway",
+    },
+    "SE": {
+      en: "Sweden",
+      smj: "Ruoŧŧa",
+    },
+  },
   languages: {
     "is": {
-      name: "Icelandic",
-      autonym: "Íslenska",
+      name: {
+        en: "Icelandic",
+        is: "Íslenska",
+      },
     },
     "fo": {
-      name: "Faroese",
-      autonym: "Føroyskt",
+      name: {
+        en: "Faroese",
+        fo: "Føroyskt",
+      },
     },
     "kl": {
-      name: "Greenlandic",
-      autonym: "Kalaallisut",
+      name: {
+        en: "Greenlandic",
+        kl: "Kalaallisut",
+      },
     },
     "se": {
-      name: "North Sámi",
-      autonym: "Davvisámegiella",
+      name: {
+        en: "North Sámi",
+        se: "Davvisámegiella",
+      },
     },
     "smj": {
-      name: "Lule Sámi",
-      autonym: "Julevsámegiella",
-      "regions": { "NO": "Norway", "SE": "Sweden" },
+      name: {
+        en: "Lule Sámi",
+        smj: "Julevsámegiella",
+      },
+      regions: ["NO", "SE"],
     },
     "sma": {
-      name: "South Sámi",
-      autonym: "Åarjelsaemien gïele",
+      name: {
+        en: "South Sámi",
+        sma: "Åarjelsaemien gïele",
+      },
     },
     "sjd": {
-      name: "Kildin Sámi",
-      autonym: "Кӣллт са̄мь кӣлл",
+      name: {
+        en: "Kildin Sámi",
+        sjd: "Кӣллт са̄мь кӣлл",
+      },
     },
     "sms": {
-      name: "Skolt Sámi",
-      autonym: "Nuõrttsääʹmǩiõll",
+      name: {
+        en: "Skolt Sámi",
+        sms: "Nuõrttsääʹmǩiõll",
+      },
     },
     "smn": {
-      name: "Inari Sámi",
-      autonym: "Anarâškielâ",
+      name: {
+        en: "Inari Sámi",
+        smn: "Anarâškielâ",
+      },
     },
     "fkv": {
-      name: "Kven",
-      autonym: "Kväänin kieli",
+      name: {
+        en: "Kven",
+        fkv: "Kväänin kieli",
+      },
     },
     "fit": {
-      name: "Meänkieli",
-      autonym: "Meänkieli",
+      name: {
+        en: "Meänkieli",
+        fit: "Meänkieli",
+      },
     },
     "sje": {
-      name: "Pite Sámi",
-      autonym: "Bidumsámegiella",
+      name: {
+        en: "Pite Sámi",
+        sje: "Bidumsámegiella",
+      },
     },
     "sju": {
-      name: "Ume Sámi",
-      autonym: "Ubmejesámiengiälla",
+      name: {
+        en: "Ume Sámi",
+        sju: "Ubmejesámiengiälla",
+      },
     },
     "en": {
-      name: "English",
-      autonym: "English",
+      name: {
+        en: "English",
+        sv: "Engelska",
+      },
     },
     "sv": {
-      name: "Swedish",
-      autonym: "Svenska",
+      name: {
+        en: "Swedish",
+        sv: "Svenska",
+      },
     },
     "nb": {
-      name: "Norwegian (Bokmål)",
-      autonym: "Norsk bokmål",
+      name: {
+        en: "Norwegian (Bokmål)",
+        sv: "Norska (Bokmål)",
+        nb: "Norsk bokmål",
+      },
     },
     /*     "nn": {
-      name: "Norwegian (Nynorsk)",
+      name: { en: "Norwegian (Nynorsk)" },
       autonym: "Norsk nynorsk",
     }, */
     /*     "fi": {
-      name: "Finnish",
+      name: { en: "Finnish" },
       autonym: "Suomi",
     }, */
     /*     "da": {
-      name: "Danish",
+      name: { en: "Danish" },
       autonym: "Dansk",
     }, */
   },

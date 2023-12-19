@@ -53,7 +53,7 @@ export default function multilanguage(): Plugin {
         .filter(([x]) => !languagesData.excludeFromUi.includes(x))
         .forEach(([langId, langData]) => {
           if (langData.regions != null) {
-            Object.keys(langData.regions).forEach((regionId) => {
+            langData.regions.forEach((regionId) => {
               pageLanguages.push(`${langId}-${regionId}`)
             })
           } else {

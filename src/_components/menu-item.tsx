@@ -1,7 +1,8 @@
-export function MenuItem(props: { text: string }) {
+export function MenuItem(props: { text?: string; smallText?: string }) {
   return (
     <div className="menu-item">
-      {props.text}
+      {props.text && <span className="lg">{props.text}</span>}
+      {props.smallText && <span className="sm">{props.smallText}</span>}
       <ChevronDown />
     </div>
   )

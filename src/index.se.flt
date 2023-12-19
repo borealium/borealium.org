@@ -65,3 +65,7 @@ more-info-keyboards =
 
   Many languages do also have keyboards for Android and iOS. These are distributed via our
   keyboard app.
+
+macos = macOS
+windows = Windows
+mobile = Mobile
