@@ -114,8 +114,12 @@ const languagesData: LanguagesData = {
       autonym: "Norsk nynorsk",
     }, */
     "fi": {
-      name: { en: "Finnish" },
-      autonym: "Suomi",
+      name: {
+        en: "Finnish"
+        fi: "Suomi",
+        nb: "Finsk",
+        sv: "Finska",
+      },
     },
     /*     "da": {
       name: { en: "Danish" },
