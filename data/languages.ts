@@ -93,12 +93,14 @@ const languagesData: LanguagesData = {
     "en": {
       name: {
         en: "English",
+        nb: "Engelsk",
         sv: "Engelska",
       },
     },
     "sv": {
       name: {
         en: "Swedish",
+        nb: "Svensk",
         sv: "Svenska",
       },
     },
