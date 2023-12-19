@@ -4,10 +4,12 @@ const languagesData: LanguagesData = {
   regions: {
     "NO": {
       en: "Norway",
+      nb: "Norge",
     },
     "SE": {
       en: "Sweden",
-      smj: "Ruoŧŧa",
+      nb: "Sverige",
+      se: "Ruoŧŧa",
     },
   },
   languages: {
