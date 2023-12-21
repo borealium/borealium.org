@@ -71,10 +71,10 @@ src/post
 ```
 
 For predominantly static content, such as titles of sections reused on multiple pages, or other reusable strings, this website uses Fluent files. These files are composable based
-on their position within the directory tree, so if an `index.en.flt` file exists in `src/`, and an `index.en.flt` exists at `src/foo/`, then all files in `src/foo/` will have all
-the strings defined in `src/index.en.flt` with `src/foo/index.en.flt` layered on top.
+on their position within the directory tree, so if an `index.en.ftl` file exists in `src/`, and an `index.en.ftl` exists at `src/foo/`, then all files in `src/foo/` will have all
+the strings defined in `src/index.en.ftl` with `src/foo/index.en.ftl` layered on top.
 
-In order to create a new Fluent translation, just create a file with the same name but a different language tag, e.g. `src/index.se.flt`. The system will automatically detect it and use 
+In order to create a new Fluent translation, just create a file with the same name but a different language tag, e.g. `src/index.se.ftl`. The system will automatically detect it and use 
 it where necessary.
 
 In order to access these translations from an `.mdx` file, use the `t` function which is always accessible in that scope:
@@ -98,7 +98,7 @@ sense to do so -- the goal is to promote string reuse, not clutter.
 
 ### Prerequisites
 
-- Install [Rust](https://rustup.rs) — this is needed for validating the `.flt` files
+- Install [Rust](https://rustup.rs) — this is needed for validating the `.ftl` files
 - Install [Deno](https://docs.deno.com/runtime/manual/getting_started/installation) — this is the JavaScript engine used by Lume
 
 ### Quickstart
@@ -127,7 +127,7 @@ This plugin generates the single paragraph summaries for the sidebar present on 
 
 #### `fluent`
 
-This plugin implements the Fluent wrappers so that `.flt` files can be used with this website.
+This plugin implements the Fluent wrappers so that `.ftl` files can be used with this website.
 
 #### `language-data`
 
