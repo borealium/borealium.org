@@ -1,0 +1,1 @@
+borealium-description = Borealium lea giellateknoliija ressursaid guovddáš davviriikkalaš uhcit- ja minoritehtaidgielaide. Vuolábealde gávdná giellateknologalaš reaidduid ja gielaid maid Borealium hálddaša.

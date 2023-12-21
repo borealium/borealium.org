@@ -1,0 +1,3 @@
+search = Oza
+results = bohtosat
+loading = Viežžamin …
