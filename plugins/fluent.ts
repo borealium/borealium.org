@@ -79,23 +79,23 @@ export function fluentBundle(key: string, lang: string) {
 }
 
 function validateFltFiles() {
-  console.log("Validating .flt files...")
+  console.log("Validating .ftl files...")
   const cmd = new Deno.Command(`${Deno.cwd()}/_cargo/bin/stringly`, {
-    args: ["validate", "-r", "-i", ".", "-f", "flt"],
+    args: ["validate", "-r", "-i", ".", "-f", "ftl"],
     stdout: "piped",
   })
 
   const output = cmd.outputSync()
   console.log(new TextDecoder().decode(output.stderr))
   if (!output.success) {
-    throw new Error("Failed to validate .flt files")
+    throw new Error("Failed to validate .ftl files")
   }
 }
 
 function loadFluentFiles() {
   validateFltFiles()
 
-  const bundleTree = fltBundleTree(`${Deno.cwd()}/src`, languages)
+  const bundleTree = ftlBundleTree(`${Deno.cwd()}/src`, languages)
   console.log("Loaded Fluent files:")
   for (const k in bundleTree) {
     if (k == "") {
@@ -120,7 +120,7 @@ export default function fluent(userOptions?: Partial<Options>): Plugin {
 
   return (site: Site) => {
     site.addEventListener("beforeUpdate", (event) => {
-      if (Array.from(event.files).some((x) => x.endsWith(".flt"))) {
+      if (Array.from(event.files).some((x) => x.endsWith(".ftl"))) {
         site.logger.log("Regenerating Fluent data...")
         bundleTree = loadFluentFiles()
       }
@@ -142,9 +142,9 @@ export default function fluent(userOptions?: Partial<Options>): Plugin {
       }
 
       const src = page.src.entry?.src ?? `${Deno.cwd()}/src`
-      const fltResKey = relative(`${Deno.cwd()}/src`, dirname(src ?? ""))
+      const ftlResKey = relative(`${Deno.cwd()}/src`, dirname(src ?? ""))
 
-      const t = _t(site, page.data.url, fluentBundle.bind(null, fltResKey, lang))
+      const t = _t(site, page.data.url, fluentBundle.bind(null, ftlResKey, lang))
 
       pages.splice(
         pages.indexOf(page),
@@ -208,7 +208,7 @@ function _t(site: Site, url: string, bundleFn: () => FluentBundle) {
 }
 
 function* findFltFiles(rootPath: string) {
-  for (const item of walkSync(rootPath, { includeDirs: false, exts: ["flt"] })) {
+  for (const item of walkSync(rootPath, { includeDirs: false, exts: ["ftl"] })) {
     const [name, lang] = item.name.split(".")
 
     const chunks = relative(rootPath, item.path).split("/")
@@ -227,7 +227,7 @@ function* findFltFiles(rootPath: string) {
   }
 }
 
-function fltResourceTree(rootPath: string) {
+function ftlResourceTree(rootPath: string) {
   const tree: { [path: string]: { [lang: string]: FluentResource } } = {}
 
   for (const item of findFltFiles(rootPath)) {
@@ -247,9 +247,9 @@ function makeFallbacks(lang: string, languages: LanguagesData) {
   return lang === "en" ? ["en"] : [lang, ...(languages.fallbacks[lang] ?? ["en"])]
 }
 
-function fltBundleTree(rootPath: string, languages: LanguagesData) {
+function ftlBundleTree(rootPath: string, languages: LanguagesData) {
   const tree: { [path: string]: { [lang: string]: FluentBundle } } = {}
-  const resources = fltResourceTree(rootPath)
+  const resources = ftlResourceTree(rootPath)
   const resKeys = Object.keys(resources)
 
   for (const k of resKeys) {
