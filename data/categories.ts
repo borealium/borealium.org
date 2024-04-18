@@ -3,7 +3,7 @@ import { CategoriesData } from "~types/category.ts"
 const categoriesData: CategoriesData = {
   "package-management": {
     en: {
-      name: "Package Management",
+      name: "App installation",
       description: "Tools for installing, uninstalling and updating packages on your computer.",
     },
   },
@@ -25,7 +25,7 @@ const categoriesData: CategoriesData = {
   },
   "text-to-speech": {
     en: {
-      name: "Text-to-speech systems",
+      name: "Text-to-speech (TTS) systems",
       description: "Tools to convert text to speech",
     },
   },

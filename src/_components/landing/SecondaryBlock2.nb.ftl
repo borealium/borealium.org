@@ -1,9 +1,6 @@
-tag = Pakkehåndterer
+tag = Programinstallering
 title = En nedlasting — resten håndteres automatisk
 description =
-  Divvun Manager brukes for å installere
-  retteprogram, tastatur med mere
-  på datamaskinen. Når verktøyene har blitt installert,
-  holder Divvun Manager dem oppdaterte ved å
-  automatisk installere nye versjoner i
-  bakgrunnen.
+  Man bruker Divvun Manager til å installere retteprogram, tastatur 
+  og andre program vi lager. Divvun Manager henter automatisk nye 
+  versjoner når de er tilgjengelige.
