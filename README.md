@@ -4,13 +4,13 @@ This uses [Lume](https://lume.land/docs/overview/about-lume/).
 
 ## Dev
 
-```
+```sh
 deno task serve
 ```
 
 All the JSX being red and angry?
 
-```
+```sh
 deno cache src/_includes/*.tsx
 ```
 
