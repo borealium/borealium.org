@@ -209,15 +209,14 @@ function _t(site: Site, url: string, bundleFn: () => FluentBundle) {
 
 function* findFtlFiles(rootPath: string) {
   for (const item of walkSync(rootPath, { includeDirs: false, exts: ["ftl"] })) {
-    const [name, lang] = item.name.split(".")
+    const [lang] = relative(rootPath, item.path).split("/")
+    const chunks = item.name.split("_slash_")
+    const name = chunks.pop()?.split(".")[0] ?? "index"
 
-    const chunks = relative(rootPath, item.path).split("/")
-    chunks.pop()
     if (name !== "index") {
       chunks.push(name)
     }
 
-    console.log(name, lang, item.name, item.path, chunks)
     yield {
       name,
       lang,
