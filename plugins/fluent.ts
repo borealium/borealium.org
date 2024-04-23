@@ -78,7 +78,7 @@ export function fluentBundle(key: string, lang: string) {
   throw new Error(`Could not find any bundle for path '${key}'`)
 }
 
-function validateFltFiles() {
+function validateFtlFiles() {
   console.log("Validating .ftl files...")
   const cmd = new Deno.Command(`${Deno.cwd()}/_cargo/bin/stringly`, {
     args: ["validate", "-r", "-i", ".", "-f", "ftl"],
@@ -93,7 +93,7 @@ function validateFltFiles() {
 }
 
 function loadFluentFiles() {
-  validateFltFiles()
+  validateFtlFiles()
 
   const bundleTree = ftlBundleTree(`${Deno.cwd()}/src`, languages)
   console.log("Loaded Fluent files:")
@@ -207,7 +207,7 @@ function _t(site: Site, url: string, bundleFn: () => FluentBundle) {
   return message.bind(null, bundle, logger, url)
 }
 
-function* findFltFiles(rootPath: string) {
+function* findFtlFiles(rootPath: string) {
   for (const item of walkSync(rootPath, { includeDirs: false, exts: ["ftl"] })) {
     const [name, lang] = item.name.split(".")
 
@@ -231,7 +231,7 @@ function* findFltFiles(rootPath: string) {
 function ftlResourceTree(rootPath: string) {
   const tree: { [path: string]: { [lang: string]: FluentResource } } = {}
 
-  for (const item of findFltFiles(rootPath)) {
+  for (const item of findFtlFiles(rootPath)) {
     const p = item.chunks.join("/")
 
     if (tree[p] == null) {
