@@ -95,7 +95,7 @@ function validateFtlFiles() {
 function loadFluentFiles() {
   validateFtlFiles()
 
-  const bundleTree = ftlBundleTree(`${Deno.cwd()}/src`, languages)
+  const bundleTree = ftlBundleTree(`${Deno.cwd()}/locales`, languages)
   console.log("Loaded Fluent files:")
   for (const k in bundleTree) {
     if (k == "") {
