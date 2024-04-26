@@ -1,3 +1,5 @@
+title = Example
+
 paragraph-1 =
   Språk är de levande trådarna som väver mänsklighetens kommunikationstapet och fungerar som hörnstenen för 
   vår förmåga att uttrycka tankar, känslor och idéer. Med över 7 000 talade språk världen över speglar denna rika 

@@ -1,3 +1,5 @@
+title = Example
+
 # First paragraph
 paragraph-1 =
   Languages are the vibrant threads that weave the tapestry of human communication, serving as the *cornerstone*
