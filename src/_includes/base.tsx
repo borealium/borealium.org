@@ -1,4 +1,4 @@
-import { Page, PageData } from "lume/core.ts"
+import { PageData } from "lume/core.ts"
 import { Navbar } from "~/_components/navbar.tsx"
 import { script } from "~/_includes/lang-redir.tsx"
 import { Footer } from "~/_components/footer.tsx"

@@ -1,4 +1,4 @@
-import { Data, Page, PageData } from "lume/core.ts"
+import { Data, PageData } from "lume/core.ts"
 import Aside, { SimplePost } from "~/_components/aside.tsx"
 import { FluentPage } from "~plugins/fluent.ts"
 
