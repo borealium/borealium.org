@@ -36,6 +36,7 @@ for-macos = på macOS
 for-ios-and-android = på iOS og Android
 dm-button-title = Divvun Manager
 dm-button-description = på Windows og macOS
+dk-button-title = Divvun Keyboard
 dk-button-description = for iOS og Android
 website-copyright = Copyright © { $year } UiT Norges arktiske universitet
 read-documentation = Dokumentasjon
