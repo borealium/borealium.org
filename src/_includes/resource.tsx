@@ -82,6 +82,11 @@ function parseLinkType(type: LinkType, t: TranslateFn) {
 
 function DownloadLinks(props: { t: TranslateFn; resource: Resource; lang: string }) {
   const { t, resource, lang } = props
+
+  if (resource.links == null) {
+    return <></>
+  }
+
   return (
     <div className="downloads">
       <h3>{t("downloads")}</h3>
@@ -208,6 +213,15 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
           {isPahkat
             ? <PahkatInfo resource={resource} t={t} />
             : <DownloadLinks t={t} resource={resource} lang={lang} />}
+
+          {resource.integrations?.map((integration, i) => {
+            switch (integration.type) {
+              case "tts":
+                return <div key={i}>I'm a TTS</div>
+              default:
+                return <></>
+            }
+          })}
         </div>
 
         <div className="related-documentation">

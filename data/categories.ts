@@ -41,6 +41,12 @@ const categoriesData: CategoriesData = {
       description: "Corpus resources presented in the Korp web interface.",
     },
   },
+  "voices": {
+    en: {
+      name: "Voices",
+      description: "Voices used with text-to-speech (TTS) systems.",
+    },
+  },
 }
 
 export default categoriesData
