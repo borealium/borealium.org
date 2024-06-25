@@ -22,6 +22,9 @@ See [borealium.org@plausible](https://plausible.io/borealium.org) (requires logi
 
 ## Scheduled builds
 
-The site is rebuilt on each push and pull request. In addition, it is scheduled to build every hour, to make sure that it picks up changes in the Páhkat repo regularly. If there has been no repo activities for **60** days, workflow builds are automatically disabled.
+The site is rebuilt on each push and pull request. In addition, it is scheduled to build every hour, to make sure that
+it picks up changes in the Páhkat repo regularly. If there has been no repo activities for **60** days, workflow builds
+are automatically disabled.
 
-To re-enable workflows in such a case, [follow these instructions](https://docs.github.com/en/enterprise-server@3.12/actions/using-workflows/disabling-and-enabling-a-workflow#enabling-a-workflow).
+To re-enable workflows in such a case,
+[follow these instructions](https://docs.github.com/en/enterprise-server@3.12/actions/using-workflows/disabling-and-enabling-a-workflow#enabling-a-workflow). 
