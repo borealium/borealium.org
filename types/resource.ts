@@ -12,6 +12,21 @@ export type Resource = {
   release?: ResourceRelease
   documentationUrl?: string
   links?: Link[]
+  integrations?: Integration[]
+}
+
+export type Integration = TtsIntegration
+
+export type TtsVoice = {
+  name: string
+  gender: string
+  apiUrl: string
+  sampleText: string
+}
+
+export type TtsIntegration = {
+  type: "tts"
+  voices: TtsVoice[]
 }
 
 export type ResourceRelease = {
