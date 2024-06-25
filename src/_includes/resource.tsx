@@ -257,7 +257,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
               const src = document.createElement('source')
               src.src = URL.createObjectURL(blob)
               src.type = "audio/x-wav"
-              audio.appendChild(sourceElement)
+              audio.appendChild(src)
               audio.load()
               audio.play()
               button.disabled = false
