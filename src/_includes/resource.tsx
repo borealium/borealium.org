@@ -253,7 +253,13 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
               }),
             }).then((response) => response.blob())
             .then((blob) => {
-              audio.src = URL.createObjectURL(blob)
+              audio.innerHTML = ""
+              const src = document.createElement('source')
+              src.src = URL.createObjectURL(blob)
+              src.type = "audio/x-wav"
+              audio.appendChild(sourceElement)
+              audio.load()
+              audio.play()
               button.disabled = false
               button.innerText = "Speak"
             })
