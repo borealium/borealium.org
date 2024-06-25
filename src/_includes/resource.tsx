@@ -257,6 +257,9 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
               button.disabled = false
               button.innerText = "Speak"
             })
+            .catch((e) => {
+              console.error(e)
+            })
           })
         `)}
         </template>
