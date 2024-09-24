@@ -1,4 +1,4 @@
 [[paths]]
-    reference = "locales/en/*.ftl"
+    reference = "locales/nb/*.ftl"
     l10n = "locales/{locale}/*.ftl"
   
