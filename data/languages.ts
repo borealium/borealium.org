@@ -125,6 +125,20 @@ const languagesData: LanguagesData = {
         sv: "Finska",
       },
     },
+    "rom": {
+      name: {
+        en: "Romani",
+        nb: "Romsk",
+        sv: "Romska",
+      },
+    },
+    "yid": {
+      name: {
+        en: "Yiddish",
+        nb: "Jiddisk",
+        sv: "Jiddiska",
+      },
+    },
     /*     "da": {
       name: { en: "Danish" },
       autonym: "Dansk",
@@ -145,6 +159,8 @@ const languagesData: LanguagesData = {
     "nn": ["nb", "en"],
     "fo": ["da", "en"],
     "kl": ["da", "en"],
+    "rom": ["sv", "en"],
+    "yid": ["sv", "en"],
   },
   uiOnly: ["da", "en", "fi", "nb", "nn", "sv"],
   excludeFromUi: ["fit", "fkv", "sjd", "sje", "sju", "sms", "sma", "smn"],
