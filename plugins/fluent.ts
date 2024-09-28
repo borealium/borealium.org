@@ -81,7 +81,7 @@ export function fluentBundle(key: string, lang: string) {
 function validateFtlFiles() {
   console.log("Validating .ftl files...")
   const cmd = new Deno.Command(`${Deno.cwd()}/_cargo/bin/stringly`, {
-    args: ["validate", "-r", "-i", ".", "-f", "ftl"],
+    args: ["validate", "-r", "-i", ".", "-f", "fluent"],
     stdout: "piped",
   })
 
