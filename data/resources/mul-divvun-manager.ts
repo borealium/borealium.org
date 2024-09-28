@@ -10,11 +10,11 @@ const resource: Resource = {
   },
   description: {
     en:
-      "Divvun Manager is a package manager for installing and updating language resources on your Windows or Mac computer.",
+      "Divvun Manager is an app for installing language tools on your Windows or Mac computer.",
     sv:
-      "Divvun Manager är en pakethanterare för att installera och uppdatera språkverktyg för din Windows- eller Mac-dator.",
+      "Divvun Manager är et program för att installera språkverktyg för din Windows- eller Mac-dator.",
     nb:
-      "Divvun Manager er en pakkehåndterer for å installere og uppdatere språkverktøy for Windows- eller Mac-datamaskinen din.",
+      "Divvun Manager er et program for å installere språkverktøy for Windows- eller Mac-datamaskinen din.",
   },
   release: {
     platforms: ["windows", "macos"],
@@ -28,12 +28,12 @@ const resource: Resource = {
     sv: `
         I Divvun Manager väljer du språk, och därefter installerar du verktygen som finns. Efter installationen
         vil Divvun Manager med jämna mellanrum kolla om det finns nya versioner av verktygen, och i fall det
-        finns vil de installeras automatiskt.
+        finns vil de uppdateras automatiskt.
     `,
     nb: `
-        I Divvun Manager velger du språk, og deretter installerer du verktöyene for språket. Etter installasjonen
-        vil Divvun Manager med jevne mellomrom sjekke om det finnes nye versjoner av verktöyene, og i så fall
-        installere dem automatisk.
+        I Divvun Manager velger du språk, og deretter installerer du verktøyene for språket. Etter installasjonen
+        vil Divvun Manager med jevne mellomrom sjekke om det finnes nye versjoner av verktøyene, og i så fall
+        oppdatere dem automatisk.
     `,
   },
   documentationUrl: "/doc/divvun-manager/",
