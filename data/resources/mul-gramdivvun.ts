@@ -20,6 +20,10 @@ const resource: Resource = {
       GramDivvun is a grammar checker plugin for MS Office and Google Docs
       that provides grammar checker services in a number of languages.
     `,
+    nb: `
+      GramDivvun er en grammatikkontrollutvidelse for MS Office og Google Docs
+      som inneholder grammatikkontroller for mange språk.
+    `,
   },
   links: [
     {
