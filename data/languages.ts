@@ -96,7 +96,7 @@ const languagesData: LanguagesData = {
     },
     "nn": {
       name: {
-        en: "Norwegian (Nynorsk)"
+        en: "Norwegian (Nynorsk)",
         nn: "Norsk, nynorsk",
       },
     },
