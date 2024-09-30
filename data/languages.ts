@@ -35,6 +35,13 @@ const languagesData: LanguagesData = {
         se: "Davvisámegiella",
       },
     },
+    "en": {
+      name: {
+        en: "English",
+        nb: "Engelsk",
+        sv: "Engelska",
+      },
+    },
     "fo": {
       name: {
         en: "Faroese",
