@@ -25,10 +25,12 @@ const languagesData: LanguagesData = {
         sje: "Bidumsámegiella",
       },
     },
-    /*     "da": {
-      name: { en: "Danish" },
-      autonym: "Dansk",
-    }, */
+    "da": {
+      name: {
+        en: "Danish",
+        da: "Dansk",
+      },
+    },
     "se": {
       name: {
         en: "North Sámi",
