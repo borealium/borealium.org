@@ -157,7 +157,7 @@ const languagesData: LanguagesData = {
     "yid": ["sv", "en"],
   },
   uiOnly: ["da", "en", "fi", "nb", "nn", "sv"],
-  excludeFromUi: ["fit", "fkv", "sjd", "sje", "sju", "sms", "sma", "smn"],
+  excludeFromUi: ["fit", "fkv", "rom", "sjd", "sje", "sju", "sms", "sma", "smn"],
 }
 
 export default languagesData
