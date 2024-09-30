@@ -3,7 +3,6 @@
   "packages": {
     "specifiers": {
       "npm:@mdx-js/mdx@2.3.0": "npm:@mdx-js/mdx@2.3.0",
-      "npm:@types/nunjucks@3.2.5": "npm:@types/nunjucks@3.2.5",
       "npm:@types/react-dom@18.2.7": "npm:@types/react-dom@18.2.7",
       "npm:@types/react@18.2.33": "npm:@types/react@18.2.33",
       "npm:date-fns@2.30.0": "npm:date-fns@2.30.0",
@@ -108,10 +107,6 @@
       },
       "@types/ms@0.7.34": {
         "integrity": "sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==",
-        "dependencies": {}
-      },
-      "@types/nunjucks@3.2.5": {
-        "integrity": "sha512-P9EakWGTqHpziLO9FMRm98LrVnPoipXGR/iAVF55xYa9SKQq7Brob/JTxGESwkhoNkL7fFvROdUOWNwTceELfw==",
         "dependencies": {}
       },
       "@types/prop-types@15.7.13": {
@@ -1341,6 +1336,7 @@
     "https://deno.land/std@0.204.0/http/http_status.ts": "8a7bcfe3ac025199ad804075385e57f63d055b2aed539d943ccc277616d6f932",
     "https://deno.land/std@0.204.0/http/server.ts": "1b2403b3c544c0624ad23e8ca4e05877e65380d9e0d75d04957432d65c3d5f41",
     "https://deno.land/std@0.204.0/http/util.ts": "4cf044067febaa26d0830e356b0f3a5f76d701a60d7ff7a516fad7b192f4c3a7",
+    "https://deno.land/std@0.204.0/json/common.ts": "ecd5e87d45b5f0df33238ed8b1746e1444da7f5c86ae53d0f0b04280f41a25bb",
     "https://deno.land/std@0.204.0/jsonc/mod.ts": "b88dce28eb3645667caa856538ae2fe87af51410822544a0b45a4177ef3bd7dd",
     "https://deno.land/std@0.204.0/jsonc/parse.ts": "c1096e2b7ffb4996d7ed841dfdb29a4fccc78edcc55299beaa20d6fe5facf7b6",
     "https://deno.land/std@0.204.0/media_types/_db.ts": "7606d83e31f23ce1a7968cbaee852810c2cf477903a095696cdc62eaab7ce570",
@@ -1793,10 +1789,12 @@
     "https://deno.land/x/lume@v1.19.3/middlewares/reload_client.js": "34d75e01503fae8180796de882af42b1125fac88f22a010a99d5548de1ba7d72",
     "https://deno.land/x/lume@v1.19.3/mod.ts": "39889108bfda96444489c2d4cec1de3f3a4daee3f5182c20b3965b16a0703055",
     "https://deno.land/x/lume@v1.19.3/plugins/favicon.ts": "35839eaeda5604a97f2c3383be3d7853bc035c563579251a08e79a00c0fc85a7",
+    "https://deno.land/x/lume@v1.19.3/plugins/imagick.ts": "1526ff93ce65b79ede7ccc2c8d6c4698b9960a596f3bef3c96aba27a4a8a6cc4",
     "https://deno.land/x/lume@v1.19.3/plugins/json.ts": "ca6bf1bc6d42639f7bdf581dc9318832d8c2eaf83ae3ecdab6f02dfc738896bf",
     "https://deno.land/x/lume@v1.19.3/plugins/jsx.ts": "532a055f1c6c6f00d21d13cb658614d5f6fc56ea28266020d371ba5fb151461a",
     "https://deno.land/x/lume@v1.19.3/plugins/markdown.ts": "c9964181ff61f15c9820cba7e98292973fae3ace9ea4cfe460b648ae3c6e4ae2",
     "https://deno.land/x/lume@v1.19.3/plugins/mdx.ts": "5a85934644972610e3e5895ff729f22254bdd6c3b39e32631d9eb1cc540e2f4b",
+    "https://deno.land/x/lume@v1.19.3/plugins/metas.ts": "1036c93ae4c99953358496360bae00a4f3b726d5ad7d80b7406652ddbd3cd6ba",
     "https://deno.land/x/lume@v1.19.3/plugins/modules.ts": "d31ababab5e35b47fc207685765c9431ddc7bec019061e18b1d36f527e13029d",
     "https://deno.land/x/lume@v1.19.3/plugins/nav.ts": "f417de5ab06c9ecaf500a5e538fe6774028e421b86edda920ffd0571bf1edda5",
     "https://deno.land/x/lume@v1.19.3/plugins/nunjucks.ts": "8382c559a416816074c0507a430f39b86be16d4ae2afddedfa0d10110d068a57",
@@ -1807,6 +1805,7 @@
     "https://deno.land/x/lume@v1.19.3/plugins/slugify_urls.ts": "4a2b63e63601dc3f7ee58f03f75e1d348918034ce3ce86b38a70abeeda89cf5a",
     "https://deno.land/x/lume@v1.19.3/plugins/source_maps.ts": "b224615d8e820de71c57beef1931ef63265863bc4abf4b67f8d50e5aebb0f0be",
     "https://deno.land/x/lume@v1.19.3/plugins/url.ts": "43d3d47896a7322a8dd34572dedb4baa6f73a382594a2ff7c34a3a064dcc6c9e",
+    "https://deno.land/x/lume@v1.19.3/plugins/utils.ts": "6435d164539d9e408e7e818b080cc1a96ff76ed3c376160577a7df751b57fa07",
     "https://deno.land/x/lume@v1.19.3/plugins/yaml.ts": "df24aac4098dba258f1ac331a3b16ba488a336eb63c51afed8f59201228d583c",
     "https://esm.sh/stable/@fluent/bundle@0.18.0": "dd780c45bd64735c85c0b273f0b586d65c7ec0da2395fea929b572fd762a28b1",
     "https://esm.sh/stable/dedent@1.5.1": "7e918ed4beee6f8aff6820e01492b3f4d1d59426c685abbbcecf5a4e953ac1f7",
