@@ -11,7 +11,7 @@
     ]
   },
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run --v8-flags=--max-old-space-size=8096 --unstable -A -",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run --v8-flags=--max-old-space-size=8096 --unstable-* -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s"
   },
