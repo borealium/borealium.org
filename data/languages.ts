@@ -135,18 +135,18 @@ const languagesData: LanguagesData = {
         sju: "Ubmejesámiengiälla",
       },
     },
-    "sma": {
-      name: {
-        en: "South Sámi",
-        sma: "Åarjelsaemien gïele",
-      },
-    },
     "yid": {
       name: {
         en:  "Yiddish",
         nb:  "Jiddisk",
         sv:  "Jiddiska",
         yid: "Yidish",
+      },
+    },
+    "sma": {
+      name: {
+        en: "South Sámi",
+        sma: "Åarjelsaemien gïele",
       },
     },
   },
