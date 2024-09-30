@@ -13,10 +13,26 @@ const languagesData: LanguagesData = {
     },
   },
   languages: {
-    "is": {
+    "smn": {
       name: {
-        en: "Icelandic",
-        is: "Íslenska",
+        en: "Inari Sámi",
+        smn: "Anarâškielâ",
+      },
+    },
+    "sje": {
+      name: {
+        en: "Pite Sámi",
+        sje: "Bidumsámegiella",
+      },
+    },
+    /*     "da": {
+      name: { en: "Danish" },
+      autonym: "Dansk",
+    }, */
+    "se": {
+      name: {
+        en: "North Sámi",
+        se: "Davvisámegiella",
       },
     },
     "fo": {
@@ -25,16 +41,10 @@ const languagesData: LanguagesData = {
         fo: "Føroyskt",
       },
     },
-    "kl": {
+    "is": {
       name: {
-        en: "Greenlandic",
-        kl: "Kalaallisut",
-      },
-    },
-    "se": {
-      name: {
-        en: "North Sámi",
-        se: "Davvisámegiella",
+        en: "Icelandic",
+        is: "Íslenska",
       },
     },
     "smj": {
@@ -44,28 +54,16 @@ const languagesData: LanguagesData = {
       },
       regions: ["NO", "SE"],
     },
-    "sma": {
+    "kl": {
       name: {
-        en: "South Sámi",
-        sma: "Åarjelsaemien gïele",
+        en: "Greenlandic",
+        kl: "Kalaallisut",
       },
     },
     "sjd": {
       name: {
         en: "Kildin Sámi",
         sjd: "Кӣллт са̄мь кӣлл",
-      },
-    },
-    "sms": {
-      name: {
-        en: "Skolt Sámi",
-        sms: "Nuõrttsääʹmǩiõll",
-      },
-    },
-    "smn": {
-      name: {
-        en: "Inari Sámi",
-        smn: "Anarâškielâ",
       },
     },
     "fkv": {
@@ -80,23 +78,37 @@ const languagesData: LanguagesData = {
         fit: "Meänkieli",
       },
     },
-    "sje": {
+    "nb": {
       name: {
-        en: "Pite Sámi",
-        sje: "Bidumsámegiella",
+        en: "Norwegian (Bokmål)",
+        sv: "Norska (Bokmål)",
+        nb: "Norsk bokmål",
       },
     },
-    "sju": {
+    "nn": {
+      name: { en: "Norwegian (Nynorsk)" },
+      autonym: "Norsk nynorsk",
+    },
+    "sms": {
       name: {
-        en: "Ume Sámi",
-        sju: "Ubmejesámiengiälla",
+        en: "Skolt Sámi",
+        sms: "Nuõrttsääʹmǩiõll",
       },
     },
-    "en": {
+    "rom": {
       name: {
-        en: "English",
-        nb: "Engelsk",
-        sv: "Engelska",
+        en: "Romani",
+        nb: "Romsk",
+        sv: "Romska",
+        rom: "Rromani ćhib",
+      },
+    },
+    "fi": {
+      name: {
+        en: "Finnish",
+        fi: "Suomi",
+        nb: "Finsk",
+        sv: "Finska",
       },
     },
     "sv": {
@@ -106,30 +118,16 @@ const languagesData: LanguagesData = {
         sv: "Svenska",
       },
     },
-    "nb": {
+    "sju": {
       name: {
-        en: "Norwegian (Bokmål)",
-        sv: "Norska (Bokmål)",
-        nb: "Norsk bokmål",
+        en: "Ume Sámi",
+        sju: "Ubmejesámiengiälla",
       },
     },
-    /*     "nn": {
-      name: { en: "Norwegian (Nynorsk)" },
-      autonym: "Norsk nynorsk",
-    }, */
-    "fi": {
+    "sma": {
       name: {
-        en: "Finnish",
-        fi: "Suomi",
-        nb: "Finsk",
-        sv: "Finska",
-      },
-    },
-    "rom": {
-      name: {
-        en: "Romani",
-        nb: "Romsk",
-        sv: "Romska",
+        en: "South Sámi",
+        sma: "Åarjelsaemien gïele",
       },
     },
     "yid": {
@@ -139,10 +137,6 @@ const languagesData: LanguagesData = {
         sv: "Jiddiska",
       },
     },
-    /*     "da": {
-      name: { en: "Danish" },
-      autonym: "Dansk",
-    }, */
   },
   fallbacks: {
     "se": ["nb", "en"],
