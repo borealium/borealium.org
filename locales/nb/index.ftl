@@ -15,16 +15,9 @@ see-more-results = Se flere søkeresultat
 no-resources-in-category = Ingen ressurser ble funnet i denne kategorien.
 news = Nyheter
 available-on-divvun-manager = Tilgengelig via Divvun Manager
-divvun-manager-description =
-    Divvun Manager installerer og oppdaterer stavekontroll,
-    tastatur og ordbøker. Kan brukes på macOS og Windows.
-    Dette programmet har åpen kildekode og er gratis å laste ned.
+divvun-manager-description = Divvun Manager installerer og oppdaterer stavekontroll, tastatur og ordbøker. Programmet kan brukes på macOS og Windows, har åpen kildekode og er gratis å laste ned.
 available-in-divvun-keyboard-app = Tilgjengelig i appen Divvun Keyboards
-divvun-keyboard-description =
-    Divvun Keyboard for iOS og Android inneholder tastatur for
-    samiske og andre urfolks- og minoritetsspråk.
-    Mange tastatur har også innebygd stavekontroll.
-    Dette programmet har åpen kildekode og er gratis å laste ned.
+divvun-keyboard-description = Divvun Keyboard for iOS og Android inneholder tastatur for samiske og andre urfolks- og minoritetsspråk. Flere av tastatura har også innebygd stavekontroll. Programmet har åpen kildekode og er gratis å laste ned.
 platforms = Plattformer
 release = Utgivelse
 languages = Språk
