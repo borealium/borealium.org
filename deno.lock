@@ -1807,13 +1807,13 @@
     "https://deno.land/x/lume@v1.19.3/plugins/url.ts": "43d3d47896a7322a8dd34572dedb4baa6f73a382594a2ff7c34a3a064dcc6c9e",
     "https://deno.land/x/lume@v1.19.3/plugins/utils.ts": "6435d164539d9e408e7e818b080cc1a96ff76ed3c376160577a7df751b57fa07",
     "https://deno.land/x/lume@v1.19.3/plugins/yaml.ts": "df24aac4098dba258f1ac331a3b16ba488a336eb63c51afed8f59201228d583c",
-    "https://esm.sh/stable/@fluent/bundle@0.18.0": "dd780c45bd64735c85c0b273f0b586d65c7ec0da2395fea929b572fd762a28b1",
-    "https://esm.sh/stable/dedent@1.5.1": "7e918ed4beee6f8aff6820e01492b3f4d1d59426c685abbbcecf5a4e953ac1f7",
-    "https://esm.sh/stable/marked@10.0.0": "e0b9bf496cbfdec6f47fbe09aa652267f55caa244eabc2ea4255de96f120883f",
-    "https://esm.sh/stable/react@18.2.0/denonext/jsx-runtime.mjs": "54d8a51c6ca025380abd2d5302e4a9b38ff835d9759c4657e52314f587eaf6bf",
+    "https://esm.sh/stable/@fluent/bundle@0.18.0": "c30d1c55386f99a57279c3de6214d36564613ba00b2c7f1ecce5feaed7d7fafc",
+    "https://esm.sh/stable/dedent@1.5.1": "239f8fae58e344f7f28165f64ab8c071e4c52259cbc0ab3c9fc9a554740a6242",
+    "https://esm.sh/stable/marked@10.0.0": "6ba3e55cb21d6991c969e9328e7613a8fee79e655d28a6e1badbfe2d482daa40",
+    "https://esm.sh/stable/react@18.2.0/denonext/jsx-runtime.mjs": "309faa58fa4e914707daffa1a9514bef4593c952f930640cf93bb871aab7ceb6",
     "https://esm.sh/stable/react@18.2.0/denonext/react.mjs": "3c4f23bcfc53b256fcfaf6f834fa9f584c3bb7be667b2682c6cb6ba8ef88f8e6",
-    "https://esm.sh/v133/@fluent/bundle@0.18.0/denonext/bundle.mjs": "ac6cbabd193b80ef2b5f4e187bdada0aec6ca2671305a0a2b982e57d24aa4d8a",
-    "https://esm.sh/v134/dedent@1.5.1/denonext/dedent.mjs": "09c3d5dbda66b1c315a738cb8d57b12e93c07422fd263d67497431ec90224931",
-    "https://esm.sh/v134/marked@10.0.0/denonext/marked.mjs": "9e0d4d58119d175a418898cac4686c9d60851c3ce9eb8421b7118c420484f76a"
+    "https://esm.sh/v135/@fluent/bundle@0.18.0/denonext/bundle.mjs": "ac6cbabd193b80ef2b5f4e187bdada0aec6ca2671305a0a2b982e57d24aa4d8a",
+    "https://esm.sh/v135/dedent@1.5.1/denonext/dedent.mjs": "09c3d5dbda66b1c315a738cb8d57b12e93c07422fd263d67497431ec90224931",
+    "https://esm.sh/v135/marked@10.0.0/denonext/marked.mjs": "9e0d4d58119d175a418898cac4686c9d60851c3ce9eb8421b7118c420484f76a"
   }
 }
