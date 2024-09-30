@@ -141,9 +141,10 @@ const languagesData: LanguagesData = {
     },
     "yid": {
       name: {
-        en: "Yiddish",
-        nb: "Jiddisk",
-        sv: "Jiddiska",
+        en:  "Yiddish",
+        nb:  "Jiddisk",
+        sv:  "Jiddiska",
+        yid: "Yidish",
       },
     },
   },
