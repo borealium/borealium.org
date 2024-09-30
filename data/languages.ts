@@ -89,12 +89,14 @@ const languagesData: LanguagesData = {
       name: {
         en: "Norwegian (Bokmål)",
         sv: "Norska (Bokmål)",
-        nb: "Norsk bokmål",
+        nn: "Norsk, bokmål",
       },
     },
     "nn": {
-      name: { en: "Norwegian (Nynorsk)" },
-      autonym: "Norsk nynorsk",
+      name: {
+        en: "Norwegian (Nynorsk)"
+        nn: "Norsk, nynorsk",
+      },
     },
     "sms": {
       name: {
