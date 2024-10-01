@@ -1,0 +1,3 @@
+search = Finn
+results = søkjeresultat
+loading = Les inn...
