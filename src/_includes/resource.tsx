@@ -1,7 +1,7 @@
 import { FluentBundle } from "@fluent/bundle"
-import { Data, Page, PageData } from "lume/core.ts"
+import { Data, PageData } from "lume/core.ts"
 import { DownloadButton } from "~/_components/download-button.tsx"
-import { LinkType, Resource, ResourceType, TtsIntegration } from "~types/resource.ts"
+import { LinkType, Resource, ResourceType } from "~types/resource.ts"
 import { CategoryLabel } from "~/_components/label.tsx"
 import Aside, { SimplePost } from "~/_components/aside.tsx"
 import LanguageTag from "~/_components/tag.tsx"
@@ -10,7 +10,6 @@ import { autonym, getLanguageData, selectLocale } from "~plugins/language-data.t
 import { getCategoryData, translateCategoryName } from "~plugins/category-data.ts"
 import * as marked from "marked"
 import dedent from "dedent"
-import { useState } from "react"
 import { script } from "~/_includes/lang-redir.tsx"
 
 export const layout = "base.tsx"
