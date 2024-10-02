@@ -356,16 +356,6 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
             {isPahkat
               ? <PahkatInfo resource={resource} t={t} />
               : <DownloadLinks t={t} resource={resource} lang={lang} />}
-
-            {resource.integrations?.map((integration, i) => {
-              switch (integration.type) {
-                case "tts":
-                  return <></>
-                  // return <TtsIntegrationView resource={resource} integration={integration} key={i} />
-                default:
-                  return <></>
-              }
-            })}
           </div>
 
           <div className="related-documentation">
