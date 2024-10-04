@@ -1,0 +1,24 @@
+smn  = Inarisamisk
+sje = Pitesamisk
+da = Dansk
+se = Nordsamisk
+en = Engelsk
+fo = Færøysk
+is = Islandsk
+smj = Lulesamisk
+kl = Grønlandsk
+sjd = Kildinsamisk
+fkv = Kvensk
+fit = Meänkieli
+nb = Bokmål
+nn = Nynorsk
+sms = Skoltesamisk
+rom = Romsk
+fi = Finsk
+sv = Svenske
+sju = Umesamisk
+yid = Jiddisk
+sma = Sørsamisk
+NO = Norge
+SE = Sverige
+

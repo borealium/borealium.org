@@ -6,6 +6,7 @@ import { FluentPage } from "~plugins/fluent.ts"
 
 export default function BasePage(page: PageData & FluentPage) {
   const { title, children, url, originalUrl, lang, t } = page
+  const lang_t = page.fluentBundle(lang, "languages")
 
   if (t == null) {
     throw new Error("t not available")
@@ -205,7 +206,7 @@ export default function BasePage(page: PageData & FluentPage) {
       </head>
       <body id="top">
         <div className="wrapper">
-          <Navbar url={originalUrl || url || "/"} t={t} lang={lang} />
+          <Navbar url={originalUrl || url || "/"} t={t} lang_t={lang_t} lang={lang} />
           <div className="navbar-offset-wrapper">
             {children}
           </div>

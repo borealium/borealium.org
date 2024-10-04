@@ -1,10 +1,11 @@
 import { MenuItem } from "~/_components/menu-item.tsx"
 import { autonym, getLanguageData, selectLocale } from "~plugins/language-data.ts"
 import { TranslateIcon } from "~/_components/icons.tsx"
+import { TranslateFn } from "~plugins/fluent.ts"
 
 const languagesData = getLanguageData()
 
-export function LanguageSelect(props: { lang: string; url: string }) {
+export function LanguageSelect(props: { lang: string; url: string; lang_t: TranslateFn }) {
   return (
     <>
       <input className="button" type="checkbox" />
@@ -27,9 +28,7 @@ export function LanguageSelect(props: { lang: string; url: string }) {
                   <li key={code}>
                     <a
                       data-multilang
-                      title={`${selectLocale(props.lang, data.name)} (${
-                        selectLocale(props.lang, languagesData.regions[regionCode])
-                      })`}
+                      title={`${props.lang_t(code)} (${props.lang_t(regionCode)})`}
                       href={`/${code}-${regionCode.toLowerCase()}${props.url}`}
                     >
                       {autonym(code)} ({regionText})
@@ -41,7 +40,7 @@ export function LanguageSelect(props: { lang: string; url: string }) {
 
             return (
               <li key={code}>
-                <a data-multilang title={selectLocale(props.lang, data.name)} href={`/${code}${props.url}`}>
+                <a data-multilang title={props.lang_t(code)} href={`/${code}${props.url}`}>
                   {autonym(code)}
                 </a>
               </li>

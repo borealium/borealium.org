@@ -116,6 +116,7 @@ function DownloadLinks(props: { t: TranslateFn; resource: Resource; lang: string
 export default function ResourceLayout(page: PageData & ResourceProps & FluentPage) {
   const { resource, lang, search } = page
   const t = page.fluentBundle(lang, "_includes/resource")
+  const lang_t = page.fluentBundle(lang, "languages")
   const categories = getCategoryData()
   const languages = getLanguageData()
 
@@ -386,7 +387,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
                       return (
                         <dd key={key}>
                           <a
-                            title={selectLocale(lang, languages.languages[key].name)}
+                            title={lang_t(key)}
                             href={`/language/${key}`}
                           >
                             {autonym(key)}

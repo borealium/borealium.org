@@ -14,159 +14,87 @@ const languagesData: LanguagesData = {
   },
   languages: {
     "smn": {
-      name: {
-        en: "Inari Sámi",
-        smn: "Anarâškielâ",
-      },
+      autonym: "Anarâškielâ",
     },
     "sje": {
-      name: {
-        en: "Pite Sámi",
-        sje: "Bidumsámegiella",
-      },
+      autonym: "Bidumsámegiella",
     },
     "da": {
-      name: {
-        en: "Danish",
-        da: "Dansk",
-      },
+      autonym: "Dansk",
     },
     "se": {
-      name: {
-        en: "North Sámi",
-        se: "Davvisámegiella",
-      },
+      autonym: "Davvisámegiella",
     },
     "en": {
-      name: {
-        en: "English",
-        nb: "Engelsk",
-        sv: "Engelska",
-      },
+      autonym: "English",
     },
     "fo": {
-      name: {
-        en: "Faroese",
-        fo: "Føroyskt",
-      },
+      autonym: "Føroyskt",
     },
     "is": {
-      name: {
-        en: "Icelandic",
-        is: "Íslenska",
-      },
+      autonym: "Íslenska",
     },
     "smj": {
-      name: {
-        en: "Lule Sámi",
-        smj: "Julevsámegiella",
-      },
+      autonym: "Julevsámegiella",
       regions: ["NO", "SE"],
     },
     "kl": {
-      name: {
-        en: "Greenlandic",
-        kl: "Kalaallisut",
-      },
+      autonym: "Kalaallisut",
     },
     "sjd": {
-      name: {
-        en: "Kildin Sámi",
-        sjd: "Кӣллт са̄мь кӣлл",
-      },
+      autonym: "Кӣллт са̄мь кӣлл",
     },
     "fkv": {
-      name: {
-        en: "Kven",
-        fkv: "Kväänin kieli",
-      },
+      autonym: "Kväänin kieli",
     },
     "fit": {
-      name: {
-        en: "Meänkieli",
-        fit: "Meänkieli",
-      },
+      autonym: "Meänkieli",
     },
     "nb": {
-      name: {
-        en: "Norwegian (Bokmål)",
-        sv: "Norska (Bokmål)",
-        nb: "Norsk, bokmål",
-      },
+      autonym: "Norsk, bokmål",
     },
     "nn": {
-      name: {
-        en: "Norwegian (Nynorsk)",
-        nn: "Norsk, nynorsk",
-      },
+      autonym: "Norsk, nynorsk",
     },
     "sms": {
-      name: {
-        en: "Skolt Sámi",
-        sms: "Nuõrttsääʹmǩiõll",
-      },
+      autonym: "Nuõrttsääʹmǩiõll",
     },
     "rom": {
-      name: {
-        en: "Romani",
-        nb: "Romsk",
-        sv: "Romska",
-        rom: "Rromani ćhib",
-      },
+      autonym: "Rromani ćhib",
     },
     "fi": {
-      name: {
-        en: "Finnish",
-        fi: "Suomi",
-        nb: "Finsk",
-        sv: "Finska",
-      },
+      autonym: "Suomi",
     },
     "sv": {
-      name: {
-        en: "Swedish",
-        nb: "Svensk",
-        sv: "Svenska",
-      },
+      autonym: "Svenska",
     },
     "sju": {
-      name: {
-        en: "Ume Sámi",
-        sju: "Ubmejesámiengiälla",
-      },
+      autonym: "Ubmejesámiengiälla",
     },
     "yid": {
-      name: {
-        en:  "Yiddish",
-        nb:  "Jiddisk",
-        sv:  "Jiddiska",
-        yid: "Yidish",
-      },
+      autonym: "Yidish",
     },
     "sma": {
-      name: {
-        en: "South Sámi",
-        sma: "Åarjelsaemien gïele",
-      },
+      autonym: "Åarjelsaemien gïele",
     },
   },
   fallbacks: {
-    "se":     ["nb",  "en"],
-    "sma":    ["sv",  "en"],
-    "sms":    ["fi",  "en"],
-    "smn":    ["fi",  "en"],
-    "sje":    ["sv",  "en"],
-    "sju":    ["sv",  "en"],
-    "fkv":    ["nb",  "fi", "en"],
-    "fit":    ["sv",  "fi", "en"],
+    "se": ["nb", "en"],
+    "sma": ["sv", "en"],
+    "sms": ["fi", "en"],
+    "smn": ["fi", "en"],
+    "sje": ["sv", "en"],
+    "sju": ["sv", "en"],
+    "fkv": ["nb", "fi", "en"],
+    "fit": ["sv", "fi", "en"],
     "smj-SE": ["smj", "sv", "en"],
     "smj-NO": ["smj", "nb", "en"],
-    "nb":     ["nn",  "en"],
-    "nn":     ["nb",  "en"],
-    "fo":     ["da",  "en"],
-    "kl":     ["da",  "en"],
-    "rom":    ["sv",  "en"],
-    "yid":    ["sv",  "en"],
+    "nb": ["nn", "en"],
+    "nn": ["nb", "en"],
+    "fo": ["da", "en"],
+    "kl": ["da", "en"],
+    "rom": ["sv", "en"],
+    "yid": ["sv", "en"],
   },
   uiOnly: ["da", "en", "fi", "nb", "nn", "sv"],
   excludeFromUi: ["fit", "fkv", "rom", "sjd", "sje", "sju", "sms", "smn"],
