@@ -13,6 +13,7 @@ fit = meänkieli
 nb = bókmál
 nn = nýnorskt
 sms = skoltsámiskt
+rom = romani
 fi = finskt
 sv = svenskt
 sju = umesámiskt
