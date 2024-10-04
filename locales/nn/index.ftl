@@ -38,7 +38,7 @@ read-documentation = Dokumentasjon
 more-info-spellers =
     På Windows fungerer stavekontrollane i MS Office, LibreOffice og fleire andre program. På macOS fungerer stavekontrollane i dei fleste program.
     
-    Stavekontrollane frå GiellaLT blir installerte med Divvun Manager, som òg oppdaterer alle verktya automatisk.
+    Stavekontrollane frå GiellaLT blir installerte med Divvun Manager, som òg oppdaterer alle verktøya automatisk.
     
     Dei fleste stavekontrollane i Borealium er bygde med GiellaLT-infrastrukturen, og er open kjeldekode.
 more-info-keyboards = Tastatura i Borealium fungerer på Windows, macOS, iOS, Android og ChromeOS. På Windows og Mac installerer ein desse med Divvun Manager. Mobiltastatura finst i App og Play Store. Dei fleste av desse har innebygd stavekontroll. På ChromeOS må ein installera tastaturet manuelt. Dei fleste tastatura i Borealium er bygde med GiellaLT-infrastrukturen, og utvikla av Divvun og Giellatekno.
