@@ -87,7 +87,11 @@ In order to access these translations from an `.mdx` file, use the `t` function 
 If your translation includes a variable, you can specify that like so:
 
 ```javascript
-{t("some-id", { someVar: "some value" })}
+{t("some-id",
+  {
+    someVar: "some value"
+  })
+}
 ```
 
 Within `.tsx` templates, the `t` function is a child of the `page` variable.
