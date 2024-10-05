@@ -1,4 +1,4 @@
-smn = inarisámiskt
+smn = enaresámiskt
 sje = pitesámiskt
 da = danskt
 se = norðursámiskt
