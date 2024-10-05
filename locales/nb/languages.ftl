@@ -1,4 +1,4 @@
-smn  = Inarisamisk
+smn  = Enaresamisk
 sje = Pitesamisk
 da = Dansk
 se = Nordsamisk

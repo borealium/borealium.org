@@ -1,4 +1,4 @@
-smn  = Inarisamisk
+smn  = Enaresamisk
 sje = Pitesamisk
 da = Dansk
 se = Nordsamisk
@@ -21,4 +21,3 @@ yid = Jiddisk
 sma = Sørsamisk
 NO = Norge
 SE = Sverige
-
