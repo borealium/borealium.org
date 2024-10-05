@@ -26,7 +26,7 @@ export default function LanguageIndexLayout(page: PageData & LanguageIndexProps 
         <div>
           <CategoryLabel category={t("language")} />
           <h1 title={lang_t(languageId)}>
-            {autonym(languageId)}
+            {lang_t(languageId)}
           </h1>
         </div>
         <div className="search-page-results" data-pagefind-ignore>
