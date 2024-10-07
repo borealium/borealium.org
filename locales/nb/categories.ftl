@@ -1,29 +1,29 @@
-package-management = ftlInstallasjon og oppdatering av programvare
-package-management-description = ftlTools for installing, uninstalling and updating packages on your computer.
+package-management = Installasjon og oppdatering av programvare
+package-management-description = Tools for installing, uninstalling and updating packages on your computer.
 
-dictionaries = ftlOrdbøker
-dictionaries-description = ftlRessurser for å oversette mellom språk.
+dictionaries = Ordbøker
+dictionaries-description = Ressurser for å oversette mellom språk.
 
-grammar-checkers = ftlGrammatikkontroll
-grammar-checkers-description = ftlVerktøy for å sjekke grammatikk- og skrivefeil, formateringsfeil og mer.
+grammar-checkers = Grammatikkontroll
+grammar-checkers-description = Verktøy for å sjekke grammatikk- og skrivefeil, formateringsfeil og mer.
 
-text-to-speech = ftlTekst-til-tale (TTS) systemer
-text-to-speech-description = ftlVerktøy for å konvertere tekst til tale
+text-to-speech = Tekst-til-tale (TTS) systemer
+text-to-speech-description = Verktøy for å konvertere tekst til tale
 
-speech-recognition = ftlTalegjenkjenning (ASR)
-speech-recognition-description = ftlVerktøy for å konvertere tale til tekst, diktere, lage undertekster og mer
+speech-recognition = Talegjenkjenning (ASR)
+speech-recognition-description = Verktøy for å konvertere tale til tekst, diktere, lage undertekster og mer
 
-korp = ftlKorp
-korp-description = ftlKorpusressurser presentert i Korp-nettgrensesnittet.
+korp = Korp
+korp-description = Korpusressurser presentert i Korp-nettgrensesnittet.
 
-voices = ftlStemmer
-voices-description = ftlStemmer til bruk i tekst-til-tale (TTS) systemer.
+voices = Stemmer
+voices-description = Stemmer til bruk i tekst-til-tale (TTS) systemer.
 
-spellers = ftlStavekontroller
-spellers-description = ftlVerktøy for å sjekke staving og grammatikk.
+spellers = Stavekontroller
+spellers-description = Verktøy for å sjekke staving og grammatikk.
 
-speller-engines = ftlStavekontroller-motorer
-speller-engines-description = ftlVerktøy for å sjekke staving og grammatikk.
+speller-engines = Stavekontroller-motorer
+speller-engines-description = Verktøy for å sjekke staving og grammatikk.
 
-keyboard-layouts = ftlTastaturoppsett
-keyboard-layouts-description = ftlVerktøy for å endre tastaturoppsett.
+keyboard-layouts = Tastaturoppsett
+keyboard-layouts-description = Verktøy for å endre tastaturoppsett.

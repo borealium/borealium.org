@@ -1,29 +1,29 @@
-package-management = ftlApp installation
-package-management-description = ftlTools for installing, uninstalling and updating packages on your computer.
+package-management = App installation
+package-management-description = Tools for installing, uninstalling and updating packages on your computer.
 
-dictionaries = ftlDictionaries
-dictionaries-description = ftlResources for translating between languages.
+dictionaries = Dictionaries
+dictionaries-description = Resources for translating between languages.
 
-grammar-checkers = ftlGrammar checkers
-grammar-checkers-description = ftlTools for checking grammar errors, formatting errors and more.
+grammar-checkers = Grammar checkers
+grammar-checkers-description = Tools for checking grammar errors, formatting errors and more.
 
-text-to-speech = ftlText-to-speech (TTS) systems
-text-to-speech-description = ftlTools to convert text to speech
+text-to-speech = Text-to-speech (TTS) systems
+text-to-speech-description = Tools to convert text to speech
 
-speech-recognition = ftlAutomatic speech recognition (ASR)
-speech-recognition-description = ftlTools to convert speech to text, dictate, create subtitling and more
+speech-recognition = Automatic speech recognition (ASR)
+speech-recognition-description = Tools to convert speech to text, dictate, create subtitling and more
 
-korp = ftlKorp
-korp-description = ftlCorpus resources presented in the Korp web interface.
+korp = Korp
+korp-description = Corpus resources presented in the Korp web interface.
 
-voices = ftlVoices
-voices-description = ftlVoices used with text-to-speech (TTS) systems.
+voices = Voices
+voices-description = Voices used with text-to-speech (TTS) systems.
 
-spellers = ftlSpellers
-spellers-description = ftlTools for checking spelling and grammar.
+spellers = Spellers
+spellers-description = Tools for checking spelling and grammar.
 
-speller-engines = ftlSpeller engines
-speller-engines-description = ftlRun spell checkers.
+speller-engines = Speller engines
+speller-engines-description = Run spell checkers.
 
-keyboard-layouts = ftlKeyboard layouts
-keyboard-layouts-description = ftlTools to change keyboard layouts.
+keyboard-layouts = Keyboard layouts
+keyboard-layouts-description = Tools to change keyboard layouts.
