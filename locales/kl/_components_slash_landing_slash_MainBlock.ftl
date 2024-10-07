@@ -1,1 +1,3 @@
 title = Borealium — Nunani Avannarlerni oqaatsinut minnernut ikiuutit
+description = Borealiumimi avannaamioqatigiinni oqaatsinut minnernut oqaaserpassualerissutit ikiuutillu ataatsimoortillugit katersorneqarput. Ujarlersinnaavutit, ataani oqaatsinik toqqaallutit, imaluunniit suulluunniit pigineqartut ujarlerfigalugit: kukkuniiaatit, oqaaseqatigiinnik kukkuniiaatit, ordbogit, allanniarluni naqitassat (tastaturit) allallu. Amerlanerit akeqanngillat, ineriartortitaallutillu tamanit atorneqarsinnaasunik.
+subtitle = Oqaatsinik ataaniittunik toqqaagit atortorissaarutit suut atorsinnaanerlugit takuniarlugu:
