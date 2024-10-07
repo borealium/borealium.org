@@ -1,1 +1,3 @@
 title = Borealium pillugu
+para1 = Borealium nittartagaavoq paasissutissaasivik Nunani Avannarlerni oqaatsinut minnernut oqaaserpassualerissutinik ujarlerfik.
+para2 = Nittartakkap paasissutissaasiviup pilersinneqarnissaanut aningaasaliisuupput [Nordisk ministerråd](https://www.norden.org/no/nordisk-ministerrad). Nittartakkap paasissutissaasiviup pilersinneqarnissaanut aallarnisaasuuvoq [ASTIN](https://www.isof.se/vart-uppdrag/samarbeten/arbetsgruppen-for-sprakteknologi-i-norden-astin). Nittartakkamik suliarinnittuullutillu aqutsisuupput [Divvun](https://divvun.no/no/index.html) aamma [Giellatekno](https://giellatekno.uit.no/index.nob.html) allaffeqarfigalugu [UiT Norges arktiske universitet](https://uit.no).
