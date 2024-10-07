@@ -1,0 +1,1 @@
+borealium-description = Borealium Nunani Avannarlerni oqaatsinut minnernut oqaaserpassualerissutinik ujarlerfiuvoq. Atortorissaarutit suussusii oqaatsillu atortorissaarutillit ataani takusinnaavatit.
