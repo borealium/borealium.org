@@ -1,2 +1,3 @@
 search = Ujarlerit
-results = ujarlernermi nassaarineqartut
+results = ujarlernermi nassaarisat
+loading = Aallerpoq...

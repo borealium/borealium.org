@@ -1,0 +1,17 @@
+welcome = Tikilluarit
+downloads = Linkit
+about-us = Uagut pilluta
+divvun = Divvun
+privacy = Akornuserneqannginnissaq
+information = Paasissutissat
+documentation = Nalunaarsuineq
+maintaining-this-website = Nittartakkap paasissutissiiviup massuma isumagineqarnera
+resource = Atugassat pigineqartut
+category = Suussuseq
+language = Oqaatsit
+back-to-top = Qulaanut uterit
+read-more = Atuaqqigit
+see-more-results = Ujarlernermi nassaarisat amerlanerusut takukkit
+no-resources-in-category = Suussutsimi matumani atugassanik pigineqartunik nassaartoqanngilaq
+news = Nutaarsiassat
+available-on-divvun-manager = Divvun Managerikkut pissarsiarineqarsinnaavoq
