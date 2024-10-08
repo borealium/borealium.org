@@ -1,5 +1,5 @@
-package-management = Installasjon og oppdatering av programvare
-package-management-description = Tools for installing, uninstalling and updating packages on your computer.
+package-management = Språkpakkeinstallering
+package-management-description = Program for å installere, fjerne og oppdatere språkstøtte på datamaskinen din.
 
 dictionaries = Ordbøker
 dictionaries-description = Ressurser for å oversette mellom språk.
