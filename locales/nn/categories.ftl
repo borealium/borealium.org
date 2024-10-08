@@ -1,4 +1,4 @@
-package-management = Installasjon og oppdatering av programvare
+package-management = Språkpakkeinstallering
 package-management-description = Program for å installera, fjerna og oppdatera språkstøtte på datamaskina di.
 dictionaries = Ordbøker
 dictionaries-description = Ressursar for å omsetja mellom språk.
@@ -14,7 +14,7 @@ voices = Røyster
 voices-description = Røyster til bruk i tekst-til-tale-systemer.
 spellers = Stavekontrollar
 spellers-description = Verktøy for å sjekka stavinga av ord.
-speller-engines = Stavekontrollmotoar
+speller-engines = Stavekontrollmotorar
 speller-engines-description = Verktøy som får stavekontrollane til å fungera med ulike program og system.
 keyboard-layouts = Tastaturoppsett
 keyboard-layouts-description = Gjer det mogleg å skriva raskt og effektivt på ditt eige språk
