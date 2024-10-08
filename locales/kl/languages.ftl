@@ -1,7 +1,7 @@
 smn = Enaresaamisut
 sje = Pitesaamisut
 da = Qallunaatut
-se = Saamit avannaamiuisut
+se = Saamisut avannaamiusut
 en = Tuluttut
 fo = Savalimmiormiutut
 is = Islandimiutut
@@ -10,7 +10,7 @@ kl = Kalaallisut
 sjd = Kildinsaamisut
 fkv = Kvenskisut
 fit = Tornedalsfinskisut
-nb = Bokmål
+nb = Bokmåli
 nn = Nynorskisut
 sms = Skoltesaamisut
 rom = Romskisut
