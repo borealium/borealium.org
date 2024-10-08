@@ -2,7 +2,7 @@ package-management = Språkpakkeinstallering
 package-management-description = Program for å installere, fjerne og oppdatere språkstøtte på datamaskinen din.
 
 dictionaries = Ordbøker
-dictionaries-description = Ressurser for å oversette mellom språk.
+dictionaries-description = Elektroniske ordbøker og termsamlinger.
 
 grammar-checkers = Grammatikkontroll
 grammar-checkers-description = Verktøy for å sjekke grammatikk- og skrivefeil, formateringsfeil og mer.
