@@ -22,8 +22,8 @@ voices-description = Stemmer til bruk i tekst-til-tale-systemer.
 spellers = Stavekontroller
 spellers-description = Verktøy for å sjekke stavingen av ord.
 
-speller-engines = Stavekontrollmotorer
-speller-engines-description = Verktøy som får stavekontrollene til å fungere med ulike program og system.
+speller-engines = Stavekontrolltillegg
+speller-engines-description = Tillegg til program og system som får stavekontroller til å fungere med disse programmene og systemene. Vanligvis blir disse tilleggene installert automatisk, og bare slike som må installeres manuelt er listet opp nedenfor.
 
 keyboard-layouts = Tastaturoppsett
 keyboard-layouts-description = Gjør det mulig å skrive raskt og effektivt på eget språk.
