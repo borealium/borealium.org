@@ -16,7 +16,7 @@ speech-recognition-description = Verktøy for å konvertere tale til tekst, bl.a
 korp = Korpus
 korp-description = Korpusressurser og søkbare tekstsamlinger.
 
-voices = Stemmer
+voices = Kunstige stemmer
 voices-description = Stemmer til bruk i tekst-til-tale-systemer.
 
 spellers = Stavekontroller
