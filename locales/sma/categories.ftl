@@ -13,5 +13,6 @@ voices = Dorjeldhgïelh
 voices-description = Dorjeldhgïelh mah leah tekste-soptsestimmiesystemine åtnasovveme
 spellers = Staeriedimmieprogrammh
 spellers-description = Dïrregh mah viehkiehtieh rïekteslaakan tjaeledh
-speller-engines-description = Dorjeldhgïelh
+speller-engines = Staeriedimmieprogrammelissie
+speller-engines-description = { "" }
 keyboard-layouts = Båaloebuertieh
