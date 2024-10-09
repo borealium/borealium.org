@@ -1,3 +1,3 @@
 title = Borealiumen bïjre
 para1 = Nehtebielie Borealium lea sijje gusnie noerhterïjhki  gïeledïrregh gaavna.
-para2 = { "" }
+para2 = [Nordisk ministerråd](https://www.norden.org/en/nordic-council-ministers) lea beetnegh laeviehtamme nehtebielien barkose.  [Arbetsgruppen för språkteknologi i Norden (Astin)](https://www.isof.se/vart-uppdrag/samarbeten/arbetsgruppen-for-sprakteknologi-i-norden-astin) eelki nehtebieliem bigkedh/darjodh. [Divvun](https://divvun.no/en/index.html) ja [Giellatekno](https://giellatekno.uit.no/index.eng.html) [UiT Norgga árktalaš universitehtas](https://en.uit.no) nehtebieliem reerie jïh orrestahta.
