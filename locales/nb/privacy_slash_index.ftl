@@ -6,3 +6,4 @@ body =
   
   Besøksanalyse
   blir gjort med [Plausible](https://plausible.io/), som følger GDPR helt.
+
