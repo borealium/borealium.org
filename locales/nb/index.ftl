@@ -1,6 +1,6 @@
 welcome = Velkommen
 downloads = Lenker
-about-us = Om oss
+about-us = Om Borealium
 divvun = Divvun
 privacy = Personvern
 information = Informasjon
