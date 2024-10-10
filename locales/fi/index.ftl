@@ -1,6 +1,6 @@
 welcome = Tervetuloa
 downloads = Linkkejä
-about-us = Tietoa meistä
+about-us = Tietoa Borealiumista
 divvun = Divvun
 privacy = Henkilötietosuoja
 information = Tietoja
