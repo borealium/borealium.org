@@ -1,6 +1,6 @@
 welcome = Vælkomin
 downloads = Leinki
-about-us = Um okkum
+about-us = Um Borealium
 divvun = Divvun
 privacy = Privatlív
 information = Kunning
