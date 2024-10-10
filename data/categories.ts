@@ -1,4 +1,6 @@
-const categoriesData: string[] = [
+import { CategoryId } from "~types/category.ts"
+
+export const categoriesList: CategoryId[] = [
   "package-management",
   "dictionaries",
   "grammar-checkers",
@@ -7,5 +9,3 @@ const categoriesData: string[] = [
   "korp",
   "voices",
 ]
-
-export default categoriesData

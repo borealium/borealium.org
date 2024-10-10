@@ -1,12 +1,11 @@
 import { getCategoryData } from "~plugins/category-data.ts"
 import resources from "~data/resources/mod.ts"
 import { PageData } from "lume/core.ts"
-import { CategoryId } from "~types/category.ts"
 
-const categoryData: CategoryId[] = getCategoryData()
+const categoryData = getCategoryData()
 
 export default function* (_page: PageData) {
-  for (const id of categoryData) {
+  for (const id of Object.keys(categoryData)) {
     const filteredResources = resources
       .filter((resource) => resource.category === id)
 
@@ -14,6 +13,7 @@ export default function* (_page: PageData) {
       id,
       url: `/category/${id}/`,
       categoryId: id,
+      category: categoryData[id],
       resources: filteredResources,
       layout: "category-index.tsx",
     }

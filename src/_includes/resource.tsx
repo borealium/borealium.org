@@ -7,7 +7,7 @@ import Aside, { SimplePost } from "~/_components/aside.tsx"
 import LanguageTag from "~/_components/tag.tsx"
 import { FluentPage, TranslateFn } from "~plugins/fluent.ts"
 import { autonym, getLanguageData, selectLocale } from "~plugins/language-data.ts"
-import { getCategoryData } from "~plugins/category-data.ts"
+import { getCategoryData, translateCategoryName } from "~plugins/category-data.ts"
 import * as marked from "marked"
 import dedent from "dedent"
 import { script } from "~/_includes/lang-redir.tsx"
@@ -118,8 +118,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
   const { resource, lang, search } = page
   const t = page.fluentBundle(lang, "_includes/resource")
   const lang_t = page.fluentBundle(lang, "languages")
-  const category_t = page.fluentBundle(lang, "categories")
-  const categories: CategoryId[] = getCategoryData()
+  const categories = getCategoryData()
   const languages = getLanguageData()
 
   if (resource.category === "voices") {
@@ -298,7 +297,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
                 href={`/category/${resource.category}`}
                 data-pagefind-filter={`category:${resource.category}`}
               >
-                {category_t(resource.category)}
+                {translateCategoryName(lang, resource.category)}
               </a>
               {resource.languages.map((lang, key) => {
                 return (
@@ -370,10 +369,10 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
                 <dt>
                   <img style={{ height: "16px" }} src={"/static/images/tag-category.svg"} alt="" /> {t("categories")}
                 </dt>
-                {categories.map((key) => {
+                {Object.entries(categories).map(([key, value]) => {
                   return (
                     <dd key={key}>
-                      <a href={`/category/${key}`}>{category_t(key)}</a>
+                      <a href={`/category/${key}`}>{selectLocale(lang, value)?.name}</a>
                     </dd>
                   )
                 })}

@@ -2,6 +2,7 @@ import { Data, PageData } from "lume/core.ts"
 import { Resource } from "~types/resource.ts"
 import { selectLocale } from "~plugins/language-data.ts"
 import { CategoryLabel } from "~/_components/label.tsx"
+import { LangTag } from "~types/category.ts"
 import { FluentPage } from "~plugins/fluent.ts"
 import Aside, { SimplePost } from "~/_components/aside.tsx"
 
@@ -9,14 +10,15 @@ export const layout = "base.tsx"
 
 type CategoryIndexProps = {
   resources: Resource[]
+  category: Record<LangTag, { name: string; description: string }>
   categoryId: string
 }
 
 export default function CategoryIndexLayout(page: PageData & CategoryIndexProps & FluentPage) {
-  const { resources, lang, categoryId, search, t } = page
-  const category_t = page.fluentBundle(lang, "categories")
+  const { resources, lang, category, categoryId, search, t } = page
 
   const posts = search.pages(["type=post", `lang=${lang}`], "date=desc").slice(0, 3)
+  const cat = selectLocale(lang, category) ?? category["en"]
 
   return (
     <div
@@ -28,9 +30,9 @@ export default function CategoryIndexLayout(page: PageData & CategoryIndexProps 
       <div className="content">
         <div>
           <CategoryLabel category={t("category")} />
-          <h1>{category_t(categoryId)}</h1>
+          <h1>{cat.name}</h1>
           <p>
-            {category_t(`${categoryId}-description`)}
+            {cat.description}
           </p>
         </div>
         <div className="search-page-results" data-pagefind-ignore>

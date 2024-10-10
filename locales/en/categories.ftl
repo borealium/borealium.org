@@ -18,12 +18,3 @@ korp-description = Corpus resources presented in the Korp web interface.
 
 voices = Voices
 voices-description = Voices used with text-to-speech (TTS) systems.
-
-spellers = Spellers
-spellers-description = Tools for checking spelling and grammar.
-
-speller-engines = Speller engines
-speller-engines-description = Run spell checkers.
-
-keyboard-layouts = Keyboard layouts
-keyboard-layouts-description = Tools to change keyboard layouts.
