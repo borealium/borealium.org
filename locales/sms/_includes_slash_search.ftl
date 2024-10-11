@@ -1,0 +1,3 @@
+search = Ooʒʒ
+results = Ooccâmpuʹhttõõzz
+loading = Viǯǯmen...
