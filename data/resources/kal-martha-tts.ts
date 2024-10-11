@@ -1,4 +1,4 @@
-import { LinkType, Resource, ResourceType } from "~types/resource.ts"
+import { Resource, ResourceType } from "~types/resource.ts"
 
 const resource: Resource = {
   id: "marthatts",
@@ -36,4 +36,3 @@ const resource: Resource = {
 }
 
 export default resource
-

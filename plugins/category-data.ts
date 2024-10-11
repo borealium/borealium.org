@@ -3,21 +3,27 @@ import { strings } from "~data/pahkat.ts"
 import { getLanguageData, selectLocale } from "~plugins/language-data.ts"
 import { categoriesList } from "~data/categories.ts"
 import { fluentBundle, message } from "~plugins/fluent.ts"
-import { CategoriesData } from "~types/category.ts"
+import { CategoriesData, CategoryData, CategoryId } from "~types/category.ts"
+import { LangTag } from "~types/language.ts"
 
 const languageData = getLanguageData()
 
-const categoriesData: CategoriesData = {}
-for (const id of categoriesList) {
-  categoriesData[id] = {}
-  for (const lang of Object.keys(languageData.languages)) {
-    const bundle = fluentBundle("categories", lang)
-    categoriesData[id][lang] = {
-      name: message(bundle, null, "~categories", id),
-      description: message(bundle, null, "categories", `${id}-description`),
-    }
-  }
-}
+const categoriesData = categoriesList.reduce((data: CategoriesData, id: CategoryId) => {
+  const categoryData = Object.keys(languageData.languages).reduce(
+    (acc: Record<LangTag, CategoryData>, lang: LangTag) => {
+      const bundle = fluentBundle("categories", lang)
+      acc[lang] = {
+        name: message(bundle, null, "~categories", id),
+        description: message(bundle, null, "~categories", `${id}-description`),
+      }
+      return acc
+    },
+    {},
+  )
+
+  data[id] = categoryData
+  return data
+}, {})
 
 const pahkatCategoryIds = Object.keys(strings.en)
 
