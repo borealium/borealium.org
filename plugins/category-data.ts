@@ -25,7 +25,11 @@ for (const id of pahkatCategoryIds) {
   categoriesData[id] = {}
   for (const lang of Object.keys(languageData.languages)) {
     if (strings[lang]?.[id] != null) {
-      categoriesData[id][lang] = { name: strings[lang][id], description: "" }
+      const bundle = fluentBundle("categories", lang)
+      categoriesData[id][lang] = {
+        name: message(bundle, null, "~categories", id),
+        description: message(bundle, null, "categories", `${id}-description`),
+      }
     }
   }
 }
