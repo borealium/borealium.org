@@ -11,7 +11,7 @@ const LINKS: LinkGroupType[] = [
     urls: [
       { id: "about-us", url: "/about" },
       { id: "privacy", url: "/privacy" },
-      { id: "divvun", url: "https://divvun.no/" },
+/*      { id: "divvun", url: "https://divvun.no/" }, */
     ],
   },
   {
