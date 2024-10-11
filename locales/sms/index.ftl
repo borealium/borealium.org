@@ -33,3 +33,18 @@ dk-button-title = Divvun Keyboard
 dk-button-description = iOS da Android vääras
 website-copyright = Raajjivuõiggâdvuõtt © { $year } UiT Taar aarktlaž universiteʹtt
 read-documentation = Dokumentâsttmõš
+more-info-spellers =
+    Windows:st vuõigglookki tåimmai MS Office:st, LibreOffice:st da jeeʹres prograammin. 
+    MacOS:st vuõigglookki tåimmai jäänmõsân prograammin.
+    
+    Vuõigglookki GiellaLT:st šiõtteet Divvun Manager vieʹǩǩin, kååʹtt peeiʹvat tuâjjneävvaid automaattlânji.
+    
+    Täujja Borealium vuõigglookki leät raajjâm GiellaLT-infrastruktuurâst, da lie äävai kaʹlddikood.
+more-info-keyboards =
+    Borealium puällpååʹrd tåimma Windows:st, Mac:st, iOS:st, Android:st da ChromeOS:st.
+    Windows:st da Mac:st puällpååʹrdid šiõtteet Divvun Manager vieʹǩǩin. Mobiilpuällpååʹrd käunnʼje App da Google Play Storein. Tääuʹjmõsân täin lie mieʹldd vuõigglookkmõš.
+    ChromeOS:st puällpååʹrd âlgg šiõtteed manuaalʼlânji.
+    Jäänmõs vueʹss Borealium puällpååʹrdin leät raajjâm GiellaLT infrastruktuurâst da tõk lie ooudääm Divvun da Giellatekno.
+macos = macOS
+windows = Windows
+mobile = Mobiil
