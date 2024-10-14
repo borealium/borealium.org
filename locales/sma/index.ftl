@@ -41,9 +41,9 @@ dk-button-description = iOS:asse jïh Androidese
 website-copyright = Copyright Uit Nöörjen arktihke universiteete
 read-documentation = Vihtiestimmie
 more-info-spellers =
-    Jeenemes  Borealiumen staeriedimmieprogrammh leah GiellaLT-infrastruktuvrine dorjeldihkie, mij rïhpes gaaltijekovde.
+    Jeenemes Borealiumen staeriedimmieprogrammh leah GiellaLT-infrastruktuvrine dorjeldihkie, mij rïhpes gaaltijekovde.
     Windowsisnie staeriedimmieprogrammh MS Officesne, LibreOfficesne jïh jïjnjh jeatjah programmine juhtieh.
-    MacOSas staeriedimmieprogrammh juhtieh jeenemes programine, badth ij MS Officessne juhtieh.
+    MacOSesne staeriedimmieprogrammh juhtieh jeenemes programine, badth ij MS Officessne juhtieh.
     
     GiellaLT staeriedimmieprogrammh Divvun Managerinie sijjiedahta.
     Divvun Manager aaj jïjtsistie daejtie orrestahta.
@@ -56,3 +56,4 @@ more-info-keyboards =
     Naan gïeli leah aaj båaloebuertieh  Androidesne jïh iOS:esne. Dah gååvnesieh mijjen båaloebuertieAppesne.
 macos = macOS
 windows = Windows
+mobile = Mobïjle
