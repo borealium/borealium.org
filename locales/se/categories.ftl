@@ -1,0 +1,17 @@
+package-management = Divvun Manager
+package-management-description = Prográmma mii sajáiduhttá, váldá eret ja ođasmahttá giellateknologalaš reaidduid iežat dihtoris.
+dictionaries = Sátnegirjjit
+dictionaries-description = Elektronalaš sátnegirjjit ja tearbmačoakkáldagat.
+grammar-checkers = Grammatihkkadárkkisteapmi
+grammar-checkers-description = Reaidu mii dárkkista grammatihkka-, čállin- ja formaterenmeattáhusaid,
+text-to-speech = Hállansyntesa
+text-to-speech-description = Reaidu mii konvertere teavstta hállamii, dihtor lohká de jitnosit dan maid gávdná šearpmas.
+speech-recognition = Hállanáican (Hállamis teaksta)
+speech-recognition-description = Reaidu mii konvertere hállama tekstii, omd. go diktere dahje ráhkada vuolleteavsttaid filmmaide.
+korp = Teakstačoakkáldat
+korp-description = Ozahahtti teakstačoakkáldagat ja eará teakstačoakkáldatresurssat.
+voices = Dahkkojienat
+voices-description = Dahkkojienat maid hállansyntesaprográmmat geavahit.
+spellers = Čállindárkkisteapmi
+spellers-description = Reaidu mii dárkkista jus sánit leat rievttes láhkai čállon.
+speller-engines = Čállindárkkistanlasáhus
