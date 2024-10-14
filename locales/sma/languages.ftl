@@ -1,0 +1,17 @@
+smn = Anaarsaemiengïele
+sje = Bidumsaemiengïele
+da = Daanskegïele
+se = Noerhtesaemien
+en = Englaantengïele
+fo = Færsååligïele
+is = Islaantengïele
+smj = Julevsaemiengïele
+kl = Kruanaetnemengïele
+nb = Daaroengïele
+nn = Orredaaroengïele
+fi = Soemengïele
+sv = Svïenskegïele
+sju = Upmijengïele
+sma = Åarjelsaemien
+NO = Nöörje
+SE = Sveerje

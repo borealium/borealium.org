@@ -1,0 +1,17 @@
+welcome = Buerie båeteme!
+downloads = Svaalhtesh
+about-us = Borealiumen bïjre
+divvun = Divvun
+privacy = Persovnevaarjelimmie
+information = Bïevnesh
+documentation = Vihtiestimmie
+maintaining-this-website = Nehtebieliereerije
+resource = Ressursh
+category = Kategorije
+language = Gïele
+back-to-top = Bååstede aalkoevasse
+read-more = Lohkh vielie
+see-more-results = Vuesehth vielie syökemeilleldahkh
+no-resources-in-category = Eah leah vielie ressursh daennie kategorijesne
+news = Saernieh
+available-on-divvun-manager = Jaksoesmieresne Divvun Managerinie
