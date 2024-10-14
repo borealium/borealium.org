@@ -1,6 +1,6 @@
 [[paths]]
-    reference = "locales/en/fit-resources.ftl"
-    l10n = "locales/{locale}/fit-resources.ftl"
+    reference = "resources/en/fit-resources.ftl"
+    l10n = "resources/{locale}/fit-resources.ftl"
     locales = [
         "en",
         "fit",

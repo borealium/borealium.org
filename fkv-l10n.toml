@@ -1,6 +1,6 @@
 [[paths]]
-    reference = "locales/en/fkv-resources.ftl"
-    l10n = "locales/{locale}/fkv-resources.ftl"
+    reference = "resources/en/fkv-resources.ftl"
+    l10n = "resources/{locale}/fkv-resources.ftl"
     locales = [
         "en",
         "fkv",
