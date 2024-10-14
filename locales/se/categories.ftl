@@ -15,3 +15,6 @@ voices-description = Dahkkojienat maid hállansyntesaprográmmat geavahit.
 spellers = Čállindárkkisteapmi
 spellers-description = Reaidu mii dárkkista jus sánit leat rievttes láhkai čállon.
 speller-engines = Čállindárkkistanlasáhus
+speller-engines-description = Prográmma- ja vuogádatlasáhusat man bokte aktivere čállindárkkisteami prográmmain ja vuogádagain. Dábálaččat dát lasáhusat sajaiduhttot automáhtalaččat, ja gávnnat dušše diekkáriid maid ieš ferte sajáiduhttit dás vuolábealde.
+keyboard-layouts = Boallobeavderáhkadusat
+keyboard-layouts-description = Dáid bokte čálát iežat giela jođánit ja vuohkasit.
