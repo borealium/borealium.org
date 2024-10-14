@@ -1,0 +1,9 @@
+[[paths]]
+    reference = "locales/en/sme-resources.ftl"
+    l10n = "locales/{locale}/sme-resources.ftl"
+    locales = [
+        "en",
+        "nb",
+        "sme",
+        "sv"
+    ]

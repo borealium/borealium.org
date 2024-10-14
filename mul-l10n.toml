@@ -1,0 +1,12 @@
+[[paths]]
+    reference = "locales/en/mul-resources.ftl"
+    l10n = "locales/{locale}/mul-resources.ftl"
+    locales = [
+        "en",
+        "fi",
+        "nb",
+        "se",
+        "sme",
+        "smj",
+        "sv"
+    ]
