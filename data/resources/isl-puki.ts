@@ -1,27 +1,30 @@
 import { LinkType, Resource, ResourceType } from "~types/resource.ts"
+import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
+
+const id = "puki"
+const resourceLang = "isl"
+const halfLinks = [
+  {
+    type: LinkType.Normal,
+    url: new URL("https://puki.is"),
+  },
+]
+
+const l10nLanguages = getL10NLanguages(resourceLang)
 
 const resource: Resource = {
-  id: "puki",
+  id,
   type: ResourceType.External,
   languages: ["is"],
   category: "spellers",
-  name: {
-    en: "Púki spellchecker",
-    is: "Púki ritvilluvörn",
-  },
-  description: {
-    en: "Púki Icelandic spelling checker",
-    is: "Púki ritvilluvörn fyrir PC og Mac",
-  },
-  links: [
-    {
-      type: LinkType.Normal,
-      text: {
-        en: "Púki",
-      },
-      url: new URL("https://puki.is"),
-    },
-  ],
+  name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
+  description: makeResourceTranslations(`${id}-description`, resourceLang, l10nLanguages),
+  links: halfLinks.map((halfLink, index) => {
+    return {
+      ...halfLink,
+      text: makeResourceTranslations(`${id}-links-${index}`, resourceLang, l10nLanguages),
+    }
+  }),
 }
 
 export default resource

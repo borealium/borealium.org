@@ -1,29 +1,34 @@
 import { Resource, ResourceType } from "~types/resource.ts"
+import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
+
+const id = "kaldict"
+const resourceLang = "kal"
+const halfLinks = [
+  {
+    text: {
+      en: "Greenlandic Dictionaries",
+      kl: "Kalaallisut Ordbogit",
+      da: "Grønlandske Ordbøger",
+    },
+    url: new URL("https://ordbog.gl"),
+  },
+]
+
+const l10nLanguages = getL10NLanguages(resourceLang)
 
 const resource: Resource = {
-  id: "kaldict",
+  id,
   type: ResourceType.External,
   languages: ["kl"],
   category: "dictionaries",
-  name: {
-    en: "Greenlandic Dictionaries",
-    kl: "Kalaallisut Ordbogit",
-    da: "Grønlandske Ordbøger",
-  },
-  description: {
-    en: "Online dictionary resources for Greenlandic",
-    da: "Grønlandske Ordbøger på net",
-  },
-  links: [
-    {
-      text: {
-        en: "Greenlandic Dictionaries",
-        kl: "Kalaallisut Ordbogit",
-        da: "Grønlandske Ordbøger",
-      },
-      url: new URL("https://ordbog.gl"),
-    },
-  ],
+  name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
+  description: makeResourceTranslations(`${id}-description`, resourceLang, l10nLanguages),
+  links: halfLinks.map((halfLink, index) => {
+    return {
+      ...halfLink,
+      text: makeResourceTranslations(`${id}-links-${index}`, resourceLang, l10nLanguages),
+    }
+  }),
 }
 
 export default resource

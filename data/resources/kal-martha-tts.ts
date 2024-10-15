@@ -1,38 +1,35 @@
 import { Resource, ResourceType } from "~types/resource.ts"
+import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
+
+const id = "marthatts"
+const resourceLang = "kal"
+const halfLinks = [
+  {
+    url: new URL("https://oqaasileriffik.gl/en/langtech/martha/"),
+  },
+  {
+    url: new URL("https://oqaasileriffik.gl/oqaaserpassualerineq/martha/"),
+  },
+  {
+    url: new URL("https://oqaasileriffik.gl/da/sprogteknologi/martha/"),
+  },
+]
+
+const l10nLanguages = getL10NLanguages(resourceLang)
 
 const resource: Resource = {
-  id: "marthatts",
+  id,
   type: ResourceType.External,
   languages: ["kl"],
   category: "text-to-speech",
-  name: {
-    en: "Martha Speech Synthesis",
-  },
-  description: {
-    en: "Speech synthesis for Greenlandic",
-  },
-  links: [
-    {
-      text: {
-        en: "Martha TTS (in English)",
-      },
-      url: new URL("https://oqaasileriffik.gl/en/langtech/martha/"),
-    },
-    {
-      text: {
-        kl: "Martha TTS (kalaallisut)",
-        en: "Martha TTS (in Greenlandic)",
-      },
-      url: new URL("https://oqaasileriffik.gl/oqaaserpassualerineq/martha/"),
-    },
-    {
-      text: {
-        da: "Martha TTS (på dansk)",
-        en: "Martha TTS (in Danish)",
-      },
-      url: new URL("https://oqaasileriffik.gl/da/sprogteknologi/martha/"),
-    },
-  ],
+  name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
+  description: makeResourceTranslations(`${id}-description`, resourceLang, l10nLanguages),
+  links: halfLinks.map((halfLink, index) => {
+    return {
+      ...halfLink,
+      text: makeResourceTranslations(`${id}-links-${index}`, resourceLang, l10nLanguages),
+    }
+  }),
 }
 
 export default resource

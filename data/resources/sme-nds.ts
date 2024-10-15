@@ -1,29 +1,31 @@
 import { Resource, ResourceType } from "~types/resource.ts"
+import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
+
+const id = "nds-sme"
+const resourceLang = "sme"
+
+const l10nLanguages = getL10NLanguages(resourceLang)
+
+const halfLinks = [
+  {
+    url: new URL("https://sanit.oahpa.no"),
+  },
+]
 
 const resource: Resource = {
   id: "nds-sme",
   type: ResourceType.External,
   languages: ["se"],
   category: "dictionaries",
-  name: {
-    en: "NDS for North Sámi",
-  },
-  description: {
-    en: "Dictionary resources for North Sámi",
-  },
-  moreInfo: {
-    en: `
-      NDS — Neahttadigisánit — for North Sámi contains dictionaries translating to and from North Sámi.
-    `,
-  },
-  links: [
-    {
-      text: {
-        en: "NDS Davvi",
-      },
-      url: new URL("https://sanit.oahpa.no"),
-    },
-  ],
+  name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
+  description: makeResourceTranslations(`${id}-description`, resourceLang, l10nLanguages),
+  moreInfo: makeResourceTranslations(`${id}-more-info`, resourceLang, l10nLanguages),
+  links: halfLinks.map((halfLink, index) => {
+    return {
+      ...halfLink,
+      text: makeResourceTranslations(`${id}-links-${index}`, resourceLang, l10nLanguages),
+    }
+  }),
 }
 
 export default resource

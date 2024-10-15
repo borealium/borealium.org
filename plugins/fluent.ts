@@ -95,7 +95,10 @@ function validateFtlFiles() {
 function loadFluentFiles() {
   validateFtlFiles()
 
-  const bundleTree = ftlBundleTree(`${Deno.cwd()}/locales`, languages)
+  const bundleTree = ftlBundleTree(
+    [`${Deno.cwd()}/locales`, `${Deno.cwd()}/resources`],
+    languages,
+  )
   console.log("Loaded Fluent files:")
   for (const k in bundleTree) {
     if (k == "") {
@@ -247,28 +250,46 @@ function makeFallbacks(lang: string, languages: LanguagesData) {
   return lang === "en" ? ["en"] : [lang, ...(languages.fallbacks[lang] ?? ["en"])]
 }
 
-function ftlBundleTree(rootPath: string, languages: LanguagesData) {
+function ftlBundleTree(rootPaths: string[], languages: LanguagesData) {
   const tree: { [path: string]: { [lang: string]: FluentBundle } } = {}
-  const resources = ftlResourceTree(rootPath)
-  const resKeys = Object.keys(resources)
+  for (const rootPath of rootPaths) {
+    const resources = ftlResourceTree(rootPath)
+    const resKeys = Object.keys(resources)
 
-  for (const k of resKeys) {
-    const langs = Object.keys(languages.languages)
-    const fallbacks = langs.reduce((acc, lang) => {
-      acc[lang] = makeFallbacks(lang, languages)
-      return acc
-    }, {} as Record<string, string[]>)
+    for (const k of resKeys) {
+      const langs = Object.keys(languages.languages)
+      const fallbacks = langs.reduce((acc, lang) => {
+        acc[lang] = makeFallbacks(lang, languages)
+        return acc
+      }, {} as Record<string, string[]>)
 
-    const bundles = langs.reduce((acc, lang) => {
-      acc[lang] = new FluentBundle(lang)
-      return acc
-    }, {} as Record<string, FluentBundle>)
+      const bundles = langs.reduce((acc, lang) => {
+        acc[lang] = new FluentBundle(lang)
+        return acc
+      }, {} as Record<string, FluentBundle>)
 
-    const chunks = k.split("/")
+      const chunks = k.split("/")
 
-    while (chunks.length > 0) {
-      const p = chunks.join("/")
-      const res = resources[p]
+      while (chunks.length > 0) {
+        const p = chunks.join("/")
+        const res = resources[p]
+
+        if (res != null) {
+          for (const lang of langs) {
+            const bundle = bundles[lang]
+
+            for (const l of fallbacks[lang]) {
+              if (res[l] != null) {
+                bundle.addResource(res[l])
+              }
+            }
+          }
+        }
+
+        chunks.pop()
+      }
+
+      const res = resources[""]
 
       if (res != null) {
         for (const lang of langs) {
@@ -282,24 +303,8 @@ function ftlBundleTree(rootPath: string, languages: LanguagesData) {
         }
       }
 
-      chunks.pop()
+      tree[k] = bundles
     }
-
-    const res = resources[""]
-
-    if (res != null) {
-      for (const lang of langs) {
-        const bundle = bundles[lang]
-
-        for (const l of fallbacks[lang]) {
-          if (res[l] != null) {
-            bundle.addResource(res[l])
-          }
-        }
-      }
-    }
-
-    tree[k] = bundles
   }
 
   return tree

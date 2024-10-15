@@ -1,24 +1,28 @@
 import { Resource, ResourceType } from "~types/resource.ts"
+import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
+
+const id = "fkv-korp"
+const resourceLang = "fkv"
+const halfLinks = [
+  {
+    url: new URL("https://gtweb.uit.no/f_korp/#?lang=en"),
+  },
+]
+const l10nLanguages = getL10NLanguages(resourceLang)
 
 const resource: Resource = {
-  id: "fkv-korp",
+  id,
   type: ResourceType.External,
   languages: ["fkv"],
   category: "korp",
-  name: {
-    en: "Korp for Kven",
-  },
-  description: {
-    en: "In Korp for Kven, you can search for Kven texts. The text corpus is gramatically annotated.",
-  },
-  links: [
-    {
-      text: {
-        en: "Korp for Kven",
-      },
-      url: new URL("https://gtweb.uit.no/f_korp/#?lang=en"),
-    },
-  ],
+  name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
+  description: makeResourceTranslations(`${id}-description`, resourceLang, l10nLanguages),
+  links: halfLinks.map((halfLink, index) => {
+    return {
+      ...halfLink,
+      text: makeResourceTranslations(`${id}-links-${index}`, resourceLang, l10nLanguages),
+    }
+  }),
 }
 
 export default resource
