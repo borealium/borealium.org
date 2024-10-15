@@ -4,5 +4,6 @@
     locales = [
         "en",
         "nb",
+        "nn",
         "sv"
     ]
