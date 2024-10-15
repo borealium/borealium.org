@@ -2,6 +2,7 @@
     reference = "resources/en/kal-resources.ftl"
     l10n = "resources/{locale}/kal-resources.ftl"
     locales = [
-        "dk",
+        "da",
         "en",
+        "kl",
     ]
