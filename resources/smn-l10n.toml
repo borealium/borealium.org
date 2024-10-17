@@ -1,8 +1,0 @@
-[[paths]]
-    reference = "resources/en/smn-resources.ftl"
-    l10n = "resources/{locale}/smn-resources.ftl"
-    locales = [
-        "en",
-        "fi",
-        "smn",
-    ]
