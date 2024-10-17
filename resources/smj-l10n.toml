@@ -1,6 +1,6 @@
 [[paths]]
-    reference = "resources/en/smj-resources.ftl"
-    l10n = "resources/{locale}/smj-resources.ftl"
+    reference = "en/smj-resources.ftl"
+    l10n = "{locale}/smj-resources.ftl"
     locales = [
         "nb",
         "nn",

@@ -1,6 +1,6 @@
 [[paths]]
-    reference = "resources/en/kal-resources.ftl"
-    l10n = "resources/{locale}/kal-resources.ftl"
+    reference = "en/kal-resources.ftl"
+    l10n = "{locale}/kal-resources.ftl"
     locales = [
         "da",
         "en",

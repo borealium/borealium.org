@@ -1,6 +1,6 @@
 [[paths]]
-    reference = "resources/en/smn-resources.ftl"
-    l10n = "resources/{locale}/smn-resources.ftl"
+    reference = "en/smn-resources.ftl"
+    l10n = "{locale}/smn-resources.ftl"
     locales = [
         "fi",
         "smn",
