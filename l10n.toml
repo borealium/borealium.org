@@ -1,4 +1,11 @@
 [[paths]]
     reference = "locales/nb/*.ftl"
     l10n = "locales/{locale}/*.ftl"
-  
+
+[[paths]]
+    reference = "locales/en/fao-resources.ftl"
+    l10n = "locales/{locale}/fao-resources.ftl"
+    locales = [
+        "fo",
+        "da",
+    ]
