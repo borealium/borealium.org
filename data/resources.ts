@@ -6,7 +6,10 @@ import { fluentBundle, message } from "~plugins/fluent.ts"
 export function getL10NLanguages(resourceLang: string): string[] {
   const tomlContent = Deno.readTextFileSync(`${Deno.cwd()}/resources/${resourceLang}-l10n.toml`)
   const toml = tomlParse(tomlContent) as Record<string, L10nPath[]>
-  return toml.paths[0].locales
+  return [
+    ...toml.paths[0].locales,
+    "en",
+  ]
 }
 
 export function makeResourceTranslations(
