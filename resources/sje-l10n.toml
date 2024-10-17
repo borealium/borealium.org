@@ -2,7 +2,6 @@
     reference = "resources/en/sje-resources.ftl"
     l10n = "resources/{locale}/sje-resources.ftl"
     locales = [
-        "en",
         "nb",
         "nn",
         "sv"
