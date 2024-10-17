@@ -1,0 +1,7 @@
+[[paths]]
+    reference = "resources/en/fit-resources.ftl"
+    l10n = "resources/{locale}/fit-resources.ftl"
+    locales = [
+        "fit",
+        "sv",
+    ]

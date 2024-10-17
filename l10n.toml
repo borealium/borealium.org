@@ -1,28 +1,3 @@
 [[paths]]
     reference = "locales/nb/*.ftl"
     l10n = "locales/{locale}/*.ftl"
-
-[[paths]]
-    reference = "locales/en/fao-resources.ftl"
-    l10n = "locales/{locale}/fao-resources.ftl"
-    locales = [
-        "fo",
-        "da",
-    ]
-
-[[paths]]
-    reference = "locales/en/fit-resources.ftl"
-    l10n = "locales/{locale}/fit-resources.ftl"
-    locales = [
-        "fit",
-        "sv",
-    ]
-
-[[paths]]
-    reference = "locales/en/fkv-resources.ftl"
-    l10n = "locales/{locale}/fkv-resources.ftl"
-    locales = [
-        "fkv",
-        "nb",
-        "nn",
-    ]
