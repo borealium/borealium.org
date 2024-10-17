@@ -1,6 +1,6 @@
 [[paths]]
-    reference = "resources/en/fao-resources.ftl"
-    l10n = "resources/{locale}/fao-resources.ftl"
+    reference = "en/fao-resources.ftl"
+    l10n = "{locale}/fao-resources.ftl"
     locales = [
         "fo",
         "da",
