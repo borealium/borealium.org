@@ -18,6 +18,7 @@ fi = Suomagiella
 sv = Ruoŧagiella
 sju = Ubmisámegiella
 yid = Israelagiella
+yid-description = Jiddišgiella lea almmolaš minoritehtagiella Ruoŧas, ja resurssat vuolábealde leat eanemuš ávkin ruoŧabeale jiddišgielagiidda.
 sma = Máttasámegiella
 NO = Norga
 SE = Ruoŧŧa
