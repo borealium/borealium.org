@@ -18,6 +18,7 @@ fi = Finsk
 sv = Svensk
 sju = Umesamisk
 yid = Jiddisk
+yid-description = Jiddisk er eit offisielt minoritetsspråk i Sverige, og ressursane lista opp nedanfor er meint som hjelpemiddel for å nytta jiddisk i Sverige.
 sma = Sørsamisk
 NO = Noreg
 SE = Sverige
