@@ -1,4 +1,4 @@
-smn  = Inari Sámi
+smn = Inari Sámi
 sje = Pite Sámi
 da = Danish
 se = North Sámi
@@ -18,6 +18,7 @@ fi = Finnish
 sv = Swedish
 sju = Ume Sámi
 yid = Yiddish
+yid-description = Yiddish is an official minority language in Sweden, and the resources listed below are meant as help for using Yiddish in Sweden.
 sma = South Sámi
 NO = Norway
 SE = Sweden
