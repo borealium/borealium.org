@@ -71,7 +71,7 @@ const languagesData: LanguagesData = {
     "sju": {
       autonym: "Ubmejesámiengiälla",
     },
-    "yid": {
+    "yi": {
       autonym: "Yidish",
     },
     "sma": {
@@ -95,10 +95,10 @@ const languagesData: LanguagesData = {
     "fo": ["da", "en"],
     "kl": ["da", "en"],
     "rom": ["sv", "en"],
-    "yid": ["sv", "en"],
+    "yi": ["sv", "en"],
   },
   uiOnly: ["da", "en", "fi", "nb", "nn", "sv"],
-  excludeFromUi: ["da", "fit", "fkv", "rom", "sjd", "sje", "sju", "sma-NO", "sma-SE", "smn", "yid"],
+  excludeFromUi: ["da", "fit", "fkv", "rom", "sjd", "sje", "sju", "sma-NO", "sma-SE", "smn", "yi"],
 }
 
 export default languagesData
