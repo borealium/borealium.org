@@ -1,4 +1,4 @@
-smn  = Enaresamiska
+smn = Enaresamiska
 sje = Pitesamiska
 da = Danska
 se = Nordsamiska
@@ -18,6 +18,7 @@ fi = Finska
 sv = Svenska
 sju = Umesamiska
 yid = Jiddiska
+yid-description = Jiddisch är ett nationellt minoritetsspråk i Sverige, och resurserna listade nedan är hjälpmedel för att använda Jiddisch i Sverige.
 sma = Sydsamiska
 NO = Norge
 SE = Sverige
