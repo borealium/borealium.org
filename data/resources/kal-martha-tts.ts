@@ -21,7 +21,7 @@ const resource: Resource = {
   id,
   type: ResourceType.External,
   languages: ["kl"],
-  category: "text-to-speech",
+  category: ["text-to-speech","voices"],
   name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
   description: makeResourceTranslations(`${id}-description`, resourceLang, l10nLanguages),
   links: halfLinks.map((halfLink, index) => {
