@@ -1,17 +1,15 @@
 import { FluentBundle } from "@fluent/bundle"
 import { Data, PageData } from "lume/core.ts"
-import { DownloadButton } from "~/_components/download-button.tsx"
-import { LinkType, Resource, ResourceType } from "~types/resource.ts"
-import { CategoryLabel } from "~/_components/label.tsx"
 import Aside, { SimplePost } from "~/_components/aside.tsx"
+import { DownloadButton } from "~/_components/download-button.tsx"
+import { CategoryLabel } from "~/_components/label.tsx"
 import LanguageTag from "~/_components/tag.tsx"
+import { script } from "~/_includes/lang-redir.tsx"
+import { Markdown } from "~/_includes/markdown.ts"
+import { getCategoryData, translateCategoryName } from "~plugins/category-data.ts"
 import { FluentPage, TranslateFn } from "~plugins/fluent.ts"
 import { autonym, getLanguageData, selectLocale } from "~plugins/language-data.ts"
-import { getCategoryData, translateCategoryName } from "~plugins/category-data.ts"
-import * as marked from "marked"
-import dedent from "dedent"
-import { script } from "~/_includes/lang-redir.tsx"
-import { CategoryId } from "~types/category.ts"
+import { LinkType, Resource, ResourceType } from "~types/resource.ts"
 
 export const layout = "base.tsx"
 
@@ -226,9 +224,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
                 })}
               </select>
             </label>
-            <textarea className="speak-value">
-              {voices[0]?.sampleText}
-            </textarea>
+            <textarea className="speak-value" defaultValue={voices[0]?.sampleText} />
             <button className="button speak-button">Speak</button>
             <audio className="speak-audio" controls autoPlay />
           </div>
@@ -277,11 +273,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
             <div>
               <CategoryLabel category={t("resource")} />
               <h1>{name}</h1>
-              {description != null && (
-                <p className="description">
-                  {description}
-                </p>
-              )}
+              {description != null && <Markdown as="p" className="description">{description}</Markdown>}
             </div>
             <div className="tags-wrapper">
               {resource.tags != null && (
@@ -349,12 +341,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
                 </>
               )}
             </div>
-            {moreInfo != null && (
-              <div
-                className="section"
-                dangerouslySetInnerHTML={{ __html: marked.parse(dedent(moreInfo)) }}
-              />
-            )}
+            {moreInfo != null && <Markdown className="section">{moreInfo}</Markdown>}
             {isPahkat
               ? <PahkatInfo resource={resource} t={t} />
               : <DownloadLinks t={t} resource={resource} lang={lang} />}
