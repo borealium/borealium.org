@@ -18,6 +18,7 @@ fi = Finskt
 sv = Svenskt
 sju = Umesámiskt
 yi = Jiddiskt
+yi-description = Jiddiskt er eitt alment minnilutamál í Svøríki, og tilfeingið á listanum niðanfyri er ætlað sum hjálp til at brúka jiddiskt í Svøríki.
 sma = Suðursámiskt
 NO = Noreg
 SE = Svøríki
