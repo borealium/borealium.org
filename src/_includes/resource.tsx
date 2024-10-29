@@ -143,6 +143,11 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
           gender: "female",
           apiUrl: "https://tts.divvun.user.town/smj/female/",
           sampleText: "Buoris, muv namma l Siggá. Mån lav Divvuna julevsáme dahkojiedna.",
+        }, {
+          name: "Aanna",
+          gender: "female",
+          apiUrl: "https://tts.divvun.user.town/sma/female/",
+          sampleText: "Buerie biejjie, mov nomme Aanna. Manne leam Divvunen åarjelsaemien dorjeldhgïele.",
         }],
       },
     ]
