@@ -1,0 +1,2 @@
+dictionaries = Sanakirjoja
+korp = Korpuksia
