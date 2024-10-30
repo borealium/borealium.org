@@ -14,7 +14,7 @@ read-more = Les meir
 see-more-results = Sjå fleire søkjeresultat
 no-resources-in-category = Ingen ressursar vart funne i denne kategorien.
 news = Nyhende
-available-on-divvun-manager = Tilgengeleg via Divvun Manager
+available-on-divvun-manager = Tilgjengeleg via Divvun Manager
 divvun-manager-description =
     Divvun Manager installerer og oppdaterer stavekontrollar, tastatur og ordbøker. Finst for macOS og Windows.
     Dette programmet har open kjeldekode og er gratis å lasta ned.
