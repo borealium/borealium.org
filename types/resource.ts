@@ -18,6 +18,7 @@ export type Resource = {
 export type Integration = TtsIntegration
 
 export type TtsVoice = {
+  language: LangTag
   name: string
   gender: string
   apiUrl: string

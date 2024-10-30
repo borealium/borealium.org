@@ -124,26 +124,31 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
       {
         type: "tts",
         voices: [{
+          language: "se",
           name: "Biret",
           gender: "female",
           apiUrl: "https://tts.divvun.user.town/se/female/",
           sampleText: "Bures, mu namma lea Biret. Mun lean Divvuma davvisámi dahkujietna.",
         }, {
+          language: "smj",
           name: "Nihkol",
           gender: "male",
           apiUrl: "https://tts.divvun.user.town/smj/male/",
           sampleText: "Buoris, muv namma l Nihkol. Mån lav Divvuna julevsáme dahkojiedna.",
         }, {
+          language: "smj",
           name: "Ábmut",
           gender: "male",
           apiUrl: "https://tts.divvun.user.town/smj/male/?speaker=1",
           sampleText: "Buoris, muv namma l Ábmut. Mån lav Divvuna julevsáme dahkojiedna.",
         }, {
+          language: "smj",
           name: "Siggá",
           gender: "female",
           apiUrl: "https://tts.divvun.user.town/smj/female/",
           sampleText: "Buoris, muv namma l Siggá. Mån lav Divvuna julevsáme dahkojiedna.",
         }, {
+          language: "sma",
           name: "Aanna",
           gender: "female",
           apiUrl: "https://tts.divvun.user.town/sma/female/",
@@ -160,7 +165,14 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
   const moreInfo = resource.moreInfo != null ? selectLocale(lang, resource.moreInfo) : null
   const isPahkat = resource.type === ResourceType.Pahkat
 
-  const voices = resource.integrations?.filter((x) => x.type === "tts").flatMap((x) => x.voices) ?? []
+  const voices =
+    resource.integrations?.filter((ttsIntegration) => ttsIntegration.type === "tts" && ttsIntegration).flatMap((
+      ttsIntegration,
+    ) =>
+      ttsIntegration.voices.filter((ttsVoice) =>
+        ttsVoice.language === resource.languages[0] && ttsVoice.gender === resource.id.split("-").at(-1)
+      )
+    ) ?? []
 
   return (
     <>
@@ -223,11 +235,15 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
             <h3>Test the voice!</h3>
             <label>
               <span>Voice:</span>
-              <select className="voices-list">
-                {voices.map((voice) => {
-                  return <option data-sample={voice.sampleText} value={voice.apiUrl}>{voice.name}</option>
-                })}
-              </select>
+              {voices.length > 1
+                ? (
+                  <select className="voices-list">
+                    {voices.map((voice) => {
+                      return <option data-sample={voice.sampleText} value={voice.apiUrl}>{voice.name}</option>
+                    })}
+                  </select>
+                )
+                : <span>{voices[0]?.name}</span>}
             </label>
             <textarea className="speak-value" defaultValue={voices[0]?.sampleText} />
             <button className="button speak-button">Speak</button>
