@@ -1,4 +1,4 @@
-smn  = Enaresamisk
+smn = Enaresamisk
 sje = Pitesamisk
 da = Dansk
 se = Nordsamisk
@@ -17,7 +17,8 @@ rom = Romsk
 fi = Finsk
 sv = Svensk
 sju = Umesamisk
-yi = Jiddisk
-sma = Sørsamisk
+yi = Jiddisch
+yi-description = Jiddisch er et officielt minoritetssprog i Sverige, og resurserne listet op nedenfor er ment som hjælpemiddel for å bruge jiddisch i Sverige.
+sma = Sydsamisk
 NO = Norge
 SE = Sverige

@@ -1,0 +1,3 @@
+search = Søg
+results = søgeresultat
+loading = Læser ind...

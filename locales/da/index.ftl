@@ -1,0 +1,17 @@
+welcome = Velkommen
+downloads = Linker
+about-us = Om Borealium
+divvun = Divvun
+privacy = Privatliv
+information = Information
+documentation = Dokumentation
+maintaining-this-website = Vedlikehold av denne portal
+resource = Resurse
+category = Kategori
+language = Sprog
+back-to-top = Tilbage til toppen
+read-more = Læs mere
+see-more-results = Se flere søgeresultat
+no-resources-in-category = Ingen resurser ble fundne i denne kategori.
+news = Nyheder
+available-on-divvun-manager = Tilgængelig via Divvun Manager
