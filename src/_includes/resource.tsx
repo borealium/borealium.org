@@ -123,37 +123,50 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
     resource.integrations = [
       {
         type: "tts",
-        voices: [{
-          language: "se",
-          name: "Biret",
-          gender: "female",
-          apiUrl: "https://tts.divvun.user.town/se/female/",
-          sampleText: "Bures, mu namma lea Biret. Mun lean Divvuma davvisámi dahkujietna.",
-        }, {
-          language: "smj",
-          name: "Nihkol",
-          gender: "male",
-          apiUrl: "https://tts.divvun.user.town/smj/male/",
-          sampleText: "Buoris, muv namma l Nihkol. Mån lav Divvuna julevsáme dahkojiedna.",
-        }, {
-          language: "smj",
-          name: "Ábmut",
-          gender: "male",
-          apiUrl: "https://tts.divvun.user.town/smj/male/?speaker=1",
-          sampleText: "Buoris, muv namma l Ábmut. Mån lav Divvuna julevsáme dahkojiedna.",
-        }, {
-          language: "smj",
-          name: "Siggá",
-          gender: "female",
-          apiUrl: "https://tts.divvun.user.town/smj/female/",
-          sampleText: "Buoris, muv namma l Siggá. Mån lav Divvuna julevsáme dahkojiedna.",
-        }, {
-          language: "sma",
-          name: "Aanna",
-          gender: "female",
-          apiUrl: "https://tts.divvun.user.town/sma/female/",
-          sampleText: "Buerie biejjie, mov nomme Aanna. Manne leam Divvunen åarjelsaemien dorjeldhgïele.",
-        }],
+        voices: [
+          {
+            language: "sma",
+            name: "Aanna",
+            gender: "female",
+            apiUrl: "https://tts.divvun.user.town/sma/female/",
+            sampleText: "Bure, muv namma lea Aanna. Mun lean Divvuma davvisámi dahkujietna.",
+          },
+          {
+            language: "se",
+            name: "Biret",
+            gender: "female",
+            apiUrl: "https://tts.divvun.user.town/se/female/",
+            sampleText: "Bures, mu namma lea Biret. Mun lean Divvuma davvisámi dahkujietna.",
+          },
+          {
+            language: "smj",
+            name: "Nihkol",
+            gender: "male",
+            apiUrl: "https://tts.divvun.user.town/smj/male/",
+            sampleText: "Buoris, muv namma l Nihkol. Mån lav Divvuna julevsáme dahkojiedna.",
+          },
+          {
+            language: "smj",
+            name: "Ábmut",
+            gender: "male",
+            apiUrl: "https://tts.divvun.user.town/smj/male/?speaker=1",
+            sampleText: "Buoris, muv namma l Ábmut. Mån lav Divvuna julevsáme dahkojiedna.",
+          },
+          {
+            language: "smj",
+            name: "Siggá",
+            gender: "female",
+            apiUrl: "https://tts.divvun.user.town/smj/female/",
+            sampleText: "Buoris, muv namma l Siggá. Mån lav Divvuna julevsáme dahkojiedna.",
+          },
+          {
+            language: "sma",
+            name: "Aanna",
+            gender: "female",
+            apiUrl: "https://tts.divvun.user.town/sma/female/",
+            sampleText: "Buerie biejjie, mov nomme Aanna. Manne leam Divvunen åarjelsaemien dorjeldhgïele.",
+          },
+        ],
       },
     ]
   }
