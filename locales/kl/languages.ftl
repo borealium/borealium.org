@@ -18,6 +18,7 @@ fi = Finskisut
 sv = Svenskisut
 sju = Umesaamisut
 yi = Jiddiskisut
+yi-description = Sverigemi Jiddiskisut oqaatsit pisortatigoortumik ikinnerussuteqartut oqaasiisut taaneqarput, ikiuutillu ataani allattorsimasut Sverigemi jiddiskisut oqaatsinik atuinermi ikiuutissatut atugassiaapput.
 sma = Sørsaamisut
 NO = Norgemiutut
 SE = Sverige
