@@ -2,7 +2,6 @@
     reference = "en/mul-resources.ftl"
     l10n = "{locale}/mul-resources.ftl"
     locales = [
-        "en",
         "fi",
         "nb",
         "nn",
