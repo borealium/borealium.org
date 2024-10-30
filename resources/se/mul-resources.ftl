@@ -1,0 +1,1 @@
+satni = sátni.org
