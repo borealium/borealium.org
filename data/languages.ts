@@ -36,7 +36,6 @@ const languagesData: LanguagesData = {
     },
     "smj": {
       autonym: "Julevsámegiella",
-      regions: ["NO", "SE"],
     },
     "kl": {
       autonym: "Kalaallisut",
