@@ -39,9 +39,11 @@ export default function LanguageIndexLayout(page: PageData & LanguageIndexProps 
           <h1 title={lang_t(languageId)}>
             {lang_t(languageId)}
           </h1>
-          <p>
-            {lang_t(languageId + "-description")}
-          </p>
+          {lang_t(languageId + "-description") !== languageId + "-description" && (
+            <p>
+              {lang_t(languageId + "-description")}
+            </p>
+          )}
         </div>
         <div className="search-page-results" data-pagefind-ignore>
           {resources.length === 0 && (
