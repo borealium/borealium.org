@@ -1,4 +1,11 @@
+package-management = Kielipaketin installeerinki (Divvun Manager)
+package-management-description = Prukrammia kieliteknologisten työkalujen instaleeraamisheen, poistamisheen ja päivittämisheen taattorilla.
 dictionaries = Sanakirjoja
+dictionaries-description = Elektroonisia sanakirjoja ja termikokoelmia.
+grammar-checkers = Kramatiikkatarkastajia
+grammar-checkers-description = Työkaluja kramatiikka-, kirjotus- ja formateerinkivirhheitten kollaamisheen.
+text-to-speech = Tekstistä puhheeksi (Text-till-tal)
+text-to-speech-description = Työkaluja tekstin konverteeraamiseksi puhheeksi, niin ette taattori saattaa lukea äänen särmiltä.
 speech-recognition = Puhheentunnistus
 korp = Korpuksia
 voices = Teko ääniä
