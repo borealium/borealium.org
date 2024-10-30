@@ -2,6 +2,7 @@ import { PageData } from "lume/core.ts"
 import { Resource } from "~types/resource.ts"
 import { autonym, selectLocale } from "~plugins/language-data.ts"
 import { CategoryLabel } from "~/_components/label.tsx"
+import { Markdown } from "~/_includes/markdown.ts"
 import { FluentPage } from "~plugins/fluent.ts"
 
 export const layout = "base.tsx"
@@ -51,9 +52,9 @@ export default function LanguageIndexLayout(page: PageData & LanguageIndexProps 
                   {resName}
                 </a>
                 {resDescription && (
-                  <div className="description">
+                  <Markdown as="p" className="description">
                     {resDescription}
-                  </div>
+                  </Markdown>
                 )}
               </li>
             )
