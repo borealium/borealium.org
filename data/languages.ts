@@ -86,7 +86,7 @@ const languagesData: LanguagesData = {
     "sje": ["sv", "nb", "en"],
     "sju": ["sv", "nb", "en"],
     "fkv": ["nb", "nn", "en"],
-    "fit": ["sv", "fi", "en"],
+    "fit": ["sv", "en"],
     "smj-SE": ["smj", "sv", "nb", "en"],
     "smj-NO": ["smj", "nb", "nn", "sv", "en"],
     "nb": ["nn", "da", "sv", "en"],
