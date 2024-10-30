@@ -263,39 +263,41 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
             <audio className="speak-audio" controls autoPlay />
           </div>
           {script(`
-          const list = document.querySelector(".voices-list")
-          const textarea = document.querySelector(".speak-value")
-          const button = document.querySelector(".speak-button")
-          const audio = document.querySelector(".speak-audio")
-          list.addEventListener("change", (e) => {
-            textarea.value = list.selectedOptions[0].getAttribute("data-sample")
-          })
-          button.addEventListener("click", () => {
-            button.disabled = true
-            button.innerText = "Generating..."
-            const url = list.value
-            fetch(url, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                text: textarea.value
-              }),
-            }).then((response) => response.blob())
-            .then((blob) => {
-              audio.innerHTML = ""
-              const src = document.createElement('source')
-              src.src = URL.createObjectURL(blob)
-              src.type = "audio/x-wav"
-              audio.appendChild(src)
-              audio.load()
-              audio.play()
-              button.disabled = false
-              button.innerText = "Speak"
+          document.addEventListener("load", () => {
+            const list = document.querySelector(".voices-list")
+            const textarea = document.querySelector(".speak-value")
+            const button = document.querySelector(".speak-button")
+            const audio = document.querySelector(".speak-audio")
+            list.addEventListener("change", (e) => {
+              textarea.value = list.selectedOptions[0].getAttribute("data-sample")
             })
-            .catch((e) => {
-              console.error(e)
+            button.addEventListener("click", () => {
+              button.disabled = true
+              button.innerText = "Generating..."
+              const url = list.value
+              fetch(url, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  text: textarea.value
+                }),
+              }).then((response) => response.blob())
+              .then((blob) => {
+                audio.innerHTML = ""
+                const src = document.createElement('source')
+                src.src = URL.createObjectURL(blob)
+                src.type = "audio/x-wav"
+                audio.appendChild(src)
+                audio.load()
+                audio.play()
+                button.disabled = false
+                button.innerText = "Speak"
+              })
+              .catch((e) => {
+                console.error(e)
+              })
             })
           })
         `)}
