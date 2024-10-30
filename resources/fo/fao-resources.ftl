@@ -1,2 +1,10 @@
-sprotin = Sprotin netorðabøkur
+voisit-asr = VoisIT talukennari
+voisit-asr-description = Appin skilur føroyska talu og roynir – við hjálp av vitlíki – at skriva tekstin upp á skermin. Úrslitið ávirkast av, um úttalan er týðilig, um mikrofonin er hampiliga góð, og hvussu nógv óljóð er í bakgrundini. Gev tí hesum ans.
+voisit-asr-links-0 = VoisIT talukenning
+voisit-asr-links-1 = VoisIT
+voisit-asr-links-2 = VoisIT
+sprotin = Netorðabøkur á Sprotanum
 sprotin-description = Føroyskar netorðabøkur
+sprotin-links-0 = Sprotin
+fao-korp = Tekstagrunnurin Korp
+fao-korp-description = Á Tekstagrunninum Korp kanst tú leita í føroyskum tekstum. Tekstagrunnurin er málfrøðiliga markaður.
