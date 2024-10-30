@@ -241,22 +241,17 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
             <h3>Test the voice!</h3>
             <label>
               <span>Voice:</span>
-              {voices.length > 1
-                ? (
-                  <select className="voices-list">
-                    {voices.map((voice) => {
-                      return <option data-sample={voice.sampleText} value={voice.apiUrl}>{voice.name}</option>
-                    })}
-                  </select>
-                )
-                : <span>{voices[0]?.name}</span>}
+              <select className="voices-list">
+                {voices.map((voice) => {
+                  return <option data-sample={voice.sampleText} value={voice.apiUrl}>{voice.name}</option>
+                })}
+              </select>
             </label>
             <textarea className="speak-value" defaultValue={voices[0]?.sampleText} />
             <button className="button speak-button">Speak</button>
             <audio className="speak-audio" controls autoPlay />
           </div>
           {script(`
-          document.addEventListener("load", () => {
             const list = document.querySelector(".voices-list")
             const textarea = document.querySelector(".speak-value")
             const button = document.querySelector(".speak-button")
@@ -293,7 +288,6 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
                 console.error(e)
               })
             })
-          })
         `)}
         </template>
       )}
