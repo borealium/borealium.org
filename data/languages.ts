@@ -40,8 +40,8 @@ const languagesData: LanguagesData = {
     "kl": {
       autonym: "Kalaallisut",
     },
-    "sjd": {
-      autonym: "Кӣллт са̄мь кӣлл",
+/*    "sjd": {
+      autonym: "Кӣллт са̄мь кӣлл", */
     },
     "fkv": {
       autonym: "Kväänin kieli",
