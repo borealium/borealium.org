@@ -125,13 +125,6 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
         type: "tts",
         voices: [
           {
-            language: "sma",
-            name: "Aanna",
-            gender: "female",
-            apiUrl: "https://tts.divvun.user.town/sma/female/",
-            sampleText: "Bure, muv namma lea Aanna. Mun lean Divvuma davvisámi dahkujietna.",
-          },
-          {
             language: "se",
             name: "Biret",
             gender: "female",
