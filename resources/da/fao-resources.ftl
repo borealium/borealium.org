@@ -1,2 +1,11 @@
 voisit-asr = VoisIT talegenkendelse
 voisit-asr-description = Talegenkendelse for færøsk
+voisit-asr-links-0 = VoisIt talegenkendelse (på færøsk)
+voisit-asr-links-1 = VoisIT
+voisit-asr-links-2 = VoisIT
+sprotin = Sprotin online ordbøger
+sprotin-description = Online ordbøger for færøsk
+sprotin-links-0 = Sprotin
+fao-korp = Korp for færøsk
+fao-korp-description = På Korp for færøsk kan du søge i færøske tekster. Tekstkorpusset er grammatisk annoteret.
+fao-korp-links-0 = Korp for færøsk
