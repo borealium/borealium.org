@@ -3,6 +3,7 @@ import { Resource } from "~types/resource.ts"
 import { selectLocale } from "~plugins/language-data.ts"
 import { CategoryLabel } from "~/_components/label.tsx"
 import { LangTag } from "~types/category.ts"
+import { Markdown } from "~/_includes/markdown.ts"
 import { FluentPage } from "~plugins/fluent.ts"
 import Aside, { SimplePost } from "~/_components/aside.tsx"
 
@@ -52,9 +53,9 @@ export default function CategoryIndexLayout(page: PageData & CategoryIndexProps 
                   {resName}
                 </a>
                 {resDescription && (
-                  <div className="description">
+                  <Markdown as="p" className="description">
                     {resDescription}
-                  </div>
+                  </Markdown>
                 )}
               </li>
             )
