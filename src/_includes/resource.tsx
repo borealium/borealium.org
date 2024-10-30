@@ -265,6 +265,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
               textarea.value = list.selectedOptions[0].getAttribute("data-sample")
             })
             button.addEventListener("click", () => {
+              console.log("Click")
               button.disabled = true
               button.innerText = "Generating..."
               const url = list.value
