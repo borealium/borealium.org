@@ -53,10 +53,3 @@ export default function categoryData(): Plugin {
 export function getCategoryData(): CategoriesData {
   return categoriesData as CategoriesData
 }
-
-export function translateCategoryName(lang: string, categoryId: string): string {
-  if (categoriesData[categoryId] == null) {
-    return categoryId
-  }
-  return selectLocale(lang, categoriesData[categoryId])?.name ?? categoryId
-}
