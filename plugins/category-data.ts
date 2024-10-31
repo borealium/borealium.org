@@ -1,6 +1,6 @@
 import type { Plugin } from "lume/core.ts"
 import { strings } from "~data/pahkat.ts"
-import { getLanguageData, selectLocale } from "~plugins/language-data.ts"
+import { getLanguageData } from "~plugins/language-data.ts"
 import { categoriesList } from "~data/categories.ts"
 import { fluentBundle, message } from "~plugins/fluent.ts"
 import { CategoriesData, CategoryData, CategoryId } from "~types/category.ts"
