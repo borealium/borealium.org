@@ -6,3 +6,4 @@ _cargo/
 node_modules
 package-lock.json
 package.json
+/deno.lock
