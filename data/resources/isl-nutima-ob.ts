@@ -5,9 +5,6 @@ const id = "nutimaordabok"
 const resourceLang = "isl"
 const halfLinks = [
   {
-    text: {
-      en: "Nútímamáls-orðabók",
-    },
     url: new URL("https://islenskordabok.arnastofnun.is"),
   },
 ]
