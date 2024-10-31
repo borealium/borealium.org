@@ -13,4 +13,5 @@ korp-description = Korpusresyrsiä ja tekstikokoelmien hakuja
 voices = Tekoääniä
 voices-description = Ääniä puhesynteesisystemiä varten
 spellers = Tavvausohjelmia
-keyboard-layouts = Tanjenttipöytänäytelmä
+spellers-description = Työkaluja sanojen oikeinkirjotuksen tarkistamisheen.
+keyboard-layouts = Tanjenttipöytäleijautti
