@@ -27,3 +27,6 @@ speller-engines-description = Tillegg til program og system som får stavekontro
 
 keyboard-layouts = Tastaturoppsett
 keyboard-layouts-description = Gjør det mulig å skrive raskt og effektivt på eget språk.
+
+hyphenators = Orddelingsprogram
+hyphenators-description = Orddelingsprogram setter inn mulige orddelingspunkter i teksten for deg.

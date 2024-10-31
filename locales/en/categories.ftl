@@ -27,3 +27,6 @@ speller-engines-description = Run spell checkers.
 
 keyboard-layouts = Keyboard layouts
 keyboard-layouts-description = Tools to change keyboard layouts.
+
+hyphenators = Hyphenators
+hyphenators-description = Hyphenators hyphenate the text for you.

@@ -8,4 +8,5 @@ export const categoriesList: CategoryId[] = [
   "speech-recognition",
   "korp",
   "voices",
+  "hyphenators",
 ]
