@@ -15,3 +15,4 @@ voices-description = Ääniä puhesynteesisystemiä varten
 spellers = Tavvausohjelmia
 spellers-description = Työkaluja sanojen oikeinkirjotuksen tarkistamisheen.
 keyboard-layouts = Tanjenttipöytäleijautti
+keyboard-layouts-description = Tekkee sen maholiseksi ette saattaa kirjottaa nopeasti ja tehokhaasti omala kielelä.
