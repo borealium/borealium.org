@@ -17,6 +17,7 @@ export default function LanguageIndexLayout(page: PageData & LanguageIndexProps 
   const { resources, lang, languageId, t } = page
   const lang_t = page.fluentBundle(page.lang, "languages")
   const category_t = page.fluentBundle(page.lang, "categories")
+
   const res_by_category: Record<CategoryId, [Resource]> = resources.reduce((acc, resource) => {
     if (resource.category in acc) {
       acc[resource.category].push(resource)
@@ -54,9 +55,13 @@ export default function LanguageIndexLayout(page: PageData & LanguageIndexProps 
           {Object.entries(res_by_category).map(([category, resources]) => {
             return (
               <div key={category} className="category">
-                <h2>
+                <a
+                  className="tag tag-category"
+                  href={`/category/${category}`}
+                  data-pagefind-filter={`category:${category}`}
+                >
                   {category_t(category)}
-                </h2>
+                </a>
                 <ul>
                   {resources.map((resource) => {
                     const resName = selectLocale(lang, resource.name)
