@@ -6,7 +6,7 @@ import { CategoryLabel } from "~/_components/label.tsx"
 import LanguageTag from "~/_components/tag.tsx"
 import { script } from "~/_includes/lang-redir.tsx"
 import { Markdown } from "~/_includes/markdown.ts"
-import { getCategoryData, translateCategoryName } from "~plugins/category-data.ts"
+import { getCategoryData } from "~plugins/category-data.ts"
 import { FluentPage, TranslateFn } from "~plugins/fluent.ts"
 import { autonym, getLanguageData, selectLocale } from "~plugins/language-data.ts"
 import { LinkType, Resource, ResourceType } from "~types/resource.ts"
@@ -116,6 +116,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
   const { resource, lang, search } = page
   const t = page.fluentBundle(lang, "_includes/resource")
   const lang_t = page.fluentBundle(lang, "languages")
+  const category_t = page.fluentBundle(lang, "categories")
   const categories = getCategoryData()
   const languages = getLanguageData()
 
@@ -313,7 +314,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
                 href={`/category/${resource.category}`}
                 data-pagefind-filter={`category:${resource.category}`}
               >
-                {translateCategoryName(lang, resource.category)}
+                {category_t(resource.category)}
               </a>
               {resource.languages.map((lang, key) => {
                 return (
