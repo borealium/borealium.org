@@ -8,13 +8,13 @@ divvun-manager-links-0 = Divvun Manager
 divvun-manager-links-1 = Divvun Manager
 divvunspell-libreoffice = DivvunSpell til LibreOffice
 divvunspell-libreoffice-description = Eitt ískoytisforrit til LibreOffice, sum gevur atgongd til rættstavarar hjá Divvun.
-# divvunspell-more-info = On Windows, use Divvun Manager to install this plugin. It is installed automatically if you have LibreOffice on your computer.
+# divvunspell-libreoffice-more-info = On Windows, use Divvun Manager to install this plugin. It is installed automatically if you have LibreOffice on your computer.
 #       ### Installation on macOS
 #       * Install any relevant spellers with Divvun Manager
 #       * Download the .oxt file below
 #       * Import it into the Plugins in LibreOffice
 #       * Restart LibreOffice
-divvunspell-links-0 = .oxt-fíla
+divvunspell-libreoffice-links-0 = .oxt-fíla
 gramdivvun = GramDivvun
 gramdivvun-description = Mállærurættarar hjá Divvun
 gramdivvun-more-info =

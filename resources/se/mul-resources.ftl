@@ -16,13 +16,13 @@ divvun-manager-links-0 = Divvun Manager
 divvun-manager-links-1 = Divvun Manager
 divvunspell-libreoffice = DivvunSpell LibreOfficei
 divvunspell-libreoffice-description = Lasáhus LibreOfficei man bokte sáhttá geavahit Divvuma čállindárkkisteaddjiid.
-# divvunspell-more-info = On Windows, use Divvun Manager to install this plugin. It is installed automatically if you have LibreOffice on your computer.
+# divvunspell-libreoffice-more-info = On Windows, use Divvun Manager to install this plugin. It is installed automatically if you have LibreOffice on your computer.
 #       ### Installation on macOS
 #       * Install any relevant spellers with Divvun Manager
 #       * Download the .oxt file below
 #       * Import it into the Plugins in LibreOffice
 #       * Restart LibreOffice
-divvunspell-links-0 = .oxt fiila
+divvunspell-libreoffice-links-0 = .oxt-fiila
 gramdivvun = GramDivvun
 gramdivvun-description = Divvuma grammatihkadárkkisteaddjit
 gramdivvun-more-info = GramDivvun lea MS Office ja Google Docs lasáhus mainna dárkkista máŋga gielaid grammatihkka.
