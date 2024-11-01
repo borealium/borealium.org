@@ -23,21 +23,7 @@ const resource: Resource = {
   category: "speller-engines",
   name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
   description: makeResourceTranslations(`${id}-description`, resourceLang, l10nLanguages),
-  // TODO: Fix Fluent handling of multiline string with Markdown formatting
-  moreInfo: {
-    en: `
-      On Windows, use Divvun Manager to install this plugin. It is installed automatically if you have LibreOffice on your computer.
-
-      ### Installation on macOS
-
-      * Install any relevant spellers with Divvun Manager
-      * Download the .oxt file below
-      * Import it into the Plugins in LibreOffice
-      * Restart LibreOffice
-      
-      Now you can use spellchecking with the provided spellers.
-    `,
-  },
+  moreInfo: makeResourceTranslations(`${id}-more-info`, resourceLang, l10nLanguages),
   links: halfLinks.map((halfLink, index) => {
     return {
       ...halfLink,
