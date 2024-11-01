@@ -23,7 +23,7 @@ const resource: Resource = {
   category: "speller-engines",
   name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
   description: makeResourceTranslations(`${id}-description`, resourceLang, l10nLanguages),
-  // TODO: Fix multiline string
+  // TODO: Fix Fluent handling of multiline string with Markdown formatting
   moreInfo: {
     en: `
       On Windows, use Divvun Manager to install this plugin. It is installed automatically if you have LibreOffice on your computer.
