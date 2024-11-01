@@ -28,7 +28,7 @@ divvunspell-libreoffice-more-info = On Windows, use Divvun Manager to install th
 #  * Download the .oxt file below
 #  * Import it into the Plugins in LibreOffice
 #  * Restart LibreOffice
-divvunspell-links-0 = .oxt file
+divvunspell-libreoffice-links-0 = .oxt file
 
 gramdivvun = GramDivvun
 gramdivvun-description = Divvun Grammar checkers
