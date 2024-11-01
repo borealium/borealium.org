@@ -23,11 +23,11 @@ divvun-manager-links-1 = Divvun Manager
 divvunspell-libreoffice = DivvunSpell for LibreOffice
 divvunspell-libreoffice-description = A plugin for LibreOffice that provides access to Divvun spellers.
 divvunspell-libreoffice-more-info = On Windows, use Divvun Manager to install this plugin. It is installed automatically if you have LibreOffice on your computer.
-#  ### Installation on macOS
-#  * Install any relevant spellers with Divvun Manager
-#  * Download the .oxt file below
-#  * Import it into the Plugins in LibreOffice
-#  * Restart LibreOffice
+  \### Installation on macOS
+  * Install any relevant spellers with Divvun Manager
+  * Download the .oxt file below
+  * Import it into the Plugins in LibreOffice
+  * Restart LibreOffice
 divvunspell-libreoffice-links-0 = .oxt file
 
 gramdivvun = GramDivvun
