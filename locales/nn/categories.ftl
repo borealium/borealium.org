@@ -18,3 +18,5 @@ speller-engines = Stavekontrollmotorar
 speller-engines-description = Verktøy som får stavekontrollane til å fungera med ulike program og system.
 keyboard-layouts = Tastaturoppsett
 keyboard-layouts-description = Gjer det mogleg å skriva raskt og effektivt på ditt eige språk
+hyphenators = Orddelingsprogram
+hyphenators-description = Orddelingsprogram set inn moglege orddelingspunkt i teksten for deg.
