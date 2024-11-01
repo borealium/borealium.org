@@ -21,10 +21,10 @@ divvunspell-libreoffice-more-info =
   
   Installering på macOS
   ---------------------
-  
-  - Install any relevant spellers with Divvun Manager
-  - Download the .oxt file below
-  - Import it into the Plugins in LibreOffice
+
+  - Installer alle språk du vil ha med Divvun Manager
+  - Last ned .oxt-fila nedanfor
+  - Legg ho til i Utvidingar i LibreOffice
   - Start om att LibreOffice
   
   Nå kan du bruka alle stavekontrollane frå Divvun Manager i LibreOffice
