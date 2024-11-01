@@ -16,12 +16,18 @@ divvun-manager-links-0 = Divvun Manager
 divvun-manager-links-1 = Divvun Manager
 divvunspell-libreoffice = DivvunSpell for LibreOffice
 divvunspell-libreoffice-description = Eit tillegg til LibreOffice som gjer at alle Divvun-stavekontrollane blir tilgjengelege i LibreOffice. Blir installert automatisk på Windows, men må installerast manuelt på macOS.
-# divvunspell-libreoffice-more-info = On Windows, use Divvun Manager to install this plugin. It is installed automatically if you have LibreOffice on your computer.
-#       ### Installation on macOS
-#       * Install any relevant spellers with Divvun Manager
-#       * Download the .oxt file below
-#       * Import it into the Plugins in LibreOffice
-#       * Restart LibreOffice
+divvunspell-libreoffice-more-info =
+  Bruk Divvun Manager for å installera dette tillegget på Windows. Det blir installert automatisk om du har LibreOffice på datamaskina di.
+  
+  Installering på macOS
+  ---------------------
+  
+  - Install any relevant spellers with Divvun Manager
+  - Download the .oxt file below
+  - Import it into the Plugins in LibreOffice
+  - Start om att LibreOffice
+  
+  Nå kan du bruka alle stavekontrollane frå Divvun Manager i LibreOffice
 divvunspell-libreoffice-links-0 = .oxt-fil
 gramdivvun = GramDivvun
 gramdivvun-description = Grammatikkontrollar frå Divvun-gruppa og samarbeidspartnarar.
