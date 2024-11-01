@@ -18,3 +18,5 @@ speller-engines = Stavekontroltillæg
 speller-engines-description = Tillæg til program og system som får stavekontroller til å fungere med disse programmerne og systemerne. Vanligvis bliver disse tillæggene installeret automatisk, og bare sådanne som må installeres manuelt er listet op nedenfor.
 keyboard-layouts = Tastaturlayout
 keyboard-layouts-description = Gør det mulig å skrive raskt og effektivt på eget sprog.
+hyphenators = Orddelingsprogram
+hyphenators-description = Orddelingsprogram sætter ind mulige orddelingspunkter i teksten for dig.
