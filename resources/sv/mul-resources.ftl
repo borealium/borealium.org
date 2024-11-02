@@ -27,7 +27,7 @@ divvunspell-libreoffice-more-info =
   Installation på macOS
   ---------------------
   
-  - Installer alla språk du behöver med Divvun Manager
+  - Installera alla språk du behöver med Divvun Manager
   - Ladda ner .oxt-filen här nedanför
   - Lägg till den i Utvidgningar i LibreOffice
   - Starta om LibreOffice
