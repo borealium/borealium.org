@@ -24,8 +24,7 @@ divvunspell-libreoffice-description = Ett tillägg för LibreOffice som ger till
 divvunspell-libreoffice-more-info =
   Använd Divvun Manager för att installera denna utvidgningen på Windows. Den blir installerad automatiskt om du redan har LibreOffice på din dator.
   
-  Installation på macOS
-  ---------------------
+  {"###"} Installation på macOS
   
   - Installera alla språk du behöver med Divvun Manager
   - Ladda ner .oxt-filen här nedanför
