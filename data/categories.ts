@@ -9,4 +9,7 @@ export const categoriesList: CategoryId[] = [
   "korp",
   "voices",
   "hyphenators",
+  "mt",
+  "langlearning",
+  "wordinfl",
 ]

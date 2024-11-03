@@ -30,3 +30,12 @@ keyboard-layouts-description = Gjør det mulig å skrive raskt og effektivt på 
 
 hyphenators = Orddelingsprogram
 hyphenators-description = Orddelingsprogram setter inn mulige orddelingspunkter i teksten for deg.
+
+mt = Maskinoversettelse
+mt-description = Oversetter mellom ulike språk. Verktøyene som er med her er ordnet etter kildespråk, men de vil ofte kunne oversette til og fra mange språk.
+
+langlearning = Språklæring
+langlearning-description = Verktøy, apper og ressurser for å hjelpe deg med å lære et språk.
+
+wordinfl = Ordbøyning
+wordinfl-description = Verktøy for å hjelpe deg med å bøye ord, eller for å vise alle formene av et ord.

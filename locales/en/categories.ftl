@@ -30,3 +30,12 @@ keyboard-layouts-description = Tools to change keyboard layouts.
 
 hyphenators = Hyphenators
 hyphenators-description = Hyphenators hyphenate the text for you.
+
+mt = Machine translation
+mt-description = Translates between various languages. The resourcs are listed according to source language, but will often translate to and from many languages.
+
+langlearning = Language learning
+langlearning-description = Tools, apps and resources to help you learn a language. 
+
+wordinfl = Word inflections
+wordinfl-description = Tools to help you inflect words, or to list all forms of a word.
