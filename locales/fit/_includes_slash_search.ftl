@@ -1,0 +1,3 @@
+search = Haku
+results = Hakuresyltaatit
+loading = Lukkee...

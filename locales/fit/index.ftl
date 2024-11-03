@@ -20,3 +20,28 @@ available-in-divvun-keyboard-app = Saapuvilla Divvun Keyboardsin kautta
 divvun-keyboard-description = Divvun Keyboard iOS:lle ja Androidile sisältää tanjettipöytiä saamen kielile ja muile vähemistö- ja alkuperäkansojen kielile. Monissa tanjenttipöyissä oon myötä stavningskontroll. Ohjelma oon aukinaista lähekootia ja sen mennee laata alle ilhmaiseksi.
 platforms = Platformia
 release = Ulospäästö
+languages = Kielet
+categories = Katekoriat
+for-apple-app-store = iOSille
+for-play-store = Androidile
+for-windows = Windowsille
+for-macos = macOSille
+for-ios-and-android = iOSille ja Androidile
+dm-button-title = Kielipaketin installeerinki (Divvun Manager)
+dm-button-description = Windowsille ja macOSille
+dk-button-title = Divvun Keyboard
+dk-button-description = iOSille ja Androidile
+website-copyright = Copyright © { $year } UiT Norjan arktinen yniversiteetti
+read-documentation = Tokymentasuuni
+more-info-spellers =
+    Windowsilla stavningskontroll toimii MS Officessa, LibreOfficessa ja
+    muissa ohjelmissa.
+    MacOSissa stavningskontroll toimii usseimmissa ohjelmissa.
+    
+    Stavningskontroll GiellaLT:stä installeerathaan
+    Divvun Managerilla, joka päivittää työkaluja automaattisesti.
+    
+    Usseimmat stavningskontroll Borealiumissa oon
+    rakenettu GiellaLT-infrastryktyyrista, ja net oon aukinaista lähekootia.
+macos = macOS
+windows = Windows
