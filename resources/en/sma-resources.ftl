@@ -6,3 +6,7 @@ nds-sma-links-0 = NDS Åarjel
 sma-korp = Korp for South Sámi
 sma-korp-description = In Korp for South Sámi you can search South Sámi texts. The text corpus is grammatically annotated.
 sma-korp-links-0 = Korp for South Sámi
+
+sma-oahpa = Oahpa for South Sámi
+sma-oahpa-description = Learn South Sami using a number of various exercises.
+sma-oahpa-links-0 = Åarjel-Oahpa
