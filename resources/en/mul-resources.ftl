@@ -56,4 +56,4 @@ islex-links-0 = ISLEX
 
 mulsmimt = Sámi Machine Translation
 mulsmimt-description = Machine translation between North, Lule, South and Inari Sámi. Not all combinations available.
-mulsmimt-links-0
+mulsmimt-links-0 = Sámi MT
