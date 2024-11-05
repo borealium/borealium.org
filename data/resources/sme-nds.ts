@@ -13,7 +13,7 @@ const halfLinks = [
 ]
 
 const resource: Resource = {
-  id: "nds-sme",
+  id,
   type: ResourceType.External,
   languages: ["se"],
   category: "dictionaries",
