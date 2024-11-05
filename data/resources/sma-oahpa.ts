@@ -8,7 +8,7 @@ const l10nLanguages = getL10NLanguages(resourceLang)
 
 const halfLinks = [
   {
-    url: new URL("https://oahpaa.no/davvi"),
+    url: new URL("https://oahpa.no/aarjel"),
   },
 ]
 
