@@ -58,9 +58,9 @@ const languagesData: LanguagesData = {
     "sms": {
       autonym: "Nuõrttsääʹmǩiõll",
     },
-    "rom": {
+/*    "rom": {
       autonym: "Rromani ćhib",
-    },
+    }, */
     "fi": {
       autonym: "Suomi",
     },
