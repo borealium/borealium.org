@@ -53,3 +53,7 @@ online-speller-sami-links-0 = Online spellchecker
 islex = ISLEX
 islex-description = Online bilingual dictionaries for modern Icelandic to Nordic languages (Danish, Norwegian bokmål, Nynorsk, Swedish, Finnish, Faroese)
 islex-links-0 = ISLEX
+
+mulsmimt = Sámi Machine Translation
+mulsmimt-description = Machine translation between North, Lule, South and Inari Sámi. Not all combinations available.
+mulsmimt-links-0

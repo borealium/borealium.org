@@ -10,3 +10,7 @@ sme-korp-links-0 = Korp for North Sámi
 sme-oahpa = Oahpa for North Sámi
 sme-oahpa-description = Learn North Sami using a number of various exercises.
 sme-oahpa-links-0 = Oahpa Davvi
+
+mtsme = Machine translation from North Sámi
+mtsme-description = Machine translation from North Sámi to Norwegian bokmål, using Apertium. Optionally, the output can be smoothed using ChatGPT, but with  the risk of changing the content.
+mtsme-links-0 = MT for North Sámi
