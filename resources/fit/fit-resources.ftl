@@ -1,6 +1,6 @@
-fit-korp = 
-fit-korp-description = 
-fit-korp-links-0 = { "" }
-fit-dictionary = 
-fit-dictionary-description = 
-fit-dictionary-links-0 = 
+fit-korp = TEST
+fit-korp-description = TEST
+fit-korp-links-0 = TEST
+fit-dictionary = TEST
+fit-dictionary-description = TEST
+fit-dictionary-links-0 = TEST
