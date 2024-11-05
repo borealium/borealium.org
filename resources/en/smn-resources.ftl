@@ -6,3 +6,7 @@ nds-smn-links-0 = NDS Anarâškielâ
 smn-korp = Korp for Inari Sámi
 smn-korp-description = In Korp for Inari Sámi you can search Inari Sámi texts. The text corpus is grammatically annotated.
 smn-korp-links-0 = Korp for Inari Sámi
+
+smn-oahpa = Oahpa for Inari Sámi
+smn-oahpa-description = Learn Inari Sami using a number of various exercises.
+smn-oahpa-links-0 = Oahpa Ánár
