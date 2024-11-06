@@ -26,7 +26,7 @@ divvunspell-libreoffice-more-info =
     -------------------------------
     
     - Installer alle språk du vil ha med Divvun Manager
-    - Last ned .oxt-fila nedanfor
+    - Last ned .oxt-fila nedafor
     - Legg til tillegget i LibreOffice
     - Start LibreOffice på nytt
     
