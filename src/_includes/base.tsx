@@ -1,12 +1,14 @@
 import { PageData } from "lume/core.ts"
+import { Footer } from "~/_components/footer.tsx"
 import { Navbar } from "~/_components/navbar.tsx"
 import { script } from "~/_includes/lang-redir.tsx"
-import { Footer } from "~/_components/footer.tsx"
 import { FluentPage } from "~plugins/fluent.ts"
+import { getLanguageData } from "~plugins/language-data.ts"
 
 export default function BasePage(page: PageData & FluentPage) {
   const { title, children, url, originalUrl, lang, t } = page
   const lang_t = page.fluentBundle(lang, "languages")
+  const { languages, uiOnly } = getLanguageData()
 
   if (t == null) {
     throw new Error("t not available")
@@ -20,12 +22,22 @@ export default function BasePage(page: PageData & FluentPage) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="stylesheet" href="/static/geo/style.css" />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
           rel="stylesheet"
         />
         <link rel="stylesheet" href="/styles/index.css" />
         <script defer data-domain="borealium.org" src="https://plausible.io/js/script.js"></script>
+        {script(`
+          window.baseNodes = ${JSON.stringify(
+            Object.entries(languages)
+              .filter(([code]) => !uiOnly.includes(code))
+              .map(([code]) => {
+                return { ...languages[code], code }
+              }),
+          )};
+        `)}
         {script(`
           if (document.documentElement.hasAttribute("lang")) {
             localStorage.setItem("borealium:language", document.documentElement.getAttribute("lang"))
