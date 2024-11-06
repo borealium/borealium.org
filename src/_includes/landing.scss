@@ -24,7 +24,7 @@ $sm-breakpoint: 412px;
 
   @media (min-width: $lg-main-breakpoint) {
     height: calc(max(100vh, var(--nav-height) * 8) - var(--nav-height));
-    contain: paint;
+    // contain: paint;
   }
 
   .blocks {
@@ -85,8 +85,12 @@ $sm-breakpoint: 412px;
     .second-cell {
       display: flex;
       flex-direction: column;
-      padding: 2rem;
+      // padding: 2rem;
       margin-top: -8px;
+
+      h3 {
+        padding: 0 2rem;
+      }
     }
   }
 
@@ -125,15 +129,15 @@ $sm-breakpoint: 412px;
 }
 
 .language-group {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 16px;
-  row-gap: 16px;
-  @media (max-width: 490px) {
-    grid-template-columns: 1fr;
-  }
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // column-gap: 16px;
+  // row-gap: 16px;
+  // @media (max-width: 490px) {
+  //   grid-template-columns: 1fr;
+  // }
 
-  .download-button {
-    width: 100%;
-  }
+  // .download-button {
+  //   width: 100%;
+  // }
 }
