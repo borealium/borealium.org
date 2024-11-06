@@ -1,6 +1,7 @@
-fit-korp = TEST
-fit-korp-description = TEST
-fit-korp-links-0 = TEST
-fit-dictionary = TEST
-fit-dictionary-description = TEST
-fit-dictionary-links-0 = TEST
+fit-korp = Meänkieli Korp
+fit-korp-description = ...
+fit-korp-links-0 = Meänkieli Korp
+
+fit-dictionary = Meänkieli-ruotti sanakirja
+fit-dictionary-description = ...
+fit-dictionary-links-0 = Meänkieli - ruotti sanakirja

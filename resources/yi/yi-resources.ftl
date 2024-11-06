@@ -1,3 +1,3 @@
-yi-dictionary = Yiddisch-Swedish Dictionary
-yi-dictionary-description = DESCRIPTION
-yi-dictionary-links-0 = Yiddisch-Swedish Dictionary
+yi-dictionary = ייִדיש־ שוועדיש/שוועדיש־ ייִדישווערטערבוך
+yi-dictionary-description = דאָס ייִדיש־​שוועדישע/שוועדיש־​ייִדישע ווערטערבוך דערמעגלעכט זוכונגען צווישן ייִדיש און שוועדיש
+yi-dictionary-links-0 = יִידיש־ שוועדיש/שוועדיש־ ייִדישווערטערבוך
