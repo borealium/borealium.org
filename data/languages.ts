@@ -98,7 +98,7 @@ const languagesData: LanguagesData = {
       labelPosition: "left",
     },
     "yi": {
-      autonym: "Yidish",
+      autonym: "Yiddisch",
       coordinates: [12, 58],
       labelPosition: "bottom",
     },
