@@ -42,7 +42,17 @@ export default function LandingMainBlock(
         </div>
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="/static/geo/shapes.js"></script>
-        <script src="/static/geo/map.js"></script>
+        <script src="/static/geo/map.js"></script>        
+        {script(`
+          window.baseNodes = ${JSON.stringify(
+            Object.entries(languages)
+              .filter(([code]) => !uiOnly.includes(code))
+              .map(([code]) => {
+                return { ...languages[code], code }
+              }),
+          )};
+          createMap();
+        `)}
         {/* {Object.entries(languages)
           .filter(([code]) => !uiOnly.includes(code))
           .map(([code]) => {

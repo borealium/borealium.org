@@ -30,15 +30,6 @@ export default function BasePage(page: PageData & FluentPage) {
         <link rel="stylesheet" href="/styles/index.css" />
         <script defer data-domain="borealium.org" src="https://plausible.io/js/script.js"></script>
         {script(`
-          window.baseNodes = ${JSON.stringify(
-            Object.entries(languages)
-              .filter(([code]) => !uiOnly.includes(code))
-              .map(([code]) => {
-                return { ...languages[code], code }
-              }),
-          )};
-        `)}
-        {script(`
           if (document.documentElement.hasAttribute("lang")) {
             localStorage.setItem("borealium:language", document.documentElement.getAttribute("lang"))
           }
