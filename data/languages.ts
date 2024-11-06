@@ -44,7 +44,7 @@ const languagesData: LanguagesData = {
     },
     "kl": {
       autonym: "Kalaallisut",
-      coordinates: [-2, 69.7],
+      coordinates: [-5, 69],
       labelPosition: "right",
     },
     "nb": {
@@ -60,8 +60,8 @@ const languagesData: LanguagesData = {
     // },
     "se": {
       autonym: "Davvisámegiella",
-      coordinates: [18.5, 68.5],
-      labelPosition: "top",
+      coordinates: [22.5, 69],
+      labelPosition: "left",
     },
     // "sjd": {
     //   autonym: "Кӣллт са̄мь кӣлл",
@@ -96,7 +96,7 @@ const languagesData: LanguagesData = {
     },
     "sms": {
       autonym: "Nuõrttsääʹmǩiõll",
-      coordinates: [29, 67.75],
+      coordinates: [28, 68],
       labelPosition: "left",
     },
     "sv": {
@@ -104,7 +104,7 @@ const languagesData: LanguagesData = {
     },
     "yi": {
       autonym: "Yiddisch",
-      coordinates: [12, 58],
+      coordinates: [14.5, 58],
       labelPosition: "bottom",
     },
   },
