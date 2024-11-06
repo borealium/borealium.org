@@ -5,3 +5,7 @@ fit-korp-links-0 = Korp for Meänkieli
 fit-dictionary = Meänkieli-Swedish dictionary
 fit-dictionary-description = A dictionary between Meänkieli and Swedish, by the Meän Akateemi.
 fit-dictionary-links-0 = Meänkieli dictionary
+
+fit-nds = NDS Meänkieli dictionary
+fit-nds-description = Dictionary for Meänkieli, with links to corpus texts and inflections.
+fit-nds-links-0 = NDS Meänkieli
