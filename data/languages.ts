@@ -46,7 +46,7 @@ const languagesData: LanguagesData = {
     },
     "smj": {
       autonym: "Julevsámegiella",
-      regions: ["NO", "SE"],
+      // regions: ["NO", "SE"],
       coordinates: [18, 67],
       labelPosition: "left",
     },
