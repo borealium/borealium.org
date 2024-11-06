@@ -24,7 +24,7 @@ const languagesData: LanguagesData = {
     },
     "fit": {
       autonym: "Meänkieli",
-      coordinates: [23, 66.5],
+      coordinates: [23, 66.8],
       labelPosition: "right",
     },
     "fkv": {
@@ -70,18 +70,18 @@ const languagesData: LanguagesData = {
     // },
     "sje": {
       autonym: "Bidumsámegiella",
-      coordinates: [16.5, 63.3],
-      labelPosition: "bottom",
+      coordinates: [16.9, 65.8],
+      labelPosition: "right",
     },
     "sju": {
       autonym: "Ubmejesámiengiälla",
-      coordinates: [18, 65.87],
+      coordinates: [15.8, 65.09],
       labelPosition: "left",
     },
     "sma": {
       autonym: "Åarjelsaemien gïele",
-      coordinates: [13, 65],
-      labelPosition: "left",
+      coordinates: [13, 64],
+      labelPosition: "right",
     },
     "smj": {
       autonym: "Julevsámegiella",
