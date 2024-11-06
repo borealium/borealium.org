@@ -6,6 +6,7 @@ grammar-checkers = Kramatiikkikontrolli
 grammar-checkers-description = Työkaluja kramatiikki-, kirjotus- ja formateerinkivirhheitten kollaamisheen.
 text-to-speech = Puhesynteesi (Text-till-tal)
 text-to-speech-description = Työkaluja tekstin konverteeraamiseksi puhheeksi, niin ette taattori saattaa lukea äähneen sen mitä särmilä lukkee.
+speech-recognition = Puhheentunnistus
 speech-recognition-description = Työkaluja puhheen muuttamisheen tekstiksi esimerkiksi tekstin dikteeraamista ja alatekstiä varten.
 korp = Korpuksia
 korp-description = Korpusresyrsiä ja tekstikokoelmien hakuja
