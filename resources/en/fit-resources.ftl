@@ -3,5 +3,5 @@ fit-korp-description = In Korp for Meänkieli, you can search for Meänkieli tex
 fit-korp-links-0 = Korp for Meänkieli
 
 fit-dictionary = Meänkieli-Swedish dictionary
-fit-dictionary-drscription = A dictionary between Meänkieli and Swedish.
+fit-dictionary-description = A dictionary between Meänkieli and Swedish, by the Meän Akateemi.
 fit-dictionary-links-0 = Meänkieli dictionary
