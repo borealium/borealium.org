@@ -13,26 +13,24 @@ const languagesData: LanguagesData = {
     },
   },
   languages: {
-    "smn": {
-      autonym: "Anarâškielâ",
-      coordinates: [27, 69],
-      labelPosition: "right",
-    },
-    "sje": {
-      autonym: "Bidumsámegiella",
-      coordinates: [16.5, 63.3],
-      labelPosition: "bottom",
-    },
     "da": {
       autonym: "Dansk",
     },
-    "se": {
-      autonym: "Davvisámegiella",
-      coordinates: [18.5, 68.5],
-      labelPosition: "top",
-    },
     "en": {
       autonym: "English",
+    },
+    "fi": {
+      autonym: "Suomi",
+    },
+    "fit": {
+      autonym: "Meänkieli",
+      coordinates: [23, 66.5],
+      labelPosition: "right",
+    },
+    "fkv": {
+      autonym: "Kväänin kieli",
+      coordinates: [23.75, 70],
+      labelPosition: "top",
     },
     "fo": {
       autonym: "Føroyskt",
@@ -44,31 +42,10 @@ const languagesData: LanguagesData = {
       coordinates: [-3, 63.5],
       labelPosition: "right",
     },
-    "smj": {
-      autonym: "Julevsámegiella",
-      // regions: ["NO", "SE"],
-      coordinates: [18, 67],
-      labelPosition: "left",
-    },
     "kl": {
       autonym: "Kalaallisut",
       coordinates: [-2, 69.7],
       labelPosition: "right",
-    },
-    // "sjd": {
-    //   autonym: "Кӣллт са̄мь кӣлл",
-    //   coordinates: [33.5, 67.75],
-    //   labelPosition: "bottom",
-    // },
-    "fkv": {
-      autonym: "Kväänin kieli",
-      coordinates: [23.75, 70],
-      labelPosition: "top",
-    },
-    "fit": {
-      autonym: "Meänkieli",
-      coordinates: [23, 66.5],
-      labelPosition: "bottom",
     },
     "nb": {
       autonym: "Norsk, bokmål",
@@ -76,36 +53,59 @@ const languagesData: LanguagesData = {
     "nn": {
       autonym: "Norsk, nynorsk",
     },
-    "sms": {
-      autonym: "Nuõrttsääʹmǩiõll",
-      coordinates: [29, 67.75],
-      labelPosition: "left",
-    },
     // "rom": {
     //   autonym: "Rromani ćhib",
     //   coordinates: [18, 59],
     //   labelPosition: "right",
     // },
-    "fi": {
-      autonym: "Suomi",
+    "se": {
+      autonym: "Davvisámegiella",
+      coordinates: [18.5, 68.5],
+      labelPosition: "top",
     },
-    "sv": {
-      autonym: "Svenska",
+    // "sjd": {
+    //   autonym: "Кӣллт са̄мь кӣлл",
+    //   coordinates: [33.5, 67.75],
+    //   labelPosition: "bottom",
+    // },
+    "sje": {
+      autonym: "Bidumsámegiella",
+      coordinates: [16.5, 63.3],
+      labelPosition: "bottom",
     },
     "sju": {
       autonym: "Ubmejesámiengiälla",
       coordinates: [18, 65.87],
       labelPosition: "left",
     },
-    "yi": {
-      autonym: "Yiddisch",
-      coordinates: [12, 58],
-      labelPosition: "bottom",
-    },
     "sma": {
       autonym: "Åarjelsaemien gïele",
       coordinates: [13, 65],
       labelPosition: "left",
+    },
+    "smj": {
+      autonym: "Julevsámegiella",
+      // regions: ["NO", "SE"],
+      coordinates: [18, 67],
+      labelPosition: "left",
+    },
+    "smn": {
+      autonym: "Anarâškielâ",
+      coordinates: [27, 69],
+      labelPosition: "right",
+    },
+    "sms": {
+      autonym: "Nuõrttsääʹmǩiõll",
+      coordinates: [29, 67.75],
+      labelPosition: "left",
+    },
+    "sv": {
+      autonym: "Svenska",
+    },
+    "yi": {
+      autonym: "Yiddisch",
+      coordinates: [12, 58],
+      labelPosition: "bottom",
     },
   },
   fallbacks: {
