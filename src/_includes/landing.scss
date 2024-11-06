@@ -141,10 +141,3 @@ $sm-breakpoint: 412px;
   //   width: 100%;
   // }
 }
-
-g:hover rect {
-  opacity:0.5;
-}
-g rect:hover {
-  opacity: 1;
-}
