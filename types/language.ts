@@ -1,6 +1,7 @@
 export type LanguageId = string
 export type RegionId = string
 export type LangTag = string
+export type Coordinate = number
 
 export type LanguagesData = {
   regions: Record<RegionId, Record<LangTag, string>>
@@ -13,4 +14,6 @@ export type LanguagesData = {
 export type LanguageData = {
   autonym: string
   regions?: RegionId[]
+  coordinates?: Coordinate[]
+  labelPosition?: string
 }
