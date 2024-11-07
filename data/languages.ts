@@ -44,7 +44,7 @@ const languagesData: LanguagesData = {
     },
     "kl": {
       autonym: "Kalaallisut",
-      coordinates: [-5, 69],
+      coordinates: [-2, 69.7],
       labelPosition: "right",
     },
     "nb": {
