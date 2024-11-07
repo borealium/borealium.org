@@ -1,4 +1,4 @@
-import { Resource, ResourceType } from "~types/resource.ts"
+import { LinkType, Resource, ResourceType } from "~types/resource.ts"
 import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
 
 const id = "fao-korp"
@@ -8,7 +8,7 @@ const halfLinks = [
     type: LinkType.Normal,
     url: new URL("https://gtweb.uit.no/f_korp/?mode=fao#?lang=en"),
   },
-}]
+]
 
 const l10nLanguages = getL10NLanguages(resourceLang)
 
