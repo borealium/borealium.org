@@ -1,10 +1,11 @@
-import { Resource, ResourceType } from "~types/resource.ts"
+import { LinkType, Resource, ResourceType } from "~types/resource.ts"
 import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
 
 const id = "stavseting"
 const resourceLang = "fao"
 const halfLinks = [
   {
+    type: LinkType.Normal,
     url: new URL("https://malrad.fo/stavsetingarordabokin"),
   },
 ]
