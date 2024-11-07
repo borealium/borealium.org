@@ -19,6 +19,7 @@ speller-engines-description = Amboð sum fáa rættstavarar at rigga við ymsum 
 keyboard-layouts = Knappaborðsuppseting
 keyboard-layouts-description = Ger tað gjørligt at skriva skjótt og væl á egnum máli.
 hyphenators = Orðbýtisforrit
+hyphenators-description = Orðbýtisforrit siga tær, hvar tú kanst seta bindistrikur í tekstinum.
 mt = Teldutýðing
 mt-description = Týða millum ymisk mál. Teldutýðararnir her eru settir upp eftir keldumáli, men teir kunnu ofta týða til og frá nógvum málum.
 langlearning = Máltøka
