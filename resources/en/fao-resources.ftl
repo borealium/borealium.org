@@ -32,3 +32,7 @@ dictus-asr-links-0 = Dictus ASR
 stavseting = Faroese Spelling Dictionary
 stavseting-description = The Faroese spelling dictionary is authorized and establishes general Faroese spelling rules. It also has conjugation patterns for most of the words.
 stavseting-links-0 = Spelling Dictionary
+
+foenmt = Faroese-English Translator
+foenmt-description = A machine translation model (FO-EN) that is being developed at the University of the Faroe Islands.
+foenmt-links-0 = Faroese-English Translator
