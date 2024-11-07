@@ -2,7 +2,7 @@ import { Resource, ResourceType } from "~types/resource.ts"
 import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
 
 const id = "yi-dictionary"
-const resourceLang = "yi"
+const resourceLang = "yid"
 
 const l10nLanguages = getL10NLanguages(resourceLang)
 
