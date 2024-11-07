@@ -28,3 +28,7 @@ browser-asr-links-0 = Speech Recognition (beta)
 dictus-asr = Dictus Speech Recognition
 dictus-asr-description = This software can transcribe what you say on Windows computers. You can be working in, for example, Word, Outlook, or some website, and have the program type for you.
 dictus-asr-links-0 = Dictus ASR
+
+stavseting = Faroese Spelling Dictionary
+stavseting-description = The Faroese spelling dictionary is authorized and establishes general Faroese spelling rules. It also has conjugation patterns for most of the words.
+stavseting-links-0 = Spelling Dictionary
