@@ -1,6 +1,6 @@
 [[paths]]
-    reference = "en/yi-resources.ftl"
-    l10n = "{locale}/yi-resources.ftl"
+    reference = "en/yid-resources.ftl"
+    l10n = "{locale}/yid-resources.ftl"
     locales = [
         "yi",
         "sv",
