@@ -13,4 +13,6 @@ sma-oahpa-links-0 = Åarjel-Oahpa
 
 sma-gielese = Gïelese
 sma-gielese-description = South Sámi beginner language learning
+sma-gielese-more-info =
+  Gïelese is an online beginner language learning web app with various exercises for training vocabulary and everyday expressions.
 sma-gielese-links-0 = Gïelese
