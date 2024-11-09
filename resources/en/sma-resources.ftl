@@ -10,3 +10,7 @@ sma-korp-links-0 = Korp for South Sámi
 sma-oahpa = Oahpa for South Sámi
 sma-oahpa-description = Learn South Sami using a number of various exercises.
 sma-oahpa-links-0 = Åarjel-Oahpa
+
+sma-gielese = Gïelese
+sma-gielese-description = South Sámi beginner language learning
+sma-gielese-links-0 = Gïelese
