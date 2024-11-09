@@ -45,3 +45,4 @@ more-info-keyboards = Tastatura i Borealium fungerer på Windows, macOS, iOS, An
 macos = macOS
 windows = Windows
 mobile = Mobil
+github = GitHub
