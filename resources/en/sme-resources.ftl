@@ -13,6 +13,11 @@ sme-nds-smn-description = Neahttadigisánit dictionary between North and Inari S
 sme-nds-smn-more-info = NDS — Neahttadigisánit — for North and Inari Sámi contains translations in both directions.
 sme-nds-smn-links-0 = NDS Davvi Anár
 
+sme-nds-spa = NDS for North Sámi ⇐ Spanish
+sme-nds-spa-description = Neahttadigisánit dictionary from Spanish to North Sámi.
+sme-nds-spa-more-info = NDS — Neahttadigisánit — from Spanish to North Sámi contains translations only in one direction so far.
+sme-nds-spa-links-0 = NDS Spánska Davvi
+
 sme-korp = Korp for North Sámi
 sme-korp-description = In Korp for North Sámi you can search North Sámi texts. The text corpus is grammatically annotated.
 sme-korp-links-0 = Korp for North Sámi
