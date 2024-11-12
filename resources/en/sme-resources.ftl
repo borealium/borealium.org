@@ -1,9 +1,9 @@
-sme-nds-nob = NDS for North Saami ⇔ Norwegian Bokmål
+sme-nds-nob = NDS for North Sámi ⇔ Norwegian Bokmål
 sme-nds-nob-description = Neahttadigisánit dictionary between North Sámi and Norwegian Bokmål.
 sme-nds-nob-more-info = NDS — Neahttadigisánit — for North Sámi and Norwegian Bokmål contains about 33 000 entries in both directions.
 sme-nds-nob-links-0 = NDS Davvi Dáru
 
-sme-nds-fin = NDS for North Saami ⇔ Finnish
+sme-nds-fin = NDS for North Sámi ⇔ Finnish
 sme-nds-fin-description = Neahttadigisánit dictionary between North Sámi and Finnish.
 sme-nds-fin-more-info = NDS — Neahttadigisánit — for North Sámi and Finnish contains about 11 000 entries in both directions.
 sme-nds-fin-links-0 = NDS Davvi Suopma
