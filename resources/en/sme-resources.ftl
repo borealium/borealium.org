@@ -23,6 +23,11 @@ sme-jounivest-description = Online dictionary between North Sámi and Finnish
 sme-jounivest-more-info = Plain HTML dictionary from Finnish to North Sámi. The content is all on one page, and you search using the browser search function.
 sme-jounivest-links-0 = Jouni Vest Suomi Saame
 
+sme-juridisk = List of legal terms
+sme-juridisk-description = Online list of legal terms in North Sámi, Norwegian and Finnish.
+sme-juridisk-more-info = Simple search interface to a list of legal terms, about 1600 entries.
+sme-juridisk-links-0 = Legal terms
+
 sme-korp = Korp for North Sámi
 sme-korp-description = In Korp for North Sámi you can search North Sámi texts. The text corpus is grammatically annotated.
 sme-korp-links-0 = Korp for North Sámi
