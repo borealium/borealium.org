@@ -1,14 +1,14 @@
 import { Resource, ResourceType } from "~types/resource.ts"
 import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
 
-const id = "nds-sme"
+const id = "sme-nds-nob"
 const resourceLang = "sme"
 
 const l10nLanguages = getL10NLanguages(resourceLang)
 
 const halfLinks = [
   {
-    url: new URL("https://sanit.oahpa.no"),
+    url: new URL("https://sanit.oahpa.n/sme/nob/"),
   },
 ]
 

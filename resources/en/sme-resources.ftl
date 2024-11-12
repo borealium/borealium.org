@@ -1,7 +1,7 @@
-nds-sme = NDS for North Sámi
-nds-sme-description = Dictionary resources for North Sámi
-nds-sme-more-info = NDS — Neahttadigisánit — for North Sámi contains dictionaries translating to and from North Sámi.
-nds-sme-links-0 = NDS Davvi
+sme-nds-nob = NDS for North Saami ⇔ Norwegian Bokmål
+sme-nds-nob-description = Neahttadigisánit dictionary between North Sámi and Norwegian Bokmål.
+sme-nds-nob-more-info = NDS — Neahttadigisánit — for North Sámi and Norwegian Bokmål contains about 33 000 entries in both directions.
+sme-nds-nob-links-0 = NDS Davvi Dáru
 
 sme-korp = Korp for North Sámi
 sme-korp-description = In Korp for North Sámi you can search North Sámi texts. The text corpus is grammatically annotated.
