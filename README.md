@@ -27,8 +27,10 @@ it picks up changes in the Páhkat repo regularly. If there has been no repo act
 are automatically disabled.
 
 To re-enable workflows in such a case,
-[follow these instructions](https://docs.github.com/en/enterprise-server@3.12/actions/using-workflows/disabling-and-enabling-a-workflow#enabling-a-workflow). 
+[follow these instructions](https://docs.github.com/en/enterprise-server@3.12/actions/using-workflows/disabling-and-enabling-a-workflow#enabling-a-workflow).
 
 ## Localisation
 
-Almost all text is localised in our [Pontoon instance](https://divvun-pontoon-vm.norwayeast.cloudapp.azure.com/projects/borealium/), and soon everything will be.
+Almost all text is localised in our
+[Pontoon instance](https://divvun-pontoon-vm.norwayeast.cloudapp.azure.com/projects/borealium/), and soon everything
+will be.
