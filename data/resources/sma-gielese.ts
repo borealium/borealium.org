@@ -19,6 +19,7 @@ const resource: Resource = {
   category: "langlearning",
   name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
   description: makeResourceTranslations(`${id}-description`, resourceLang, l10nLanguages),
+  moreInfo: makeResourceTranslations(`${id}-more-info`, resourceLang, l10nLanguages),
   links: halfLinks.map((halfLink, index) => {
     return {
       ...halfLink,
