@@ -57,3 +57,9 @@ islex-links-0 = ISLEX
 mulsmimt = Sámi Machine Translation
 mulsmimt-description = Machine translation between North, Lule, South and Inari Sámi. Not all combinations available.
 mulsmimt-links-0 = Sámi MT
+
+webdict = Webdict from Giellatekno
+webdict-description = A simple and fast dictionary, works also offline.
+webdict-more-info = A collection of many dictionaries in a simple and easy to use web interface.
+  No morphological analysis, no links to external sources. Works offline.
+webdict-links-0 = Webdict
