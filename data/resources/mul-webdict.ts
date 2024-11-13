@@ -15,7 +15,7 @@ const halfLinks = [
 const resource: Resource = {
   id,
   type: ResourceType.External,
-  languages: ["se", "sjd", "sma", "smj", "smn", "sms"],
+  languages: ["se", "sjd", "sje", "sma", "smj", "smn", "sms"],
   category: "dictionaries",
   tags: ["satni", "baakoe"],
   name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
