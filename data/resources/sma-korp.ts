@@ -8,9 +8,6 @@ const l10nLanguages = getL10NLanguages(resourceLang)
 
 const halfLinks = [
   {
-    text: {
-      en: "Korp for South Sámi",
-    },
     url: new URL("https://gtweb.uit.no/korp/?mode=sma#?lang=en"),
   },
 ]

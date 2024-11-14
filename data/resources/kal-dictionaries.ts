@@ -5,11 +5,6 @@ const id = "kaldict"
 const resourceLang = "kal"
 const halfLinks = [
   {
-    text: {
-      en: "Greenlandic Dictionaries",
-      kl: "Kalaallisut Ordbogit",
-      da: "Grønlandske Ordbøger",
-    },
     url: new URL("https://ordbog.gl"),
   },
 ]
