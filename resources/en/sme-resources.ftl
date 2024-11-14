@@ -39,3 +39,7 @@ sme-oahpa-links-0 = Oahpa Davvi
 mtsme = Machine translation from North Sámi
 mtsme-description = Machine translation from North Sámi to Norwegian bokmål, using Apertium. Optionally, the output can be smoothed using ChatGPT, but with  the risk of changing the content.
 mtsme-links-0 = MT for North Sámi
+
+sme-online-speller = North Sámi Online Spellchecker
+sme-online-speller-description = Online spellchecker for North Sámi: paste in your text and get checks.
+sme-online-speller-links-0 = Davvi Online Speller
