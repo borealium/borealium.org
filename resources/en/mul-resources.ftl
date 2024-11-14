@@ -65,8 +65,12 @@ webdict-more-info = A collection of many dictionaries in a simple and easy to us
 webdict-links-0 = Webdict
 
 mul-newamigos = New Amigos
-mul-newamigos-description = Language Learning Directly from a Native Speaker
-mul-newamigos-more-info = New Amigos offers language cafes online, games and direct interaction with native speakers.
+mul-newamigos-description = Language Learning Directly from a Native Speaker.
+mul-newamigos-more-info =
+  New Amigos can be played alone, with family and friends, or together with a teacher.
+  The app also offers a language café, where up to four participants can meet around a
+  virtual table. In addition the app has a built-in chat with automatic translation to
+  and from Sámi languages.
 mul-newamigos-links-0 = New Amigos
 mul-newamigos-links-1 = New Amigos
 mul-newamigos-links-2 = New Amigos web site
