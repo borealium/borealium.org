@@ -9,5 +9,5 @@ kaldict-description = Online dictionary resources for Greenlandic
 kaldict-links-0 = Greenlandic Dictionaries
 
 kal-learngrl = Learn Greenlandic
-kal-learngrl-description = Learn Greenlandic by Per Langgård (paywall).
+kal-learngrl-description = Learn Greenlandic by Per Langgård.
 kal-learngrl-links-0 = Learn Greenlandic
