@@ -18,7 +18,7 @@ sme-nds-spa-description = Neahttadigisánit dictionary from Spanish to North Sá
 sme-nds-spa-more-info = NDS — Neahttadigisánit — from Spanish to North Sámi contains translations only in one direction so far.
 sme-nds-spa-links-0 = NDS Spánska Davvi
 
-sme-jounivest = Jouni A Vest: Suommi–Saame
+sme-jounivest = Jouni A Vest: Suomi–Saame
 sme-jounivest-description = Online dictionary between North Sámi and Finnish
 sme-jounivest-more-info = Plain HTML dictionary from Finnish to North Sámi. The content is all on one page, and you search using the browser search function.
 sme-jounivest-links-0 = Jouni Vest Suomi Saame
