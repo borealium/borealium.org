@@ -21,3 +21,7 @@ smj-kintelnob-more-info =
   contains both directions.
 smj-kintelnob-links-0 = A. Kintel: Norwegian ⇒ Lule Sámi
 smj-kintelnob-links-1 = Download HTML version
+
+smj-online-speller = Lule Sámi Online Spellchecker
+smj-online-speller-description = Online spellchecker for Lule Sámi: paste in your text and get checks.
+smj-online-speller-links-0 = Julev Online Speller
