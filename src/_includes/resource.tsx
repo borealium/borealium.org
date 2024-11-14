@@ -384,7 +384,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
                 {Object.entries(categories).map(([key, value]) => {
                   return (
                     <dd key={key}>
-                      <a href={`/category/${key}`}>{selectLocale(lang, value)?.name}</a>
+                      <a className="tag tag-category" href={`/category/${key}`}>{selectLocale(lang, value)?.name}</a>
                     </dd>
                   )
                 })}
@@ -400,6 +400,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
                       return (
                         <dd key={key}>
                           <a
+                            className="tag tag-language"
                             title={lang_t(key)}
                             href={`/language/${key}`}
                           >
