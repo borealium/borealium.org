@@ -10,3 +10,7 @@ smn-korp-links-0 = Korp for Inari Sámi
 smn-oahpa = Oahpa for Inari Sámi
 smn-oahpa-description = Learn Inari Sami using a number of various exercises.
 smn-oahpa-links-0 = Oahpa Ánár
+
+smn-online-speller = Inari Sámi Online Spellchecker
+smn-online-speller-description = Online spellchecker for Inari Sámi: paste in your text and get checks.
+smn-online-speller-links-0 = Anár Online Speller
