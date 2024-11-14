@@ -44,3 +44,4 @@ more-info-keyboards = Naqitassat Borealiumimiittut Windowsimi, Macimi, iOS-imi, 
 macos = macOS
 windows = Windows
 mobile = Mobiili
+github = GitHub
