@@ -37,6 +37,3 @@ gramdivvun-links-1 = Google Docs
 online-speller-others = Stavekontroll på nettet
 online-speller-others-description = Stavekontroll på nettet for mange språk
 online-speller-others-links-0 = Stavekontroll på nettet
-online-speller-sami = Samisk stavekontroll på nettet
-online-speller-sami-description = Stavekontroll på nettet for samiske språk
-online-speller-sami-links-0 = Stavekontroll på nettet

@@ -26,6 +26,3 @@ gramdivvun-links-1 = Google Docs
 online-speller-others = Čállindárkkisteapmi neahtas
 online-speller-others-description = Čállindárkkisteapmi neahtas máŋga giela várás
 online-speller-others-links-0 = Čállindárkkisteapmi neahtas
-online-speller-sami = Sámi čállindárkkisteapmi neahtas
-online-speller-sami-description = Sámi gielaid čállindárkkisteapmi neahtas
-online-speller-sami-links-0 = Čállindárkkisteapmi neahtas

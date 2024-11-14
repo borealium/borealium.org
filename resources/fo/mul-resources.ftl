@@ -20,6 +20,3 @@ gramdivvun-links-1 = Google Docs
 online-speller-others = Rættstavari á netinum
 online-speller-others-description = Rættstavari á netinum til fleiri mál
 online-speller-others-links-0 = Rættstavari á netinum
-online-speller-sami = Rættstavari á netinum til sámisk mál
-online-speller-sami-description = Rættstavari á netinum til sámisk mál
-online-speller-sami-links-0 = Rættstavari á netinum

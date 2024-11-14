@@ -46,10 +46,6 @@ online-speller-others = Online spellchecker
 online-speller-others-description = Online spellchecker for many languages
 online-speller-others-links-0 = Online spellchecker
 
-online-speller-sami = Online Sámi spellchecker
-online-speller-sami-description = Online spellchecker for the Sámi languages
-online-speller-sami-links-0 = Online spellchecker
-
 islex = ISLEX
 islex-description = Online bilingual dictionaries for modern Icelandic to Nordic languages (Danish, Norwegian bokmål, Nynorsk, Swedish, Finnish, Faroese)
 islex-links-0 = ISLEX

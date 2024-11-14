@@ -42,6 +42,3 @@ gramdivvun-links-1 = Google Docs
 online-speller-others = Stavningskontroll online
 online-speller-others-description = Stavningskontroll online för flera språk
 online-speller-others-links-0 = Stavningskontroll online
-online-speller-sami = Stavningskontroll online för samiska
-online-speller-sami-description = Stavningskontroll online för dom samiska språken
-online-speller-sami-links-0 = Stavningskontroll online
