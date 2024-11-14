@@ -3,6 +3,9 @@ import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
 
 const id = "divvun-keyboard"
 const resourceLang = "mul"
+
+const l10nLanguages = getL10NLanguages(resourceLang)
+
 const halfLinks = [
   {
     type: LinkType.AppleAppStore,
@@ -21,8 +24,6 @@ const halfLinks = [
     url: new URL("https://play.google.com/store/apps/details?id=no.uit.giella.keyboards.dev"),
   },
 ]
-
-const l10nLanguages = getL10NLanguages(resourceLang)
 
 const resource: Resource = {
   id,

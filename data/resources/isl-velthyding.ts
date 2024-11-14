@@ -3,14 +3,15 @@ import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
 
 const id = "velthyding"
 const resourceLang = "isl"
+
+const l10nLanguages = getL10NLanguages(resourceLang)
+
 const halfLinks = [
   {
     type: LinkType.Normal,
     url: new URL("https://velthyding.is/"),
   },
 ]
-
-const l10nLanguages = getL10NLanguages(resourceLang)
 
 const resource: Resource = {
   id,

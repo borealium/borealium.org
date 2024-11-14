@@ -3,14 +3,15 @@ import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
 
 const id = "browser-asr"
 const resourceLang = "fao"
+
+const l10nLanguages = getL10NLanguages(resourceLang)
+
 const halfLinks = [
   {
     type: LinkType.Normal,
     url: new URL("https://mtd.setur.fo/en/talukennari-til-kaga/"),
   },
 ]
-
-const l10nLanguages = getL10NLanguages(resourceLang)
 
 const resource: Resource = {
   id,

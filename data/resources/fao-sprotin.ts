@@ -3,14 +3,15 @@ import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
 
 const id = "sprotin"
 const resourceLang = "fao"
+
+const l10nLanguages = getL10NLanguages(resourceLang)
+
 const halfLinks = [
   {
     type: LinkType.Normal,
     url: new URL("https://sprotin.fo"),
   },
 ]
-
-const l10nLanguages = getL10NLanguages(resourceLang)
 
 const resource: Resource = {
   id,

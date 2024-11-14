@@ -1,15 +1,17 @@
-import { Resource, ResourceType } from "~types/resource.ts"
+import { LinkType, Resource, ResourceType } from "~types/resource.ts"
 import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
 
 const id = "fkv-korp"
 const resourceLang = "fkv"
+
+const l10nLanguages = getL10NLanguages(resourceLang)
+
 const halfLinks = [
   {
+    type: LinkType.Normal,
     url: new URL("https://gtweb.uit.no/f_korp/#?lang=en"),
   },
 ]
-const l10nLanguages = getL10NLanguages(resourceLang)
-
 const resource: Resource = {
   id,
   type: ResourceType.External,

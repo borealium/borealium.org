@@ -1,21 +1,25 @@
-import { Resource, ResourceType } from "~types/resource.ts"
+import { LinkType, Resource, ResourceType } from "~types/resource.ts"
 import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
 
 const id = "marthatts"
 const resourceLang = "kal"
+
+const l10nLanguages = getL10NLanguages(resourceLang)
+
 const halfLinks = [
   {
+    type: LinkType.Normal,
     url: new URL("https://oqaasileriffik.gl/en/langtech/martha/"),
   },
   {
+    type: LinkType.Normal,
     url: new URL("https://oqaasileriffik.gl/oqaaserpassualerineq/martha/"),
   },
   {
+    type: LinkType.Normal,
     url: new URL("https://oqaasileriffik.gl/da/sprogteknologi/martha/"),
   },
 ]
-
-const l10nLanguages = getL10NLanguages(resourceLang)
 
 const resource: Resource = {
   id,

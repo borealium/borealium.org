@@ -3,14 +3,15 @@ import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
 
 const id = "fid"
 const resourceLang = "fao"
+
+const l10nLanguages = getL10NLanguages(resourceLang)
+
 const halfLinks = [
   {
     type: LinkType.Normal,
     url: new URL("https://bendingar.fo/"),
   },
 ]
-
-const l10nLanguages = getL10NLanguages(resourceLang)
 
 const resource: Resource = {
   id,

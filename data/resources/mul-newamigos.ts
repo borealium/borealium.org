@@ -16,7 +16,7 @@ const halfLinks = [
     url: new URL("https://play.google.com/store/apps/details?id=com.newamigos"),
   },
   {
-    type: LinkType.normal,
+    type: LinkType.Normal,
     url: new URL("https://newamigos.com/"),
   },
 ]

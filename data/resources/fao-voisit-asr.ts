@@ -3,6 +3,9 @@ import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
 
 const id = "voisit-asr"
 const resourceLang = "fao"
+
+const l10nLanguages = getL10NLanguages(resourceLang)
+
 const halfLinks = [
   {
     type: LinkType.Normal,
@@ -17,8 +20,6 @@ const halfLinks = [
     url: new URL("https://play.google.com/store/apps/details?id=net.isolveit.voisit"),
   },
 ]
-
-const l10nLanguages = getL10NLanguages(resourceLang)
 
 const resource: Resource = {
   id,

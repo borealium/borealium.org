@@ -1,15 +1,17 @@
-import { Resource, ResourceType } from "~types/resource.ts"
+import { LinkType, Resource, ResourceType } from "~types/resource.ts"
 import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
 
 const id = "malstadur"
 const resourceLang = "isl"
+
+const l10nLanguages = getL10NLanguages(resourceLang)
+
 const halfLinks = [
   {
+    type: LinkType.Normal,
     url: new URL("https://malstadur.mideind.is/"),
   },
 ]
-
-const l10nLanguages = getL10NLanguages(resourceLang)
 
 const resource: Resource = {
   id,
