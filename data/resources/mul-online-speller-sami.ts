@@ -9,7 +9,7 @@ const l10nLanguages = getL10NLanguages(resourceLang)
 const halfLinks = [
   {
     type: LinkType.Normal,
-    url: new URL("https://divvun.no/proofing/online-speller.html"),
+    url: new URL("https://divvun.no/korrektur/speller-demo.html"),
   },
 ]
 
