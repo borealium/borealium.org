@@ -7,10 +7,10 @@ dictionaries-description = Resources for translating between languages.
 grammar-checkers = Grammar checkers
 grammar-checkers-description = Tools for checking grammar errors, formatting errors and more.
 
-text-to-speech = Text-to-speech (TTS) systems
+text-to-speech = Text-to-speech
 text-to-speech-description = Tools to convert text to speech
 
-speech-recognition = Automatic speech recognition (ASR)
+speech-recognition = Automatic speech recognition
 speech-recognition-description = Tools to convert speech to text, dictate, create subtitling and more
 
 korp = Korp
