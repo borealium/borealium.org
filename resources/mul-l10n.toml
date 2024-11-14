@@ -3,13 +3,13 @@
     l10n = "{locale}/mul-resources.ftl"
     locales = [
         "fi",
+        "fkv", 
+        "fo", 
+        "kl", 
         "nb",
         "nn",
         "se",
         "sma",
         "smj",
         "sv",
-        "fo", 
-        "kl", 
-        "fkv", 
     ]
