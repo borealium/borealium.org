@@ -1,3 +1,11 @@
+marthatts = Atuffat Martha
+marthatts-description = Kalaallisut atuffat
+marthatts-links-0 = Martha TTS (tuluttut)
 marthatts-links-1 = Martha TTS (kalaallisut)
+marthatts-links-2 = Martha TTS (qallunaatut)
 kaldict = Kalaallisut Ordbogit
+kaldict-description = Kalaallisut ordbogit nittartakkaniittut
 kaldict-links-0 = Kalaallisut Ordbogit
+kal-learngrl = Learn Greenlandic
+kal-learngrl-description = Learn Greenlandic Per Langgårdimit suliaasoq.
+kal-learngrl-links-0 = Learn Greenlandic
