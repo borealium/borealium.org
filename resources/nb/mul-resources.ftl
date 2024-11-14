@@ -51,3 +51,13 @@ islex-links-0 = ISLEX
 mulsmimt = Samisk maskinoversetting
 mulsmimt-description = Maskinoversetting mellom nord-, lule-, sør- og enaresamisk. Ikke alle kombinasjonar finnes.
 mulsmimt-links-0 = Samisk MT
+mul-newamigos = New Amigos
+mul-newamigos-description = Lær språk direkte fra en morsmålstaler.
+mul-newamigos-more-info =
+  New Amigos kan spilles alene, med familie og venner, eller sammen med en lærer.
+  Appen tilbyr også en språkkafé, der opptil fire deltakere kan møtes rundt hvert
+  virtuelle bord. I tillegg har appen en chat-funksjon med automatisk oversettelse
+  til og fra samiske språk.
+mul-newamigos-links-0 = New Amigos
+mul-newamigos-links-1 = New Amigos
+mul-newamigos-links-2 = New Amigos-nettsted
