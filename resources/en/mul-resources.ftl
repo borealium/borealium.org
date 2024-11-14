@@ -63,3 +63,10 @@ webdict-description = A simple and fast dictionary, works also offline.
 webdict-more-info = A collection of many dictionaries in a simple and easy to use web interface.
   No morphological analysis, no links to external sources. Works offline.
 webdict-links-0 = Webdict
+
+mul-newamigos = New Amigos
+mul-newamigos-description = Language Learning Directly from a Native Speaker
+mul-newamigos-more-info = New Amigos offers language cafes online, games and direct interaction with native speakers.
+mul-newamigos-links-0 = New Amigos
+mul-newamigos-links-1 = New Amigos
+mul-newamigos-links-2 = New Amigos web site
