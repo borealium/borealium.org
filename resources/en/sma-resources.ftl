@@ -15,3 +15,7 @@ sma-gielese = Gïelese
 sma-gielese-description = South Sámi beginner language learning
 sma-gielese-more-info = Gïelese is an online beginner language learning web app with various exercises for training vocabulary and everyday expressions.
 sma-gielese-links-0 = Gïelese
+
+sma-online-speller = South Sámi Online Spellchecker
+sma-online-speller-description = Online spellchecker for South Sámi: paste in your text and get checks.
+sma-online-speller-links-0 = Åarjel Online Speller
