@@ -53,7 +53,8 @@ more-info-keyboards =
     ChromeOS båaloebuertieh gååvnesieh Divvun ChromeOS båaloebuertieAppesne.
     Android jïh iOS båaloebuertieh gååvnesieh Divvun båaloebuertieAppine Play- jïh App Storesne.
     
-    Naan gïeli leah aaj båaloebuertieh  Androidesne jïh iOS:esne. Dah gååvnesieh mijjen båaloebuertieAppesne.
+    Naan gïeli leah aaj båaloebuertieh  Androidesne jïh iOS:esne. Dah gååvnesieh mijjen
+    båaloebuertieAppesne.
 macos = macOS
 windows = Windows
 mobile = Mobïjle
