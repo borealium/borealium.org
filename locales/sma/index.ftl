@@ -48,8 +48,8 @@ more-info-spellers =
     GiellaLT staeriedimmieprogrammh Divvun Managerinie sijjiedahta.
     Divvun Manager aaj jïjtsistie daejtie orrestahta.
 more-info-keyboards =
-    Jeenemes gïeli båaloebuertieh leah  GiellaLT-infrastruktuvrine dorjeldihkie, mij rïhpes gaaltijekovde. ,
-    Windows jïh Mac båaloebuertieh Divvun Managerisnie gååvnesieh.
+    Jeenemes gïeli båaloebuertieh leah  GiellaLT-infrastruktuvrine dorjeldihkie, mij rïhpes
+    gaaltijekovde. Windows jïh Mac båaloebuertieh Divvun Managerisnie gååvnesieh.
     ChromeOS båaloebuertieh gååvnesieh Divvun ChromeOS båaloebuertieAppesne.
     Android jïh iOS båaloebuertieh gååvnesieh Divvun båaloebuertieAppine Play- jïh App Storesne.
     
