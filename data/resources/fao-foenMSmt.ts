@@ -1,7 +1,7 @@
 import { LinkType, Resource, ResourceType } from "~types/resource.ts"
 import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
 
-const id = "foenMSmt"
+const id = "foenmsmt"
 const resourceLang = "fao"
 
 const l10nLanguages = getL10NLanguages(resourceLang)

@@ -37,10 +37,10 @@ foenmt = Faroese-English Translator (Huggingface)
 foenmt-description = A machine translation model (FO-EN) that is being developed at the University of the Faroe Islands.
 foenmt-links-0 = Faroese-English Translator
 
-foenMSmt = Faroese Machine Translation (Bing)
-foenMSmt-description = A machine translation tool from Microsoft. It can translate both from Faroese and to Faroese.
-foenMSmt-links-0 = Translate to Faroese
-foenMSmt-links-1 = Translate from Faroese
+foenmsmt = Faroese Machine Translation (Bing)
+foenmsmt-description = A machine translation tool from Microsoft. It can translate both from Faroese and to Faroese.
+foenmsmt-links-0 = Translate to Faroese
+foenmsmt-links-1 = Translate from Faroese
 
 malradid = Word lists by Málráðið
 malradid-description = Search online dictionary resources for Faroese, by Málráðið
