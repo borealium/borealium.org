@@ -41,3 +41,7 @@ foenMSmt = Faroese Machine Translation (Bing)
 foenMSmt-description = A machine translation tool from Microsoft. It can translate both from Faroese and to Faroese.
 foenMSmt-links-0 = Translate to Faroese
 foenMSmt-links-1 = Translate from Faroese
+
+malradid = Word lists by Málráðið
+malradid-description = Search online dictionary resources for Faroese, by Málráðið
+malradid-links-0 = Málráðið lists
