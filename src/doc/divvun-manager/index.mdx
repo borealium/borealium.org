@@ -11,6 +11,9 @@ layout: doc.tsx
 
 Med Divvun Manager installerer man de fleste verktøy fra UiT (Divvun- og Giellatekno-gruppene). Divvun Manager oppdaterer automatisk installerte verktøy når det kommer ut nye versjoner.
 
+⚠️ **Merk** at du må ha administratorrettigheter for å installere Divvun Manager.
+Vanlige brukere på private datamaskiner har automatisk dette, mens det for arbeidsdatamaskiner eid av arbeidsgiver ofte er andre regler. Les mer om ulike alternativer [lenger ned](#administratorrettigheter).
+
 ## Installere verktøy
 
 ### Alle verktøy for et språk
@@ -43,11 +46,81 @@ Alle pakkene blir lasta ned og installert:
   <figcaption>Divvun Manager: nedlastinga har starta</figcaption>
 </figure>}
 
-Når installeringa er klar bør du starta om att maskina.
+Når installeringa er klar bør du starte om igjen maskinen.
 
 ### Utvalgte verktøy for et språk
 
+Klikk i menyen øverst, og bytt til **All Repositories**:
+
+{<figure>
+  <img src="/static/images/doc/dm/mac-change-view.png" />
+  <figcaption>Divvun Manager: bytt til listevisning</figcaption>
+</figure>}
+
+Da vises alle språkpakkene slik:
+
+{<figure>
+  <img src="/static/images/doc/dm/mac-install-single-package.png" />
+  <figcaption>Divvun Manager: Listevisning med valgt pakke</figcaption>
+</figure>}
+
+Kryss av for de pakkene du vil ha, og klikk deretter på **Installer N pakker** (N viser hvor mange pakker du har valgt).
+
 ## Avinstallere verktøy
+
+Gå til **Listevisning** (se forrige punkt), og kryss av de pakkene du vil avinstallere. Klikk deretter på **Avinstaller N pakker** (N viser hvor mange pakker du har valgt):
+
+{<figure>
+  <img src="/static/images/doc/dm/mac-uinstall.png" />
+  <figcaption>Divvun Manager: Avinstaller valgt pakke</figcaption>
+</figure>}
+
+Etter avinstalleringa bør du starte datamaskinen på nytt.
+
+## Administratorrettigheter
+
+For administrerte datamaskiner som blir brukt i store organisasjoner (kommunder, fylkeskommuner, store firmaer osv) er det oftest slik at den enkelte brukeren ikke har administratorrettigheter til sin egen datamaskin, og dermed ikke kan installere nye program, slik som Divvun Manager, på egen hånd. Typisk er noen av følgende alternativ brukt:
+
+- **midlertidig administrator:** brukeren av datamskinen kan gjøre seg selv til administrator for kortere perioder for å installere program ved behov. Sørg for å gjøre deg selv til administrator, og fortsett deretter som beskrevet lenger opp.
+- **sentral, manuell installering:** be IT-ansvarlige om å installere Divvun Manager og de språkene du behøver
+- **sentral, automatisk installering:** be IT-ansvarlige om å sjekke [denne sida](https://divvun.github.io/enterprise/), og [ta kontakt med oss](mailto:feedback@divvun.no) om det ikke er nok, eller de behøver andre alternativ.
+
+## Installer tidlig-versjoner og uferdige språk
+
+Om man vil bruke tidlige versjoner av verktøyene, eller er interessert i å prøve ut uferdige språk, kan man bytte til en annen leveringskanal, fra stabile versjoner til enten betaversjoner eller såkalte nattlige bygg. Nattlige bygg bygges i praksis flere ganger om dagen for de språkene det arbeides mest med.
+
+Bytt kanal slik:
+
+1. Gå til innstillinger:
+
+{<figure>
+  <img src="/static/images/doc/dm/mac-settings-menu.png" />
+  <figcaption>Divvun Manager, macOS: Gå til innstillinger via menyen</figcaption>
+</figure>}
+
+{<figure>
+  <img src="/static/images/doc/dm/mac-settings-wheel.png" />
+  <figcaption>Divvun Manager, macOS: Gå til innstillinger ved å klikke på tannhjulet øverst i vinduet</figcaption>
+</figure>}
+
+{<figure>
+  <img src="/static/images/doc/dm/win-settings-menu.png" />
+  <figcaption>Divvun Manager, Windows: Gå til innstillinger ved å klikke på hamburgermenyen</figcaption>
+</figure>}
+
+2. Velg **beta** eller **nightly** fra kanal-menyen:
+
+{<figure>
+  <img src="/static/images/doc/dm/mac-settings-channel.png" />
+  <figcaption>Divvun Manager, macOS: velg installeringskanalen du vil ha</figcaption>
+</figure>}
+
+{<figure>
+  <img src="/static/images/doc/dm/win-settings-channel.png" />
+  <figcaption>Divvun Manager, Windows: velg installeringskanalen du vil ha</figcaption>
+</figure>}
+
+Fra nå av vil alle pakker bli installert fra den valgte kanalen, og oppdateringer vil bli hentet og installert automatisk fra samme kanal. Du kan senere bytte tilbake til **Stable**-kanalen, slik at du bare får kvalitetssikra oppdateringer. Men for å bytte et verktøy helt fra **beta** eller **nightly** til **Stable** må du først avinstallere verktøyet, så bytte kanal, og deretter installere det på nytt.
 
 ## Problemløsning
 
