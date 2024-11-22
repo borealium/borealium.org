@@ -17,7 +17,7 @@ news = Nyheter
 available-on-divvun-manager = Tillgänglig på Divvun Manager
 divvun-manager-description =
     Divvun Manager är ett gratis och öppet källkodsverktyg för att hantera språkliga resurser som stavningskontroller,
-    tangentbord och ordböcker. Det stöder macOS och Windows.
+    tangentbord och talsyntes. Det stöder macOS och Windows.
 available-in-divvun-keyboard-app = Tillgänglig i appen Divvun Keyboard
 divvun-keyboard-description = Divvun Keyboard är en gratis app gjord med öppen källkod för iOS och Android som innehåller tangentbord för samiska och andra urfolks- och minoritetsspråk. Många tangentbord har också innebygd rättstavning.
 platforms = Plattformer

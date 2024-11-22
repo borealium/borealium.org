@@ -17,7 +17,7 @@ news = News
 available-on-divvun-manager = Olamuttus Divvun Manageris
 divvun-manager-description =
     Divvun Manager lea reaidu ráhkaduvvon rabas gáldokodas.
-    Dan bokte hálddaša lingvistalaš resurssaid nugo čállindárkkisteddjiid, boallobevddiid ja sátnegirjjiid.
+    Dan bokte hálddaša lingvistalaš resurssaid nugo čállindárkkisteddjiid, boallobevddiid ja hállansyntesaprográmmaid.
     Doaibmá macOSis ja Windowsis
 available-in-divvun-keyboard-app = Gávdnu Divvuma boallobevddiin
 divvun-keyboard-description =

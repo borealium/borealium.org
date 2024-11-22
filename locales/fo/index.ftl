@@ -17,7 +17,7 @@ news = Tíðindi
 available-on-divvun-manager = Tøkt á Divvun Manager
 divvun-manager-description =
     Divvun Manager er eitt ókeypis forrit við opnari keldukodu, sum tekur sær av máltøkniligum amboðum sum rættstavarum,
-    knappaborðum og orðabókum. Tað riggar á bæði macOS og Windows.
+    knappaborðum og teldutaluskipanum. Tað riggar á bæði macOS og Windows.
 available-in-divvun-keyboard-app = Tøkt á Divvun Keyboard
 divvun-keyboard-description = Divvun Keyboard er ein ókeypis app til iOS og Android við opnari keldukodu. Appin hevur knappaborð til sámisk mál og onnur minnilutamál. Rættstavari er innbygdur.
 platforms = Pallar

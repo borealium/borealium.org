@@ -17,7 +17,7 @@ news = Ådåsa
 available-on-divvun-manager = Gávnnu Divvun Managerin
 divvun-manager-description =
     Divvun Manager la nåvkå ja rabás ræjddo man baktu
-    háldat gielalasj ressursajt dagu tjállemdárkástusájt, boallobievdijt ja báhkogirjijt.
+    háldat gielalasj ressursajt dagu tjállemdárkástusájt, boallobievdijt ja hållamsyntiessavuogádagájt.
     Divvun Manager doarjju macOS:av ja Windowsav
 available-in-divvun-keyboard-app = Gávnnu Divvuna boallobievdijn
 divvun-keyboard-description =

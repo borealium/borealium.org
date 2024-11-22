@@ -17,7 +17,7 @@ news = Fréttir
 available-on-divvun-manager = Aðgengilegt í Divvun Manager
 divvun-manager-description =
     Divvun Manager er ókeypis og opinn hugbúnaður fyrir umsýslu málfanga á
-    borð við leiðréttingarforrit, lyklaborð og orðabækur.
+    borð við leiðréttingarforrit, lyklaborð og talgervlur.
     Það styður bæði macOS og Windows.
 available-in-divvun-keyboard-app = Aðgengilegt í Divvun Keyboard
 divvun-keyboard-description =

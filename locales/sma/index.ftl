@@ -17,7 +17,7 @@ news = Saernieh
 available-on-divvun-manager = Jaksoesmieresne Divvun Managerinie
 divvun-manager-description =
     Divvun Manager lea dïrrege mij rïhpes gaaltijekovdeste dorjeldihkie. 
-    Dejnie lingvistihke ressurside reerie, goh staeriedimmieprogrammem, båaloebuertide jïh baakoegærjide.  
+    Dejnie lingvistihke ressurside reerie, goh staeriedimmieprogrammem, båaloebuertide jïh tekste-soptsestimmiesysteemide.  
     macOSesne jïh Windowsisnie jåhta
 available-in-divvun-keyboard-app = Gååvnese Divvun båaloebuertine
 divvun-keyboard-description =
