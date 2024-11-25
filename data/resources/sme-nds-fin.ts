@@ -9,7 +9,7 @@ const l10nLanguages = getL10NLanguages(resourceLang)
 const halfLinks = [
   {
     type: LinkType.Normal,
-    url: new URL("https://sanit.oahpa.n/sme/fin/"),
+    url: new URL("https://sanit.oahpa.no/sme/fin/"),
   },
 ]
 
