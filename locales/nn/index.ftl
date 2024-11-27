@@ -36,11 +36,19 @@ dk-button-description = for iOS og Android
 website-copyright = Opphavsrett © { $year } UiT Noregs arktiske universitet
 read-documentation = Dokumentasjon
 more-info-spellers =
-    På Windows fungerer stavekontrollane i MS Office, LibreOffice og fleire andre program. På macOS fungerer stavekontrollane i dei fleste program.
+    Dei fleste stavekontrollane i Borealium er bygde med
+    GiellaLT-infrastrukturen, og har open kjeldekode. Det finst andre stavekontrollar òg,
+    med både lukka og open kjeldekode.
+
+    På Windows fungerer GiellaLT-stavekontrollane i MS Office, LibreOffice og 
+    fleire andre program.
+    På macOS fungerer stavekontrollane i dei fleste programma.
     
-    Stavekontrollane frå GiellaLT blir installerte med Divvun Manager, som òg oppdaterer alle verktøya automatisk.
-    
-    Dei fleste stavekontrollane i Borealium er bygde med GiellaLT-infrastrukturen, og er open kjeldekode.
+    For å bruka GiellaLT-stavekontrollane i **LibreOffice for macOS**, må du manuelt installera
+    eit [separat LibreOffice-tillegg](/resource/divvunspell-libreoffice/).
+
+    Stavekontrollane frå GiellaLT blir installerte med
+    Divvun Manager, som òg oppdaterer alle verktøya automatisk.
 more-info-keyboards = Tastatura i Borealium fungerer på Windows, macOS, iOS, Android og ChromeOS. På Windows og Mac installerer ein desse med Divvun Manager. Mobiltastatura finst i App og Play Store. Dei fleste av desse har innebygd stavekontroll. På ChromeOS må ein installera tastaturet manuelt. Dei fleste tastatura i Borealium er bygde med GiellaLT-infrastrukturen, og utvikla av Divvun og Giellatekno.
 macos = macOS
 windows = Windows

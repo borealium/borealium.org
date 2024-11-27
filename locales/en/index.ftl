@@ -37,8 +37,14 @@ website-copyright = Copyright © { $year } UiT The Arctic University of Norway
 read-documentation = Documentation
 more-info-spellers =
     Most spellers in Borealium are built using the GiellaLT infrastructure, based
-    on open source code. The spellers work in most macOS apps, and in MS Office,
-    LibreOffice and several other apps on Windows.
+    on open source code. There are other spellers as well, both open and
+    closed source.
+    
+    On Windows the GiellaLT spellers work in MS Office, LibreOffice and several other apps.
+    On macOS the GiellaLT spellers work in most apps.
+
+    To use the GiellaLT spellers in **LibreOffice for macOS**, you need to manually install
+    a [separate LibreOffice extension](/resource/divvunspell-libreoffice/).
     
     The spellers from GiellaLT are installed using Divvun Manager, and they are
     also kept up-to-date automatically by Divvun Manager.
