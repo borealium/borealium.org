@@ -40,14 +40,6 @@ dk-button-title = Divvun Keyboard
 dk-button-description = fyrir iOS og Android
 website-copyright = Höfundarréttur © { $year } UiT The Arctic University of Norway
 read-documentation = Skráning
-more-info-spellers =
-    Flest þau leiðréttingarforrit sem finna má í Borealium eru búin til með
-    GiellaLT-búnaðinum og byggja
-    á opnum hugbúnaði. Leiðréttingarforritin virka í flestum macOS-forritum sem og í MS Office,
-    LibreOffice og þónokkrum öðrum Windows-forritum.
-    
-    Leiðréttingarforritin frá GiellaLT eru sett upp með Divvun Manager og þau
-    uppfærast einnig sjálfvirkt með Divvun Manager.
 more-info-keyboards =
     Flest þau lyklaborð sem finna má í Borealium eru búin til með GiellaLT-innviðum frá Divvun
     og Giellatekno. Þessi lyklaborð eru sjálfkrafa hönnuð fyrir Windows og macOS og er dreift

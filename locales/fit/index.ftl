@@ -33,15 +33,5 @@ dk-button-title = Divvun Keyboard
 dk-button-description = iOSille ja Androidile
 website-copyright = Copyright © { $year } UiT Norjan arktinen yniversiteetti
 read-documentation = Tokymentasuuni
-more-info-spellers =
-    Windowsilla stavningskontroll toimii MS Officessa, LibreOfficessa ja
-    muissa ohjelmissa.
-    MacOSissa stavningskontroll toimii usseimmissa ohjelmissa.
-    
-    Stavningskontroll GiellaLT:stä installeerathaan
-    Divvun Managerilla, joka päivittää työkaluja automaattisesti.
-    
-    Usseimmat stavningskontroll Borealiumissa oon
-    rakenettu GiellaLT-infrastryktyyrista, ja net oon aukinaista lähekootia.
 macos = macOS
 windows = Windows

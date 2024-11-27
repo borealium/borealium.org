@@ -40,13 +40,6 @@ dk-button-title = Divvun Keyboard
 dk-button-description = iOS:aj ja Androidaj
 website-copyright = Dahkkerievtesvuode © { $year } UiT Vuona arktalasj universitiehtta
 read-documentation = Dokumentasjåvnnå
-more-info-spellers =
-    Ienemus tjállemdárkástusá Borealiuman li dagáduvvam GiellaLT infrastruktuvrajn mij la rabás
-    gálldokåvddå. Tjállemdárkástusá doajmmi ienemus macOS ehpajn ja duodden MS Officin, LibreOfficin
-    ja moatten ietjá ehpan Windowsin.
-    
-    Tjállemdárkástusá GiellaLT:as sájájduvvi Divvun Managera baktu, ja da
-    autmatihkalattjat ådåstuvvi dán baktu.
 more-info-keyboards =
     Ienemus boallobievde Borealiuman li dagáduvvam Divvomis ja Giellateknos
     GiellaLT infrastruktuvrajn. Dá boallobievde li automatihkalattjat dagáduvvi

@@ -40,14 +40,6 @@ dk-button-title = Divvuma boallobeavddit
 dk-button-description = doibmet iOS:s ja Androidas
 website-copyright = Dahkkivuoigatvuođat © { $year } UiT Norgga árktalaš universitehta
 read-documentation = Dokumentašuvdna
-more-info-spellers =
-    Eanaš čállindárkkisteddjit Borealiumis leat huksejuvvon GiellaLT-infrastruktuvrra bokte,
-    mii lea rabas gáldokoda.
-    Windowsis čállindárkkisteddjit doibmet MS Offices, LibreOffices ja máŋga eará prográmmain.
-    MacOSas čállindárkkisteddjit doibmet eanáš prográmmain, erret MS Offices.
-    
-    GiellaLT čállindárkkisteddjit sajáduhttá Divvun Manageriin.
-    Divvun Manager maid automáhtalaččat ođasta daid.
 more-info-keyboards =
     Eanaš gielaid boallobeavddit Borealiumis leat huksejuvvon GiellaLT-infrastruktuvrra bokte,
     mii lea rabas gáldokoda.

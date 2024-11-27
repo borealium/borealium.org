@@ -33,13 +33,6 @@ dk-button-title = Divvun Keyboard
 dk-button-description = iOS-imut Androidimullu
 website-copyright = Copyright © { $year } UiT Norges arktiske universitet
 read-documentation = Nalunaarsuineq
-more-info-spellers =
-    Windowsimi kukkuniiaatit atorneqarsinnaapput MS Officemi, LibreOfficemi programminilu allani.
-    macOS-imi programmini amerlanerni kukkuniiaatit atorneqarsinnaapput.
-    
-    Kukkuniiaatit GiellaLT-meersut Divvun Manager atorlugu ikkunneqarsinnaapput, namminerlu nutartertarlutik. 
-    
-    Kukkuniiaatit amerlanerit Borealiumimiittut GiellaLT-p atortulersuutaanik suliaapput, tamanillu atorneqarsinnaasunik tunngaveqarlutik.
 more-info-keyboards = Naqitassat Borealiumimiittut Windowsimi, Macimi, iOS-imi, Androidimi ChromeOS-imilu atorneqarsinnaapput. Windowsimi Macimilu Divvun Manager atorlugu ikkunneqarsinnaapput. Naqitassat mobiilimut atugassat App Storemi Play Storemilu nassaarineqarsinnaapput. Amerlanerit kukkuniiaatitaqareerput. ChromeOS-imi naqitassat ikkunnissaat nammineq isumagisassaapput. Borealiumimi naqitassat amerlanerit GiellaLT-p atortulersuutaanik suliaapput, Divvunimit GiellaLT-millu ineriartortitaallutik.
 macos = macOS
 windows = Windows

@@ -35,13 +35,6 @@ dk-button-title = Divvun Keyboard
 dk-button-description = til iOS og Android
 website-copyright = Copyright © { $year } UiT Arktiska universitetið í Noregi
 read-documentation = Skjalfesting
-more-info-spellers =
-    Teir flestu rættstavararnir á Borealium eru bygdir inni á undirstøðikervinum hjá GiellaLT,
-    har teir eru bygdir upp á opna keldukodu. Rættstavararnir rigga á teimum flestu appunum til macOS,
-    á MS Office, LibreOffice og nógvum øðrum appum á Windows.
-    
-    Rættstavararnir hjá GiellaLT verða lagdir inn á telduna við Divvun Manager, og teir verða
-    eisini sjálvvirkandi dagførdir av Divvun Manager.
 more-info-keyboards =
     Tey flestu knappaborðini á Borealium eru bygd inni á undirstøðukervinum hjá GiellaLT, sum er ment av Divvun
     og Giellatekno. Hesi knappaborðini verða sjálvvirkandi gjørd til Windows og macOS og verða síðani løgd inn

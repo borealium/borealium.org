@@ -35,15 +35,6 @@ dk-button-title = Divvun Keyboard
 dk-button-description = för iOS och Android
 website-copyright = Copyright © { $year } UiT Norges arktiska universitet
 read-documentation = Dokumentation
-more-info-spellers =
-    De flesta rättstavningsvärktygen i Borealium är bygda med
-    GiellaLT-infrastrukturen, og är öppen källkod.
-    Rättstavningsvärktygen fungerar i de flesta programmen på macOS,
-    och i MS Office, LibreOffice och flera andra program på Windows.
-    
-    Rättstavningsvärktygen från GiellaLT installeras med
-    Divvun Manager, som också automatiskt håller alla
-    verktygen uppdaterade.
 more-info-keyboards =
     De flesta tangentborden i Borealium är bygda i GiellaLT-infrastrukturen, och gjorda av Divvun och
     Giellatekno. Tangentborden blir bygda för Windows och macOS automatiskt, och distribuerade via

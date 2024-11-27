@@ -33,16 +33,6 @@ dk-button-title = Divvun Keyboard
 dk-button-description = IOSille ja Androidille
 website-copyright = Tekijänoikeus © { $year } UiT Norjan arktinen yliopisto
 read-documentation = Dokumentaatio
-more-info-spellers =
-    Windowsilla oikaisuluku toimii MS Officessa, LibreOfficessa ja
-    muissa ohjelmissa.
-    MacOSissa oikaisuluku toimii useimmissa ohjelmissa.
-    
-    Oikaisulukimet GiellaLT:stä asennetaan
-    Divvun Managerilla, joka päivittää työkaluja automaattisesti,
-    
-    Useimmat oikaisulukimet Borealiumissa on
-    rakennettu GiellaLT-infrastruktuurista, ja ovat avointa lähdekoodia.
 more-info-keyboards =
     Näppäimistöt Borealiumissa toimivat Windowsissa, Macissä, IOSissa, Androidissa ja ChromeOSissa.
     Windowsissa ja Macissä näppäimistöt asennetaan Divvun Managerilla. Mobiilinäppäimistöt löytyvät App ja Google Play Storeista. Useimmissa näistä on mukana oikaisuluku.
