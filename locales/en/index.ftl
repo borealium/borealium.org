@@ -44,8 +44,9 @@ more-info-spellers =
     also kept up-to-date automatically by Divvun Manager.
 more-info-keyboards =
     Most keyboards found in Borealium are built in the GiellaLT infrastructure by Divvun
-    and Giellatekno. These keyboards are built for Windows and macOS automatically, and distributed
-    via the Divvun Manager. Keyboards for ChromeOS must be added to our ChromeOS keyboard app.
+    and Giellatekno. These keyboards are built for Windows and macOS automatically,
+    and distributed via the Divvun Manager. Keyboards for
+    ChromeOS must be added to our ChromeOS keyboard app.
     
     Many languages do also have keyboards for Android and iOS. These are distributed via our
     keyboard app.
