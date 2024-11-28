@@ -11,3 +11,7 @@ kaldict-links-0 = Greenlandic Dictionaries
 kal-learngrl = Learn Greenlandic
 kal-learngrl-description = Learn Greenlandic by Per Langgård.
 kal-learngrl-links-0 = Learn Greenlandic
+
+kal-online-speller = Greenlandic Online Spellchecker
+kal-online-speller-description = Online spellchecker for Greenlandic: paste in your text and get checks.
+kal-online-speller-links-0 = Greenlandic Online Speller

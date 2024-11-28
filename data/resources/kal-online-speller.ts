@@ -1,22 +1,22 @@
 import { LinkType, Resource, ResourceType } from "~types/resource.ts"
 import { getL10NLanguages, makeResourceTranslations } from "~data/resources.ts"
 
-const id = "online-speller-others"
-const resourceLang = "mul"
+const id = "kal-online-speller"
+const resourceLang = "kal"
 
 const l10nLanguages = getL10NLanguages(resourceLang)
 
 const halfLinks = [
   {
     type: LinkType.Normal,
-    url: new URL("https://divvun.org/proofing/online-speller.html"),
+    url: new URL(`https://divvun.org/proofing/online-speller.html?lang=kl`),
   },
 ]
 
 const resource: Resource = {
   id,
   type: ResourceType.External,
-  languages: ["sje", "fkv", "fit"],
+  languages: ["kl"],
   category: "spellers",
   name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
   description: makeResourceTranslations(`${id}-description`, resourceLang, l10nLanguages),
