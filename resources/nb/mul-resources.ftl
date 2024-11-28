@@ -39,9 +39,6 @@ gramdivvun-more-info =
     som inneholder grammatikkontroller for mange språk.
 gramdivvun-links-0 = MS Office
 gramdivvun-links-1 = Google Docs
-online-speller-others = Stavekontroll på nettet
-online-speller-others-description = Stavekontroll på nettet for mange språk
-online-speller-others-links-0 = Stavekontroll på nettet
 islex = ISLEX
 islex-description = Flerspråklig nettordbok fra islandsk til andre nordiske språk (dansk, bokmål, nynorsk, svensk, finsk, færøysk).
 islex-links-0 = ISLEX

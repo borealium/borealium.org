@@ -34,6 +34,3 @@ gramdivvun-description = Grammatikkontrollar frå Divvun-gruppa og samarbeidspar
 gramdivvun-more-info = GramDivvun er eit grammatikkontrolltillegg for MS Office og Google Docs som inneheld grammatikkontrollar for mange språk.
 gramdivvun-links-0 = MS Office
 gramdivvun-links-1 = Google Docs
-online-speller-others = Stavekontroll på nettet
-online-speller-others-description = Stavekontroll på nettet for mange språk
-online-speller-others-links-0 = Stavekontroll på nettet

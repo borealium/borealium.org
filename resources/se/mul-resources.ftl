@@ -23,6 +23,3 @@ gramdivvun-description = Divvuma grammatihkadárkkisteaddjit
 gramdivvun-more-info = GramDivvun lea MS Office ja Google Docs lasáhus mainna dárkkista máŋga gielaid grammatihkka.
 gramdivvun-links-0 = MS Office
 gramdivvun-links-1 = Google Docs
-online-speller-others = Čállindárkkisteapmi neahtas
-online-speller-others-description = Čállindárkkisteapmi neahtas máŋga giela várás
-online-speller-others-links-0 = Čállindárkkisteapmi neahtas

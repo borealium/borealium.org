@@ -42,10 +42,6 @@ gramdivvun-more-info = GramDivvun is a grammar checker plugin for MS Office and 
 gramdivvun-links-0 = MS Office
 gramdivvun-links-1 = Google Docs
 
-online-speller-others = Online spellchecker
-online-speller-others-description = Online spellchecker for many languages
-online-speller-others-links-0 = Online spellchecker
-
 islex = ISLEX
 islex-description = Online bilingual dictionaries for modern Icelandic to Nordic languages (Danish, Norwegian bokmål, Nynorsk, Swedish, Finnish, Faroese)
 islex-links-0 = ISLEX

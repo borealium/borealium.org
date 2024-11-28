@@ -17,6 +17,3 @@ gramdivvun-more-info =
     sum kann rætta mállæruvillur og stavivillur í ymsum málum.
 gramdivvun-links-0 = Microsoft Office
 gramdivvun-links-1 = Google Docs
-online-speller-others = Rættstavari á netinum
-online-speller-others-description = Rættstavari á netinum til fleiri mál
-online-speller-others-links-0 = Rættstavari á netinum
