@@ -45,3 +45,7 @@ foenmsmt-links-1 = Translate from Faroese
 malradid = Word lists by Málráðið
 malradid-description = Search online dictionary resources for Faroese, by Málráðið
 malradid-links-0 = Málráðið lists
+
+fao-online-speller = Faroese Online Spellchecker
+fao-online-speller-description = Online spellchecker for Faroese: paste in your text and get checks.
+fao-online-speller-links-0 = Faroese Online Speller
