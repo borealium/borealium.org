@@ -9,3 +9,7 @@ fit-dictionary-links-0 = Meänkieli dictionary
 fit-nds = NDS Meänkieli dictionary
 fit-nds-description = Dictionary for Meänkieli, with links to corpus texts and inflections.
 fit-nds-links-0 = NDS Meänkieli
+
+fit-online-speller = Meänkieli Online Spellchecker
+fit-online-speller-description = Online spellchecker for Meänkieli: paste in your text and get checks.
+fkfitv-online-speller-links-0 = Meänkieli Online Speller
