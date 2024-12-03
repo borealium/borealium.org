@@ -1,4 +1,10 @@
+marthatts = Atuffat Martha
+marthatts-description = Kalaallisut atuffat
+marthatts-links-0 = Martha TTS (tuluttut)
 marthatts-links-2 = Martha TTS (på dansk)
 kaldict = Grønlandske Ordbøger
 kaldict-description = Grønlandske Ordbøger på net
 kaldict-links-0 = Grønlandske Ordbøger
+kal-learngrl = Learn Greenlandic
+kal-learngrl-description = Learn Greenlandic Per Langgårdimit suliaasoq.
+kal-learngrl-links-0 = Learn Greenlandic
