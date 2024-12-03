@@ -1,3 +1,12 @@
+satni-description = Yrkorð og orðabøkur fyri sámisk mál
+satni-more-info =
+    Sátni.org hevur yrkorð frá Giellagáldu og ymsar orðabøkur fyri sámisk mál.
+    Tú kanst leita í øllum í senn, og tú kanst síla úrslitini eftir máli og orðabók.
+satni-links-0 = Sátni.org
+divvun-keyboard = Divvun-knappaborð
+divvun-keyboard-description = Divvun-knappaborð til iOS og Android
+divvun-keyboard-more-info = Divvun-knappaborð hava knappaborð til tey flestu sámisku málini umframt til nøkur onnur minniulutamál og mál hjá upprunafólki.
+divvun-keyboard-links-0 = Støðug útgáva
 divvun-manager = Divvun Manager
 divvun-manager-description = Divvun Manager er eitt forrit, sum leggur máltøknilig amboð inn á tína Windows- ella Mac-teldu.
 divvun-manager-more-info =
@@ -8,7 +17,6 @@ divvun-manager-links-0 = Divvun Manager
 divvun-manager-links-1 = Divvun Manager
 divvunspell-libreoffice = DivvunSpell til LibreOffice
 divvunspell-libreoffice-description = Eitt ískoytisforrit til LibreOffice, sum gevur atgongd til rættstavarar hjá Divvun.
-# divvunspell-libreoffice-more-info = test
 divvunspell-libreoffice-links-0 = .oxt-fíla
 gramdivvun = GramDivvun
 gramdivvun-description = Mállærurættarar hjá Divvun
