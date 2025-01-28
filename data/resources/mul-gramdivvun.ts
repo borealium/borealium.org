@@ -25,7 +25,7 @@ const resource: Resource = {
   name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
   description: makeResourceTranslations(`${id}-description`, resourceLang, l10nLanguages),
   release: {
-    platforms: ["macos", "windows", "mobile"],
+    platforms: ["macos", "windows", "mobile", "linux"],
     authors: [],
   },
   moreInfo: makeResourceTranslations(`${id}-more-info`, resourceLang, l10nLanguages),
