@@ -38,3 +38,4 @@ macos = macOS
 windows = Windows
 mobile = Mobiili
 github = GitHub
+linux = Linux

@@ -35,3 +35,4 @@ website-copyright = Copyright © { $year } UiT Norjan arktinen yniversiteetti
 read-documentation = Tokymentasuuni
 macos = macOS
 windows = Windows
+linux = Linux

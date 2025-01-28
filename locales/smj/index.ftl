@@ -50,3 +50,4 @@ more-info-keyboards =
 macos = macOS
 windows = Windows
 mobile = Mobile
+linux = Linux

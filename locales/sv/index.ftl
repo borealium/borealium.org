@@ -45,3 +45,4 @@ more-info-keyboards =
 macos = macOS
 windows = Windows
 mobile = Mobil
+linux = Linux

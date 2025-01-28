@@ -41,3 +41,4 @@ more-info-keyboards =
 macos = macOS
 windows = Windows
 mobile = Mobiil
+linux = Linux

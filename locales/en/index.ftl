@@ -60,3 +60,4 @@ macos = macOS
 windows = Windows
 mobile = Mobile
 github = GitHub
+linux = Linux

@@ -60,3 +60,4 @@ macos = macOS
 windows = Windows
 mobile = Fartelefon
 github = GitHub
+linux = Linux
