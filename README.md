@@ -32,5 +32,7 @@ To re-enable workflows in such a case,
 ## Localisation
 
 Almost all text is localised in our
-[Pontoon instance](https://divvun-pontoon-vm.norwayeast.cloudapp.azure.com/projects/borealium/), and soon everything
-will be.
+[Pontoon instance](https://divvun-pontoon-vm.norwayeast.cloudapp.azure.com/projects/borealium/). Exceptions:
+
+- news articles
+- user documentation
