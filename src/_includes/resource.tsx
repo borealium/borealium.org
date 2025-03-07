@@ -134,6 +134,13 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
               sampleText: "Bures, mu namma lea Biret. Mun lean Divvuma davvisámi dahkujietna.",
             },
             {
+              language: "se",
+              name: "Máhtte",
+              gender: "male",
+              apiUrl: "https://api-giellalt.uit.no/tts/se/mahtte/",
+              sampleText: "Bures, mu namma lea Máhtte. Mun lean Divvuma davvisámi dahkujietna.",
+            },
+            {
               language: "smj",
               name: "Nihkol",
               gender: "male",
