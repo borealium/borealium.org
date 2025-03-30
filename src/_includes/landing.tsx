@@ -41,8 +41,6 @@ export default function (
         posts={posts.map((post) => {
           const { id, title, category, date, originalUrl } = post as Data
 
-          console.log(originalUrl)
-
           return {
             id: id,
             date: date?.toISOString(),
