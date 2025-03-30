@@ -1,5 +1,5 @@
+import { Data } from "lume/core/file.ts"
 import React from "react"
-import { Page, PageData, Site } from "lume/core.ts"
 import { autonym, getLanguageData } from "~plugins/language-data.ts"
 
 export const layout = "base.tsx"
@@ -43,7 +43,7 @@ const SCRIPT = `
 })()
 `
 
-export default function (page: PageData) {
+export default function (page: Data) {
   return (
     <>
       {script(SCRIPT)}

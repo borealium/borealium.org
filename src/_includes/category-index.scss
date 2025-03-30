@@ -1,15 +1,18 @@
+@use "../_components/footer";
+@use "../_components/label";
+
 .category-index {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   background-color: var(--color-background);
 
-  @media (min-width: $md-breakpoint) {
+  @media (min-width: footer.$md-breakpoint) {
     display: grid;
     grid-template-columns: 7fr 3fr;
   }
 
-  @media (min-width: $lg-nav-breakpoint) {
+  @media (min-width: label.$lg-nav-breakpoint) {
     grid-template-columns: 7fr 2fr;
   }
 
@@ -56,7 +59,7 @@
             flex-direction: column;
             gap: 4px;
 
-            @media (min-width: $md-breakpoint) {
+            @media (min-width: footer.$md-breakpoint) {
               flex-direction: row;
               gap: 20px;
             }

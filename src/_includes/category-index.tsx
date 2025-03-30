@@ -1,11 +1,12 @@
-import { Data, PageData } from "lume/core.ts"
-import { Resource } from "~types/resource.ts"
-import { selectLocale } from "~plugins/language-data.ts"
-import { CategoryLabel } from "~/_components/label.tsx"
-import { LangTag } from "~types/category.ts"
-import { Markdown } from "~/_includes/markdown.ts"
-import { FluentPage } from "~plugins/fluent.ts"
+import { Data, Page } from "lume/core/file.ts"
+import type Searcher from "lume/core/searcher.ts"
 import Aside, { SimplePost } from "~/_components/aside.tsx"
+import { CategoryLabel } from "~/_components/label.tsx"
+import { Markdown } from "~/_includes/markdown.ts"
+import { FluentPage, TranslateFn } from "~plugins/fluent.ts"
+import { selectLocale } from "~plugins/language-data.ts"
+import { LangTag } from "~types/category.ts"
+import { Resource } from "~types/resource.ts"
 
 export const layout = "base.tsx"
 
@@ -13,12 +14,17 @@ type CategoryIndexProps = {
   resources: Resource[]
   category: Record<LangTag, { name: string; description: string }>
   categoryId: string
+  t: TranslateFn
+  lang: string
 }
 
-export default function CategoryIndexLayout(page: PageData & CategoryIndexProps & FluentPage) {
-  const { resources, lang, category, categoryId, search, t } = page
-
-  const posts = search.pages(["type=post", `lang=${lang}`], "date=desc").slice(0, 3)
+export default function CategoryIndexLayout(
+  { search, t, lang, category, categoryId, resources }: {
+    page: Page & FluentPage
+    search: Searcher
+  } & CategoryIndexProps,
+) {
+  const posts = search.pages(`type=post lang=${lang}`, "date=desc", 3)
   const cat = selectLocale(lang, category) ?? category["en"]
 
   return (
@@ -50,7 +56,7 @@ export default function CategoryIndexLayout(page: PageData & CategoryIndexProps 
               <li className="search-result">
                 <a href={`/resource/${resource.id}`}>
                   <img src={"/static/images/tag-resource.svg"} alt="" />
-                  {resName}
+                  <strong>{resName}</strong>
                 </a>
                 {resDescription && (
                   <Markdown as="p" className="description">
@@ -66,7 +72,7 @@ export default function CategoryIndexLayout(page: PageData & CategoryIndexProps 
         t={t}
         category={t("news")}
         posts={posts.map((post) => {
-          const { id, title, category, date, originalUrl } = post as Data<PageData>
+          const { id, title, category, date, originalUrl } = post as Data
 
           return {
             id: id,

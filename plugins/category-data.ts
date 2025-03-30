@@ -1,8 +1,8 @@
-import type { Plugin } from "lume/core.ts"
-import { strings } from "~data/pahkat.ts"
-import { getLanguageData } from "~plugins/language-data.ts"
+import type { Plugin } from "lume/core/site.ts"
 import { categoriesList } from "~data/categories.ts"
+import { strings } from "~data/pahkat.ts"
 import { fluentBundle, message } from "~plugins/fluent.ts"
+import { getLanguageData } from "~plugins/language-data.ts"
 import { CategoriesData, CategoryData, CategoryId } from "~types/category.ts"
 import { LangTag } from "~types/language.ts"
 

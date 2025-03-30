@@ -1,18 +1,22 @@
+@use "../_components/footer";
+@use "../_components/label";
+@use "landing";
+
 .resource {
   display: flex;
   flex-direction: column;
   background-color: var(--color-background);
 
-  @media (min-width: $md-breakpoint) {
+  @media (min-width: footer.$md-breakpoint) {
     display: grid;
     grid-template-columns: 7fr 3fr;
   }
 
-  @media (min-width: $lg-nav-breakpoint) {
+  @media (min-width: label.$lg-nav-breakpoint) {
     grid-template-columns: 7fr 2fr;
   }
 
-  @media (min-width: $lg-main-breakpoint) {
+  @media (min-width: landing.$lg-main-breakpoint) {
     contain: paint;
   }
 
@@ -114,7 +118,7 @@
         display: flex;
         gap: 32px;
 
-        @media (max-width: $md-breakpoint) {
+        @media (max-width: footer.$md-breakpoint) {
           gap: 0px;
           flex-direction: column;
         }

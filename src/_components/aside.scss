@@ -1,9 +1,11 @@
+@use "footer";
+
 .aside {
   padding: 2rem;
   overflow-y: auto;
   background-color: #ffffff;
 
-  @media (min-width: $md-breakpoint) {
+  @media (min-width: footer.$md-breakpoint) {
     padding: 2rem 1rem;
     position: sticky;
     top: var(--nav-links-height);

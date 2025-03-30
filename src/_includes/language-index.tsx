@@ -1,22 +1,33 @@
-import { PageData } from "lume/core.ts"
-import { Resource } from "~types/resource.ts"
-import { selectLocale } from "~plugins/language-data.ts"
+import { Page } from "lume/core/file.ts"
+import Searcher from "lume/core/searcher.ts"
 import { CategoryLabel } from "~/_components/label.tsx"
 import { Markdown } from "~/_includes/markdown.ts"
-import { FluentPage } from "~plugins/fluent.ts"
+import { FluentPage, TranslateFn } from "~plugins/fluent.ts"
+import { selectLocale } from "~plugins/language-data.ts"
 import { CategoryId } from "~types/category.ts"
+import { Resource } from "~types/resource.ts"
 
 export const layout = "base.tsx"
 
 type LanguageIndexProps = {
   resources: Resource[]
   languageId: string
+  t: TranslateFn
+  lang: string
+  fluentBundle: (lang: string, id: string) => TranslateFn
 }
 
-export default function LanguageIndexLayout(page: PageData & LanguageIndexProps & FluentPage) {
-  const { resources, lang, languageId, t } = page
-  const lang_t = page.fluentBundle(page.lang, "languages")
-  const category_t = page.fluentBundle(page.lang, "categories")
+export default function LanguageIndexLayout(
+  {
+    fluentBundle,
+    resources,
+    lang,
+    languageId,
+    t,
+  }: { page: Page & FluentPage; search: Searcher } & LanguageIndexProps,
+) {
+  const lang_t = fluentBundle(lang, "languages")
+  const category_t = fluentBundle(lang, "categories")
 
   const res_by_category: Record<CategoryId, [Resource]> = resources.reduce((acc, resource) => {
     if (resource.category in acc) {
@@ -70,7 +81,7 @@ export default function LanguageIndexLayout(page: PageData & LanguageIndexProps 
                       <li className="search-result">
                         <a href={`/resource/${resource.id}`}>
                           <img src={"/static/images/tag-resource.svg"} alt="" />
-                          {resName}
+                          <strong>{resName}</strong>
                         </a>
                         {resDescription && (
                           <Markdown as="p" className="description">

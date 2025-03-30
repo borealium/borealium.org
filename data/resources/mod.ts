@@ -1,9 +1,9 @@
-import { join } from "std/path/posix.ts"
+import { join } from "@std/path/posix"
 import { Resource, ResourceRelease, ResourceType } from "~types/resource.ts"
 
 import { PahkatRelease, repo } from "~data/pahkat.ts"
-import { getLanguageData } from "~plugins/language-data.ts"
 import { fluentBundle, message } from "~plugins/fluent.ts"
+import { getLanguageData } from "~plugins/language-data.ts"
 import { LangTag } from "~types/category.ts"
 
 const externalResources: Resource[] = await Promise.all(

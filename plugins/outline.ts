@@ -1,12 +1,12 @@
-import type { Plugin } from "lume/core.ts"
+import type { Page } from "lume/core/file.ts"
+import type { Plugin } from "lume/core/site.ts"
 import createSlugifier from "lume/core/slugifier.ts"
-import { StringInfo } from "https://deno.land/x/imagemagick_deno@0.0.24/src/internal/string-info.ts"
 
 const slugify = createSlugifier()
 
 type TocNode = {
   id: string
-  text: StringInfo
+  text: string
   level: number
   children: TocNode[]
   parent: TocNode
@@ -18,49 +18,55 @@ type TocData = {
   children: TocData[]
 }
 
+function processPage(page: Page) {
+  const { document } = page
+
+  if (document == null) {
+    throw new Error("No document found")
+  }
+
+  const tocRoot = document.getElementById("toc") as unknown as HTMLOListElement | null
+  if (tocRoot == null) {
+    return
+  }
+
+  const contextEl = document.querySelector("[data-toc-context]") ?? document
+
+  const elements: HTMLElement[] = Array.from(
+    contextEl.querySelectorAll("h1, h2, h3, h4, h5, h6"),
+  ) as unknown as HTMLElement[]
+  const outline = generateOutlineData(elements)
+
+  const rec = (node: TocData, parent: HTMLElement) => {
+    for (const child of node.children) {
+      const li = document.createElement("li") as unknown as HTMLLIElement
+      const a: HTMLAnchorElement = document.createElement("a") as unknown as HTMLAnchorElement
+      a.setAttribute("href", `#${child.id}`)
+      a.innerHTML = child.text
+      li.appendChild(a)
+
+      if (child.children.length > 0) {
+        const ol = document.createElement("ol") as unknown as HTMLOListElement
+        li.appendChild(ol)
+        rec(child, ol)
+      }
+
+      parent.appendChild(li)
+    }
+  }
+
+  rec(outline, tocRoot)
+
+  page.data.outline = outline
+  page.data.toc = tocRoot
+}
+
 export default function outline(): Plugin {
   return (site) => {
-    site.process([".html"], (page) => {
-      const { document } = page
-
-      if (document == null) {
-        throw new Error("No document found")
+    site.process([".html"], (pages) => {
+      for (const page of pages) {
+        processPage(page)
       }
-
-      const tocRoot = document.getElementById("toc") as unknown as HTMLOListElement | null
-      if (tocRoot == null) {
-        return
-      }
-
-      const contextEl = document.querySelector("[data-toc-context]") ?? document
-
-      const elements: HTMLElement[] = Array.from(
-        contextEl.querySelectorAll("h1, h2, h3, h4, h5, h6"),
-      ) as unknown as HTMLElement[]
-      const outline = generateOutlineData(elements)
-
-      const rec = (node: TocData, parent: HTMLElement) => {
-        for (const child of node.children) {
-          const li = document.createElement("li") as unknown as HTMLLIElement
-          const a: HTMLAnchorElement = document.createElement("a") as unknown as HTMLAnchorElement
-          a.setAttribute("href", `#${child.id}`)
-          a.innerHTML = child.text
-          li.appendChild(a)
-
-          if (child.children.length > 0) {
-            const ol = document.createElement("ol") as unknown as HTMLOListElement
-            li.appendChild(ol)
-            rec(child, ol)
-          }
-
-          parent.appendChild(li)
-        }
-      }
-
-      rec(outline, tocRoot)
-
-      page.data.outline = outline
-      page.data.toc = tocRoot
     })
   }
 }

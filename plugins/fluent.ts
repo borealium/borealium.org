@@ -1,15 +1,18 @@
-import { merge } from "lume/core/utils.ts"
-import type { Logger, Plugin, Site } from "lume/core.ts"
 import { FluentBundle, FluentResource, FluentVariable } from "@fluent/bundle"
-import { existsSync, walkSync } from "std/fs/mod.ts"
+import { existsSync, walkSync } from "@std/fs"
+import Site, { Plugin } from "lume/core/site.ts"
+import { log } from "lume/core/utils/log.ts"
+import { merge } from "lume/core/utils/object.ts"
 
-import { dirname } from "std/path/mod.ts"
-import { getLanguageData } from "~plugins/language-data.ts"
-import { relative } from "lume/deps/path.ts"
-import { LanguagesData } from "~types/language.ts"
+import { dirname } from "@std/path"
 import dedent from "dedent"
+import type { Page } from "lume/core/file.ts"
+import type { Logger } from "lume/deps/log.ts"
+import { relative } from "lume/deps/path.ts"
 import { React } from "lume/deps/react.ts"
 import { marked } from "marked"
+import { getLanguageData } from "~plugins/language-data.ts"
+import { LanguagesData } from "~types/language.ts"
 
 const languages = getLanguageData()
 
@@ -124,7 +127,7 @@ export default function fluent(userOptions?: Partial<Options>): Plugin {
   return (site: Site) => {
     site.addEventListener("beforeUpdate", (event) => {
       if (Array.from(event.files).some((x) => x.endsWith(".ftl"))) {
-        site.logger.log("Regenerating Fluent data...")
+        log.info("Regenerating Fluent data...")
         bundleTree = loadFluentFiles()
       }
     })
@@ -136,32 +139,35 @@ export default function fluent(userOptions?: Partial<Options>): Plugin {
       },
     )
 
-    site.preprocess(options.extensions, (page, pages) => {
-      const lang = page.data.lang as string ?? "en"
+    function preprocessHtml(page: Page) {
+      if (page.data.lang == null) {
+        page.data.lang = "en"
+      }
 
       if (typeof page.data.url !== "string") {
-        site.logger.warn("Page had no valid URL")
+        log.warn("Page had no valid URL")
         return
       }
 
       const src = page.src.entry?.src ?? `${Deno.cwd()}/src`
       const ftlResKey = relative(`${Deno.cwd()}/src`, dirname(src ?? ""))
 
-      const t = _t(site, page.data.url, fluentBundle.bind(null, ftlResKey, lang))
+      const t = _t(site, page.data.url, fluentBundle.bind(null, ftlResKey, page.data.lang))
 
-      pages.splice(
-        pages.indexOf(page),
-        1,
-        page.duplicate(undefined, {
-          ...page.data,
-          t,
-          tmd: (key: string, args?: Record<string, FluentVariable>) => {
-            return React.createElement("div", {
-              dangerouslySetInnerHTML: { __html: marked.parse(dedent(t(key, args))) },
-            })
-          },
-        }),
-      )
+      Object.assign(page.data, {
+        t,
+        tmd: (key: string, args?: Record<string, FluentVariable>) => {
+          return React.createElement("div", {
+            dangerouslySetInnerHTML: { __html: marked.parse(dedent(t(key, args))) },
+          })
+        },
+      })
+    }
+
+    site.preprocess(options.extensions, (pages) => {
+      for (const page of pages) {
+        preprocessHtml(page)
+      }
     })
   }
 }
@@ -204,7 +210,7 @@ export function message(
 }
 
 function _t(site: Site, url: string, bundleFn: () => FluentBundle) {
-  const logger = site.logger
+  const logger = log
   const bundle = bundleFn()
 
   return message.bind(null, bundle, logger, url)

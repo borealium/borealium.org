@@ -1,7 +1,7 @@
-import { Page } from "lume/core.ts"
+import { Page } from "lume/core/file.ts"
+import { DownloadButton } from "~/_components/download-button.tsx"
 import { CategoryLabel } from "~/_components/label.tsx"
 import { FluentPage } from "~plugins/fluent.ts"
-import { DownloadButton } from "~/_components/download-button.tsx"
 
 export default function (page: Page & FluentPage) {
   const t = page.fluentBundle(page.lang, "_components/landing/SecondaryBlock2")

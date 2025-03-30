@@ -1,10 +1,10 @@
-import { getCategoryData } from "~plugins/category-data.ts"
+import { Data } from "lume/core/file.ts"
 import resources from "~data/resources/mod.ts"
-import { PageData } from "lume/core.ts"
+import { getCategoryData } from "~plugins/category-data.ts"
 
 const categoryData = getCategoryData()
 
-export default function* (_page: PageData) {
+export default function* (_page: Data) {
   for (const id of Object.keys(categoryData)) {
     const filteredResources = resources
       .filter((resource) => resource.category === id)

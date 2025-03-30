@@ -1,6 +1,6 @@
-import type { Plugin } from "lume/core.ts"
-import { LangTag, LanguagesData } from "~types/language.ts"
+import type { Plugin } from "lume/core/site.ts"
 import languagesData from "~data/languages.ts"
+import { LangTag, LanguagesData } from "~types/language.ts"
 
 export default function languageData(): Plugin {
   return (site) => {

@@ -1,18 +1,22 @@
+@use "../_components/footer";
+@use "../_components/label";
+@use "landing";
+
 .post {
   display: flex;
   flex-direction: column;
   background-color: var(--color-background-above);
 
-  @media (min-width: $md-breakpoint) {
+  @media (min-width: footer.$md-breakpoint) {
     display: grid;
     grid-template-columns: 7fr 3fr;
   }
 
-  @media (min-width: $lg-main-breakpoint) {
+  @media (min-width: landing.$lg-main-breakpoint) {
     grid-template-columns: 6fr 3fr;
   }
 
-  @media (min-width: $lg-nav-breakpoint) {
+  @media (min-width: label.$lg-nav-breakpoint) {
     grid-template-columns: 7fr 2fr;
   }
   .content {

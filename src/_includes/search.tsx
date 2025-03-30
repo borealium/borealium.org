@@ -1,14 +1,15 @@
-import LanguageTag from "~/_components/tag.tsx"
+import { Data, Page } from "lume/core/file.ts"
+import type Searcher from "lume/core/searcher.ts"
 import Aside, { SimplePost } from "~/_components/aside.tsx"
-import { script } from "~/_includes/lang-redir.tsx"
-import { Data, PageData } from "lume/core.ts"
+import type { FluentPage } from "~plugins/fluent.ts"
 
 export const layout = "base.tsx"
 
-export default function SearchPage(page: PageData) {
-  const { lang, search } = page
-  const t = page.fluentBundle(lang, "_includes/search")
-  const posts = search.pages(["type=post", `lang=${lang}`], "date=desc").slice(0, 3)
+export default function SearchPage({ page, search }: { page: Page & FluentPage; search: Searcher }) {
+  const { lang } = page
+  const { fluentBundle } = page.data
+  const t = fluentBundle(lang, "_includes/search")
+  const posts = search.pages(`type=post lang=${lang}`, "date=desc", 3)
 
   return (
     <div className="search-page" data-pagefind-ignore>
@@ -32,7 +33,7 @@ export default function SearchPage(page: PageData) {
         t={t}
         category={t("news")}
         posts={posts.map((post) => {
-          const { id, title, category, date, originalUrl } = post as Data<PageData>
+          const { id, title, category, date, originalUrl } = post as Data
 
           return {
             id: id,

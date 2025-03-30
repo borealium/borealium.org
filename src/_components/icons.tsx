@@ -22,13 +22,13 @@ export function CategoryIcon() {
         d="M1 3C1 1.89543 1.89543 1 3 1H9.1265C10.0168 1 10.8612 1.39547 11.4312 2.07945L13.865 5H1V3Z"
         fill="#DDEFF7"
         stroke="#159ED7"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <path
         d="M1 5H20C21.6569 5 23 6.34315 23 8V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V5Z"
         fill="#DDEFF7"
         stroke="#159ED7"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <rect x="4.5" y="8.5" width="5" height="5" stroke="#159ED7" />
       <rect x="14.5" y="8.5" width="5" height="5" rx="2.5" stroke="#159ED7" />

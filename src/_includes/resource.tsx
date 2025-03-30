@@ -1,5 +1,6 @@
 import { FluentBundle } from "@fluent/bundle"
-import { Data, PageData } from "lume/core.ts"
+import { Data } from "lume/core/file.ts"
+import Searcher from "lume/core/searcher.ts"
 import Aside, { SimplePost } from "~/_components/aside.tsx"
 import { DownloadButton } from "~/_components/download-button.tsx"
 import { CategoryLabel } from "~/_components/label.tsx"
@@ -112,11 +113,18 @@ function DownloadLinks(props: { t: TranslateFn; resource: Resource; lang: string
   )
 }
 
-export default function ResourceLayout(page: PageData & ResourceProps & FluentPage) {
-  const { resource, lang, search } = page
-  const t = page.fluentBundle(lang, "_includes/resource")
-  const lang_t = page.fluentBundle(lang, "languages")
-  const category_t = page.fluentBundle(lang, "categories")
+export default function ResourceLayout(
+  { fluentBundle, search, lang, resource }: {
+    page: Data & ResourceProps & FluentPage
+    fluentBundle: (lang: string, path: string) => TranslateFn
+    search: Searcher
+    lang: string
+    resource: Resource
+  },
+) {
+  const t = fluentBundle(lang, "_includes/resource")
+  const lang_t = fluentBundle(lang, "languages")
+  const category_t = fluentBundle(lang, "categories")
   const categories = getCategoryData()
   const languages = getLanguageData()
 
@@ -173,7 +181,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
       ]
   }
 
-  const posts = search.pages(["type=post", `lang=${lang}`], "date=desc").slice(0, 3)
+  const posts = search.pages(`type=post lang=${lang}`, "date=desc", 3)
 
   const name = selectLocale(lang, resource.name)
   const description = selectLocale(lang, resource.description)
@@ -426,7 +434,7 @@ export default function ResourceLayout(page: PageData & ResourceProps & FluentPa
           t={t}
           category={t("news")}
           posts={posts.map((post) => {
-            const { id, title, category, date, originalUrl } = post as Data<PageData>
+            const { id, title, category, date, originalUrl } = post as Data
 
             return {
               id: id,
@@ -447,4 +455,3 @@ res.appendChild(firstClone)
     </>
   )
 }
-

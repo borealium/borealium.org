@@ -1,4 +1,4 @@
-import { parse as tomlParse } from "std/toml/mod.ts"
+import { parse as tomlParse } from "@std/toml"
 import { getLanguageData } from "~plugins/language-data.ts"
 
 const PAHKAT_URL = "https://pahkat.uit.no"

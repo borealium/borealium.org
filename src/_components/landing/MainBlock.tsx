@@ -1,4 +1,4 @@
-import { Page } from "lume/core.ts"
+import { Page } from "lume/core/file.ts"
 import { CategoryLabel } from "~/_components/label.tsx"
 import { script } from "~/_includes/lang-redir.tsx"
 import { FluentPage } from "~plugins/fluent.ts"
@@ -34,7 +34,7 @@ export default function LandingMainBlock(
         <div className="language-group">
           <div id="graph">
             <button id="expand-button" aria-label="Expand graph">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
               </svg>
             </button>
@@ -42,18 +42,21 @@ export default function LandingMainBlock(
         </div>
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="/static/geo/shapes.js"></script>
-        <script src="/static/geo/map.js"></script>        
+        <script src="/static/geo/map.js"></script>
         {script(`
-          window.baseNodes = ${JSON.stringify(
+          window.baseNodes = ${
+          JSON.stringify(
             Object.entries(languages)
               .filter(([code]) => !uiOnly.includes(code))
               .map(([code]) => {
                 return { ...languages[code], code }
               }),
-          )};
+          )
+        };
           createMap();
         `)}
-        {/* {Object.entries(languages)
+        {
+          /* {Object.entries(languages)
           .filter(([code]) => !uiOnly.includes(code))
           .map(([code]) => {
             return (
@@ -63,7 +66,8 @@ export default function LandingMainBlock(
                 href={`/language/${code}`}
               />
             )
-          })} */}
+          })} */
+        }
         {script(`
           const expandButton = document.getElementById('expand-button');
           const graphContainer = document.getElementById('graph');

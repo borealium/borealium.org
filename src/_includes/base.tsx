@@ -1,14 +1,12 @@
-import { PageData } from "lume/core.ts"
+import { Data } from "lume/core/file.ts"
 import { Footer } from "~/_components/footer.tsx"
 import { Navbar } from "~/_components/navbar.tsx"
 import { script } from "~/_includes/lang-redir.tsx"
 import { FluentPage } from "~plugins/fluent.ts"
-import { getLanguageData } from "~plugins/language-data.ts"
 
-export default function BasePage(page: PageData & FluentPage) {
+export default function BasePage(page: Data & FluentPage) {
   const { title, children, url, originalUrl, lang, t } = page
   const lang_t = page.fluentBundle(lang, "languages")
-  const { languages, uiOnly } = getLanguageData()
 
   if (t == null) {
     throw new Error("t not available")

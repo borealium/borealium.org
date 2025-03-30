@@ -1,7 +1,7 @@
-import { parse as tomlParse } from "std/toml/mod.ts"
+import { parse as tomlParse } from "@std/toml"
+import { fluentBundle, message } from "~plugins/fluent.ts"
 import { L10nPath } from "~types/l10n.ts"
 import { LangTag } from "~types/language.ts"
-import { fluentBundle, message } from "~plugins/fluent.ts"
 
 export function getL10NLanguages(resourceLang: string): string[] {
   const tomlContent = Deno.readTextFileSync(`${Deno.cwd()}/resources/${resourceLang}-l10n.toml`)
