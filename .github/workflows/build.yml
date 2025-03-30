@@ -7,7 +7,7 @@ on:
     branches: ["main"]
   schedule:
     # Run every hour to get the latest updates in Páhkat:
-    - cron:  '0 * * * *'
+    - cron: "0 * * * *"
 permissions:
   contents: read
 
@@ -20,7 +20,7 @@ jobs:
 
       - name: Cache Deno
         id: cache-deno
-        uses: actions/cache@v3 
+        uses: actions/cache@v3
         with:
           path: |
             ~/.deno
@@ -39,9 +39,9 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
 
       - name: Setup Deno
-        uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.46.3
+          deno-version: v2.x
 
       - name: Build portal
         run: deno task build
@@ -52,8 +52,8 @@ jobs:
     needs: build
 
     permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
 
     # Deploy to the github-pages environment
     environment:
