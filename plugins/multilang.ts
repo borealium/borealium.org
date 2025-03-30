@@ -1,6 +1,5 @@
 import { type Data, Page } from "lume/core/file.ts"
 import type { Plugin } from "lume/core/site.ts"
-import { log } from "lume/core/utils/log.ts"
 import { getLanguageData } from "~plugins/language-data.ts"
 
 const MULTILANG_GENERATED = Symbol("multilang-generated")
@@ -40,7 +39,6 @@ function preprocessHtml(page: Page, pages: Page[]) {
   if (data[MULTILANG_GENERATED]) {
     return
   }
-  log.warn(`Processing page ${page.src.path}`)
 
   const id: string = data.id?.toString() || page.src.path.slice(1)
 
