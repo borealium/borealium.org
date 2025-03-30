@@ -140,10 +140,6 @@ export default function fluent(userOptions?: Partial<Options>): Plugin {
     )
 
     function preprocessHtml(page: Page) {
-      if (page.data.lang == null) {
-        page.data.lang = "en"
-      }
-
       if (typeof page.data.url !== "string") {
         log.warn("Page had no valid URL")
         return
