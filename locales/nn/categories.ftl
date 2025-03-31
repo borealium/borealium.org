@@ -15,17 +15,14 @@ voices-description = Røyster til bruk i tekst-til-tale-systemer.
 spellers = Stavekontrollar
 spellers-description = Verktøy for å sjekka stavinga av ord.
 speller-engines = Stavekontrollmotorar
-speller-engines-description = Verktøy som får stavekontrollane til å fungera med ulike program og system.
+speller-engines-description = Verktøy som får stavekontrollane til å fungera med ulike program og system. Vanlegvis blir desse tillegga installert automatisk, og berre slike som må installerast manuelt er lista opp nedanfor.
 keyboard-layouts = Tastaturoppsett
 keyboard-layouts-description = Gjer det mogleg å skriva raskt og effektivt på ditt eige språk
 hyphenators = Orddelingsprogram
 hyphenators-description = Orddelingsprogram set inn moglege orddelingspunkt i teksten for deg.
-
 mt = Maskinomsetjing
 mt-description = Omset mellom ulike språk. Verktøya som er med her er ordna etter kjeldespråk, men dei vil ofte kunna omsetja til og frå mange språk.
-
 langlearning = Språklæring
 langlearning-description = Verktøy, appar og ressursar for å hjelpa deg med å læra eit språk.
-
 wordinfl = Ordbøying
 wordinfl-description = Verktøy for å hjelpa deg med å bøya ord, eller for å visa alle formene av eit ord.
