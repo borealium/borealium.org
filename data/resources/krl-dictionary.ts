@@ -11,6 +11,10 @@ const halfLinks = [
     type: LinkType.Normal,
     url: new URL("https://kaino.kotus.fi/kks/"),
   },
+  {
+    type: LinkType.Normal,
+    url: new URL("https://kotus.fi/sanakirjat/karjalan-kielen-sanakirja/"),
+  },
 ]
 
 const resource: Resource = {
