@@ -22,3 +22,4 @@ yi-description = Jiddisch är ett nationellt minoritetsspråk i Sverige, och res
 sma = Sydsamiska
 NO = Norge
 SE = Sverige
+krl = Karelska
