@@ -1,0 +1,7 @@
+[[paths]]
+    reference = "en/krl-resources.ftl"
+    l10n = "{locale}/krl-resources.ftl"
+    locales = [
+        "krl",
+        "fi",
+    ]

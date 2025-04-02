@@ -47,6 +47,11 @@ const languagesData: LanguagesData = {
       coordinates: [-2, 69.7],
       labelPosition: "right",
     },
+    "krl": {
+      autonym: "Karjalan kieli",
+      coordinates: [30, 64],
+      labelPosition: "right",
+    },
     "nb": {
       autonym: "Norsk, bokmål",
     },

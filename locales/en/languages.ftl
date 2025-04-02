@@ -22,3 +22,4 @@ yi-description = Yiddish is an official minority language in Sweden, and the res
 sma = South Sámi
 NO = Norway
 SE = Sweden
+krl = Karelian
