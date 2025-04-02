@@ -50,7 +50,7 @@ const languagesData: LanguagesData = {
     "krl": {
       autonym: "Karjalan kieli",
       coordinates: [30, 64],
-      labelPosition: "right",
+      labelPosition: "bottom",
     },
     "nb": {
       autonym: "Norsk, bokmål",
