@@ -22,3 +22,4 @@ yi-description = Jiddisk er eit offisielt minoritetsspråk i Sverige, og ressurs
 sma = Sørsamisk
 NO = Noreg
 SE = Sverige
+krl = Karelsk
