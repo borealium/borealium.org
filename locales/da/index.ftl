@@ -37,4 +37,5 @@ more-info-keyboards = Tastaturerne i Borealium fungerer på Windows, Mac, iOS, A
 macos = macOS
 windows = Windows
 mobile = Mobil
+github = GitHub
 linux = Linux

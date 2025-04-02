@@ -22,3 +22,4 @@ yi-description = Jiddisch er et officielt minoritetssprog i Sverige, og resurser
 sma = Sydsamisk
 NO = Norge
 SE = Sverige
+krl = Karelsk
