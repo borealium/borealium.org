@@ -156,12 +156,12 @@ function createMap() {
 
   function updateViz() {
     const containerWidth = Math.min(
-      document.body.clientWidth,
-      container.clientWidth
+      document.body.clientWidth | 0,
+      container.clientWidth | 0
     );
     const containerHeight = Math.min(
-      document.body.clientHeight,
-      container.clientHeight
+      document.body.clientHeight | 0,
+      container.clientHeight | 0
     );
 
     // Remove existing ocean background first
@@ -263,7 +263,6 @@ function createMap() {
 
     // Update nodes with new projected coordinates
     const nodes = baseNodes.map((node) => {
-      console.log(node);
       const [x, y] = projection(node.coordinates);
       return {
         id: node.autonym,
@@ -712,7 +711,7 @@ function createMap() {
 
     // Function to update all label-related elements with current scale
     function updateLabelsWithScale(scale = 1) {
-      const containerWidth = container.clientWidth;
+      const containerWidth = container.clientWidth | 0;
       const pixelRatio = window.devicePixelRatio || 1;
 
       // Calculate base font size accounting for pixel density
@@ -775,7 +774,6 @@ function createMap() {
 
     // Update zoom handler to use the new function
     zoom.on("zoom", (event) => {
-      console.log("zoom inner");
       pathGroup.attr("transform", event.transform);
       nodeGroup.attr("transform", event.transform);
       labelGroup.attr("transform", event.transform);
@@ -918,7 +916,6 @@ function createMap() {
 
   // Set up resize observer
   const resizeObserver = new ResizeObserver(() => {
-    console.log("resize");
     updateViz();
   });
 
@@ -938,6 +935,5 @@ function createMap() {
 }
 
 function handleResize() {
-  console.log("handleResize");
   updateViz();
 }

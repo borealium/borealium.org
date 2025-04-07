@@ -147,7 +147,6 @@ export default function BasePage(page: Data & FluentPage) {
             })
           }
 
-          console.log("Search loaded")
           window.pagefind = pagefind
 
           async function attach() {
