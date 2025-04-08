@@ -1,12 +1,11 @@
 import { FluentBundle, FluentResource, FluentVariable } from "@fluent/bundle"
 import { existsSync, walkSync } from "@std/fs"
-import Site, { Plugin } from "lume/core/site.ts"
-import { log } from "lume/core/utils/log.ts"
-import { merge } from "lume/core/utils/object.ts"
-
 import { dirname } from "@std/path"
 import dedent from "dedent"
 import type { Page } from "lume/core/file.ts"
+import Site, { Plugin } from "lume/core/site.ts"
+import { log } from "lume/core/utils/log.ts"
+import { merge } from "lume/core/utils/object.ts"
 import type { Logger } from "lume/deps/log.ts"
 import { relative } from "lume/deps/path.ts"
 import { React } from "lume/deps/react.ts"
@@ -135,7 +134,7 @@ export default function fluent(userOptions?: Partial<Options>): Plugin {
     site.data(
       "fluentBundle",
       (lang: string, key: string) => {
-        return _t(site, key, fluentBundle.bind(null, key, lang))
+        return _t(key, fluentBundle.bind(null, key, lang))
       },
     )
 
@@ -148,7 +147,7 @@ export default function fluent(userOptions?: Partial<Options>): Plugin {
       const src = page.src.entry?.src ?? `${Deno.cwd()}/src`
       const ftlResKey = relative(`${Deno.cwd()}/src`, dirname(src ?? ""))
 
-      const t = _t(site, page.data.url, fluentBundle.bind(null, ftlResKey, page.data.lang))
+      const t = _t(page.data.url, fluentBundle.bind(null, ftlResKey, page.data.lang ?? "en"))
 
       Object.assign(page.data, {
         t,
@@ -205,7 +204,7 @@ export function message(
   }
 }
 
-function _t(site: Site, url: string, bundleFn: () => FluentBundle) {
+function _t(url: string, bundleFn: () => FluentBundle) {
   const logger = log
   const bundle = bundleFn()
 
