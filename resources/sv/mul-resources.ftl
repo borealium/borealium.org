@@ -22,20 +22,32 @@ divvun-manager-links-1 = Divvun Manager
 divvunspell-libreoffice = DivvunSpell för LibreOffice
 divvunspell-libreoffice-description = Ett tillägg för LibreOffice som ger tillgång till Divvuns stavningskontroller.
 divvunspell-libreoffice-more-info =
-  Använd Divvun Manager för att installera denna utvidgningen på Windows. Den blir installerad automatiskt om du redan har LibreOffice på din dator.
-  
-  Installation på macOS
-  ---------------------
-  
-  - Installera alla språk du behöver med Divvun Manager
-  - Ladda ner .oxt-filen här nedanför
-  - Lägg till den i Utvidgningar i LibreOffice
-  - Starta om LibreOffice
-  
-  Nu kan du använda alla stavningskontrollerna från Divvun Manager i LibreOffice
+    Använd Divvun Manager för att installera denna utvidgningen på Windows. Den blir installerad automatiskt om du redan har LibreOffice på din dator.
+    
+    Installation på macOS
+    ---------------------
+    
+    - Installera alla språk du behöver med Divvun Manager
+    - Ladda ner .oxt-filen här nedanför
+    - Lägg till den i Utvidgningar i LibreOffice
+    - Starta om LibreOffice
+    
+    Nu kan du använda alla stavningskontrollerna från Divvun Manager i LibreOffice
 divvunspell-libreoffice-links-0 = .oxt-fil
 gramdivvun = GramDivvun
 gramdivvun-description = Divvun grammatikkontroller
 gramdivvun-more-info = GramDivvun är ett grammatikkontrolltillägg för Microsoft Word och Google Docs som erbjuder grammatikkontroll för flera olika språk.
 gramdivvun-links-0 = MS Office
 gramdivvun-links-1 = Google Docs
+webdict = Webdict från Giellatekno
+webdict-description = En enkel och snabb nätordbok, som också fungerar utan nätanslutning.
+webdict-more-info =
+    En samling med många ordböcker i ett enkelt og lättanvänt användargränssnitt.
+    Ingen morfologisk analys, inga länkar till externa resurser. Fungerar utan nätanslutning.
+webdict-links-0 = Webdict
+mul-newamigos = New Amigos
+mul-newamigos-description = Lär språk direkt av en modersmålstalare.
+mul-newamigos-more-info = New Amigos kan spelas ensam, med familj och vänner, eller samman med en lärare. Appen erbjuder också en språkkafé, där upp till fyra deltagare kan mötas vid ett virtuellt bord. Appen har också en chatfunktion med automatisk översättning till och från samiska språk.
+mul-newamigos-links-0 = New Amigos
+mul-newamigos-links-1 = New Amigos
+mul-newamigos-links-2 = New Amigos-nätsida
