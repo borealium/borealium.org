@@ -33,11 +33,14 @@ export default function LandingMainBlock(
         </h3>
         <div className="language-group">
           <div id="graph">
-            <button id="expand-button" aria-label="Expand graph">
+            <button id="expand-button" aria-label="Expand graph" type="button">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
               </svg>
             </button>
+            <noscript>
+              This graph requires JavaScript to be enabled.
+            </noscript>
           </div>
         </div>
         <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -53,7 +56,11 @@ export default function LandingMainBlock(
               }),
           )
         };
-          createMap();
+          if (typeof createMap === 'function') {
+            createMap();
+          } else {
+            document.getElementById('graph').innerHTML = '<p>This graph requires JavaScript to be enabled.</p>';
+          }
         `)}
         {
           /* {Object.entries(languages)
