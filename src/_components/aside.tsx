@@ -1,5 +1,5 @@
 import { TranslateFn } from "~plugins/fluent.ts"
-import { CategoryLabel, TagLabel } from "./label.tsx"
+import { CategoryLabel } from "./label.tsx"
 
 export type SimplePost = {
   date: string
@@ -24,7 +24,7 @@ export default function Aside(props: {
 
 function AsideBlock(props: { post: SimplePost; t: TranslateFn }) {
   return (
-    <div className="aside-block">
+    <div className="aside-block" data-pagefind-ignore>
       <div className="aside-block-text">
         <h3>
           <img
