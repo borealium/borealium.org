@@ -22,13 +22,12 @@ initFluent()
 
 site.loadData([".yaml", ".yml"])
 
-site.use(esbuild())
 site.use(slugifyUrls())
 site.use(favicon())
 site.use(excerpt())
 site.use(search())
 site.use(jsx())
-site.use(mdx({}))
+site.use(mdx())
 site.use(sass())
 site.use(nav())
 site.use(multilanguage())
@@ -40,12 +39,7 @@ site.use(pagefind({
   },
   ui: false,
 }))
-// console.log(Deno.cwd())
-// site.use(islands({
-//   entryPoints: ["islands/app.tsx"],
-//   outdir: "_islands",
-//   absWorkingDir: Deno.cwd(),
-// }))
+site.use(esbuild())
 
 site.copy("_static", "static")
 

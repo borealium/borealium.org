@@ -12,19 +12,15 @@ type PageProps = {
 
 export const layout = "base.tsx"
 
-export default function PageLayout({ page, search }: { page: Page & FluentPage; search: Searcher }) {
-  const { title, t } = page.data
-  const { content, lang } = page
+export default function PageLayout({ page, search, children }: { page: Page & FluentPage; search: Searcher; children: React.ReactNode }) {
+  const { t, content, lang } = page.data
   const posts = search.pages(`type=post lang=${lang}`, "date=desc", 3)
-
+  
   return (
     <article className="post" data-pagefind-filter={`type:post`}>
       <div className="content">
-        <header>
-          <h1>{title}</h1>
-        </header>
         <section data-toc-context>
-          {content}
+          {children}
         </section>
       </div>
       <Aside
