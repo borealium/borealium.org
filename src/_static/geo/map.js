@@ -15,7 +15,7 @@ function createMap() {
 
   // Calculate geographic bounds (same as before)
   let allCoords = [];
-  SE.features[0].geometry.coordinates.forEach((polygon) => {
+  shapes.SE.features[0].geometry.coordinates.forEach((polygon) => {
     polygon[0].forEach((coord) => {
       allCoords.push(coord);
     });
@@ -31,19 +31,19 @@ function createMap() {
 
   // At the top level, create a countries array
   const countries = [
-    { id: "SE", data: SE },
-    { id: "NO", data: NO },
-    { id: "FO", data: FO }, // Faroe Islands
-    { id: "DK", data: DK }, // Denmark
-    { id: "GL", data: GL }, // Greenland
-    { id: "RU", data: RU }, // Russia
-    { id: "FI", data: FI },
-    { id: "IS", data: IS }, // Iceland
+    { id: "SE", data: shapes.SE },
+    { id: "NO", data: shapes.NO },
+    { id: "FO", data: shapes.FO }, // Faroe Islands
+    { id: "DK", data: shapes.DK }, // Denmark
+    { id: "GL", data: shapes.GL }, // Greenland
+    { id: "RU", data: shapes.RU }, // Russia
+    { id: "FI", data: shapes.FI },
+    { id: "IS", data: shapes.IS }, // Iceland
   ];
 
   // Offset and scale down Greenland's coordinates
-  GL.features[0].geometry.coordinates = GL.features[0].geometry.coordinates.map(
-    (polygon) => {
+  shapes.GL.features[0].geometry.coordinates =
+    shapes.GL.features[0].geometry.coordinates.map((polygon) => {
       return polygon.map((ring) => {
         // Find center point of the polygon
         const centerLon =
@@ -60,12 +60,11 @@ function createMap() {
           return [scaledLon + 35, scaledLat];
         });
       });
-    }
-  );
+    });
 
   // Offset and scale up Faroe Islands' coordinates
-  FO.features[0].geometry.coordinates = FO.features[0].geometry.coordinates.map(
-    (polygon) => {
+  shapes.FO.features[0].geometry.coordinates =
+    shapes.FO.features[0].geometry.coordinates.map((polygon) => {
       return polygon.map((ring) => {
         const centerLon =
           ring.reduce((sum, coord) => sum + coord[0], 0) / ring.length;
@@ -80,12 +79,11 @@ function createMap() {
           return [scaledLon + 6, scaledLat - 2];
         });
       });
-    }
-  );
+    });
 
   // Offset and scale down Iceland's coordinates
-  IS.features[0].geometry.coordinates = IS.features[0].geometry.coordinates.map(
-    (polygon) => {
+  shapes.IS.features[0].geometry.coordinates =
+    shapes.IS.features[0].geometry.coordinates.map((polygon) => {
       return polygon.map((ring) => {
         const centerLon =
           ring.reduce((sum, coord) => sum + coord[0], 0) / ring.length;
@@ -100,8 +98,7 @@ function createMap() {
           return [scaledLon + 15, scaledLat - 1.4];
         });
       });
-    }
-  );
+    });
 
   // At the top level, define our region bounds
   const NORDIC_BOUNDS = {

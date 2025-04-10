@@ -128,3 +128,12 @@ kbd {
   padding: 0.2em 0.4em;
   margin: 0 0.2em;
 }
+
+/* No-JS custom element fallbacks */
+brl-language-map .fallback {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0px 32px;
+}

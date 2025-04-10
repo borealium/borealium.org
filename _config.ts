@@ -3,6 +3,7 @@ import jsx from "lume/plugins/jsx.ts"
 import mdx from "lume/plugins/mdx.ts"
 import sass from "lume/plugins/sass.ts"
 // import sitemap from "lume/plugins/sitemap.ts"
+import esbuild from "lume/plugins/esbuild.ts"
 import favicon from "lume/plugins/favicon.ts"
 import nav from "lume/plugins/nav.ts"
 import pagefind from "lume/plugins/pagefind.ts"
@@ -21,6 +22,7 @@ initFluent()
 
 site.loadData([".yaml", ".yml"])
 
+site.use(esbuild())
 site.use(slugifyUrls())
 site.use(favicon())
 site.use(excerpt())
@@ -38,6 +40,12 @@ site.use(pagefind({
   },
   ui: false,
 }))
+// console.log(Deno.cwd())
+// site.use(islands({
+//   entryPoints: ["islands/app.tsx"],
+//   outdir: "_islands",
+//   absWorkingDir: Deno.cwd(),
+// }))
 
 site.copy("_static", "static")
 
