@@ -7,7 +7,7 @@ import { CategoryLabel } from "~/_components/label.tsx"
 import LanguageTag from "~/_components/tag.tsx"
 import { script } from "~/_includes/lang-redir.tsx"
 import { Markdown } from "~/_includes/markdown.ts"
-import { getCategoryData } from "~plugins/category-data.ts"
+import { getCategoryDataForUI } from "~plugins/category-data.ts"
 import { FluentPage, TranslateFn } from "~plugins/fluent.ts"
 import { autonym, getLanguageData, selectLocale } from "~plugins/language-data.ts"
 import { LinkType, Resource, ResourceType } from "~types/resource.ts"
@@ -125,60 +125,60 @@ export default function ResourceLayout(
   const t = fluentBundle(lang, "_includes/resource")
   const lang_t = fluentBundle(lang, "languages")
   const category_t = fluentBundle(lang, "categories")
-  const categories = getCategoryData()
+  const categories = getCategoryDataForUI()
   const languages = getLanguageData()
 
   if (resource.category === "voices") {
-    resource.documentationUrl = "/doc/tts/",
-      resource.integrations = [
-        {
-          type: "tts",
-          voices: [
-            {
-              language: "se",
-              name: "Biret",
-              gender: "female",
-              apiUrl: "https://api-giellalt.uit.no/tts/se/biret",
-              sampleText: "Bures, mu namma lea Biret. Mun lean Divvuma davvisámi dahkujietna.",
-            },
-            {
-              language: "se",
-              name: "Máhtte",
-              gender: "male",
-              apiUrl: "https://api-giellalt.uit.no/tts/se/mahtte",
-              sampleText: "Bures, mu namma lea Máhtte. Mun lean Divvuma davvisámi dahkujietna.",
-            },
-            {
-              language: "smj",
-              name: "Nihkol",
-              gender: "male",
-              apiUrl: "https://api-giellalt.uit.no/tts/smj/nihkol",
-              sampleText: "Buoris, muv namma l Nihkol. Mån lav Divvuna julevsáme dahkojiedna.",
-            },
-            {
-              language: "smj",
-              name: "Ábmut",
-              gender: "male",
-              apiUrl: "https://api-giellalt.uit.no/tts/smj/abmut",
-              sampleText: "Buoris, muv namma l Ábmut. Mån lav Divvuna julevsáme dahkojiedna.",
-            },
-            {
-              language: "smj",
-              name: "Siggá",
-              gender: "female",
-              apiUrl: "https://api-giellalt.uit.no/tts/smj/sigga",
-              sampleText: "Buoris, muv namma l Siggá. Mån lav Divvuna julevsáme dahkojiedna.",
-            },
-            {
-              language: "sma",
-              name: "Aanna",
-              gender: "female",
-              apiUrl: "https://api-giellalt.uit.no/tts/sma/aanna",
-              sampleText: "Buerie biejjie, mov nomme Aanna. Manne leam Divvunen åarjelsaemien dorjeldhgïele.",
-            },
-          ],
-        },
-      ]
+    resource.documentationUrl = "/doc/tts/"
+    resource.integrations = [
+      {
+        type: "tts",
+        voices: [
+          {
+            language: "se",
+            name: "Biret",
+            gender: "female",
+            apiUrl: "https://api-giellalt.uit.no/tts/se/biret",
+            sampleText: "Bures, mu namma lea Biret. Mun lean Divvuma davvisámi dahkujietna.",
+          },
+          {
+            language: "se",
+            name: "Máhtte",
+            gender: "male",
+            apiUrl: "https://api-giellalt.uit.no/tts/se/mahtte",
+            sampleText: "Bures, mu namma lea Máhtte. Mun lean Divvuma davvisámi dahkujietna.",
+          },
+          {
+            language: "smj",
+            name: "Nihkol",
+            gender: "male",
+            apiUrl: "https://api-giellalt.uit.no/tts/smj/nihkol",
+            sampleText: "Buoris, muv namma l Nihkol. Mån lav Divvuna julevsáme dahkojiedna.",
+          },
+          {
+            language: "smj",
+            name: "Ábmut",
+            gender: "male",
+            apiUrl: "https://api-giellalt.uit.no/tts/smj/abmut",
+            sampleText: "Buoris, muv namma l Ábmut. Mån lav Divvuna julevsáme dahkojiedna.",
+          },
+          {
+            language: "smj",
+            name: "Siggá",
+            gender: "female",
+            apiUrl: "https://api-giellalt.uit.no/tts/smj/sigga",
+            sampleText: "Buoris, muv namma l Siggá. Mån lav Divvuna julevsáme dahkojiedna.",
+          },
+          {
+            language: "sma",
+            name: "Aanna",
+            gender: "female",
+            apiUrl: "https://api-giellalt.uit.no/tts/sma/aanna",
+            sampleText: "Buerie biejjie, mov nomme Aanna. Manne leam Divvunen åarjelsaemien dorjeldhgïele.",
+          },
+        ],
+      },
+    ]
   }
 
   const posts = search.pages(`type=post lang=${lang}`, "date=desc", 3)
@@ -196,6 +196,47 @@ export default function ResourceLayout(
         ttsVoice.language === resource.languages[0] && ttsVoice.gender === resource.id.split("-").at(-1)
       )
     ) ?? []
+
+  const sortedCategories = Object.entries(categories)
+    .sort(([keyA], [keyB]) => {
+      const a = category_t(keyA).toLowerCase()
+      const b = category_t(keyB).toLowerCase()
+      return a.localeCompare(b, lang)
+    })
+
+  const categoryNodes = sortedCategories
+    .map(([key, value]) => {
+      return (
+        <dd key={key}>
+          <a className="tag tag-category" href={`/category/${key}`}>{selectLocale(lang, value)?.name}</a>
+        </dd>
+      )
+    })
+
+  const sortedLanguages = Object.entries(languages.languages)
+    .filter(([key]) => !languages.uiOnly.includes(key))
+  sortedLanguages.sort(([keyA], [keyB]) => {
+    const a = autonym(keyA).toLowerCase()
+    const b = autonym(keyB).toLowerCase()
+    return a.localeCompare(b, lang)
+  })
+
+  const languageNodes = sortedLanguages
+    .map(
+      ([key]) => {
+        return (
+          <dd key={key}>
+            <a
+              className="tag tag-language"
+              title={lang_t(key)}
+              href={`/language/${key}`}
+            >
+              {autonym(key)}
+            </a>
+          </dd>
+        )
+      },
+    )
 
   return (
     <>
@@ -397,35 +438,13 @@ export default function ResourceLayout(
                 <dt>
                   <img style={{ height: "16px" }} src={"/static/images/tag-category.svg"} alt="" /> {t("categories")}
                 </dt>
-                {Object.entries(categories).map(([key, value]) => {
-                  return (
-                    <dd key={key}>
-                      <a className="tag tag-category" href={`/category/${key}`}>{selectLocale(lang, value)?.name}</a>
-                    </dd>
-                  )
-                })}
+                {categoryNodes}
               </dl>
               <dl>
                 <dt>
                   <img style={{ height: "16px" }} src={"/static/images/tag-language.svg"} alt="" /> {t("languages")}
                 </dt>
-                {Object.entries(languages.languages)
-                  .filter(([key]) => !languages.uiOnly.includes(key))
-                  .map(
-                    ([key]) => {
-                      return (
-                        <dd key={key}>
-                          <a
-                            className="tag tag-language"
-                            title={lang_t(key)}
-                            href={`/language/${key}`}
-                          >
-                            {autonym(key)}
-                          </a>
-                        </dd>
-                      )
-                    },
-                  )}
+                {languageNodes}
               </dl>
             </div>
           </div>

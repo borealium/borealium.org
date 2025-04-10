@@ -53,3 +53,8 @@ export default function categoryData(): Plugin {
 export function getCategoryData(): CategoriesData {
   return categoriesData as CategoriesData
 }
+
+export function getCategoryDataForUI(): CategoriesData {
+  const data = categoriesData as CategoriesData
+  return Object.fromEntries(Object.entries(data).filter(([key, _]) => key !== "package-management" && key !== "speller-engines"))
+}
