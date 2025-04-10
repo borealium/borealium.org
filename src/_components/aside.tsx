@@ -25,7 +25,7 @@ export default function Aside(props: {
 function AsideBlock(props: { post: SimplePost; t: TranslateFn }) {
   return (
     <div className="aside-block" data-pagefind-ignore>
-      <div className="aside-block-text">
+      <div className="aside-block-text" dir="auto">
         <h3>
           <img
             style={{ height: "16px", float: "left", marginTop: "1px", marginRight: "6px" }}

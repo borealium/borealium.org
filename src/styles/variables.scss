@@ -5,8 +5,8 @@
 }
 
 :root {
-  --font-display: "Inter", "Noto Sans", sans-serif;
-  --font-text: "Noto Sans", sans-serif;
+  --font-display: "Inter", "Noto Sans", "Noto Sans Hebrew", sans-serif;
+  --font-text: "Noto Sans", "Noto Sans Hebrew", sans-serif;
 
   --font-size-xs: #{relrem(12px)};
   --line-height-xs: #{relrem(20px)};
