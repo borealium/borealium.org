@@ -7,7 +7,6 @@ export const categoriesList: CategoryId[] = [
   "text-to-speech",
   "speech-recognition",
   "korp",
-  "voices",
   "hyphenators",
   "mt",
   "langlearning",

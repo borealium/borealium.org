@@ -128,7 +128,7 @@ export default function ResourceLayout(
   const categories = getCategoryDataForUI()
   const languages = getLanguageData()
 
-  if (resource.category === "voices") {
+  if (resource.id.startsWith("voice-")) {
     resource.documentationUrl = "/doc/tts/"
     resource.integrations = [
       {
@@ -240,7 +240,7 @@ export default function ResourceLayout(
 
   return (
     <>
-      {resource.category === "voices" && (
+      {resource.id.startsWith("voice-") && (
         <template id="tts-integration">
           <style>
             {`
@@ -465,7 +465,7 @@ export default function ResourceLayout(
           })}
         />
       </div>
-      {resource.category === "voices" && script(`
+      {resource.id.startsWith("voice-") && script(`
 const el = document.querySelector("#tts-integration");
 const firstClone = el.content.cloneNode(true);
 const res = document.querySelector(".content")
