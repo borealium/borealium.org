@@ -78,8 +78,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-          path: _site
-
+      - name: Display structure of downloaded files
+        run: ls -R
       - name: Configure AWS CLI
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.DO_SPACES_KEY }}
