@@ -19,6 +19,7 @@ type LanguageIndexProps = {
 
 export default function LanguageIndexLayout(
   {
+    page,
     fluentBundle,
     resources,
     lang,
@@ -28,6 +29,8 @@ export default function LanguageIndexLayout(
 ) {
   const lang_t = fluentBundle(lang, "languages")
   const category_t = fluentBundle(lang, "categories")
+
+  page.title = lang_t(languageId)
 
   const res_by_category: Record<CategoryId, [Resource]> = resources.reduce((acc, resource) => {
     if (resource.category in acc) {

@@ -38,7 +38,7 @@ dm-button-title = Divvun Manager
 dm-button-description = Windowisnie jïh macOS:sne jåhta
 dk-button-title = Båaloebuertieh
 dk-button-description = iOS:asse jïh Androidese
-website-copyright = Copyright Uit Nöörjen arktihke universiteete
+website-copyright = Copyright © { $year } UiT Nöörjen arktihke universiteete
 read-documentation = Vihtiestimmie
 more-info-keyboards =
     Jeenemes gïeli båaloebuertieh leah  GiellaLT-infrastruktuvrine dorjeldihkie, mij rïhpes

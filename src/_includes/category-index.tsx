@@ -19,13 +19,15 @@ type CategoryIndexProps = {
 }
 
 export default function CategoryIndexLayout(
-  { search, t, lang, category, categoryId, resources }: {
+  { page, search, t, lang, category, categoryId, resources }: {
     page: Page & FluentPage
     search: Searcher
   } & CategoryIndexProps,
 ) {
   const posts = search.pages(`type=post lang=${lang}`, "date=desc", 3)
   const cat = selectLocale(lang, category) ?? category["en"]
+
+  page.title = cat.name
 
   return (
     <div
