@@ -11,7 +11,7 @@ export default function LandingMainBlock(page: Page & FluentPage) {
 
   return (
     <>
-      <script src="/client/language-map.js" defer></script>
+      <script src="https://cdn.borealium.org/client/language-map.js" defer></script>
       <div className="first-cell">
         <div className="text-group">
           <CategoryLabel category={t("welcome")} />
