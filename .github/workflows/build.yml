@@ -88,8 +88,8 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.DO_SPACES_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.DO_SPACES_SECRET }}
-          AWS_DEFAULT_REGION: aws3
-          AWS_ENDPOINT: https://aws3.digitaloceanspaces.com
+          AWS_DEFAULT_REGION: ams3
+          AWS_ENDPOINT: https://ams3.digitaloceanspaces.com
         run: |
           aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
           aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
@@ -100,7 +100,7 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.DO_SPACES_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.DO_SPACES_SECRET }}
-          AWS_DEFAULT_REGION: aws3
-          AWS_ENDPOINT: https://aws3.digitaloceanspaces.com
+          AWS_DEFAULT_REGION: ams3
+          AWS_ENDPOINT: https://ams3.digitaloceanspaces.com
         run: |
           aws s3 sync _site/client s3://${{ secrets.DO_SPACES_BUCKET }} --endpoint-url $AWS_ENDPOINT
