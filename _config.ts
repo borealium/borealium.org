@@ -14,7 +14,6 @@ import excerpt from "~plugins/excerpt.ts"
 import fluent, { init as initFluent } from "~plugins/fluent.ts"
 import multilanguage from "~plugins/multilang.ts"
 import outline from "~plugins/outline.ts"
-import sri from "~plugins/sri.ts"
 import title from "~plugins/title.ts"
 
 const site = lume({
@@ -41,7 +40,7 @@ site.use(multilanguage())
 site.use(fluent())
 site.use(outline())
 site.use(title())
-site.use(sri())
+// site.use(sri())
 site.use(pagefind({
   indexing: {
     verbose: false,
