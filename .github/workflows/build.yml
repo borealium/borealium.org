@@ -80,9 +80,10 @@ jobs:
           name: github-pages
       - name: Extract artifact
         run: |
+          mkdir -p _site
           tar -xf artifact.tar -C _site
       - name: Display structure of downloaded files
-        run: ls -R
+        run: ls -R _site
       - name: Configure AWS CLI
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.DO_SPACES_KEY }}
