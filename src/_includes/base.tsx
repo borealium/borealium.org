@@ -23,7 +23,11 @@ export default function BasePage(page: Data & FluentPage) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+Hebrew:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <link
+          data-no-sri
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+Hebrew:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet"
+        />
         <link rel="stylesheet" href="/styles/index.css" />
         <script defer data-domain="borealium.org" src="https://plausible.io/js/script.js"></script>
         {script(`
