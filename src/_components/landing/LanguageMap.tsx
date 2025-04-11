@@ -43,18 +43,20 @@ export default function LanguageMap({ page }: { page: Page & FluentPage }) {
           )
         }`}
       >
-        <noscript className="fallback">
-          {Object.entries(languages)
-            .filter(([code]) => !uiOnly.includes(code))
-            .map(([code]) => {
-              return (
-                <DownloadButton
-                  title={autonym(code)}
-                  tooltip={lang_t(code)}
-                  href={`/language/${code}`}
-                />
-              )
-            })}
+        <noscript>
+          <div className="fallback">
+            {Object.entries(languages)
+              .filter(([code]) => !uiOnly.includes(code))
+              .map(([code]) => {
+                return (
+                  <DownloadButton
+                    title={autonym(code)}
+                    tooltip={lang_t(code)}
+                    href={`/language/${code}`}
+                  />
+                )
+              })}
+          </div>
         </noscript>
       </brl-language-map>
       {script(`
@@ -62,10 +64,7 @@ export default function LanguageMap({ page }: { page: Page & FluentPage }) {
           if (!customElements.get("brl-language-map")) {
             const node = document.querySelector("brl-language-map .fallback");
             if (node) {
-              const div = document.createElement("div");
-              div.className = node.className;
-              div.innerHTML = node.innerHTML;
-              node.parentNode.replaceChild(div, node);
+              node.parentNode.parentNode.replaceChild(div, node.parentNode);
             }
           }
         })
