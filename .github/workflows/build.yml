@@ -80,7 +80,7 @@ jobs:
           name: github-pages
       - name: Extract artifact
         run: |
-          tar -xf artifact.tar
+          tar -xf artifact.tar -C _site
       - name: Display structure of downloaded files
         run: ls -R
       - name: Configure AWS CLI
