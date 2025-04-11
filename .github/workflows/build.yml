@@ -103,4 +103,4 @@ jobs:
           AWS_DEFAULT_REGION: ams3
           AWS_ENDPOINT: https://ams3.digitaloceanspaces.com
         run: |
-          aws s3 sync _site/client s3://${{ secrets.DO_SPACES_BUCKET }} --endpoint-url $AWS_ENDPOINT
+          aws s3 sync _site/client s3://borealium --endpoint-url $AWS_ENDPOINT
