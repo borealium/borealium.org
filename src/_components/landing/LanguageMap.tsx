@@ -14,7 +14,7 @@ export default function LanguageMap({ page }: { page: Page & FluentPage }) {
         Object.entries(languages)
           .filter(([code]) => !uiOnly.includes(code))
           .map(([code]) => {
-            return { ...languages[code], code };
+            return { ...languages[code], code, title: lang_t(code) };
           })
       )}`}
     >
