@@ -81,11 +81,11 @@ $lg-breakpoint: 1280px;
       min-width: 55px;
 
       @media (min-width: $nav-md) {
-        margin-left: 0.5rem;
+        margin-inline-start: 0.5rem;
       }
 
       @media (min-width: $lg-breakpoint) {
-        margin-left: 0.5rem;
+        margin-inline-start: 0.5rem;
       }
 
       @media (max-width: 450px) {
