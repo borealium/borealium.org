@@ -108,7 +108,7 @@ const languagesData: LanguagesData = {
       autonym: "Svenska",
     },
     "yi": {
-      autonym: "Yiddisch",
+      autonym: "אידיש",
       coordinates: [14.5, 58],
       labelPosition: "bottom",
     },
