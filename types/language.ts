@@ -8,7 +8,8 @@ export type LanguagesData = {
   languages: Record<LanguageId, LanguageData>
   fallbacks: Record<LangTag, LangTag[]>
   uiOnly: LangTag[]
-  excludeFromUi: LangTag[]
+  websiteLanguages: LangTag[]
+  hidden: LangTag[]
 }
 
 export type LanguageData = {

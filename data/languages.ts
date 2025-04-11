@@ -133,7 +133,24 @@ const languagesData: LanguagesData = {
     "yi": ["sv", "en"],
   },
   uiOnly: ["da", "en", "fi", "nb", "nn", "sv"],
-  excludeFromUi: ["fkv", "krl", "rom", "sjd", "sje", "sju", "sma-NO", "sma-SE", "smj-NO", "smj-SE", "smn", "yi"],
+  websiteLanguages: [
+    "da",
+    "en",
+    "fi",
+    "fit",
+    "fo",
+    "is",
+    "kl",
+    "nb",
+    "nn",
+    "se",
+    "sma",
+    "smj",
+    "sms",
+    "sv",
+    "yi",
+  ],
+  hidden: ["yi"],
 }
 
 export default languagesData

@@ -48,7 +48,7 @@ function preprocessHtml(page: Page, pages: Page[]) {
 
   const pageLanguages: string[] = []
   Object.entries(languagesData.languages)
-    .filter(([x]) => !languagesData.excludeFromUi.includes(x))
+    .filter(([x]) => languagesData.websiteLanguages.includes(x))
     .forEach(([langId, langData]) => {
       if (langData.regions != null) {
         langData.regions.forEach((regionId) => {

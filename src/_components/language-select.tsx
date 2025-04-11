@@ -1,7 +1,7 @@
-import { MenuItem } from "~/_components/menu-item.tsx"
-import { autonym, getLanguageData, selectLocale } from "~plugins/language-data.ts"
 import { TranslateIcon } from "~/_components/icons.tsx"
+import { MenuItem } from "~/_components/menu-item.tsx"
 import { TranslateFn } from "~plugins/fluent.ts"
+import { autonym, getLanguageData, selectLocale } from "~plugins/language-data.ts"
 
 const languagesData = getLanguageData()
 
@@ -18,7 +18,8 @@ export function LanguageSelect(props: { lang: string; url: string; lang_t: Trans
       </div>
       <ul className="list">
         {Object.entries(languagesData.languages)
-          .filter(([code]) => !languagesData.excludeFromUi.includes(code))
+          .filter(([code]) => languagesData.websiteLanguages.includes(code))
+          .filter(([code]) => !languagesData.hidden.includes(code))
           .map(([code, data]) => {
             if (data.regions != null) {
               return data.regions.map((regionCode) => {
