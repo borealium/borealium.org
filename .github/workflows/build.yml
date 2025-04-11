@@ -78,6 +78,9 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
+      - name: Extract artifact
+        run: |
+          tar -xf artifact.tar
       - name: Display structure of downloaded files
         run: ls -R
       - name: Configure AWS CLI
