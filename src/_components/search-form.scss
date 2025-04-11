@@ -1,6 +1,7 @@
 .search {
   position: relative;
   padding-left: 1rem;
+  padding-right: 1rem;
   width: 100%;
 
   // These two deal with a gradient overlapping bug.
@@ -51,7 +52,8 @@
     flex-direction: column;
     justify-content: center;
     background-color: var(--color-text-secondary);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    box-shadow:
+      rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
       rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
     .result {
