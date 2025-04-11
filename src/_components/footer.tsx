@@ -1,4 +1,4 @@
-import { TranslateFn } from "~plugins/fluent.ts"
+import { TranslateFn } from "~plugins/fluent.ts";
 
 type LinkGroupType = {
   id: string
@@ -47,7 +47,7 @@ export function Footer(props: { t: TranslateFn }) {
     <footer className="footer">
       <div>
         <FullLogo />
-        <p className="copyright">{props.t("website-copyright", { year: currentYear })}</p>
+        <p className="copyright">{props.t("website-copyright", { args: { year: currentYear } })}</p>
       </div>
       <div className="footer-content">
         <div className="links">

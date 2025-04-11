@@ -349,6 +349,7 @@ class LanguageMap extends HTMLElement {
         const [x, y] = projection(node.coordinates);
         return {
           id: node.autonym,
+          title: node.title,
           url: "/language/" + node.code,
           x,
           y,
@@ -385,7 +386,6 @@ class LanguageMap extends HTMLElement {
 
       const centroids = nodes.map((d, i) => {
         const cell = voronoi.renderCell(i);
-        console.log(d, i, cell);
         const path = document.createElementNS(
           "http://www.w3.org/2000/svg",
           "path"
@@ -618,6 +618,11 @@ class LanguageMap extends HTMLElement {
           event.stopPropagation();
           window.location.href = d.node.url;
         });
+        
+      labelGroup
+        .selectAll("rect.label-bg")
+        .append("svg:title")
+        .text((d) => d.node.title);
 
       // Create the labels
       const labels = labelGroup

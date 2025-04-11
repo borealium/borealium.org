@@ -114,7 +114,7 @@ function DownloadLinks(props: { t: TranslateFn; resource: Resource; lang: string
 }
 
 export default function ResourceLayout(
-  { fluentBundle, search, lang, resource }: {
+  { page, fluentBundle, search, lang, resource }: {
     page: Data & ResourceProps & FluentPage
     fluentBundle: (lang: string, path: string) => TranslateFn
     search: Searcher
@@ -184,6 +184,7 @@ export default function ResourceLayout(
   const posts = search.pages(`type=post lang=${lang}`, "date=desc", 3)
 
   const name = selectLocale(lang, resource.name)
+  page.title = name
   const description = selectLocale(lang, resource.description)
   const moreInfo = resource.moreInfo != null ? selectLocale(lang, resource.moreInfo) : null
   const isPahkat = resource.type === ResourceType.Pahkat
@@ -201,7 +202,7 @@ export default function ResourceLayout(
     .sort(([keyA], [keyB]) => {
       const a = category_t(keyA).toLowerCase()
       const b = category_t(keyB).toLowerCase()
-      return a.localeCompare(b, lang)
+      return a.localeCompare(b, lang === "en" ? "en" : "nb")
     })
 
   const categoryNodes = sortedCategories
@@ -218,7 +219,7 @@ export default function ResourceLayout(
   sortedLanguages.sort(([keyA], [keyB]) => {
     const a = autonym(keyA).toLowerCase()
     const b = autonym(keyB).toLowerCase()
-    return a.localeCompare(b, lang)
+    return a.localeCompare(b, lang === "en" ? "en" : "nb")
   })
 
   const languageNodes = sortedLanguages
