@@ -4,6 +4,7 @@ import { decode as decodeCbor } from "npm:cbor2"
 class LanguageMap extends HTMLElement {
   shapes: any
   #cleanup?: () => void
+  #observer?: MutationObserver
 
   constructor() {
     super()
@@ -56,6 +57,33 @@ class LanguageMap extends HTMLElement {
         width: 24px;
         height: 24px;
       }
+      
+      .language-button {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        border: none;
+        cursor: pointer;
+        z-index: 10001;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+
+      .language-button:hover {
+        background: #f0f0f0;
+      }
+
+      .language-button svg {
+        width: 24px;
+        height: 24px;
+      }
 
       .graph {
         position: relative;
@@ -95,6 +123,40 @@ class LanguageMap extends HTMLElement {
     graph.appendChild(expandButton)
 
     let isExpanded = false
+    let isOriginalLanguage = true
+
+    const translateOnIcon = `<svg viewBox="0 0 16 16">
+      <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
+      <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/>
+    </svg>`
+    const translateOffIcon = `<svg viewBox="0 0 16 16">
+      <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
+      <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/>
+    </svg>`
+
+    if (localStorage.getItem("borealium:experiments:ui-language-name") === "true") {
+      const languageButton = document.createElement("button")
+      languageButton.classList.add("language-button")
+      languageButton.setAttribute("aria-label", "Change language display")
+      languageButton.setAttribute("type", "button")
+      languageButton.innerHTML = isOriginalLanguage ? translateOffIcon : translateOnIcon
+
+      graph.appendChild(languageButton)
+
+      languageButton.addEventListener("click", () => {
+        isOriginalLanguage = !isOriginalLanguage
+
+        // Toggle between autonym and title display in the existing viz
+        const labels = labelGroup.selectAll("text")
+        labels.text((d: any) => isOriginalLanguage ? d.node.id : d.node.title)
+
+        // Update the button icon to indicate current state
+        languageButton.innerHTML = isOriginalLanguage ? translateOffIcon : translateOnIcon
+
+        // Refresh the visualization to update label dimensions with the new text
+        updateViz()
+      })
+    }
 
     expandButton.addEventListener("click", () => {
       isExpanded = !isExpanded
@@ -107,6 +169,7 @@ class LanguageMap extends HTMLElement {
 
       updateViz()
     })
+
     shadow.appendChild(graph)
 
     // Get parent div and set up dimensions
@@ -619,7 +682,7 @@ class LanguageMap extends HTMLElement {
         .selectAll("text")
         .data(labelData)
         .join("text")
-        .text((d) => d.node.id)
+        .text((d: any) => isOriginalLanguage ? d.node.id : d.node.title)
         .attr("font-family", "'Noto Sans', 'Noto Sans Hebrew', sans-serif")
         .attr("font-size", "12px")
         .attr("text-anchor", "middle")
@@ -783,7 +846,7 @@ class LanguageMap extends HTMLElement {
       pathGroup.selectAll("path").attr("stroke", COLORS.border)
 
       // Add a mutation observer to watch for the expanded class
-      const observer = new MutationObserver((mutations) => {
+      this.#observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
           if (
             mutation.type === "attributes" &&
@@ -805,7 +868,7 @@ class LanguageMap extends HTMLElement {
       })
 
       // Start observing the graph element for class changes
-      observer.observe(graph, {
+      this.#observer.observe(graph, {
         attributes: true,
         attributeFilter: ["class"],
       })
@@ -855,8 +918,7 @@ class LanguageMap extends HTMLElement {
     // Cleanup function
     this.#cleanup = () => {
       resizeObserver.disconnect()
-      observer.disconnect()
-      simulation.stop()
+      this.#observer?.disconnect()
     }
   }
 
@@ -871,7 +933,7 @@ class LanguageMap extends HTMLElement {
 
   disconnectedCallback() {
     this.#cleanup?.()
-    this.#cleanup = null
+    this.#cleanup = undefined
   }
 
   attributeChangedCallback(name, oldValue, newValue) {

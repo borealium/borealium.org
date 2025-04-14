@@ -47,7 +47,11 @@ site.use(pagefind({
   },
   ui: false,
 }))
-site.use(esbuild())
+site.use(esbuild({
+  options: {
+    target: "es2023",
+  },
+}))
 
 site.copy("_static", "static")
 

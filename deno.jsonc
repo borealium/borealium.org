@@ -3,6 +3,7 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "lib": ["dom", "deno.ns"]
+    // "experimentalDecorators": true
   },
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --v8-flags=--max-old-space-size=8096 -A -",
