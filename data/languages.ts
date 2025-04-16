@@ -16,21 +16,13 @@ const languagesData: LanguagesData = {
     "da": {
       autonym: "Dansk",
     },
+    "se": {
+      autonym: "Davvisámegiella",
+      coordinates: [22.5, 69],
+      labelPosition: "left",
+    },
     "en": {
       autonym: "English",
-    },
-    "fi": {
-      autonym: "Suomi",
-    },
-    "fit": {
-      autonym: "Meänkieli",
-      coordinates: [23, 66.8],
-      labelPosition: "right",
-    },
-    "fkv": {
-      autonym: "Kväänin kieli",
-      coordinates: [23.75, 70],
-      labelPosition: "top",
     },
     "fo": {
       autonym: "Føroyskt",
@@ -42,6 +34,12 @@ const languagesData: LanguagesData = {
       coordinates: [-3, 63.5],
       labelPosition: "right",
     },
+    "smj": {
+      autonym: "Julevsámegiella",
+      // regions: ["NO", "SE"],
+      coordinates: [18, 67],
+      labelPosition: "left",
+    },
     "kl": {
       autonym: "Kalaallisut",
       coordinates: [-2, 69.7],
@@ -51,6 +49,16 @@ const languagesData: LanguagesData = {
       autonym: "Karjalan kieli",
       coordinates: [30, 64],
       labelPosition: "bottom",
+    },
+    "fkv": {
+      autonym: "Kväänin kieli",
+      coordinates: [23.75, 70],
+      labelPosition: "top",
+    },
+    "fit": {
+      autonym: "Meänkieli",
+      coordinates: [23, 66.8],
+      labelPosition: "right",
     },
     "nb": {
       autonym: "Norsk, bokmål",
@@ -62,11 +70,6 @@ const languagesData: LanguagesData = {
       autonym: "Romani",
       coordinates: [17, 59.8],
       labelPosition: "right",
-    },
-    "se": {
-      autonym: "Davvisámegiella",
-      coordinates: [22.5, 69],
-      labelPosition: "left",
     },
     // "sjd": {
     //   autonym: "Кӣллт са̄мь кӣлл",
@@ -83,17 +86,6 @@ const languagesData: LanguagesData = {
       coordinates: [15.8, 65.09],
       labelPosition: "left",
     },
-    "sma": {
-      autonym: "Åarjelsaemien gïele",
-      coordinates: [13, 64],
-      labelPosition: "right",
-    },
-    "smj": {
-      autonym: "Julevsámegiella",
-      // regions: ["NO", "SE"],
-      coordinates: [18, 67],
-      labelPosition: "left",
-    },
     "smn": {
       autonym: "Anarâškielâ",
       coordinates: [27, 69],
@@ -104,8 +96,16 @@ const languagesData: LanguagesData = {
       coordinates: [28, 68],
       labelPosition: "left",
     },
+    "fi": {
+      autonym: "Suomi",
+    },
     "sv": {
       autonym: "Svenska",
+    },
+    "sma": {
+      autonym: "Åarjelsaemien gïele",
+      coordinates: [13, 64],
+      labelPosition: "right",
     },
     "yi": {
       autonym: "אידיש",
@@ -129,6 +129,7 @@ const languagesData: LanguagesData = {
     "nn": ["nb", "sv", "da", "en"],
     "fo": ["da", "en"],
     "kl": ["da", "en"],
+    "rmn": ["sv", "en"],
     "rom": ["sv", "en"],
     "yi": ["sv", "en"],
   },
