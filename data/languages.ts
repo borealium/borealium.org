@@ -58,11 +58,11 @@ const languagesData: LanguagesData = {
     "nn": {
       autonym: "Norsk, nynorsk",
     },
-    // "rom": {
-    //   autonym: "Rromani ćhib",
-    //   coordinates: [18, 59],
-    //   labelPosition: "right",
-    // },
+    "rmn": {
+      autonym: "Romani",
+      coordinates: [17, 59.8],
+      labelPosition: "right",
+    },
     "se": {
       autonym: "Davvisámegiella",
       coordinates: [22.5, 69],
