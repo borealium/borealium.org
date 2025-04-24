@@ -22,3 +22,5 @@ yi-description = Jiddiskt er eitt alment minnilutamál í Svøríki, og tilfeing
 sma = Suðursámiskt
 NO = Noreg
 SE = Svøríki
+krl = Karelskt
+rmn = Romani
