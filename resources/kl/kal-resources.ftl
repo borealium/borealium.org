@@ -9,3 +9,6 @@ kaldict-links-0 = Kalaallisut Ordbogit
 kal-learngrl = Learn Greenlandic
 kal-learngrl-description = Learn Greenlandic Per Langgårdimit suliaasoq.
 kal-learngrl-links-0 = Learn Greenlandic
+kal-online-speller = Kalaallit oqaasiinik kukkuniiaat nittartakkatigut atugassiaq
+kal-online-speller-description = Kalaallit oqaasiinik kukkuniiaat nittartakkatigut atugassiaq: allatatit immiutikkit kukkuniiartillugillu.
+kal-online-speller-links-0 = Kalaallit oqaasiinik kukkuniiaat nittartakkatigut atugassiaq
