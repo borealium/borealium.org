@@ -33,6 +33,7 @@ dk-button-title = Divvun Keyboard
 dk-button-description = iOS-imut Androidimullu
 website-copyright = Copyright © { $year } UiT Norges arktiske universitet
 read-documentation = Nalunaarsuineq
+more-info-spellers = Kukkuniiaatit Borealiumimiittut amerlanerit GiellaLT-p atortorissaarutaanik suliaapput, tunngaviusumillu kodiat ammasuulluni. Allanik aamma kukkuniiaateqarpoq, matoqqasunik ammasunillu tunngaviusumik kodilinnik. Kukkuniiaatit GiellaLT-imeersut Windowsimi MS Officemi, LibreOfficemi programminilu allani atorsinnaapput. macOS-imi kukkuniiaatit programmini amerlanerni atorsinnaapput. Kukkuniiaatit GiellaLT-imeersut **macOS-imut LibreOfficemi** atorniarukkit nammineerlutit [LibreOfficemut ilassutissaq immikkoortoq](/resource/divvunspell-libreoffice/) ikkuttariaqarpat. Kukkuniiaatit GiellaLT-meersut Divvun Manager nammineerluni atortorissaarutinik nutarterisartoq atorlugu ikkunneqassapput.
 more-info-keyboards = Naqitassat Borealiumimiittut Windowsimi, Macimi, iOS-imi, Androidimi ChromeOS-imilu atorneqarsinnaapput. Windowsimi Macimilu Divvun Manager atorlugu ikkunneqarsinnaapput. Naqitassat mobiilimut atugassat App Storemi Play Storemilu nassaarineqarsinnaapput. Amerlanerit kukkuniiaatitaqareerput. ChromeOS-imi naqitassat ikkunnissaat nammineq isumagisassaapput. Borealiumimi naqitassat amerlanerit GiellaLT-p atortulersuutaanik suliaapput, Divvunimit GiellaLT-millu ineriartortitaallutik.
 macos = macOS
 windows = Windows

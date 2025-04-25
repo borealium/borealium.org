@@ -22,3 +22,5 @@ yi-description = Sverigemi Jiddiskisut oqaatsit pisortatigoortumik ikinnerussute
 sma = Sørsaamisut
 NO = Norgemiutut
 SE = Sverige
+krl = Karelenimiusut
+rmn = Romat oqaasii
