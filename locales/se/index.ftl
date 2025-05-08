@@ -5,7 +5,7 @@ divvun = Divvun
 privacy = Persovdnasuodjalus
 information = Dieđut
 documentation = Dokumentašuvdna
-maintaining-this-website = Hálddasit dán neahttabáikki
+maintaining-this-website = Dán neahttabáikki hálddašeapmi
 resource = Resursa
 category = Kategoriija
 language = Giella
@@ -16,14 +16,14 @@ no-resources-in-category = Eai gávdnon resurssat dán kategoriijas.
 news = News
 available-on-divvun-manager = Olamuttus Divvun Manageris
 divvun-manager-description =
-    Divvun Manager lea reaidu ráhkaduvvon rabas gáldokodas.
+    Divvun Manager lea reaidu ráhkaduvvon rabas gáldokodain.
     Dan bokte hálddaša lingvistalaš resurssaid nugo čállindárkkisteddjiid, boallobevddiid ja hállansyntesaprográmmaid.
     Doaibmá macOSis ja Windowsis
-available-in-divvun-keyboard-app = Gávdnu Divvuma boallobevddiin
+available-in-divvun-keyboard-app = Gávdno Divvuma boallobevddiin
 divvun-keyboard-description =
     Divvuma boallobeavddit doibmet iOS:s ja Androidas.
-    Leat ráhkaduvvon rabas gáldokodas.
-    Daiguin čállá sámi- ja eamiálbmot- ja eara minorihtehtagielaid.
+    Leat ráhkaduvvon rabas gáldokodain.
+    Boallobevddiiguin sáhttá čállit sámi- ja eamiálbmot- ja eara minorihtehtagielaid.
     Čállindárkkisteapmi lea oassi dán reaiddus.
 platforms = Vuogádagat
 release = Veršuvdna

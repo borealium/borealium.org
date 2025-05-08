@@ -1,6 +1,6 @@
-title = Borealium — reaiddut davviriikkaid smávit gielaid várás
+title = Borealium — reaiddut davviriikkaid smávva gielaid várás
 description =
-    Borealium čohkke buot reaidduid davviriikkaid smávit gielaid várás okta sadjái.
-    Sáhttá ohcat, dahje dušše iskat buot olamuttus reaidduid: čállindárkkisteaddjiid,
-    grammatihkadárkkisteaddjit, sátnegirjjit, boallobeavddit ja vel eanet. Measta visot
-subtitle = Go coahkkala giellaboaluid dás vuolábealde de oainnat dan giela reaidduid:
+    Borealium čohkke buot reaidduid davviriikkaid smávva gielaid várás ovtta sadjái.
+    Dás sáhttá ohcat, dahje dušše iskat buot reaidduid mat leat olámuttos: čállindárkkisteaddjiid,
+    grammatihkkadárkkisteaddjiid, sátnegirjjiid, boallobevddiid ja vel eanet. Measta visot lea nuvttá geavahit, ja ráhkaduvvon rabas gáldokodain.
+subtitle = Go coahkkala giellaboaluid dás vuolábealde de oainnát dan giela reaidduid:

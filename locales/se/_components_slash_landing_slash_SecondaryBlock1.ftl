@@ -1,3 +1,3 @@
 tag = Boallobeavddit
-title = Boallobeavddit mátkketelefovnnaide ja neahttaduolbusiidda
-description = Áppa Divvun Keyboardas leat boallobeavddit sámi- ja eará gielaide. Eanaš gielaide das lea maid sisahuksejuvvon čállindárkkisteaddji
+title = Boallobeavddit mobiilatelefovnnaide ja dihtordulbosiidda
+description = Divvun Keyboard-áppas leat boallobeavddit sámegielaide ja eará gielaide. Eanaš gielaide das lea maid sisahuksejuvvon čállindárkkisteaddji
