@@ -1,10 +1,14 @@
-marthatts = Atuffat Martha
+marthatts = Talesyntesen Martha
 marthatts-description = Kalaallisut atuffat
 marthatts-links-0 = Martha TTS (tuluttut)
+marthatts-links-1 = Martha TTS (på grønlandsk)
 marthatts-links-2 = Martha TTS (på dansk)
 kaldict = Grønlandske Ordbøger
 kaldict-description = Grønlandske Ordbøger på net
 kaldict-links-0 = Grønlandske Ordbøger
 kal-learngrl = Learn Greenlandic
-kal-learngrl-description = Learn Greenlandic Per Langgårdimit suliaasoq.
+kal-learngrl-description = Learn Greenlandic af Per Langgård.
 kal-learngrl-links-0 = Learn Greenlandic
+kal-online-speller = Online grønlandsk stavekontrol
+kal-online-speller-description = Online stavekontrol for grønlandsk: indsæt din tekst og få den rettet.
+kal-online-speller-links-0 = Online grønlandsk stavekontrol
