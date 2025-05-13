@@ -1,5 +1,5 @@
 voisit-asr = VoisIT talegenkendelse
-voisit-asr-description = Talegenkendelse for færøsk
+voisit-asr-description = Appen forstår færøsk tale og forsøger at transkribere teksten på skærmen ved hjælp af kunstig intelligens. Resultatet er afhængig af hvor klar talen er, kvaliteten af mikrofonen, og mængden af baggrundsstøj – opmærksomhed omkring disse faktorer er derfor vigtigt.
 voisit-asr-links-0 = VoisIt talegenkendelse (på færøsk)
 voisit-asr-links-1 = VoisIT
 voisit-asr-links-2 = VoisIT
@@ -31,3 +31,6 @@ foenmsmt-links-1 = Oversæt fra færøsk
 malradid = Ordlister fra det færøsk Sprogråd
 malradid-description = Søg på de online ordlister, som det færøske Sprogråd har på sin hjemmeside.
 malradid-links-0 = Sprogrådets ordlister
+fao-online-speller = Online færøsk stavekontrol
+fao-online-speller-description = Online færøsk stavekontrol: indsæt din tekst og få den rettet.
+fao-online-speller-links-0 = Online færøsk stavekontrol
