@@ -23,3 +23,4 @@ sma = Sørsamisk
 NO = Noreg
 SE = Sverige
 krl = Karelsk
+rmn = Romani
