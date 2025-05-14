@@ -5,3 +5,6 @@ nds-fkv-links-0 = NDS kvensk
 fkv-korp = Korp for kvensk
 fkv-korp-description = Kvensk Korp inneholder en søkbar kvensk tekstsamling. Tekstene er merket med grammatisk analyse.
 fkv-korp-links-0 = Korp for kvensk
+fkv-online-speller = Kvensk stavekontroll på nettet
+fkv-online-speller-description = Nettstavekontroll for kvensk: lim inn teksten din og få den rettet.
+fkv-online-speller-links-0 = Kvensk nettstavekontroll
