@@ -73,7 +73,7 @@ const languagesData: LanguagesData = {
     },
     // "sjd": {
     //   autonym: "Кӣллт са̄мь кӣлл",
-    //   coordinates: [33.5, 67.75],
+    //   coordinates: [35.5, 67.15],
     //   labelPosition: "bottom",
     // },
     "sje": {
