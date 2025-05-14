@@ -1,3 +1,4 @@
+satni = Sátni.org
 satni-description = Yrkorð og orðabøkur fyri sámisk mál
 satni-more-info =
     Sátni.org hevur yrkorð frá Giellagáldu og ymsar orðabøkur fyri sámisk mál.
