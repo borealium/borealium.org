@@ -108,7 +108,7 @@ const languagesData: LanguagesData = {
       labelPosition: "right",
     },
     "ru": {
-      autonym: "Русский язык",
+      autonym: "Русский",
     },
     "yi": {
       autonym: "אידיש",
