@@ -1,0 +1,10 @@
+nds-fkv = NDS for Kvensk
+nds-fkv-description = Ordboksressursar for kvensk
+nds-fkv-more-info = NDS — Neahttadigisánit — for kvensk inneheld ordbøker for å oversette til og fra kvensk.
+nds-fkv-links-0 = NDS kvensk
+fkv-korp = Korp for kvensk
+fkv-korp-description = Kvensk Korp inneheld ein søkbar kvensk tekstsamling. Tekstane er merka med grammatisk analyse.
+fkv-korp-links-0 = Korp for kvensk
+fkv-online-speller = Kvensk stavekontroll på nettet
+fkv-online-speller-description = Nettstavekontroll for kvensk: lim inn teksten din og få han retta.
+fkv-online-speller-links-0 = Kvensk nettstavekontroll
