@@ -107,6 +107,9 @@ const languagesData: LanguagesData = {
       coordinates: [13, 64],
       labelPosition: "right",
     },
+    "ru": {
+      autonym: "Русский язык",
+    },
     "yi": {
       autonym: "אידיש",
       coordinates: [14.5, 58],
@@ -119,6 +122,7 @@ const languagesData: LanguagesData = {
     "sma-SE": ["sma", "sv", "nb", "en"],
     "sms": ["fi", "en"],
     "smn": ["fi", "en"],
+    "sjd": ["ru", "en"],
     "sje": ["sv", "nb", "en"],
     "sju": ["sv", "nb", "en"],
     "fkv": ["nb", "nn", "en"],
@@ -131,9 +135,10 @@ const languagesData: LanguagesData = {
     "kl": ["da", "en"],
     "rmn": ["sv", "en"],
     "rom": ["sv", "en"],
+    "ru": ["en"],
     "yi": ["sv", "en"],
   },
-  uiOnly: ["da", "en", "fi", "nb", "nn", "sv"],
+  uiOnly: ["da", "en", "fi", "nb", "nn", "ru", "sv"],
   websiteLanguages: [
     "da",
     "en",
@@ -144,6 +149,7 @@ const languagesData: LanguagesData = {
     "kl",
     "nb",
     "nn",
+    "ru",
     "se",
     "sma",
     "smj",
@@ -151,7 +157,7 @@ const languagesData: LanguagesData = {
     "sv",
     "yi",
   ],
-  hidden: ["yi"],
+  hidden: ["ru", "yi"],
 }
 
 export default languagesData
