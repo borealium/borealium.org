@@ -57,7 +57,7 @@ const languagesData: LanguagesData = {
     },
     "fit": {
       autonym: "Meänkieli",
-      coordinates: [23, 66.8],
+      coordinates: [23, 66.9],
       labelPosition: "right",
     },
     "nb": {
