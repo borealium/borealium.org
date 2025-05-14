@@ -41,8 +41,7 @@ more-info-spellers =
     
     В Windows проверки орфографии GiellaLT работают в MS Office, LibreOffice и нескольких других приложениях.
     В macOS проверки орфографии GiellaLT работают в большинстве приложений.
-    Чтобы использовать проверки орфографии GiellaLT в **LibreOffice для macOS**, вам нужно вручную установить
-    [отдельное расширение для LibreOffice](/resource/divvunspell-libreoffice/).
+    Чтобы использовать проверки орфографии GiellaLT в **LibreOffice для macOS**, вам нужно вручную установить [отдельное расширение для LibreOffice](/resource/divvunspell-libreoffice/).
     
     Проверки орфографии GiellaLT устанавливаются с помощью Divvun Manager, который также автоматически обновляет их.
 more-info-keyboards =
