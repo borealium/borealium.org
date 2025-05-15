@@ -5,7 +5,7 @@ import { script } from "~/_includes/lang-redir.tsx"
 import { FluentPage } from "~plugins/fluent.ts"
 
 export default function BasePage(page: Data & FluentPage) {
-  const { title, children, url, originalUrl, lang, t } = page
+  const { title, children, url, originalUrl, lang, t, tString } = page
   const lang_t = page.fluentBundle(lang, "languages")
   const isRtl = lang === "yi"
 
@@ -13,7 +13,7 @@ export default function BasePage(page: Data & FluentPage) {
     throw new Error("t not available")
   }
 
-  const localizedTitle = t("title", { fallback: title })
+  const localizedTitle = tString("title", { fallback: title })
 
   return (
     <html>
