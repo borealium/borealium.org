@@ -1,19 +1,19 @@
-import { Page } from "lume/core/file.ts";
-import { CategoryLabel } from "~/_components/label.tsx";
-import { FluentPage } from "~plugins/fluent.ts";
-import { getLanguageData } from "~plugins/language-data.ts";
-import LanguageMap from "./LanguageMap.tsx";
+import { Page } from "lume/core/file.ts"
+import { CategoryLabel } from "~/_components/label.tsx"
+import { FluentPage } from "~plugins/fluent.ts"
+import LanguageMap from "./LanguageMap.tsx"
 
 export default function LandingMainBlock(page: Page & FluentPage) {
-  const t = page.fluentBundle(page.lang, "_components/landing/MainBlock");
-  const lang_t = page.fluentBundle(page.lang, "languages");
-  const { languages, uiOnly } = getLanguageData();
+  const bundle = page.fluentBundle(page.lang, "_components/landing/MainBlock")
+  const t = (key: string) => {
+    return <span className="ftl" data-ftl-key={`_components/landing/MainBlock/${key}`}>{bundle(key)}</span>
+  }
 
   return (
     <>
       <div className="first-cell">
         <div className="text-group">
-          <CategoryLabel category={t("welcome")} />
+          <CategoryLabel category={bundle("welcome")} />
           <h2>{t("title")}</h2>
           <p>{t("description")}</p>
         </div>
@@ -22,7 +22,7 @@ export default function LandingMainBlock(page: Page & FluentPage) {
         <h3>
           <img
             style={{ float: "left", marginTop: "-1px", marginRight: "8px" }}
-            src={"/static/images/tag-language.svg"}
+            src="/static/images/tag-language.svg"
             alt=""
           />
           {t("subtitle")}
@@ -32,5 +32,5 @@ export default function LandingMainBlock(page: Page & FluentPage) {
         </div>
       </div>
     </>
-  );
+  )
 }

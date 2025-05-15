@@ -14,7 +14,7 @@ type LanguageIndexProps = {
   languageId: string
   t: TranslateFn
   lang: string
-  fluentBundle: (lang: string, id: string) => TranslateFn
+  fluentBundle: (lang: string, id: string, jsx?: boolean) => TranslateFn
 }
 
 export default function LanguageIndexLayout(

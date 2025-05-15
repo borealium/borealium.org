@@ -4,17 +4,20 @@ import { CategoryLabel } from "~/_components/label.tsx"
 import { FluentPage } from "~plugins/fluent.ts"
 
 export default function SecondaryBlock1(page: Page & FluentPage) {
-  const t = page.fluentBundle(page.lang, "_components/landing/SecondaryBlock1")
+  const bundle = page.fluentBundle(page.lang, "_components/landing/SecondaryBlock1")
+  const t = (key: string) => {
+    return <span className="ftl" data-ftl-key={`_components/landing/SecondaryBlock1/${key}`}>{bundle(key)}</span>
+  }
 
   return (
     <>
-      <CategoryLabel category={t("tag")} />
+      <CategoryLabel category={bundle("tag")} />
       <h2>{t("title")}</h2>
       <p>{t("description")}</p>
       <div className="button-group">
         <DownloadButton
           title="Divvun Keyboards"
-          description={t("for-ios-and-android")}
+          description={bundle("for-ios-and-android")}
           href="/resource/divvun-keyboard"
         />
       </div>

@@ -26,7 +26,7 @@ const defaults: Options = {
 export type TranslateFn = (
   key: string,
   opts?: { args?: Record<string, FluentVariable>; fallback?: string },
-) => JSX.Element | string
+) => string
 
 export type FluentPage = {
   lang: string
@@ -156,13 +156,13 @@ export default function fluent(userOptions?: Partial<Options>): Plugin {
         t: (key: string, args?: Record<string, FluentVariable>) => {
           return React.createElement("span", {
             className: "ftl",
-            "data-ftl-key": key,
+            "data-ftl-key": `${ftlResKey}/${key}`,
           }, t(key, args))
         },
         tmd: (key: string, args?: Record<string, FluentVariable>) => {
           return React.createElement("div", {
             className: "ftl ftl-markdown",
-            "data-ftl-key": key,
+            "data-ftl-key": `${ftlResKey}/${key}`,
             dangerouslySetInnerHTML: { __html: marked.parse(dedent(t(key, args))) },
           })
         },

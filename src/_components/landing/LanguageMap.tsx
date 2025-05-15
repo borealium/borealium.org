@@ -25,7 +25,6 @@ const cdnUrl = (suffix: string) => {
 }
 
 export default function LanguageMap({ page }: { page: Page & FluentPage }) {
-  const t = page.fluentBundle(page.lang, "_components/landing/MainBlock")
   const lang_t = page.fluentBundle(page.lang, "languages")
   const { languages, uiOnly } = getLanguageData()
 

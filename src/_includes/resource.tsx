@@ -116,13 +116,13 @@ function DownloadLinks(props: { t: TranslateFn; resource: Resource; lang: string
 export default function ResourceLayout(
   { page, fluentBundle, search, lang, resource }: {
     page: Data & ResourceProps & FluentPage
-    fluentBundle: (lang: string, path: string) => TranslateFn
+    fluentBundle: (lang: string, path: string, jsx?: boolean) => TranslateFn
     search: Searcher
     lang: string
     resource: Resource
   },
 ) {
-  const t = fluentBundle(lang, "_includes/resource")
+  const t = fluentBundle(lang, "_includes/resource", true)
   const lang_t = fluentBundle(lang, "languages")
   const category_t = fluentBundle(lang, "categories")
   const categories = getCategoryDataForUI()

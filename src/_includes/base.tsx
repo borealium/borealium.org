@@ -208,6 +208,8 @@ export default function BasePage(page: Data & FluentPage) {
         `)}
       </head>
       <body id="top" dir={isRtl ? "rtl" : "auto"}>
+        <script src="/client/debug.js"></script>
+        <brl-debug />
         <div className="wrapper">
           <Navbar url={originalUrl || url || "/"} t={t} lang_t={lang_t} lang={lang} />
           <div className="navbar-offset-wrapper">

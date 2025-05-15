@@ -9,8 +9,9 @@ export default function Experiments() {
     <div style={{ padding: "2rem" }}>
       <h2>Experiments</h2>
       <script src="/client/checkbox.js" type="module"></script>
-      <div id="experiments">
+      <div id="experiments" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
         <brl-checkbox id="ui-language-name" label="Enable language map in UI language button" />
+        <brl-checkbox id="debug-ftl" label="Enable debug FTL keys" />
       </div>
       {script(`
         function initCheckbox(id) {
@@ -20,7 +21,11 @@ export default function Experiments() {
             checkbox.checked = true
           }
           checkbox.addEventListener("change", (e) => {
-            localStorage.setItem("borealium:experiments:" + id, e.target.checked)
+            if (e.target.checked) {
+              localStorage.setItem("borealium:experiments:" + id, "true")
+            } else {
+              localStorage.removeItem("borealium:experiments:" + id)
+            }
           })
         }
         
