@@ -20,3 +20,4 @@ yi-description = Jidtisjegïele lea byjjes unnebelåhkoegïele Sveerjesne. Resur
 sma = Åarjelsaemien
 NO = Nöörje
 SE = Sveerje
+sjd = kildinsaemiengïele
