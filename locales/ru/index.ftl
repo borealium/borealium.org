@@ -1,7 +1,7 @@
 welcome = Добро пожаловать
 downloads = Ссылки
-about-us = О Borealium
-divvun = Divvun
+about-us = О Бореалиум
+divvun = Диввун
 privacy = Конфиденциальность
 information = Информация
 documentation = Документация
