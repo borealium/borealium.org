@@ -23,7 +23,10 @@ const defaults: Options = {
   extensions: [".mdx", ".md", ".html", ".yml"],
 }
 
-export type TranslateFn = (key: string, opts?: { args?: Record<string, FluentVariable>, fallback?: string }) => string
+export type TranslateFn = (
+  key: string,
+  opts?: { args?: Record<string, FluentVariable>; fallback?: string },
+) => JSX.Element | string
 
 export type FluentPage = {
   lang: string
@@ -150,9 +153,16 @@ export default function fluent(userOptions?: Partial<Options>): Plugin {
       const t = _t(page.data.url, fluentBundle.bind(null, ftlResKey, page.data.lang ?? "en"))
 
       Object.assign(page.data, {
-        t,
+        t: (key: string, args?: Record<string, FluentVariable>) => {
+          return React.createElement("span", {
+            className: "ftl",
+            "data-ftl-key": key,
+          }, t(key, args))
+        },
         tmd: (key: string, args?: Record<string, FluentVariable>) => {
           return React.createElement("div", {
+            className: "ftl ftl-markdown",
+            "data-ftl-key": key,
             dangerouslySetInnerHTML: { __html: marked.parse(dedent(t(key, args))) },
           })
         },
@@ -172,7 +182,7 @@ export function message(
   logger: Logger | null,
   url: string,
   key: string,
-  opts: { args?: Record<string, FluentVariable>, fallback?: string } = {},
+  opts: { args?: Record<string, FluentVariable>; fallback?: string } = {},
 ): string {
   const message = bundle.getMessage(key)
 
@@ -180,7 +190,7 @@ export function message(
     const pattern = message.value
 
     if (pattern == null) {
-      if ("fallback" in opts) {
+      if (opts.fallback != null) {
         return opts.fallback
       }
       logger?.warn(`[${url}] Could not find Fluent expression for '${key}'; falling back to raw key.`)
@@ -192,7 +202,7 @@ export function message(
       const result = bundle.formatPattern(pattern, opts.args, errors)
 
       if (errors.length > 0) {
-        if ("fallback" in opts) {
+        if (opts.fallback != null) {
           return opts.fallback
         }
         logger?.warn(`[${url}] Could not format Fluent expression for '${key}'; falling back to raw key.`)
@@ -205,7 +215,7 @@ export function message(
       return bundle.formatPattern(pattern)
     }
   } else {
-    if ("fallback" in opts) {
+    if (opts.fallback != null) {
       return opts.fallback
     }
     logger?.warn(`[${url}] Could not find Fluent expression for '${key}'; falling back to raw key.`)
