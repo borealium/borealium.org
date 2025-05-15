@@ -11,10 +11,10 @@ category = Категория
 language = Язык
 back-to-top = Наверх
 read-more = Читать далее
-see-more-results = Смотреть больше результатов
-no-resources-in-category = В этой категории не найдено ресурсов.
+see-more-results = Больше результатов
+no-resources-in-category = В этой категории ресурсов не найдено.
 news = Новости
-available-on-divvun-manager = Доступно в Divvun Manager
+available-on-divvun-manager = Доступно в Диввун Менеджер
 divvun-manager-description =
     Divvun Manager — это бесплатный инструмент с открытым исходным кодом для управления лингвистическими ресурсами, например: программа проверки правописания,
     клавиатуры и синтез речи. Divvun Manager поддерживает macOS и Windows.
