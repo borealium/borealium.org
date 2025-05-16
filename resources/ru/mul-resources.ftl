@@ -14,8 +14,8 @@ divvun-manager-description = Divvun Manager — это программа для
 divvun-manager-more-info =
     В программе Divvun Manager вы выбираете язык, а затем устанавливаете доступные инструменты.
     После установки, Divvun Manager будет периодически проверять наличие новых версий языковых инструментов, и автоматически их обновлять, если они доступны.
-divvun-manager-links-0 = Divvun Manager (Установка приложений)
-divvun-manager-links-1 = Divvun Manager (Установка приложений)
+divvun-manager-links-0 = Divvun Manager
+divvun-manager-links-1 = Divvun Manager
 divvunspell-libreoffice-description = Расширение (Плагин) для LibreOffice, которое даёт доступ к программам проверки правописания от Divvun.
 divvunspell-libreoffice-more-info =
     На Windows используйте Divvun Manager для установки этого плагина (расширения). Он будет установлен автоматически, если на вашем компьютере уже установлен LibreOffice.
