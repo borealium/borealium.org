@@ -1,7 +1,13 @@
 satni = Sátni.org
 satni-description = Терминология и словари для саамских языков
+satni-more-info = Sátni.org содержит терминологию от саамского экспертного нормирующего органа Гиеллагалду, а также несколько словарей для саамских языков. Всё содержание можно искать через одно поисковое поле. Также можно фильтровать словари и языки, по которым вы хотите выполнить поиск.
 satni-links-0 = Sátni.org
-divvun-keyboard = Divvun Keyboard (Divvun клавиатура)
+divvun-keyboard = Диввун клавиатура (Divvun Keyboard)
+divvun-keyboard-description = Диввун клавиатура для  iOS и Android
+divvun-keyboard-more-info = Диввун клавиатура содержит клавиатуры для большинства саамских языков, а также для ряда других языков меньшинств и коренных народов.
+divvun-keyboard-links-0 = Стабильная версия
+divvun-keyboard-links-2 = В развитии
+divvun-keyboard-links-3 = В развитии
 divvun-manager = Установка приложений
 divvun-manager-links-0 = Установка приложений
 divvun-manager-links-1 = Установка приложений
