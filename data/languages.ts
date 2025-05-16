@@ -71,11 +71,11 @@ const languagesData: LanguagesData = {
       coordinates: [17, 59.8],
       labelPosition: "right",
     },
-    // "sjd": {
-    //   autonym: "Кӣллт са̄мь кӣлл",
-    //   coordinates: [35.5, 67.15],
-    //   labelPosition: "bottom",
-    // },
+    "sjd": {
+      autonym: "Кӣллт са̄мь кӣлл",
+      coordinates: [35.5, 67.15],
+      labelPosition: "bottom",
+    },
     "sje": {
       autonym: "Bidumsámegiella",
       coordinates: [16.9, 65.8],
