@@ -157,7 +157,7 @@ const languagesData: LanguagesData = {
     "sv",
     "yi",
   ],
-  hidden: ["ru", "yi"],
+  hidden: ["yi"],
 }
 
 export default languagesData
