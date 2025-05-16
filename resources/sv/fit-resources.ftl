@@ -1,6 +1,12 @@
 fit-korp = Korp för meänkieli
 fit-korp-description = I Korp för meänkieli kan du söka i meänkielitexter. Texterna i verktyget är grammatiskt annoterade.
 fit-korp-links-0 = Korp för meänkieli
+fit-dictionary = Meänkieli-svenska-ordbok
+fit-dictionary-description = En ordbok mellan meänkieli och svenska, av Meän Akateemi.
+fit-dictionary-links-0 = Meänkieliordbok
+fit-nds = NDS-meänkieliordbok
+fit-nds-description = Ordbok för meänkieli, med länkar till korpustexter och böjningar.
+fit-nds-links-0 = NDS för meänkieli
 fit-online-speller = Meänkieli rättstavning på nätet
 fit-online-speller-description = Rättstavning för meänkieli på nätet: lim in din text och få den korrigerad.
 fkfitv-online-speller-links-0 = Meänkieli-näträttstavning
