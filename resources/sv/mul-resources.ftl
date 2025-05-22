@@ -22,7 +22,7 @@ divvun-manager-links-1 = Divvun Manager
 divvunspell-libreoffice = DivvunSpell för LibreOffice
 divvunspell-libreoffice-description = Ett tillägg för LibreOffice som ger tillgång till Divvuns stavningskontroller.
 divvunspell-libreoffice-more-info =
-    Använd Divvun Manager för att installera denna utvidgningen på Windows. Den blir installerad automatiskt om du redan har LibreOffice på din dator.
+    Använd Divvun Manager för att installera denna utvidgning på Windows. Den blir installerad automatiskt om du redan har LibreOffice på din dator.
     
     Installation på macOS
     ---------------------
@@ -53,7 +53,7 @@ webdict-more-info =
 webdict-links-0 = Webdict
 mul-newamigos = New Amigos
 mul-newamigos-description = Lär språk direkt av en modersmålstalare.
-mul-newamigos-more-info = New Amigos kan spelas ensam, med familj och vänner, eller samman med en lärare. Appen erbjuder också en språkkafé, där upp till fyra deltagare kan mötas vid ett virtuellt bord. Appen har också en chatfunktion med automatisk översättning till och från samiska språk.
+mul-newamigos-more-info = New Amigos kan spelas ensam, med familj och vänner, eller tillsammans med en lärare. Appen erbjuder också en språkkafé, där upp till fyra deltagare kan mötas vid ett virtuellt bord. Appen har också en chatfunktion med automatisk översättning till och från samiska språk.
 mul-newamigos-links-0 = New Amigos
 mul-newamigos-links-1 = New Amigos
 mul-newamigos-links-2 = New Amigos-nätsida
