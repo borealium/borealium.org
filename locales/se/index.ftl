@@ -40,16 +40,24 @@ dk-button-title = Divvuma boallobeavddit
 dk-button-description = doibmet iOS:s ja Androidas
 website-copyright = Dahkkivuoigatvuođat © { $year } UiT Norgga árktalaš universitehta
 read-documentation = Dokumentašuvdna
-more-info-keyboards =
-    Eanaš gielaid boallobeavddit Borealiumis leat huksejuvvon GiellaLT-infrastruktuvrra bokte,
-    mii lea rabas gáldokoda.
-    Windows ja Mac boallobevddiid gávdná Divvun Manageris.
-    ChromeOS boallobevddiid gávdná Divvuma ChromeOS boallobeavdeáppas.
-    Android ja iOS boallobevddiid gávdná Divvuma boallobeavdeáppain Play- ja App Stores.
+more-info-spellers =
+    Eanaš čállindárkkisteddjit Borealiumis leat huksejuvvon GiellaLT-infrastruktuvrra bokte,
+    mii lea rabas gáldokoda. Gávdnojit maid eará čállindárkkisteaddjit, sihke rabas ja giddes gáldokodavuđot.
     
-    Many languages do also have keyboards for Android and iOS. These are distributed via our
-    keyboard app.
+    Windowsis čállindárkkisteddjit doibmet MS Offices, LibreOffices ja máŋga eará prográmmain.
+    MacOSas čállindárkkisteddjit doibmet eanáš prográmmain, erret MS Offices.
+    
+    Jus háliida geavahit GiellaLT-čállindárkkisteddjiid **LibreOffices macOSas**, de fertet manualalaččat [sierra LibreOffice-lasáhusa](/resource/divvunspell-libreoffice/).
+    
+    GiellaLT čállindárkkisteddjit sajáduhttá Divvun Manageriin.
+    Divvun Manager maid automáhtalaččat ođasta daid.
+more-info-keyboards =
+    Boallobeavddit Borealiumas doibmet Windowsis, Macas, iOS:s, Androidas ja ChromeOS:s.
+    Windows ja Mac boallobevddiid sajáduhttá Divvun Manager bokte. Mobiilaboallobevddiid gávdná App- ja Play Stores. Eanáš dáin boallobevddiin leat sisahuksejuvvon čállindárkkisteaddjit.
+    ChromeOS boallobevddiid ferte sajáiduhttit manualalaččat.
+    Eanaš gielaid boallobeavddit Borealiumis leat huksejuvvon GiellaLT-infrastruktuvrra bokte. Divvun ja Giellatekno leat ovdánahttán daid.
 macos = macOS
 windows = Windows
-mobile = Mobile
+mobile = Mobiila
+github = GitHub
 linux = Linux

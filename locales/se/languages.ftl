@@ -22,3 +22,5 @@ yi-description = Jiddišgiella lea almmolaš minoritehtagiella Ruoŧas, ja resur
 sma = Máttasámegiella
 NO = Norga
 SE = Ruoŧŧa
+krl = Karelagiella
+rmn = Romanigiella
