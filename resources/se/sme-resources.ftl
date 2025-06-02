@@ -1,5 +1,11 @@
-
 sme-nds-nob-links-0 = NDS Davvi Dáru
+sme-nds-fin-description = Neahttadigisánit sátnegirji davvisámegiela ja suomagiela gaskkas.
+sme-nds-smn-description = Neahttadigisánit sátnegirji davvisámegiela ja anárašgiela gaskkas.
+sme-jounivest-links-0 = Juoni Vest suoma - davvisámi
+sme-juridisk = Juridihkalaš tearbmalistu
+sme-juridisk-description = Online listu mas leat juridihkalaš tearpmat davvisámi-, dáro- ja suomagiela gaskkas.
+sme-juridisk-more-info = Oktageardanis ohcanlákta juridihkalaš tearbmalistui, sullii 1600 tearbmaartihkala.
+sme-juridisk-links-0 = Juridihkalaš tearpmat
 sme-korp = Davvisámi Korp
 sme-korp-description = Davvisámi Korp lea ozahahtti davvisámi teakstačoakkáldat. Teavsttat leat grammatihkalaččat merkejuvvon.
 sme-korp-links-0 = Davvisámi Korp
@@ -9,3 +15,6 @@ sme-oahpa-links-0 = Oahpa! davvi
 mtsme = Másenjorgaleapmi davvisámegielas dárogillii
 mtsme-description = Másenjorgaleapmi davvisámegielas girjedárogillii Apertium bokte. Eavttolaččat sáhttá čábbodit jorgalusaid ChatGTP:n, várra lea ahte sisdoallu rievdaduvvo.
 mtsme-links-0 = Davvisámi mášenjorgaleapmi
+sme-online-speller = Davvisámi online čállindárkkisteaddji
+sme-online-speller-description = Online davvisámi čállindárkkisteaddji: liibmes sisa teavstta, de oainnát čállinmeattáhusaid.
+sme-online-speller-links-0 = Davvisámi  online čállindárkkisteaddji
