@@ -1,6 +1,6 @@
 marthatts = Talesyntesen Martha
-marthatts-description = Kalaallisut atuffat
-marthatts-links-0 = Martha TTS (tuluttut)
+marthatts-description = Talesyntese for grønlandsk.
+marthatts-links-0 = Martha TTS (på engelsk)
 marthatts-links-1 = Martha TTS (på grønlandsk)
 marthatts-links-2 = Martha TTS (på dansk)
 kaldict = Grønlandske Ordbøger
