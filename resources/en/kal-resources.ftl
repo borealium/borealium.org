@@ -15,3 +15,7 @@ kal-learngrl-links-0 = Learn Greenlandic
 kal-online-speller = Greenlandic Online Spellchecker
 kal-online-speller-description = Online spellchecker for Greenlandic: paste in your text and get checks.
 kal-online-speller-links-0 = Greenlandic Online Speller
+
+kalmt = Greenlandic Machine Translation
+kalmt-description = Machine Translation to and from Greenlandic.
+kalmt-links-0 = Greenlandic MT
