@@ -1,4 +1,5 @@
 {
+  "nodeModulesDir": "auto",
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "react",
@@ -11,9 +12,9 @@
     "serve": "deno task lume -s"
   },
   "imports": {
-    "@std/fs": "jsr:@std/fs@^1.0.15",
-    "@std/path": "jsr:@std/path@^1.0.8",
-    "@std/toml": "jsr:@std/toml@^1.0.3",
+    "@std/fs": "jsr:@std/fs@^1.0.19",
+    "@std/path": "jsr:@std/path@^1.1.2",
+    "@std/toml": "jsr:@std/toml@^1.0.10",
     "cbor2": "npm:cbor2@^1.12.0",
     "~/": "./src/",
     "~utils/": "./utils/",
