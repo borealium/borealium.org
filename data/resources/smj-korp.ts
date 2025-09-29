@@ -9,7 +9,7 @@ const l10nLanguages = getL10NLanguages(resourceLang)
 const halfLinks = [
   {
     type: LinkType.Normal,
-    url: new URL("https://gtweb.uit.no/korp/?mode=smj#?lang=en"),
+    url: new URL("https://gtweb.uit.no/korp/"),
   },
 ]
 
