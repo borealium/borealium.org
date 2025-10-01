@@ -4,6 +4,12 @@ satni-more-info = Sátni.org contains terminology from Giellagáldu, as well as 
   All content can be searched at once in one place. One can filter on languages and dictionaries.
 satni-links-0 = Sátni.org
 
+skuolfi = Skuolfis web dictionary
+skuolfi-description = Skuolfis Finnish – North Sámi – Finnish dictionary
+skuolfi-more-info = Web dictionary between North Sámi and Finnish. This project is open source, the source code and all data is available on GitHub.
+skuolfi-links-0 = Skuolfis web dictionary
+skuolfi-links-1 = Source code to Skuolfis dictionary
+
 divvun-keyboard = Divvun Keyboard
 divvun-keyboard-description = Divvun Keyboard for iOS and Android
 divvun-keyboard-more-info = Divvun Keyboards contains keyboards for most Sámi languages and a number of other indigenous or minority languages.
