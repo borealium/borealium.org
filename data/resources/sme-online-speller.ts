@@ -9,7 +9,7 @@ const l10nLanguages = getL10NLanguages(resourceLang)
 const halfLinks = [
   {
     type: LinkType.Normal,
-    url: new URL(`https://divvun.uit.no/`),
+    url: new URL(`https://divvun.uit.no/?lang=se`),
   },
 ]
 
