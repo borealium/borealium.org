@@ -13,7 +13,9 @@ const halfLinks = [
   },
   {
     type: LinkType.Normal,
-    url: new URL("https://gtweb.uit.no/old-webdict/lulesamisk_ordbok_offline.zip"),
+    url: new URL(
+      "https://gtweb.uit.no/old-webdict/lulesamisk_ordbok_offline.zip",
+    ),
   },
 ]
 
@@ -23,12 +25,24 @@ const resource: Resource = {
   languages: ["smj"],
   category: "dictionaries",
   name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
-  description: makeResourceTranslations(`${id}-description`, resourceLang, l10nLanguages),
-  moreInfo: makeResourceTranslations(`${id}-more-info`, resourceLang, l10nLanguages),
+  description: makeResourceTranslations(
+    `${id}-description`,
+    resourceLang,
+    l10nLanguages,
+  ),
+  moreInfo: makeResourceTranslations(
+    `${id}-more-info`,
+    resourceLang,
+    l10nLanguages,
+  ),
   links: halfLinks.map((halfLink, index) => {
     return {
       ...halfLink,
-      text: makeResourceTranslations(`${id}-links-${index}`, resourceLang, l10nLanguages),
+      text: makeResourceTranslations(
+        `${id}-links-${index}`,
+        resourceLang,
+        l10nLanguages,
+      ),
     }
   }),
 }

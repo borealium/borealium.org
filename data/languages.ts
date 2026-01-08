@@ -1,4 +1,4 @@
-import { LanguagesData } from "~types/language.ts"
+import type { LanguagesData } from "../types/language.ts"
 
 const languagesData: LanguagesData = {
   regions: {
@@ -36,7 +36,7 @@ const languagesData: LanguagesData = {
     },
     "smj": {
       autonym: "Julevsámegiella",
-      // regions: ["NO", "SE"],
+      regions: ["NO", "SE"],
       coordinates: [18, 67],
       labelPosition: "left",
     },
@@ -104,6 +104,7 @@ const languagesData: LanguagesData = {
     },
     "sma": {
       autonym: "Åarjelsaemien gïele",
+      regions: ["NO", "SE"],
       coordinates: [13, 64],
       labelPosition: "right",
     },

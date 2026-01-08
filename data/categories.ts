@@ -1,4 +1,4 @@
-import { CategoryId } from "~types/category.ts"
+import type { CategoryId } from "../types/category.ts"
 
 export const categoriesList: CategoryId[] = [
   "package-management",

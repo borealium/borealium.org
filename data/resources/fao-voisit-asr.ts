@@ -17,7 +17,9 @@ const halfLinks = [
   },
   {
     type: LinkType.GooglePlayStore,
-    url: new URL("https://play.google.com/store/apps/details?id=net.isolveit.voisit"),
+    url: new URL(
+      "https://play.google.com/store/apps/details?id=net.isolveit.voisit",
+    ),
   },
 ]
 
@@ -27,11 +29,19 @@ const resource: Resource = {
   languages: ["fo"],
   category: "speech-recognition",
   name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
-  description: makeResourceTranslations(`${id}-description`, resourceLang, l10nLanguages),
+  description: makeResourceTranslations(
+    `${id}-description`,
+    resourceLang,
+    l10nLanguages,
+  ),
   links: halfLinks.map((halfLink, index) => {
     return {
       ...halfLink,
-      text: makeResourceTranslations(`${id}-links-${index}`, resourceLang, l10nLanguages),
+      text: makeResourceTranslations(
+        `${id}-links-${index}`,
+        resourceLang,
+        l10nLanguages,
+      ),
     }
   }),
 }

@@ -1,3 +1,0 @@
-[[paths]]
-    reference = "locales/nb/*.ftl"
-    l10n = "locales/{locale}/*.ftl"

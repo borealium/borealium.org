@@ -1,4 +1,4 @@
-import { LangTag } from "~types/language.ts"
+import type { LangTag } from "./language.ts"
 
 export type L10nPath = {
   reference: string

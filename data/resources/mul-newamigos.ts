@@ -27,12 +27,24 @@ const resource: Resource = {
   languages: ["fkv", "se", "sje", "sju", "sma", "smj", "sms"],
   category: "langlearning",
   name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
-  description: makeResourceTranslations(`${id}-description`, resourceLang, l10nLanguages),
-  moreInfo: makeResourceTranslations(`${id}-more-info`, resourceLang, l10nLanguages),
+  description: makeResourceTranslations(
+    `${id}-description`,
+    resourceLang,
+    l10nLanguages,
+  ),
+  moreInfo: makeResourceTranslations(
+    `${id}-more-info`,
+    resourceLang,
+    l10nLanguages,
+  ),
   links: halfLinks.map((halfLink, index) => {
     return {
       ...halfLink,
-      text: makeResourceTranslations(`${id}-links-${index}`, resourceLang, l10nLanguages),
+      text: makeResourceTranslations(
+        `${id}-links-${index}`,
+        resourceLang,
+        l10nLanguages,
+      ),
     }
   }),
 }

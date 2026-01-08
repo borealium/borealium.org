@@ -1,26 +1,68 @@
 import { parse as tomlParse } from "@std/toml"
-import { fluentBundle, message } from "~plugins/fluent.ts"
-import { L10nPath } from "~types/l10n.ts"
-import { LangTag } from "~types/language.ts"
+import { createTranslator } from "~lib/fluent.ts"
+import type { LangTag } from "~types/language.ts"
 
-export function getL10NLanguages(resourceLang: string): string[] {
-  const tomlContent = Deno.readTextFileSync(`${Deno.cwd()}/resources/${resourceLang}-l10n.toml`)
-  const toml = tomlParse(tomlContent) as Record<string, L10nPath[]>
-  return [
-    ...toml.paths[0].locales,
-    "en",
-  ]
+interface L10nPath {
+  reference: string
+  l10n: string
+  locales: string[]
 }
 
+interface L10nConfig {
+  paths: L10nPath[]
+}
+
+// Cache for l10n configs
+const l10nCache = new Map<string, string[]>()
+
+/**
+ * Get the list of languages that have translations for a resource language
+ */
+export function getL10NLanguages(resourceLang: string): string[] {
+  // Check cache first
+  if (l10nCache.has(resourceLang)) {
+    return l10nCache.get(resourceLang)!
+  }
+
+  try {
+    const tomlPath = `${Deno.cwd()}/resources/${resourceLang}-l10n.toml`
+    const tomlContent = Deno.readTextFileSync(tomlPath)
+    const config = tomlParse(tomlContent) as unknown as L10nConfig
+
+    const locales = [...(config.paths[0]?.locales ?? []), "en"]
+    l10nCache.set(resourceLang, locales)
+    return locales
+  } catch {
+    // If no l10n file, default to English only
+    const defaultLocales = ["en"]
+    l10nCache.set(resourceLang, defaultLocales)
+    return defaultLocales
+  }
+}
+
+/**
+ * Create translations for a resource key across multiple languages
+ */
 export function makeResourceTranslations(
   key: string,
   resourceLang: string,
   languages: LangTag[],
 ): Record<LangTag, string> {
-  return languages.reduce((acc, language) => {
-    const bundle = fluentBundle(`${resourceLang}-resources`, language)
-    acc[language] = message(bundle, null, `~${resourceLang}-resources`, key)
+  const result: Record<LangTag, string> = {}
 
-    return acc
-  }, {} as Record<LangTag, string>)
+  for (const lang of languages) {
+    try {
+      // Create a translator for this language using the resource-specific fluent path
+      const t = createTranslator(lang, `${resourceLang}-resources`)
+      result[lang] = t(key, { fallback: key })
+    } catch {
+      // Fallback to key if translation fails
+      result[lang] = key
+    }
+  }
+
+  return result
 }
+
+// Export type for Resource
+export type { Resource } from "~types/resource.ts"

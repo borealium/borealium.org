@@ -1,0 +1,215 @@
+$md-breakpoint: 768px;
+$lg-nav-breakpoint: 1024px;
+$lg-main-breakpoint: 1280px;
+
+.resource {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+
+  @media (min-width: $md-breakpoint) {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+  }
+
+  @media (min-width: $lg-nav-breakpoint) {
+    grid-template-columns: 7fr 2fr;
+  }
+
+  @media (min-width: $lg-main-breakpoint) {
+    contain: paint;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-background-above);
+    height: inherit;
+
+    .content {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        margin: 4px 0;
+      }
+
+      h3 {
+        margin: 0;
+      }
+
+      .description {
+        margin: 0;
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      .section {
+        padding: 16px 0;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .tags-wrapper {
+        margin-top: 12px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .meta-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 24px;
+
+        .meta {
+          code {
+            background-color: transparent;
+            color: inherit;
+            border: 0;
+            padding: 0;
+          }
+          span {
+            font-weight: 700;
+          }
+          p {
+            margin: 4px 0;
+          }
+        }
+      }
+
+      .documentation {
+        .description {
+          margin-top: 12px;
+        }
+      }
+
+      .downloads {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        padding: 16px 0;
+        h3 {
+          margin: 8px 0;
+        }
+
+        .links {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, 125px);
+          gap: 24px;
+        }
+      }
+
+      .tts-test {
+        margin-top: 32px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .tts-voice-select {
+          font-weight: bold;
+          display: flex;
+          gap: 16px;
+          align-items: center;
+        }
+
+        .tts-textarea {
+          width: 100%;
+          background-color: #30334a;
+          color: white;
+          font-size: 28px;
+          padding: 16px;
+          resize: vertical;
+          border-radius: 4px;
+          min-height: 200px;
+          border: none;
+          font-family: inherit;
+        }
+
+        .tts-speak-button {
+          border: 2px solid var(--color-border);
+          border-radius: 8px;
+          height: 64px;
+          width: 66%;
+          text-transform: uppercase;
+          align-self: center;
+          font-weight: bold;
+          background: transparent;
+          cursor: pointer;
+
+          &:hover:not(:disabled) {
+            color: var(--color-text-secondary);
+            background-color: var(--color-highlight);
+            border-color: var(--color-highlight);
+          }
+
+          &:disabled {
+            background-color: var(--color-border);
+            color: var(--color-text-secondary);
+            border-color: var(--color-text-secondary);
+            cursor: wait;
+          }
+        }
+
+        .tts-error {
+          color: #dc3545;
+          font-size: 14px;
+          align-self: center;
+        }
+
+        .tts-audio {
+          align-self: center;
+        }
+      }
+    }
+    .related-documentation {
+      padding: 16px 32px;
+      font-family: var(--font-display);
+      background-color: var(--color-background-brand);
+
+      .description {
+        font-weight: 300;
+        font-size: 14px;
+      }
+
+      .categories {
+        display: flex;
+        gap: 32px;
+
+        @media (max-width: $md-breakpoint) {
+          gap: 0px;
+          flex-direction: column;
+        }
+
+        dl {
+          margin: 16px 0;
+
+          dt {
+            margin: 8px 0;
+            font-weight: 700;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+          }
+
+          dd {
+            display: inline-block;
+            margin: 0;
+            margin-right: 8px;
+            margin-bottom: 8px;
+
+            a {
+              font-size: 10px;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+  }
+}

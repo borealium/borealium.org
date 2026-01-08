@@ -1,4 +1,4 @@
-import { CategoryId, LangTag } from "~types/category.ts"
+import type { CategoryId, LangTag } from "./category.ts"
 
 export type Resource = {
   id: string

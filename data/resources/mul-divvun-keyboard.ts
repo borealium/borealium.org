@@ -13,15 +13,21 @@ const halfLinks = [
   },
   {
     type: LinkType.GooglePlayStore,
-    url: new URL("https://play.google.com/store/apps/details?id=no.uit.giella.keyboards.Sami"),
+    url: new URL(
+      "https://play.google.com/store/apps/details?id=no.uit.giella.keyboards.Sami",
+    ),
   },
   {
     type: LinkType.AppleAppStore,
-    url: new URL("https://apps.apple.com/us/app/divvun-dev-keyboards/id1518256662"),
+    url: new URL(
+      "https://apps.apple.com/us/app/divvun-dev-keyboards/id1518256662",
+    ),
   },
   {
     type: LinkType.GooglePlayStore,
-    url: new URL("https://play.google.com/store/apps/details?id=no.uit.giella.keyboards.dev"),
+    url: new URL(
+      "https://play.google.com/store/apps/details?id=no.uit.giella.keyboards.dev",
+    ),
   },
 ]
 
@@ -31,12 +37,24 @@ const resource: Resource = {
   languages: [],
   category: "keyboard-layouts",
   name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
-  description: makeResourceTranslations(`${id}-description`, resourceLang, l10nLanguages),
-  moreInfo: makeResourceTranslations(`${id}-more-info`, resourceLang, l10nLanguages),
+  description: makeResourceTranslations(
+    `${id}-description`,
+    resourceLang,
+    l10nLanguages,
+  ),
+  moreInfo: makeResourceTranslations(
+    `${id}-more-info`,
+    resourceLang,
+    l10nLanguages,
+  ),
   links: halfLinks.map((halfLink, index) => {
     return {
       ...halfLink,
-      text: makeResourceTranslations(`${id}-links-${index}`, resourceLang, l10nLanguages),
+      text: makeResourceTranslations(
+        `${id}-links-${index}`,
+        resourceLang,
+        l10nLanguages,
+      ),
     }
   }),
 }

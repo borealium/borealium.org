@@ -9,11 +9,15 @@ const l10nLanguages = getL10NLanguages(resourceLang)
 const halfLinks = [
   {
     type: LinkType.Windows,
-    url: new URL("https://pahkat.uit.no/divvun-installer/download/divvun-installer?platform=windows"),
+    url: new URL(
+      "https://pahkat.uit.no/divvun-installer/download/divvun-installer?platform=windows",
+    ),
   },
   {
     type: LinkType.MacOS,
-    url: new URL("https://pahkat.uit.no/divvun-installer/download/divvun-installer?platform=macos"),
+    url: new URL(
+      "https://pahkat.uit.no/divvun-installer/download/divvun-installer?platform=macos",
+    ),
   },
 ]
 
@@ -23,16 +27,28 @@ const resource: Resource = {
   languages: [],
   category: "package-management",
   name: makeResourceTranslations(`${id}`, resourceLang, l10nLanguages),
-  description: makeResourceTranslations(`${id}-description`, resourceLang, l10nLanguages),
+  description: makeResourceTranslations(
+    `${id}-description`,
+    resourceLang,
+    l10nLanguages,
+  ),
   release: {
     platforms: ["windows", "macos"],
   },
-  moreInfo: makeResourceTranslations(`${id}-more-info`, resourceLang, l10nLanguages),
+  moreInfo: makeResourceTranslations(
+    `${id}-more-info`,
+    resourceLang,
+    l10nLanguages,
+  ),
   documentationUrl: "/doc/divvun-manager/",
   links: halfLinks.map((halfLink, index) => {
     return {
       ...halfLink,
-      text: makeResourceTranslations(`${id}-links-${index}`, resourceLang, l10nLanguages),
+      text: makeResourceTranslations(
+        `${id}-links-${index}`,
+        resourceLang,
+        l10nLanguages,
+      ),
     }
   }),
 }

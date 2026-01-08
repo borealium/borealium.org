@@ -1,41 +1,40 @@
-import { parse as tomlParse } from "@std/toml"
-import { getLanguageData } from "~plugins/language-data.ts"
+import languagesData from "./languages.ts"
 
 const PAHKAT_URL = "https://pahkat.uit.no"
-
 const GRAPHQL_API = `${PAHKAT_URL}/graphql`
-const stringsUrl = (lang: string, repo: string) => `${PAHKAT_URL}/${repo}/strings/${lang}.toml`
-
-const languageData = getLanguageData()
+const CACHE_TTL = 1000 * 60 * 60 // 1 hour
 
 export type PahkatPackage = {
   id: string
   name: Record<string, string>
   description: Record<string, string>
   tags: string[]
-  release: Array<PahkatRelease>
+  release: PahkatRelease[]
 }
 
 export type PahkatTarget = {
   platform: string
-  arch: null | string
+  arch: string | null
 }
 
 export type PahkatRelease = {
   version: string
-  channel: null | "nightly" | "beta" | string
+  channel: string | null
   authors: string[]
   license?: string
-  licenseUrl?: URL
-  target: Array<PahkatTarget>
+  licenseUrl?: string
+  target: PahkatTarget[]
 }
 
 export type PahkatRepo = {
   url: string
   name: Record<string, string>
   description: Record<string, string>
-  packages: Array<PahkatPackage>
+  packages: PahkatPackage[]
 }
+
+// Cache
+let cache: { repo: PahkatRepo; timestamp: number } | null = null
 
 const queryMain = `query FetchAll {
   repo(id: "main") {
@@ -64,111 +63,75 @@ const queryMain = `query FetchAll {
   }
 }`
 
-const queryTools = `query FetchAll {
-  repo(id: "tools") {
-    url
-    name
-    description
-    packages {
-      ... on PackageDescriptor {
-        id
-        name
-        description
-        tags
-        release {
-          version
-          channel
-          authors
-          license
-          licenseUrl
-          target {
-            platform
-            arch
-          }
-        }
-      }
-    }
-  }
-}`
+async function fetchPahkatRepo(): Promise<PahkatRepo> {
+  console.log("Fetching Pahkat repo data...")
 
-async function downloadMainRepo() {
-  const { data, errors } = await fetch(GRAPHQL_API, {
+  const response = await fetch(GRAPHQL_API, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
     },
     body: JSON.stringify({ query: queryMain }),
-  }).then((r) => r.json())
+  })
 
-  if (errors) {
-    console.error(errors)
-    Deno.exit(1)
+  if (!response.ok) {
+    throw new Error(
+      `Pahkat API error: ${response.status} ${response.statusText}`,
+    )
   }
 
+  const { data, errors } = await response.json()
+
+  if (errors) {
+    console.error("Pahkat GraphQL errors:", errors)
+    throw new Error("Pahkat GraphQL query failed")
+  }
+
+  console.log(`Pahkat data loaded: ${data.repo.packages.length} packages`)
   return data.repo as PahkatRepo
 }
 
-async function downloadToolsRepo() {
-  const { data, errors } = await fetch(GRAPHQL_API, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify({ query: queryTools }),
-  }).then((r) => r.json())
+/**
+ * Get the Pahkat repo data, fetching if not cached or cache expired
+ */
+export async function getPahkatRepo(): Promise<PahkatRepo> {
+  const now = Date.now()
 
-  if (errors) {
-    console.error(errors)
-    Deno.exit(1)
+  // Return cached data if valid
+  if (cache && now - cache.timestamp < CACHE_TTL) {
+    return cache.repo
   }
 
-  return data.repo as PahkatRepo
+  // Fetch fresh data
+  const repo = await fetchPahkatRepo()
+  cache = { repo, timestamp: now }
+  return repo
 }
 
-async function downloadStrings(repo: string) {
-  const strings = (await Promise.all(
-    Object.keys(languageData.languages).map((lang) => {
-      return (async () => {
-        const res = await fetch(stringsUrl(lang, repo))
-        if (!res.ok) {
-          return [lang, null]
-        }
-        const text = await res.text()
-        return [lang, tomlParse(text)]
-      })()
-    }),
-  )).filter(([_, value]) => value != null) as Array<[string, any]>
-
-  const process = (input: any) => {
-    const out: any = {}
-    for (const [key, value] of Object.entries(input.tags)) {
-      if (key.startsWith("cat:")) {
-        out[key.slice(4)] = value
-      }
-    }
-    return out
+/**
+ * Initialize Pahkat data on server startup
+ */
+export async function initPahkat(): Promise<void> {
+  try {
+    await getPahkatRepo()
+  } catch (error) {
+    console.error("Failed to initialize Pahkat data:", error)
+    // Don't crash the server, just log the error
+    // Resources will be available without Pahkat packages
   }
-
-  const out: Record<string, any> = {}
-
-  for (const [lang, data] of strings) {
-    out[lang] = process(data)
-  }
-
-  return out
 }
 
-console.log("Downloading Pahkat repo data...")
+/**
+ * Check if Pahkat data is loaded
+ */
+export function isPahkatLoaded(): boolean {
+  return cache !== null
+}
 
-export const strings = await downloadStrings("main")
-export const repo = await downloadMainRepo()
-
-// Deno.writeTextFileSync("./dump.json", JSON.stringify({ strings, repo }, null, 2))
-// const raw = JSON.parse(Deno.readTextFileSync("./dump.json"))
-
-// export const strings: Record<string, any> = raw.strings
-// export const repo: PahkatRepo = raw.repo
-
-console.log("Pahkat data loaded.")
+/**
+ * Get cached repo without fetching (returns null if not cached)
+ */
+export function getCachedPahkatRepo(): PahkatRepo | null {
+  return cache?.repo ?? null
+}

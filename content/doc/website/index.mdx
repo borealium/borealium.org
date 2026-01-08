@@ -1,0 +1,255 @@
+---
+id: maintenance
+author: Brendan Molloy
+date: '2023-11-09'
+type: doc
+category: website
+layout: doc.tsx
+---
+
+# Maintaining and developing this website
+
+## Introduction
+
+This documentation describes how to maintain and develop this website (Borealium). The website is open source and hosted on [GitHub](https://github.com/divvun/borealium.org).
+
+The purpose of this documentation is to describe the general structure of the website, how localisation functions and can be extended, key data sources that affect the website generation, and how to add or change content.
+
+This website uses the [Fresh framework](https://fresh.deno.dev). For specifics of using Fresh, please read their documentation — this document will only describe the specifics of maintaining this website, not all specifics about the framework used.
+
+## Structure
+
+```text
+borealium.org/
+├── routes/              # File-based routing (Fresh)
+│   ├── _app.tsx         # App shell (SEO meta, head tags, hreflang)
+│   ├── _middleware.ts   # Language detection, Fluent initialization
+│   ├── api/             # API endpoints
+│   └── [[lang]]/        # Optional language parameter routes
+│       ├── _layout.tsx  # Layout wrapper (Navbar + Footer)
+│       ├── index.tsx    # Landing page
+│       ├── category/    # Category pages
+│       ├── doc/         # Documentation pages
+│       ├── language/    # Language detail pages
+│       ├── post/        # Blog posts
+│       └── resource/    # Resource pages
+├── components/          # Reusable Preact components
+├── islands/             # Interactive client-side components
+├── lib/                 # Core utilities
+│   ├── i18n.ts          # Internationalization context
+│   ├── fluent.ts        # Fluent translation bundle management
+│   └── markdown.ts      # Markdown parsing with frontmatter
+├── data/                # Data loaders and static data
+│   ├── languages.ts     # Language metadata
+│   ├── categories.ts    # Resource categories
+│   ├── resourceIndex.ts # Resource indexing
+│   └── pahkat.ts        # Pahkat integration
+├── content/             # Markdown content
+│   ├── post/            # Blog posts
+│   └── doc/             # Documentation
+├── locales/             # Fluent translation files (.ftl)
+├── resources/           # Resource-specific translations
+├── assets/              # SCSS styles
+├── static/              # Static files (images, geo data)
+└── types/               # TypeScript type definitions
+```
+
+The core website functionality (routes, components, islands) are in their respective directories.
+
+Data from Pahkat (the package management service used by Divvun) is loaded in `data/pahkat.ts` and integrated with local resource definitions. The language and category data is also defined in the `data/` directory.
+
+The language data in `data/languages.ts` specifies which languages are supported by the website, including geographic coordinates for the map visualization, autonyms (native names), and whether languages are UI-only (i.e. do not show search results for resources in those languages).
+
+## Adding content
+
+### Blog posts
+
+Blog posts are stored in `content/post/` with a date-prefixed directory structure:
+
+```text
+content/post/
+└── 2024-10-31_datamaskiner-snakker-sørsamisk/
+    ├── index.mdx       # Default language (Norwegian)
+    ├── index.se.mdx    # Northern Sámi translation
+    └── index.en.mdx    # English translation
+```
+
+Each post needs frontmatter:
+
+```yaml
+---
+title: My Blog Post Title
+author: Author Name
+date: '2024-01-15'
+type: post
+category: news
+---
+```
+
+### Documentation
+
+Documentation pages are stored in `content/doc/` organized by topic:
+
+```text
+content/doc/
+├── divvun-manager/
+│   └── index.mdx
+├── tts/
+│   ├── index.mdx
+│   ├── tts-mac-spokencontent.mdx
+│   └── tts-win-screenreader.mdx
+└── website/
+    └── index.mdx
+```
+
+### External resources
+
+Each resource is defined in a separate file in `data/resources/`. Copy an existing file and modify the content.
+
+**NB!** Make sure the id string contains only *lower-case* ASCII letters and hyphens. No underscores, no other characters. The same applies to filenames.
+
+### Adding a new language
+
+Languages are defined in `data/languages.ts`. Each language entry includes:
+
+```typescript
+{
+  tag: "se",           // BCP 47 language tag
+  autonym: "Davvisámegiella",  // Native name
+  coords: [69.65, 27.01],      // Map coordinates [lat, lng]
+  labelPosition: "right",       // Map label position
+  regions: ["NO", "SE", "FI"],  // Associated countries
+  isUiOnly: false,             // If true, only for UI translation
+}
+```
+
+### Adding a new category
+
+Available categories are the sum of [the ones given by Pahkat](https://github.com/divvun/pahkat.uit.no-index/blob/main/main/strings/en.toml) and the ones defined in `data/categories.ts`. To add new categories, extend that file.
+
+## Localisation
+
+This website uses [Fluent](https://projectfluent.org/) for translations.
+
+### Translation files
+
+Translation files are stored in `locales/{lang}/` using the `.ftl` extension:
+
+```text
+locales/
+├── en/
+│   ├── index.ftl
+│   ├── categories.ftl
+│   └── languages.ftl
+├── se/
+│   ├── index.ftl
+│   └── ...
+└── nb/
+    └── ...
+```
+
+### Using translations in code
+
+In route handlers and pages, translations are accessed via the `i18n` context:
+
+```tsx
+export default define.page(function MyPage({ state }) {
+  const { i18n } = state
+  const { t } = i18n
+
+  return (
+    <div>
+      <h1>{t("page-title")}</h1>
+      <p>{t("welcome-message", { name: "User" })}</p>
+    </div>
+  )
+})
+```
+
+For markdown-rendered translations, use `tmd()`:
+
+```tsx
+<div dangerouslySetInnerHTML={{ __html: i18n.tmd("rich-content") }} />
+```
+
+### Content localisation
+
+For long prose content like blog posts, use language-specific file variants:
+
+```text
+content/post/2024-01-15_my-post/
+├── index.mdx      # Default language
+├── index.en.mdx   # English
+├── index.se.mdx   # Northern Sámi
+└── index.fi.mdx   # Finnish
+```
+
+## Development
+
+### Prerequisites
+
+- Install [Deno](https://docs.deno.com/runtime/getting_started/installation/) — the JavaScript/TypeScript runtime used by Fresh
+
+### Quickstart
+
+```bash
+deno task dev
+```
+
+That's it! Now you have a local dev environment at `http://localhost:5173`.
+
+### Available commands
+
+```bash
+deno task dev      # Start dev server with hot reload
+deno task check    # Format, lint, and type check
+deno task build    # Build for production
+deno task start    # Run production server
+```
+
+It is recommended to use Visual Studio Code with the Deno extension for development, as it provides type checking and error detection.
+
+### Islands architecture
+
+This website uses Fresh's islands architecture for client-side interactivity. Islands are Preact components in the `islands/` directory that are hydrated on the client:
+
+- `SearchForm.tsx` — Search functionality with autocomplete
+- `LanguageMap.tsx` — Interactive D3-based language map
+- `TtsTest.tsx` — Text-to-speech voice testing
+
+Islands are used sparingly to minimize client-side JavaScript. Most of the site is server-rendered with no JavaScript required.
+
+### Route patterns
+
+Routes use Fresh's file-based routing with an optional language parameter:
+
+```text
+routes/[[lang]]/resource/[id].tsx
+         ↑              ↑
+    Optional lang    Dynamic ID
+```
+
+The middleware in `routes/_middleware.ts` handles:
+1. Language detection from URL or Accept-Language header
+2. Fluent bundle initialization
+3. Creating the translation context for pages
+
+### Handler and page pattern
+
+Routes typically export a handler and a page component:
+
+```tsx
+export const handler = define.handlers({
+  async GET(ctx) {
+    // Load data
+    const data = await loadSomeData(ctx.params.id)
+    ctx.state.data = data
+    return page()
+  },
+})
+
+export default define.page(function MyPage({ state }) {
+  const { data, i18n } = state
+  // Render using state
+})
+```

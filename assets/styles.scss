@@ -1,0 +1,32 @@
+// Master stylesheet for Borealium.org Fresh
+// Imports all component and page styles
+
+// 1. Variables and functions
+@import "variables.scss";
+
+// 2. Browser resets
+@import "reset.scss";
+
+// 3. Base layout styles
+@import "base.scss";
+
+// 4. Component styles
+@import "components/navbar.scss";
+@import "components/footer.scss";
+@import "components/aside.scss";
+@import "components/menu-item.scss";
+@import "components/label.scss";
+@import "components/download-button.scss";
+@import "components/language-select.scss";
+@import "components/search-form.scss";
+@import "components/tag.scss";
+@import "components/highlight.scss";
+
+// 5. Page-specific styles
+@import "pages/landing.scss";
+@import "pages/category-index.scss";
+@import "pages/resource.scss";
+@import "pages/post.scss";
+@import "pages/doc.scss";
+@import "pages/search.scss";
+@import "pages/error.scss";

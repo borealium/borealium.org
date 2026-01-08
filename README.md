@@ -1,38 +1,17 @@
-# Borealium
+# Fresh project
 
-This uses [Lume](https://lume.land/docs/overview/about-lume/).
+Your new Fresh project is ready to go. You can follow the Fresh "Getting
+Started" guide here: https://fresh.deno.dev/docs/getting-started
 
-## Dev
+### Usage
 
-```sh
-deno task serve
+Make sure to install Deno:
+https://docs.deno.com/runtime/getting_started/installation
+
+Then start the project in development mode:
+
+```
+deno task dev
 ```
 
-All the JSX being red and angry?
-
-```sh
-deno cache src/_includes/*.tsx
-```
-
-## Site analytics
-
-See [borealium.org@plausible](https://plausible.io/borealium.org) (requires login for the time being).
-
-[Plausible](https://plausible.io/) is fully GDPR compliant, does not track, and is open source.
-
-## Scheduled builds
-
-The site is rebuilt on each push and pull request. In addition, it is scheduled to build every hour, to make sure that
-it picks up changes in the Páhkat repo regularly. If there has been no repo activities for **60** days, workflow builds
-are automatically disabled.
-
-To re-enable workflows in such a case,
-[follow these instructions](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/disabling-and-enabling-a-workflow#enabling-a-workflow).
-
-## Localisation
-
-Almost all text is localised in our
-[Pontoon instance](https://divvun-pontoon-vm.norwayeast.cloudapp.azure.com/projects/borealium/). Exceptions:
-
-- news articles
-- user documentation
+This will watch the project directory and restart as necessary.
