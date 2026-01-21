@@ -11,3 +11,7 @@ _fresh/
 node_modules/
 vendor/
 
+.DS_Store
+/_site
+/_cargo
+/_cache
