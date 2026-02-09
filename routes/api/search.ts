@@ -1,6 +1,6 @@
 import { define } from "../../utils.ts"
 import { getAllResources } from "../../data/resourceIndex.ts"
-import { categoriesList } from "../../data/categories.ts"
+import { getAllCategories } from "../../data/categories.ts"
 import languagesData from "../../data/languages.ts"
 
 interface SearchResult {
@@ -97,7 +97,7 @@ export const handler = define.handlers({
     }
 
     // Search categories
-    for (const categoryId of categoriesList) {
+    for (const categoryId of getAllCategories()) {
       const idScore = searchScore(query, categoryId)
       // Format the category ID to be more readable for title
       const title = categoryId.replace(/-/g, " ").replace(

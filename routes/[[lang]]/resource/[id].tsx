@@ -16,7 +16,7 @@ import { CategoryLabel } from "../../../components/CategoryLabel.tsx"
 import { DownloadButton } from "../../../components/DownloadButton.tsx"
 import { Aside } from "../../../components/Aside.tsx"
 import { LanguageTag } from "../../../components/Tag.tsx"
-import { categoriesList } from "../../../data/categories.ts"
+import { getUICategories } from "../../../data/categories.ts"
 import { getTtsConfig } from "~data/ttsConfig.ts"
 import TtsTest from "../../../islands/TtsTest.tsx"
 
@@ -188,7 +188,7 @@ function RelatedDocumentation({
   const collator = new Intl.Collator(collatorLocale)
 
   // Sort categories by translated name
-  const sortedCategories = [...categoriesList].sort((a, b) =>
+  const sortedCategories = [...getUICategories()].sort((a, b) =>
     collator.compare(categoryT(a), categoryT(b))
   )
 
@@ -264,7 +264,8 @@ export default define.page(function ResourcePage({ state }) {
   const ttsConfig = getTtsConfig(resource.id)
 
   // Apply TTS config overrides
-  const documentationUrl = ttsConfig?.documentationUrl ?? resource.documentationUrl
+  const documentationUrl = ttsConfig?.documentationUrl ??
+    resource.documentationUrl
 
   return (
     <>
@@ -398,7 +399,9 @@ export default define.page(function ResourcePage({ state }) {
             {/* TTS Testing */}
             {ttsConfig && ttsConfig.voices.length > 0 && (
               <div class="section">
-                <h3>{resourceT("test-voice", { fallback: "Test the voice!" })}</h3>
+                <h3>
+                  {resourceT("test-voice", { fallback: "Test the voice!" })}
+                </h3>
                 <TtsTest voices={ttsConfig.voices} />
               </div>
             )}

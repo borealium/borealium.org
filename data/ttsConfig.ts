@@ -69,6 +69,8 @@ export const ttsConfig: Record<string, TtsResourceConfig> = {
   },
 }
 
-export function getTtsConfig(resourceId: string): TtsResourceConfig | undefined {
+export function getTtsConfig(
+  resourceId: string,
+): TtsResourceConfig | undefined {
   return ttsConfig[resourceId]
 }

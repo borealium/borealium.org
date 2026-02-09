@@ -33,7 +33,12 @@ export default define.page(function ErrorPage({ error, url, state }) {
         <title>{title} | Borealium</title>
       </Head>
       <div class="wrapper">
-        <Navbar lang={lang} url={url.pathname} t={t} searchQuery={searchQuery} />
+        <Navbar
+          lang={lang}
+          url={url.pathname}
+          t={t}
+          searchQuery={searchQuery}
+        />
         <div class="navbar-offset-wrapper">
           <div class="error-page">
             <div class="error-content">

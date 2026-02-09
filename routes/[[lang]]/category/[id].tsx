@@ -2,7 +2,7 @@ import { Head } from "fresh/runtime"
 import { HttpError, page } from "fresh"
 import { marked } from "marked"
 import { define } from "../../../utils.ts"
-import { categoriesList } from "../../../data/categories.ts"
+import { getAllCategories } from "../../../data/categories.ts"
 import { getResourcesByCategory } from "../../../data/resourceIndex.ts"
 import { getRecentPosts } from "../../../lib/markdown.ts"
 import { createTranslator, selectLocale } from "../../../lib/i18n.ts"
@@ -15,7 +15,7 @@ export const handler = define.handlers({
     const { id } = ctx.params
 
     // Validate category exists
-    if (!categoriesList.includes(id)) {
+    if (!getAllCategories().includes(id)) {
       throw new HttpError(404, `Category "${id}" not found`)
     }
 

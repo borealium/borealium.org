@@ -1,6 +1,12 @@
 export function TranslateIcon() {
   return (
-    <svg width="34" height="19" viewBox="0 0 34 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="34"
+      height="19"
+      viewBox="0 0 34 19"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M17.5059 5.38781H10.7306V1.68405C10.7306 1.16844 10.293 0.75 9.75302 0.75C9.21299 0.75 8.77543 1.16844 8.77543 1.68405V5.38781H1.97758C1.43794 5.38781 1 5.80625 1 6.32186C1 6.83784 1.43794 7.2559 1.97758 7.2559H12.2444C11.25 9.17197 8.54093 13.0787 1.94966 16.3287C1.546 16.5249 1.33599 16.96 1.44236 17.3807C1.54873 17.8014 1.94342 18.097 2.39618 18.0951C2.55242 18.0962 2.70593 18.0594 2.84308 17.9886C5.17304 16.8704 7.3433 15.4713 9.3004 13.8254L14.7186 18.0367C14.8904 18.1748 15.1082 18.2507 15.333 18.25C15.748 18.2519 16.1189 18.0035 16.2584 17.6302C16.3979 17.2568 16.2755 16.8398 15.9529 16.5904L10.7304 12.4968C12.2885 10.9854 13.5353 9.20774 14.4058 7.25593H17.5224C18.0624 7.25593 18.5 6.83787 18.5 6.32189C18.5 5.80628 18.0624 5.38784 17.5224 5.38784L17.5059 5.38781Z"
         fill="#01FDC1"
@@ -17,7 +23,13 @@ export function TranslateIcon() {
 
 export function CategoryIcon() {
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M1 3C1 1.89543 1.89543 1 3 1H9.1265C10.0168 1 10.8612 1.39547 11.4312 2.07945L13.865 5H1V3Z"
         fill="#DDEFF7"
@@ -32,15 +44,33 @@ export function CategoryIcon() {
       />
       <rect x="4.5" y="8.5" width="5" height="5" stroke="#159ED7" />
       <rect x="14.5" y="8.5" width="5" height="5" rx="2.5" stroke="#159ED7" />
-      <path d="M9.87052 19.5L12.5 14.9923L15.1295 19.5H9.87052Z" stroke="#159ED7" />
+      <path
+        d="M9.87052 19.5L12.5 14.9923L15.1295 19.5H9.87052Z"
+        stroke="#159ED7"
+      />
     </svg>
   )
 }
 
 export function ResourceIcon() {
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="1" y="1" width="22" height="22" rx="3" fill="#E9E4FA" stroke="#471ADF" strokeWidth="2" />
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="1"
+        y="1"
+        width="22"
+        height="22"
+        rx="3"
+        fill="#E9E4FA"
+        stroke="#471ADF"
+        strokeWidth="2"
+      />
       <mask id="path-2-inside-1_592_7912" fill="white">
         <path
           fillRule="evenodd"
@@ -63,8 +93,23 @@ export function ResourceIcon() {
 
 export function LanguageIcon() {
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="1" y="1" width="22" height="22" rx="3" fill="#D0FBF0" stroke="#04BF93" strokeWidth="2" />
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="1"
+        y="1"
+        width="22"
+        height="22"
+        rx="3"
+        fill="#D0FBF0"
+        stroke="#04BF93"
+        strokeWidth="2"
+      />
       <path
         d="M12 8.0002V6.0001H8.5V4H6.5002V6.0001H4V8.0002H8.0002C8.0002 10.2091 6.2089 12.0001 4 12.0001V14.0002C5.5519 14.0002 6.961 13.4065 8.0254 12.4396L9.586 14.0002L11.0002 12.586L9.2755 10.8604C9.7375 10.0108 10 9.0361 10 8.0002H12Z"
         fill="#04BF93"
@@ -79,8 +124,23 @@ export function LanguageIcon() {
 
 export function PageIcon() {
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="1" y="1" width="22" height="22" rx="3" fill="#FDC8F5" stroke="#C72AAE" strokeWidth="2" />
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="1"
+        y="1"
+        width="22"
+        height="22"
+        rx="3"
+        fill="#FDC8F5"
+        stroke="#C72AAE"
+        strokeWidth="2"
+      />
       <rect x="4" y="4" width="16" height="1" fill="#C72AAE" />
       <path d="M4 7H11V8H4V7Z" fill="#C72AAE" />
       <path d="M4 10H15V11H4V10Z" fill="#C72AAE" />

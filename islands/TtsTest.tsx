@@ -13,7 +13,7 @@ export default function TtsTest({ voices }: TtsTestProps) {
   const audioRef = useRef<HTMLAudioElement>(null)
 
   const handleSpeak = async () => {
-    if (!selectedVoice || !text.trim()) return
+    if (!selectedVoice || !text.trim()) { return }
 
     setIsLoading(true)
     setError(null)

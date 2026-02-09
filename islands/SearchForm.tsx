@@ -36,7 +36,9 @@ function SearchIcon() {
   )
 }
 
-export default function SearchForm({ lang, seeMoreText, initialQuery = "" }: SearchFormProps) {
+export default function SearchForm(
+  { lang, seeMoreText, initialQuery = "" }: SearchFormProps,
+) {
   const [query, setQuery] = useState(initialQuery)
   const [results, setResults] = useState<SearchResult[]>([])
   const [showPopover, setShowPopover] = useState(false)

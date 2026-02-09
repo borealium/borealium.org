@@ -164,15 +164,26 @@ export default define.page(function SearchPage({ state }) {
           </div>
 
           {query && results.length === 0 && (
-            <p style={{ color: "var(--color-text-secondary)", padding: "32px 0" }}>
+            <p
+              style={{
+                color: "var(--color-text-secondary)",
+                padding: "32px 0",
+              }}
+            >
               {t("no-results", { fallback: "No results found for" })} "{query}"
             </p>
           )}
 
           {!query && (
-            <p style={{ color: "var(--color-text-secondary)", padding: "32px 0" }}>
+            <p
+              style={{
+                color: "var(--color-text-secondary)",
+                padding: "32px 0",
+              }}
+            >
               {t("search-instructions", {
-                fallback: "Enter a search term above to find resources, languages, and categories.",
+                fallback:
+                  "Enter a search term above to find resources, languages, and categories.",
               })}
             </p>
           )}
