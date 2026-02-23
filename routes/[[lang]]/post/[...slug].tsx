@@ -33,7 +33,7 @@ export const handler = define.handlers({
       title: p.frontmatter.title,
       date: p.frontmatter.date,
       tag: p.frontmatter.category ?? "news",
-      url: `/${ctx.state.lang}/post/${p.slug}`,
+      url: `/${ctx.state.lang}/post/${p.slug}/`,
       excerpt: p.content.slice(0, 150) + "...",
     }))
 

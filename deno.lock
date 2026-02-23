@@ -6,6 +6,7 @@
     "jsr:@deno/loader@~0.3.3": "0.3.9",
     "jsr:@fresh/build-id@1": "1.0.1",
     "jsr:@fresh/core@2": "2.2.0",
+    "jsr:@fresh/core@2.2.0": "2.2.0",
     "jsr:@fresh/core@^2.2.0": "2.2.0",
     "jsr:@fresh/plugin-vite@^1.0.8": "1.0.8",
     "jsr:@std/bytes@^1.0.6": "1.0.6",

@@ -26,7 +26,7 @@ export const handler = define.handlers({
       title: post.frontmatter.title,
       date: post.frontmatter.date,
       tag: post.frontmatter.category ?? "news",
-      url: `/${ctx.state.lang}/post/${post.slug}`,
+      url: `/${ctx.state.lang}/post/${post.slug}/`,
       excerpt: post.content.slice(0, 150) + "...",
     }))
 
@@ -93,7 +93,7 @@ function ResourceListItem(
 
   return (
     <li class="search-result">
-      <a href={`/${lang}/resource/${resource.id}`}>
+      <a href={`/${lang}/resource/${resource.id}/`}>
         <img src="/static/images/tag-resource.svg" alt="" />
         <strong>{name}</strong>
       </a>

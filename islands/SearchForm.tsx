@@ -118,7 +118,7 @@ export default function SearchForm(
   return (
     <div ref={wrapperRef} class="search-wrapper" onClick={handleWrapperClick}>
       <form
-        action={`/${lang}/search`}
+        action={`/${lang}/search/`}
         class="search"
         onClick={(e) =>
           e.stopPropagation()}
@@ -168,7 +168,7 @@ export default function SearchForm(
           <div class="search-see-more">
             <a
               class="search-see-more-button"
-              href={`/${lang}/search?q=${encodeURIComponent(query)}`}
+              href={`/${lang}/search/?q=${encodeURIComponent(query)}`}
             >
               {seeMoreText}
             </a>

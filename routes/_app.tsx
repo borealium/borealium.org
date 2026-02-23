@@ -27,16 +27,21 @@ export default define.page(function App({ Component, state, url }) {
   const image = meta.image ??
     "https://borealium.org/static/images/borealium-og.png"
 
-  // Build canonical URL
+  // Build canonical URL (trailing slash is stripped by handler for routing,
+  // so we add it back for SEO URLs)
   const baseUrl = "https://borealium.org"
-  const canonicalUrl = `${baseUrl}${url.pathname}`
+  const trailingPathname = url.pathname === "/" || url.pathname.endsWith("/")
+    ? url.pathname
+    : url.pathname + "/"
+  const canonicalUrl = `${baseUrl}${trailingPathname}`
 
   // Build path without language prefix for hreflang alternates
   // Include both base languages and regional variants in the pattern
   const allCodes = [...ALL_LANGUAGE_VARIANTS, ...languagesData.websiteLanguages]
   const langPattern = allCodes.join("|")
-  const pathWithoutLang =
-    url.pathname.replace(new RegExp(`^/(${langPattern})(?=/|$)`), "") || "/"
+  const rawPath =
+    trailingPathname.replace(new RegExp(`^/(${langPattern})(?=/|$)`), "") || "/"
+  const pathWithoutLang = rawPath.endsWith("/") ? rawPath : rawPath + "/"
 
   return (
     <html lang={lang} dir={dir}>

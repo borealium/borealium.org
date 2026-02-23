@@ -69,7 +69,7 @@ export const handler = define.handlers({
           id: resource.id,
           title: resource.name.en || resource.id,
           description: resource.description?.en?.slice(0, 150),
-          url: `/${lang}/resource/${resource.id}`,
+          url: `/${lang}/resource/${resource.id}/`,
           score,
         })
       }
@@ -90,7 +90,7 @@ export const handler = define.handlers({
           type: "language",
           id: tag,
           title: data.autonym,
-          url: `/${lang}/language/${tag}`,
+          url: `/${lang}/language/${tag}/`,
           score,
         })
       }
@@ -110,7 +110,7 @@ export const handler = define.handlers({
           type: "category",
           id: categoryId,
           title,
-          url: `/${lang}/category/${categoryId}`,
+          url: `/${lang}/category/${categoryId}/`,
           score: idScore,
         })
       }

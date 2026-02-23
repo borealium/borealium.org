@@ -110,7 +110,7 @@ export function Navbar({ lang, url, t, searchQuery }: NavbarProps) {
       <div class="header-gradient" />
       <nav class="nav-control">
         <div class="nav">
-          <a class="logo" href={`/${lang}`}>
+          <a class="logo" href={`/${lang}/`}>
             <img
               src="/static/images/borealium-small-logo.svg"
               alt="Borealium"

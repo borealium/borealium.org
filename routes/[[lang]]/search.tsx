@@ -54,7 +54,7 @@ function performSearch(query: string, lang: string): SearchResult[] {
         id: resource.id,
         title: resource.name.en || resource.id,
         description: resource.description?.en?.slice(0, 150),
-        url: `/${lang}/resource/${resource.id}`,
+        url: `/${lang}/resource/${resource.id}/`,
         score,
       })
     }
@@ -74,7 +74,7 @@ function performSearch(query: string, lang: string): SearchResult[] {
         type: "language",
         id: tag,
         title: data.autonym,
-        url: `/${lang}/language/${tag}`,
+        url: `/${lang}/language/${tag}/`,
         score,
       })
     }
@@ -93,7 +93,7 @@ function performSearch(query: string, lang: string): SearchResult[] {
         type: "category",
         id: categoryId,
         title,
-        url: `/${lang}/category/${categoryId}`,
+        url: `/${lang}/category/${categoryId}/`,
         score: idScore,
       })
     }
@@ -114,7 +114,7 @@ export const handler = define.handlers({
       title: post.frontmatter.title,
       date: post.frontmatter.date,
       tag: post.frontmatter.category ?? "news",
-      url: `/${ctx.state.lang}/post/${post.slug}`,
+      url: `/${ctx.state.lang}/post/${post.slug}/`,
       excerpt: post.content.slice(0, 150) + "...",
     }))
 

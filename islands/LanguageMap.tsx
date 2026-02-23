@@ -269,7 +269,7 @@ export default function LanguageMap({ baseNodes, lang }: LanguageMapProps) {
                 return {
                   id: n.autonym,
                   title: n.title,
-                  url: `/${langPrefix}/language/${n.code}`,
+                  url: `/${langPrefix}/language/${n.code}/`,
                   x,
                   y,
                   fx: x,
@@ -874,7 +874,7 @@ export default function LanguageMap({ baseNodes, lang }: LanguageMapProps) {
           <a
             key={node.code}
             class="download-button"
-            href={`/${lang}/language/${node.code}`}
+            href={`/${lang}/language/${node.code}/`}
             title={node.title}
           >
             <div class="button-text">

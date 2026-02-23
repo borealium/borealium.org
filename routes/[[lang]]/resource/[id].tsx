@@ -38,7 +38,7 @@ export const handler = define.handlers({
       title: post.frontmatter.title,
       date: post.frontmatter.date,
       tag: post.frontmatter.category ?? "news",
-      url: `/${ctx.state.lang}/post/${post.slug}`,
+      url: `/${ctx.state.lang}/post/${post.slug}/`,
       excerpt: post.content.slice(0, 150) + "...",
     }))
 
@@ -103,7 +103,7 @@ function PahkatInfo({
             <DownloadButton
               title={t("dm-button-title")}
               description={t("dm-button-description")}
-              href={`/${lang}/resource/divvun-manager`}
+              href={`/${lang}/resource/divvun-manager/`}
             />
           </div>
         </div>
@@ -116,7 +116,7 @@ function PahkatInfo({
             <DownloadButton
               title={t("dk-button-title")}
               description={t("dk-button-description")}
-              href={`/${lang}/resource/divvun-keyboard`}
+              href={`/${lang}/resource/divvun-keyboard/`}
             />
           </div>
         </div>
@@ -212,7 +212,7 @@ function RelatedDocumentation({
           </dt>
           {sortedCategories.map((key) => (
             <dd key={key}>
-              <a class="tag tag-category" href={`/${lang}/category/${key}`}>
+              <a class="tag tag-category" href={`/${lang}/category/${key}/`}>
                 {categoryT(key)}
               </a>
             </dd>
@@ -232,7 +232,7 @@ function RelatedDocumentation({
               <a
                 class="tag tag-language"
                 title={langT(tag)}
-                href={`/${lang}/language/${tag}`}
+                href={`/${lang}/language/${tag}/`}
               >
                 {autonym(tag)}
               </a>
@@ -299,7 +299,7 @@ export default define.page(function ResourcePage({ state }) {
             <div class="tags-wrapper">
               <a
                 class="tag tag-category"
-                href={`/${lang}/category/${resource.category}`}
+                href={`/${lang}/category/${resource.category}/`}
               >
                 {categoryT(resource.category, { fallback: resource.category })}
               </a>
@@ -307,7 +307,7 @@ export default define.page(function ResourcePage({ state }) {
                 <LanguageTag
                   key={langTag}
                   text={autonym(langTag)}
-                  href={`/${lang}/language/${langTag}`}
+                  href={`/${lang}/language/${langTag}/`}
                 />
               ))}
             </div>

@@ -52,7 +52,7 @@ export default define.page(function ErrorPage({ error, url, state }) {
                   })}
                 </p>
               )}
-              <a href={`/${lang}`} class="error-home-link">
+              <a href={`/${lang}/`} class="error-home-link">
                 {t("error-go-home", { fallback: "Go to homepage" })}
               </a>
             </div>

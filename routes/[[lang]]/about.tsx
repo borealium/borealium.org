@@ -12,7 +12,7 @@ export const handler = define.handlers({
       title: post.frontmatter.title,
       date: post.frontmatter.date,
       tag: post.frontmatter.category ?? "news",
-      url: `/${ctx.state.lang}/post/${post.slug}`,
+      url: `/${ctx.state.lang}/post/${post.slug}/`,
       excerpt: post.content.slice(0, 150) + "...",
     }))
     return page()

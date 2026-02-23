@@ -17,14 +17,14 @@ const LINKS: LinkGroupType[] = [
   {
     id: "information",
     urls: [
-      { id: "about-us", url: "/about" },
-      { id: "privacy", url: "/privacy" },
+      { id: "about-us", url: "/about/" },
+      { id: "privacy", url: "/privacy/" },
       { id: "github", url: "https://github.com/borealium/borealium.org" },
     ],
   },
   {
     id: "documentation",
-    urls: [{ id: "maintaining-this-website", url: "/doc/website" }],
+    urls: [{ id: "maintaining-this-website", url: "/doc/website/" }],
   },
 ]
 

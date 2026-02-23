@@ -10,15 +10,6 @@ import {
 export const handler = define.middleware(async (ctx) => {
   const url = new URL(ctx.req.url)
 
-  // Strip trailing slashes (except for root)
-  if (url.pathname !== "/" && url.pathname.endsWith("/")) {
-    const newUrl = url.pathname.slice(0, -1) + url.search
-    return new Response(null, {
-      status: 301,
-      headers: { Location: newUrl },
-    })
-  }
-
   // Initialize Fluent on first request
   if (!isFluentInitialized()) {
     await initFluent()
@@ -31,7 +22,7 @@ export const handler = define.middleware(async (ctx) => {
     )
     return new Response(null, {
       status: 302,
-      headers: { Location: `/${detectedLang}` },
+      headers: { Location: `/${detectedLang}/` },
     })
   }
 

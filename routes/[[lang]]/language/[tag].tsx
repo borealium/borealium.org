@@ -82,7 +82,7 @@ export default define.page(function LanguagePage({ params, state }) {
               <div key={category} class="category">
                 <a
                   class="tag tag-category"
-                  href={`/${lang}/category/${category}`}
+                  href={`/${lang}/category/${category}/`}
                 >
                   {categoryT(category, { fallback: category })}
                 </a>
@@ -112,7 +112,7 @@ function ResourceListItem(
 
   return (
     <li class="search-result">
-      <a href={`/${lang}/resource/${resource.id}`}>
+      <a href={`/${lang}/resource/${resource.id}/`}>
         <img src="/static/images/tag-resource.svg" alt="" />
         <strong>{name}</strong>
       </a>
