@@ -13,9 +13,9 @@ sme-nds-smn-description = Neahttadigisánit dictionary between North and Inari S
 sme-nds-smn-more-info = NDS — Neahttadigisánit — for North and Inari Sámi contains translations in both directions.
 sme-nds-smn-links-0 = NDS Davvi Anár
 
-sme-nds-spa = NDS for North Sámi ⇐ Spanish
-sme-nds-spa-description = Neahttadigisánit dictionary from Spanish to North Sámi.
-sme-nds-spa-more-info = NDS — Neahttadigisánit — from Spanish to North Sámi contains translations only in one direction so far.
+sme-nds-spa = NDS for North Sámi ⇔ Spanish
+sme-nds-spa-description = Neahttadigisánit dictionary between Spanish and North Sámi.
+sme-nds-spa-more-info = NDS — Neahttadigisánit — for Spanish and North Sámi contains translations in both directions.
 sme-nds-spa-links-0 = NDS Spánska Davvi
 
 sme-jounivest = Jouni A Vest: Suomi–Saame
