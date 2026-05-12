@@ -19,3 +19,7 @@ kal-online-speller-links-0 = Greenlandic Online Speller
 kalmt = Greenlandic Machine Translation
 kalmt-description = Machine Translation to and from Greenlandic.
 kalmt-links-0 = Greenlandic MT
+
+kalmtgoogle = Google Machine translation for Greenlandic
+kalmtgoogle-description = Machine translation to and from Greenlandic, using Google.
+kalmtgoogle-links-0 = Google MT for Greenlandic
