@@ -49,3 +49,7 @@ malradid-links-0 = Málráðið lists
 fao-online-speller = Faroese Online Spellchecker
 fao-online-speller-description = Online spellchecker for Faroese: paste in your text and get checks.
 fao-online-speller-links-0 = Faroese Online Speller
+
+faomtgoogle = Google Machine translation for Faroese
+faomtgoogle-description = Machine translation to and from Faroese, using Google.
+faomtgoogle-links-0 = Google MT for Faroese
