@@ -45,3 +45,7 @@ malstadur-links-0 = Málstaður
 tiro = Tíró – talgerving
 tiro-description = Online Icelandic Speech Synthesis.
 tiro-links-0 = Tíró
+
+googlemt = Google machine translation
+googlemt-description = "Google's MT system from Icelandic to many other languages"
+googlemt-links-0 = Google MT
