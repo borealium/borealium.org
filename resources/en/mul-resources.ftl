@@ -72,3 +72,7 @@ mul-newamigos-more-info =
 mul-newamigos-links-0 = New Amigos
 mul-newamigos-links-1 = New Amigos
 mul-newamigos-links-2 = New Amigos web site
+
+mulmttartu = Neurotõlge Machine translation
+mulmttartu-description = Machine translation to and from most Sámi languages, using Neurotõlge from the university of Tartu, Estonia.
+mulmttartu-links-0 = Neurotõlge MT
