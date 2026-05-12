@@ -43,3 +43,7 @@ mtsme-links-0 = MT for North Sámi
 sme-online-speller = North Sámi Online Spellchecker
 sme-online-speller-description = Online spellchecker for North Sámi: paste in your text and get checks.
 sme-online-speller-links-0 = Davvi Online Speller
+
+smemtgoogle = Google Machine translation for North Sámi
+smemtgoogle-description = Machine translation to and from North Sámi, using Google.
+smemtgoogle-links-0 = Google MT for North Sámi
