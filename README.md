@@ -22,6 +22,8 @@ This will watch the project directory and restart as necessary.
 
 ## Site analytics
 
-See [borealium.org@plausible](https://plausible.io/borealium.org) (requires login for the time being).
+See [borealium.org@plausible](https://plausible.io/borealium.org) (requires
+login for the time being).
 
-[Plausible](https://plausible.io/) is fully GDPR compliant, does not track, and is open source.
+[Plausible](https://plausible.io/) is fully GDPR compliant, does not track, and
+is open source.

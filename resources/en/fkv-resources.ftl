@@ -1,7 +1,7 @@
-nds-fkv = NDS for Kvääni
-nds-fkv-description = Dictionary resources for Kvääni
-nds-fkv-more-info = NDS — Nähttadigibáhko — for Kvääni contains dictionaries translating to and from Kvääni.
-nds-fkv-links-0 = NDS Kvääni
+fkv-nds = NDS for Kvääni
+fkv-nds-description = Dictionary resources for Kvääni
+fkv-nds-more-info = NDS — Nähttadigibáhko — for Kvääni contains dictionaries translating to and from Kvääni.
+fkv-nds-links-0 = NDS Kvääni
 
 fkv-korp = Korp for Kven
 fkv-korp-description = In Korp for Kven you can search Kven texts. The text corpus is grammatically annotated.

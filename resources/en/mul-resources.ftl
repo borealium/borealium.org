@@ -52,9 +52,9 @@ islex = ISLEX
 islex-description = Online bilingual dictionaries for modern Icelandic to Nordic languages (Danish, Norwegian bokmål, Nynorsk, Swedish, Finnish, Faroese)
 islex-links-0 = ISLEX
 
-mulsmimt = Sámi Machine Translation
-mulsmimt-description = Machine translation between North, Lule, South and Inari Sámi. Not all combinations available.
-mulsmimt-links-0 = Sámi MT
+smi-mt = Sámi Machine Translation
+smi-mt-description = Machine translation between North, Lule, South and Inari Sámi. Not all combinations available.
+smi-mt-links-0 = Sámi MT
 
 webdict = Webdict from Giellatekno
 webdict-description = A simple and fast dictionary, works also offline.
@@ -62,17 +62,17 @@ webdict-more-info = A collection of many dictionaries in a simple and easy to us
   No morphological analysis, no links to external sources. Works offline.
 webdict-links-0 = Webdict
 
-mul-newamigos = New Amigos
-mul-newamigos-description = Language Learning Directly from a Native Speaker.
-mul-newamigos-more-info =
+newamigos = New Amigos
+newamigos-description = Language Learning Directly from a Native Speaker.
+newamigos-more-info =
   New Amigos can be played alone, with family and friends, or together with a teacher.
   The app also offers a language café, where up to four participants can meet around a
   virtual table. In addition the app has a built-in chat with automatic translation to
   and from Sámi languages.
-mul-newamigos-links-0 = New Amigos
-mul-newamigos-links-1 = New Amigos
-mul-newamigos-links-2 = New Amigos web site
+newamigos-links-0 = New Amigos
+newamigos-links-1 = New Amigos
+newamigos-links-2 = New Amigos web site
 
-mulmttartu = Neurotõlge Machine translation
-mulmttartu-description = Machine translation to and from most Sámi languages, using Neurotõlge from the university of Tartu, Estonia.
-mulmttartu-links-0 = Neurotõlge MT
+tartumt = Neurotõlge Machine translation
+tartumt-description = Machine translation to and from most Sámi languages, using Neurotõlge from the university of Tartu, Estonia.
+tartumt-links-0 = Neurotõlge MT

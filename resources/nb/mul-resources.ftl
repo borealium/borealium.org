@@ -42,18 +42,18 @@ gramdivvun-links-1 = Google Docs
 islex = ISLEX
 islex-description = Flerspråklig nettordbok fra islandsk til andre nordiske språk (dansk, bokmål, nynorsk, svensk, finsk, færøysk).
 islex-links-0 = ISLEX
-mulsmimt = Samisk maskinoversetting
-mulsmimt-description = Maskinoversetting mellom nord-, lule-, sør- og enaresamisk. Ikke alle kombinasjoner finnes.
-mulsmimt-links-0 = Samisk MT
+smi-mt = Samisk maskinoversetting
+smi-mt-description = Maskinoversetting mellom nord-, lule-, sør- og enaresamisk. Ikke alle kombinasjoner finnes.
+smi-mt-links-0 = Samisk MT
 webdict = Webdict fra Giellatekno
 webdict-description = Ei enkel og rask nettordbok, som også fungerer uten nett.
 webdict-more-info =
     Ei samling med mange ordbøker i et enkelt og lettbrukt nettgrensesnitt.
     Ingen morfologisk analyse, ingen lenker til eksterne ressurser. Fungerer uten nett.
 webdict-links-0 = Webdict
-mul-newamigos = New Amigos
-mul-newamigos-description = Lær språk rett fra en morsmålstaler.
-mul-newamigos-more-info = New Amigos kan spilles alene, med familie og venner, eller sammen med en lærer. Appen tilbyr også en språkkafé, der inntil fire deltakere kan møtes rundt hvert sitt virtuelle bord. I tillegg har appen en chattefunksjon med automatisk oversettelse til og fra samiske språk.
-mul-newamigos-links-0 = New Amigos
-mul-newamigos-links-1 = New Amigos
-mul-newamigos-links-2 = New Amigos-nettsted
+newamigos = New Amigos
+newamigos-description = Lær språk rett fra en morsmålstaler.
+newamigos-more-info = New Amigos kan spilles alene, med familie og venner, eller sammen med en lærer. Appen tilbyr også en språkkafé, der inntil fire deltakere kan møtes rundt hvert sitt virtuelle bord. I tillegg har appen en chattefunksjon med automatisk oversettelse til og fra samiske språk.
+newamigos-links-0 = New Amigos
+newamigos-links-1 = New Amigos
+newamigos-links-2 = New Amigos-nettsted
