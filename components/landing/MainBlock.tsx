@@ -1,6 +1,5 @@
 import type { LangTag } from "~types/language.ts"
 import { CategoryLabel } from "../CategoryLabel.tsx"
-import { DownloadButton } from "../DownloadButton.tsx"
 import { autonym, getAllLanguages, getLanguageTitle } from "../../lib/i18n.ts"
 import { createTranslator } from "../../lib/fluent.ts"
 import LanguageMap from "../../islands/LanguageMap.tsx"
@@ -11,7 +10,6 @@ interface MainBlockProps {
 
 export function MainBlock({ lang }: MainBlockProps) {
   const t = createTranslator(lang, "_components/landing/MainBlock")
-  const tLang = createTranslator(lang, "languages")
 
   // Get languages that have coordinates (for display on map)
   // Note: hidden languages (like yi) still appear on map, only uiOnly are excluded

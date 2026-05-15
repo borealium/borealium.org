@@ -2,12 +2,7 @@ import type { FluentVariable } from "@fluent/bundle"
 import { marked } from "marked"
 import languagesData from "../data/languages.ts"
 import type { LangTag } from "../types/language.ts"
-import {
-  createTranslator,
-  formatMessage,
-  getBundle,
-  makeFallbacks,
-} from "./fluent.ts"
+import { createTranslator } from "./fluent.ts"
 
 export { createTranslator } from "./fluent.ts"
 

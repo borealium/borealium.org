@@ -20,7 +20,7 @@ export const handler = define.handlers({
 })
 
 export default define.page(function AboutPage({ state }) {
-  const { lang, i18n, recentPosts } = state
+  const { i18n, recentPosts } = state
   const { t, tmd } = i18n
 
   const title = t("title", { fallback: "About Borealium" })
@@ -42,6 +42,7 @@ export default define.page(function AboutPage({ state }) {
             <h1>{title}</h1>
 
             <div
+              // deno-lint-ignore react-no-danger
               dangerouslySetInnerHTML={{
                 __html: tmd("para1", {
                   fallback:
@@ -51,6 +52,7 @@ export default define.page(function AboutPage({ state }) {
             />
 
             <div
+              // deno-lint-ignore react-no-danger
               dangerouslySetInnerHTML={{
                 __html: tmd("para2", {
                   fallback:

@@ -2,7 +2,6 @@ import { define } from "../utils.ts"
 import { initFluent, isFluentInitialized } from "../lib/fluent.ts"
 import {
   createTranslationContext,
-  getDefaultLanguage,
   isValidLanguage,
   parseAcceptLanguage,
 } from "../lib/i18n.ts"

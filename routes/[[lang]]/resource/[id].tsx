@@ -2,7 +2,7 @@ import { HttpError, page } from "fresh"
 import { Head } from "fresh/runtime"
 import { marked } from "marked"
 import { define } from "../../../utils.ts"
-import { getAllResources, getResourceById } from "~data/resourceIndex.ts"
+import { getResourceById } from "~data/resourceIndex.ts"
 import { getRecentPosts } from "~lib/markdown.ts"
 import {
   autonym,
@@ -11,7 +11,7 @@ import {
   selectLocale,
 } from "~lib/i18n.ts"
 import { LinkType, ResourceType } from "~types/resource.ts"
-import type { Link, Resource } from "~types/resource.ts"
+import type { Resource } from "~types/resource.ts"
 import { CategoryLabel } from "../../../components/CategoryLabel.tsx"
 import { DownloadButton } from "../../../components/DownloadButton.tsx"
 import { Aside } from "../../../components/Aside.tsx"
@@ -151,7 +151,7 @@ function DownloadLinks({
                 key={idx}
                 title={text}
                 href={link.url.href}
-                large={true}
+                large
               />
             )
           }
@@ -162,7 +162,7 @@ function DownloadLinks({
               description={info.text}
               href={link.url.href}
               img={info.img}
-              large={true}
+              large
             />
           )
         })}
@@ -288,6 +288,7 @@ export default define.page(function ResourcePage({ state }) {
               {description && (
                 <p
                   class="description"
+                  // deno-lint-ignore react-no-danger
                   dangerouslySetInnerHTML={{
                     __html: marked.parse(description) as string,
                   }}
@@ -373,6 +374,7 @@ export default define.page(function ResourcePage({ state }) {
             {moreInfo && (
               <div
                 class="section"
+                // deno-lint-ignore react-no-danger
                 dangerouslySetInnerHTML={{
                   __html: marked.parse(moreInfo) as string,
                 }}

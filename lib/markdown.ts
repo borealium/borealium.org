@@ -155,7 +155,7 @@ function extractToc(html: string): { html: string; toc: TocEntry[] } {
 
       // Check if heading already has an ID
       const idMatch = attrs.match(/id=["']([^"']+)["']/)
-      let id = idMatch ? idMatch[1] : slugify(textContent)
+      const id = idMatch ? idMatch[1] : slugify(textContent)
 
       // Navigate to correct parent level
       while (current.level >= levelNum && current.parent) {

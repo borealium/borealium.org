@@ -71,6 +71,7 @@ export default define.page(function DocPage({ state }) {
         <div class="content">
           <section
             data-toc-context
+            // deno-lint-ignore react-no-danger
             dangerouslySetInnerHTML={{ __html: doc.html }}
           />
         </div>

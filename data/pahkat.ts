@@ -1,5 +1,3 @@
-import languagesData from "./languages.ts"
-
 const PAHKAT_URL = "https://pahkat.uit.no"
 const GRAPHQL_API = `${PAHKAT_URL}/graphql`
 const CACHE_TTL = 1000 * 60 * 60 // 1 hour

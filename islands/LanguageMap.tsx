@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-explicit-any no-window no-unused-vars
 import { useEffect, useRef } from "preact/hooks"
 import * as d3 from "d3"
 import { decode as decodeCbor } from "cbor2"

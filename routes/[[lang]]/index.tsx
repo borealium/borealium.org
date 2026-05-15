@@ -6,7 +6,6 @@ import { SecondaryBlock1 } from "../../components/landing/SecondaryBlock1.tsx"
 import { SecondaryBlock2 } from "../../components/landing/SecondaryBlock2.tsx"
 import { Aside } from "../../components/Aside.tsx"
 import { getRecentPosts } from "../../lib/markdown.ts"
-import type { SimplePost } from "../../components/Aside.tsx"
 
 export const handler = define.handlers({
   async GET(ctx) {

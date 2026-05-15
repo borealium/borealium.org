@@ -8,7 +8,6 @@ import {
   type PostFrontmatter,
 } from "~lib/markdown.ts"
 import { Aside } from "../../../components/Aside.tsx"
-import { CategoryLabel } from "../../../components/CategoryLabel.tsx"
 
 export const handler = define.handlers({
   async GET(ctx) {
@@ -42,7 +41,7 @@ export const handler = define.handlers({
 })
 
 export default define.page(function PostPage({ state }) {
-  const { lang, i18n, recentPosts } = state
+  const { i18n, recentPosts } = state
   const { t } = i18n
   const post = state.post as ParsedContent<PostFrontmatter>
   const posts = recentPosts ?? []
@@ -72,7 +71,10 @@ export default define.page(function PostPage({ state }) {
             )}
             <h1>{title}</h1>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section
+            // deno-lint-ignore react-no-danger
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
         </div>
         <Aside category={t("news", { fallback: "News" })} posts={posts} t={t} />
       </article>

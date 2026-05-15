@@ -17,6 +17,7 @@ app.fsRoutes()
 const _originalHandler = app.handler
 app.handler = function (this: typeof app) {
   const inner = _originalHandler.call(this)
+  // deno-lint-ignore require-await
   return async (req: Request, info?: Deno.ServeHandlerInfo) => {
     const url = new URL(req.url)
 

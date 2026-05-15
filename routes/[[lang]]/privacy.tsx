@@ -42,6 +42,7 @@ export default define.page(function PrivacyPage({ state }) {
             <h1>{title}</h1>
 
             <div
+              // deno-lint-ignore react-no-danger
               dangerouslySetInnerHTML={{
                 __html: tmd("body", {
                   fallback:

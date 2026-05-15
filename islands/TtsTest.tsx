@@ -76,6 +76,7 @@ export default function TtsTest({ voices }: TtsTestProps) {
       />
 
       <button
+        type="button"
         class="tts-speak-button"
         onClick={handleSpeak}
         disabled={isLoading || !text.trim()}

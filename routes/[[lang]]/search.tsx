@@ -126,7 +126,7 @@ export const handler = define.handlers({
 })
 
 export default define.page(function SearchPage({ state }) {
-  const { lang, i18n, searchResults, searchQuery, recentPosts } = state
+  const { i18n, searchResults, searchQuery, recentPosts } = state
   const { t } = i18n
 
   const query = searchQuery ?? ""
@@ -205,6 +205,7 @@ export default define.page(function SearchPage({ state }) {
                   {result.description && (
                     <div
                       class="description"
+                      // deno-lint-ignore react-no-danger
                       dangerouslySetInnerHTML={{
                         __html: marked.parseInline(
                           result.description.replace(/\n+/g, " "),

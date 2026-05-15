@@ -119,6 +119,7 @@ function ResourceListItem(
       {description && (
         <p
           class="description"
+          // deno-lint-ignore react-no-danger
           dangerouslySetInnerHTML={{
             __html: marked.parse(description) as string,
           }}
