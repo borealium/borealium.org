@@ -1,7 +1,7 @@
 import { LinkType } from "~types/resource.ts"
 import { defineResource } from "~data/resources.ts"
 
-export default defineResource(import.meta.url, "smn", {
+export default defineResource("smn", {
   languages: ["smn"],
   category: "dictionaries",
   moreInfo: true,

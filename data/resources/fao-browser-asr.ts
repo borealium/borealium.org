@@ -1,7 +1,7 @@
 import { LinkType } from "~types/resource.ts"
 import { defineResource } from "~data/resources.ts"
 
-export default defineResource(import.meta.url, "fao", {
+export default defineResource("fao", {
   languages: ["fo"],
   category: "speech-recognition",
   links: [

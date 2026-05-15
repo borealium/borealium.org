@@ -5,15 +5,20 @@ import {
   type PahkatPackage,
   type PahkatRelease,
 } from "./pahkat.ts"
+import { buildResource, type ResourceDescriptor } from "./resources.ts"
 import languagesData from "./languages.ts"
 
-const resourceModules = import.meta.glob<{ default: Resource }>(
+const resourceModules = import.meta.glob<{ default: ResourceDescriptor }>(
   "./resources/*.ts",
   { eager: true },
 )
 
-const allResources: Resource[] = Object.values(resourceModules)
-  .map((m) => m.default)
+const allResources: Resource[] = Object.entries(resourceModules).map(
+  ([path, m]) => {
+    const id = path.split("/").pop()!.replace(/\.ts$/, "")
+    return buildResource(id, m.default)
+  },
+)
 
 const resourcesMap = new Map<string, Resource>()
 

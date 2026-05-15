@@ -85,18 +85,34 @@ type DefineResourceConfig = {
   type?: ResourceType
 }
 
+export type ResourceDescriptor = {
+  resourceLang: string
+  config: DefineResourceConfig
+}
+
 /**
- * Build a Resource from its module URL and a config. The id is derived from
- * the filename, so each resource file's source of truth for its id is its own
- * path on disk. Translation keys (`id`, `id-description`, `id-more-info`,
- * `id-links-N`) are constructed automatically.
+ * Declare a resource. Each resource file in `data/resources/` returns one of
+ * these descriptors. The id and the full `Resource` (with translations) are
+ * built by `buildResource` in `resourceIndex.ts`, which derives the id from
+ * the file's path key in `import.meta.glob` — this is the only thing that
+ * survives Vite's production bundling.
  */
 export function defineResource(
-  url: string,
   resourceLang: string,
   config: DefineResourceConfig,
+): ResourceDescriptor {
+  return { resourceLang, config }
+}
+
+/**
+ * Build a Resource from an id (derived from the file path by the caller) and
+ * its descriptor. Translation keys (`id`, `id-description`, `id-more-info`,
+ * `id-links-N`) are constructed automatically.
+ */
+export function buildResource(
+  id: string,
+  { resourceLang, config }: ResourceDescriptor,
 ): Resource {
-  const id = url.split("/").pop()!.replace(/\.ts$/, "")
   const l10nLanguages = getL10NLanguages(resourceLang)
   const tr = (key: string) =>
     makeResourceTranslations(key, resourceLang, l10nLanguages)

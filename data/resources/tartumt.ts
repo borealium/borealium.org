@@ -1,7 +1,7 @@
 import { LinkType } from "~types/resource.ts"
 import { defineResource } from "~data/resources.ts"
 
-export default defineResource(import.meta.url, "mul", {
+export default defineResource("mul", {
   languages: ["se", "sma", "smj", "smn", "sms", "sjd", "sje"],
   category: "mt",
   links: [
