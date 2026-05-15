@@ -1,9 +1,13 @@
-# Fresh project
+# borealium
 
-Your new Fresh project is ready to go. You can follow the Fresh "Getting
-Started" guide here: https://fresh.deno.dev/docs/getting-started
+Borealium gathers all tools and language support for small Nordic languages in
+one place. One can search, choose a language below, or just explore everything
+available: spelling checkers, grammar checkers, dictionaries, keyboards and
+more. Almost everything is for free, and built with open source.
 
-### Usage
+This is the source code for the website https://borealium.org/
+
+### Developing this website
 
 Make sure to install Deno:
 https://docs.deno.com/runtime/getting_started/installation
