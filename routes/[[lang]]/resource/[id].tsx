@@ -171,8 +171,8 @@ function DownloadLinks({
   )
 }
 
-// const KEYBOARD_VIEWER_EMBED_URL = "https://keyboard.giellalt.org/embed"
-const KEYBOARD_VIEWER_EMBED_URL = "http://localhost:5173/embed"
+const KEYBOARD_VIEWER_EMBED_URL = "https://keyboard.giellalt.org/embed"
+// const KEYBOARD_VIEWER_EMBED_URL = "http://localhost:5173/embed"
 
 function KeyboardLayoutEmbed({
   resource,
@@ -190,7 +190,7 @@ function KeyboardLayoutEmbed({
 
   const kbd = resource.id.replace(/^keyboard-/, "")
   const src =
-    `${KEYBOARD_VIEWER_EMBED_URL}?kbd=${kbd}&interactive=false&width=600`
+    `${KEYBOARD_VIEWER_EMBED_URL}?kbd=${kbd}&interactive=false&width=650`
 
   return (
     <div class="keyboard-embed section">
@@ -198,9 +198,9 @@ function KeyboardLayoutEmbed({
       <iframe
         src={src}
         width="100%"
-        height="360"
+        height="400"
         loading="lazy"
-        style={{ maxWidth: "600px", border: "none" }}
+        style={{ maxWidth: "650px", border: "none" }}
       />
     </div>
   )
