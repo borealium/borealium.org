@@ -87,6 +87,13 @@ $lg-main-breakpoint: 1280px;
         }
       }
 
+      .keyboard-embed {
+        iframe {
+          display: block;
+          margin-top: 12px;
+        }
+      }
+
       .downloads {
         display: flex;
         flex-direction: column;

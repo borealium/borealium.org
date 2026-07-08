@@ -171,6 +171,41 @@ function DownloadLinks({
   )
 }
 
+// const KEYBOARD_VIEWER_EMBED_URL = "https://keyboard.giellalt.org/embed"
+const KEYBOARD_VIEWER_EMBED_URL = "http://localhost:5173/embed"
+
+function KeyboardLayoutEmbed({
+  resource,
+  t,
+}: {
+  resource: Resource
+  t: (key: string, opts?: { fallback?: string }) => string
+}) {
+  if (
+    resource.category !== "keyboard-layouts" ||
+    resource.id === "divvun-keyboard"
+  ) {
+    return null
+  }
+
+  const kbd = resource.id.replace(/^keyboard-/, "")
+  const src =
+    `${KEYBOARD_VIEWER_EMBED_URL}?kbd=${kbd}&interactive=false&width=600`
+
+  return (
+    <div class="keyboard-embed section">
+      <h3>{t("keyboard-layout", { fallback: "Keyboard layout" })}</h3>
+      <iframe
+        src={src}
+        width="100%"
+        height="360"
+        loading="lazy"
+        style={{ maxWidth: "600px", border: "none" }}
+      />
+    </div>
+  )
+}
+
 function RelatedDocumentation({
   t,
   lang,
@@ -380,6 +415,8 @@ export default define.page(function ResourcePage({ state }) {
                 }}
               />
             )}
+
+            <KeyboardLayoutEmbed resource={resource} t={resourceT} />
 
             {/* Downloads */}
             {isPahkat
