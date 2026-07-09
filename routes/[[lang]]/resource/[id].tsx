@@ -216,7 +216,7 @@ function KeyboardLayoutEmbed({
       <iframe
         src={src}
         width="100%"
-        height="400"
+        height="460"
         loading="lazy"
         style={{ maxWidth: "900px", border: "none" }}
       />
