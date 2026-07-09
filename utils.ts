@@ -24,6 +24,9 @@ export interface State {
   post?: ParsedContent<PostFrontmatter>
   /** Recent posts for sidebar */
   recentPosts?: SimplePost[]
+  /** Server-fetched height of the embedded keyboard-layout iframe, read off
+   * keyboard-viewer's `data-embed-height`; null if the fetch failed */
+  keyboardEmbedHeight?: number | null
   /** Search results for search page */
   searchResults?: unknown[]
   /** Search query for search page */

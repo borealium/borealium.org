@@ -20,6 +20,32 @@ import { getUICategories } from "../../../data/categories.ts"
 import { getTtsConfig } from "~data/ttsConfig.ts"
 import TtsTest from "../../../islands/TtsTest.tsx"
 
+const KEYBOARD_VIEWER_EMBED_URL = "https://keyboard.giellalt.org/embed"
+// const KEYBOARD_VIEWER_EMBED_URL = "http://localhost:5177/embed"
+
+/**
+ * Fetches keyboard-viewer's static embed for `kbd` server-to-server and pulls
+ * its `data-embed-height` out of the raw HTML, so the iframe below can be
+ * given the correct height from first paint even with JS disabled — no-JS
+ * visitors never run the postMessage-based resize script, so this is the
+ * only chance to get their iframe sized correctly. Returns null (falling
+ * back to a fixed guess) if keyboard-viewer is unreachable or the attribute
+ * is missing.
+ */
+async function fetchEmbedHeight(kbd: string): Promise<number | null> {
+  try {
+    const url =
+      `${KEYBOARD_VIEWER_EMBED_URL}?kbd=${kbd}&interactive=false&width=900`
+    const res = await fetch(url)
+    if (!res.ok) { return null }
+    const html = await res.text()
+    const match = html.match(/data-embed-height="(\d+)"/)
+    return match ? Number(match[1]) : null
+  } catch {
+    return null
+  }
+}
+
 export const handler = define.handlers({
   async GET(ctx) {
     const { id } = ctx.params
@@ -30,6 +56,15 @@ export const handler = define.handlers({
     }
 
     ctx.state.resource = resource
+
+    if (
+      resource.category === "keyboard-layouts" &&
+      resource.id !== "divvun-keyboard"
+    ) {
+      ctx.state.keyboardEmbedHeight = await fetchEmbedHeight(
+        resource.id.replace(/^keyboard-/, ""),
+      )
+    }
 
     // Get recent posts for sidebar
     const recentPosts = await getRecentPosts(3)
@@ -171,9 +206,6 @@ function DownloadLinks({
   )
 }
 
-const KEYBOARD_VIEWER_EMBED_URL = "https://keyboard.giellalt.org/embed"
-// const KEYBOARD_VIEWER_EMBED_URL = "http://localhost:5173/embed"
-
 // Listens for the resize messages keyboard-viewer's embed posts (both the
 // interactive embed and the static/no-JS embed's progressive-enhancement
 // script use the same "giellalt-keyboard-resize" protocol) and applies the
@@ -195,9 +227,11 @@ const KEYBOARD_RESIZE_LISTENER_SCRIPT = `
 function KeyboardLayoutEmbed({
   resource,
   t,
+  embedHeight,
 }: {
   resource: Resource
   t: (key: string, opts?: { fallback?: string }) => string
+  embedHeight: number | null | undefined
 }) {
   if (
     resource.category !== "keyboard-layouts" ||
@@ -216,7 +250,7 @@ function KeyboardLayoutEmbed({
       <iframe
         src={src}
         width="100%"
-        height="460"
+        height={embedHeight ?? 460}
         loading="lazy"
         style={{ maxWidth: "900px", border: "none" }}
       />
@@ -302,7 +336,7 @@ function RelatedDocumentation({
 }
 
 export default define.page(function ResourcePage({ state }) {
-  const { lang, i18n, recentPosts } = state
+  const { lang, i18n, recentPosts, keyboardEmbedHeight } = state
   const { t } = i18n
   const resource = state.resource as Resource
   const posts = recentPosts ?? []
@@ -438,7 +472,11 @@ export default define.page(function ResourcePage({ state }) {
               />
             )}
 
-            <KeyboardLayoutEmbed resource={resource} t={resourceT} />
+            <KeyboardLayoutEmbed
+              resource={resource}
+              t={resourceT}
+              embedHeight={keyboardEmbedHeight}
+            />
 
             {/* Downloads */}
             {isPahkat
