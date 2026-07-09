@@ -174,6 +174,24 @@ function DownloadLinks({
 const KEYBOARD_VIEWER_EMBED_URL = "https://keyboard.giellalt.org/embed"
 // const KEYBOARD_VIEWER_EMBED_URL = "http://localhost:5173/embed"
 
+// Listens for the resize messages keyboard-viewer's embed posts (both the
+// interactive embed and the static/no-JS embed's progressive-enhancement
+// script use the same "giellalt-keyboard-resize" protocol) and applies the
+// reported height to whichever iframe sent it.
+const KEYBOARD_RESIZE_LISTENER_SCRIPT = `
+  window.addEventListener("message", (event) => {
+    if (event.data.type === "giellalt-keyboard-resize") {
+      const iframes = document.querySelectorAll("iframe")
+      for (const iframe of iframes) {
+        if (iframe.contentWindow === event.source) {
+          iframe.style.height = event.data.height + "px"
+          break
+        }
+      }
+    }
+  })
+`
+
 function KeyboardLayoutEmbed({
   resource,
   t,
@@ -190,7 +208,7 @@ function KeyboardLayoutEmbed({
 
   const kbd = resource.id.replace(/^keyboard-/, "")
   const src =
-    `${KEYBOARD_VIEWER_EMBED_URL}?kbd=${kbd}&interactive=false&width=650`
+    `${KEYBOARD_VIEWER_EMBED_URL}?kbd=${kbd}&interactive=false&width=900`
 
   return (
     <div class="keyboard-embed section">
@@ -200,7 +218,11 @@ function KeyboardLayoutEmbed({
         width="100%"
         height="400"
         loading="lazy"
-        style={{ maxWidth: "650px", border: "none" }}
+        style={{ maxWidth: "900px", border: "none" }}
+      />
+      <script
+        // deno-lint-ignore react-no-danger
+        dangerouslySetInnerHTML={{ __html: KEYBOARD_RESIZE_LISTENER_SCRIPT }}
       />
     </div>
   )
