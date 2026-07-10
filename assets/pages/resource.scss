@@ -88,10 +88,8 @@ $lg-main-breakpoint: 1280px;
       }
 
       .keyboard-embed {
-        iframe {
-          display: block;
-          margin-top: 12px;
-        }
+        margin-top: 12px;
+        max-width: 900px;
       }
 
       .downloads {

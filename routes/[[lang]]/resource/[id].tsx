@@ -1,7 +1,7 @@
 import { HttpError, page } from "fresh"
 import { Head } from "fresh/runtime"
 import { marked } from "marked"
-import { define } from "../../../utils.ts"
+import { define, type State } from "../../../utils.ts"
 import { getResourceById } from "~data/resourceIndex.ts"
 import { getRecentPosts } from "~lib/markdown.ts"
 import {
@@ -19,32 +19,12 @@ import { LanguageTag } from "../../../components/Tag.tsx"
 import { getUICategories } from "../../../data/categories.ts"
 import { getTtsConfig } from "~data/ttsConfig.ts"
 import TtsTest from "../../../islands/TtsTest.tsx"
-
-const KEYBOARD_VIEWER_EMBED_URL = "https://keyboard.giellalt.org/embed"
-// const KEYBOARD_VIEWER_EMBED_URL = "http://localhost:5177/embed"
-
-/**
- * Fetches keyboard-viewer's static embed for `kbd` server-to-server and pulls
- * its `data-embed-height` out of the raw HTML, so the iframe below can be
- * given the correct height from first paint even with JS disabled — no-JS
- * visitors never run the postMessage-based resize script, so this is the
- * only chance to get their iframe sized correctly. Returns null (falling
- * back to a fixed guess) if keyboard-viewer is unreachable or the attribute
- * is missing.
- */
-async function fetchEmbedHeight(kbd: string): Promise<number | null> {
-  try {
-    const url =
-      `${KEYBOARD_VIEWER_EMBED_URL}?kbd=${kbd}&interactive=false&width=900`
-    const res = await fetch(url)
-    if (!res.ok) { return null }
-    const html = await res.text()
-    const match = html.match(/data-embed-height="(\d+)"/)
-    return match ? Number(match[1]) : null
-  } catch {
-    return null
-  }
-}
+import {
+  buildKeyboardComboTree,
+  DEFAULT_PLATFORM,
+  DEFAULT_VARIANT,
+} from "@divvun/keyboard"
+import KeyboardPickerIsland from "../../../islands/KeyboardPicker.tsx"
 
 export const handler = define.handlers({
   async GET(ctx) {
@@ -61,9 +41,21 @@ export const handler = define.handlers({
       resource.category === "keyboard-layouts" &&
       resource.id !== "divvun-keyboard"
     ) {
-      ctx.state.keyboardEmbedHeight = await fetchEmbedHeight(
-        resource.id.replace(/^keyboard-/, ""),
-      )
+      const kbd = resource.id.replace(/^keyboard-/, "")
+      try {
+        const { combos, defaultFile, defaultPlatform } =
+          await buildKeyboardComboTree({
+            kbd,
+            layout: "",
+            platform: DEFAULT_PLATFORM,
+            variant: DEFAULT_VARIANT,
+          })
+        ctx.state.keyboardData = { combos, defaultFile, defaultPlatform }
+      } catch (e) {
+        ctx.state.keyboardData = {
+          error: e instanceof Error ? e.message : String(e),
+        }
+      }
     }
 
     // Get recent posts for sidebar
@@ -206,32 +198,14 @@ function DownloadLinks({
   )
 }
 
-// Listens for the resize messages keyboard-viewer's embed posts (both the
-// interactive embed and the static/no-JS embed's progressive-enhancement
-// script use the same "giellalt-keyboard-resize" protocol) and applies the
-// reported height to whichever iframe sent it.
-const KEYBOARD_RESIZE_LISTENER_SCRIPT = `
-  window.addEventListener("message", (event) => {
-    if (event.data.type === "giellalt-keyboard-resize") {
-      const iframes = document.querySelectorAll("iframe")
-      for (const iframe of iframes) {
-        if (iframe.contentWindow === event.source) {
-          iframe.style.height = event.data.height + "px"
-          break
-        }
-      }
-    }
-  })
-`
-
 function KeyboardLayoutEmbed({
   resource,
   t,
-  embedHeight,
+  keyboardData,
 }: {
   resource: Resource
   t: (key: string, opts?: { fallback?: string }) => string
-  embedHeight: number | null | undefined
+  keyboardData: State["keyboardData"]
 }) {
   if (
     resource.category !== "keyboard-layouts" ||
@@ -240,23 +214,22 @@ function KeyboardLayoutEmbed({
     return null
   }
 
+  if (!keyboardData || "error" in keyboardData) {
+    return null
+  }
+
   const kbd = resource.id.replace(/^keyboard-/, "")
-  const src =
-    `${KEYBOARD_VIEWER_EMBED_URL}?kbd=${kbd}&interactive=false&width=900`
 
   return (
     <div class="keyboard-embed section">
       <h3>{t("keyboard-layout", { fallback: "Keyboard layout" })}</h3>
-      <iframe
-        src={src}
-        width="100%"
-        height={embedHeight ?? 460}
-        loading="lazy"
-        style={{ maxWidth: "900px", border: "none" }}
-      />
-      <script
-        // deno-lint-ignore react-no-danger
-        dangerouslySetInnerHTML={{ __html: KEYBOARD_RESIZE_LISTENER_SCRIPT }}
+      <KeyboardPickerIsland
+        kbd={kbd}
+        combos={keyboardData.combos}
+        initialFile={keyboardData.defaultFile}
+        initialPlatform={keyboardData.defaultPlatform}
+        initialLayer="default"
+        requestedWidth={900}
       />
     </div>
   )
@@ -336,7 +309,7 @@ function RelatedDocumentation({
 }
 
 export default define.page(function ResourcePage({ state }) {
-  const { lang, i18n, recentPosts, keyboardEmbedHeight } = state
+  const { lang, i18n, recentPosts, keyboardData } = state
   const { t } = i18n
   const resource = state.resource as Resource
   const posts = recentPosts ?? []
@@ -475,7 +448,7 @@ export default define.page(function ResourcePage({ state }) {
             <KeyboardLayoutEmbed
               resource={resource}
               t={resourceT}
-              embedHeight={keyboardEmbedHeight}
+              keyboardData={keyboardData}
             />
 
             {/* Downloads */}
