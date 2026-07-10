@@ -100,10 +100,13 @@ $lg-main-breakpoint: 1280px;
         max-width: 900px;
 
         // .content's blanket `h3 { margin: 0; }` above leaves this heading
-        // flush against the keyboard below it — restore spacing like
-        // .downloads' h3 does.
+        // flush against the keyboard below it. Other h3s on this page (e.g.
+        // .downloads') use an 8px margin, but their effective gap ends up
+        // 16px because it collapses with a <p>'s own margin-top below — the
+        // keyboard has no such sibling margin to collapse with, so set 16px
+        // directly to match the rendered spacing, not just the CSS value.
         h3 {
-          margin: 0 0 12px;
+          margin: 0 0 16px;
         }
 
         // Safety net: the island's own ResizeObserver keeps the keyboard
