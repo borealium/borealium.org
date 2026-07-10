@@ -26,11 +26,19 @@ $lg-main-breakpoint: 1280px;
     justify-content: space-between;
     background-color: var(--color-background-above);
     height: inherit;
+    // Flex/grid items default to a content-based automatic minimum size —
+    // without this, a wide descendant (the keyboard embed, now rendered
+    // inline instead of in an iframe that used to shield the grid from its
+    // internal width) inflates this item's min-content size, which forces
+    // the outer .resource grid to widen the 7fr column and squeeze the
+    // aside sidebar instead of letting the keyboard scale/scroll internally.
+    min-width: 0;
 
     .content {
       padding: 32px;
       display: flex;
       flex-direction: column;
+      min-width: 0;
 
       h1 {
         margin: 4px 0;
@@ -90,6 +98,12 @@ $lg-main-breakpoint: 1280px;
       .keyboard-embed {
         margin-top: 12px;
         max-width: 900px;
+        // Safety net: the island's own ResizeObserver keeps the keyboard
+        // scaled to fit this container's actual width, but clip (rather
+        // than let it push the layout wider) for the brief window before
+        // that JS runs, or if it's ever asked to render narrower than the
+        // keyboard's minimum usable scale.
+        overflow-x: auto;
       }
 
       .downloads {
