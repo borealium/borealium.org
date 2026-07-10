@@ -30,14 +30,15 @@
     "jsr:@std/semver@^1.0.6": "1.0.7",
     "jsr:@std/toml@1": "1.0.11",
     "jsr:@std/uuid@^1.0.9": "1.0.9",
+    "jsr:@std/yaml@1": "1.0.12",
     "npm:@babel/core@^7.28.0": "7.28.5",
     "npm:@babel/preset-react@^7.27.1": "7.28.5_@babel+core@7.28.5",
     "npm:@fluent/bundle@0.18": "0.18.0",
     "npm:@mjackson/node-fetch-server@0.7": "0.7.0",
     "npm:@opentelemetry/api@^1.9.0": "1.9.0",
-    "npm:@preact/signals@^2.2.1": "2.5.1_preact@10.28.0",
-    "npm:@preact/signals@^2.5.0": "2.5.1_preact@10.28.0",
-    "npm:@prefresh/vite@^2.4.8": "2.4.11_preact@10.28.0_vite@7.2.6__sass-embedded@1.97.2__picomatch@4.0.3_sass-embedded@1.97.2",
+    "npm:@preact/signals@^2.2.1": "2.5.1_preact@10.29.7__preact-render-to-string@6.6.3_preact-render-to-string@6.6.3__preact@10.29.7",
+    "npm:@preact/signals@^2.5.0": "2.5.1_preact@10.29.7__preact-render-to-string@6.6.3_preact-render-to-string@6.6.3__preact@10.29.7",
+    "npm:@prefresh/vite@^2.4.8": "2.4.11_preact@10.29.7__preact-render-to-string@6.6.3_vite@7.2.6__sass-embedded@1.97.2__picomatch@4.0.3_preact-render-to-string@6.6.3__preact@10.29.7",
     "npm:@types/d3@7": "7.4.3",
     "npm:cbor2@1": "1.12.0",
     "npm:d3@7": "7.9.0_d3-selection@3.0.0",
@@ -47,9 +48,10 @@
     "npm:highlight.js@^11.11.1": "11.11.1",
     "npm:marked-highlight@^2.2.1": "2.2.3_marked@12.0.2",
     "npm:marked@12": "12.0.2",
-    "npm:preact-render-to-string@^6.6.3": "6.6.3_preact@10.28.0",
-    "npm:preact@^10.27.0": "10.28.0",
-    "npm:preact@^10.27.2": "10.28.0",
+    "npm:preact-render-to-string@^6.6.3": "6.6.3_preact@10.29.7",
+    "npm:preact@^10.27.0": "10.29.7_preact-render-to-string@6.6.3",
+    "npm:preact@^10.27.2": "10.29.7_preact-render-to-string@6.6.3",
+    "npm:preact@^10.29.1": "10.29.7_preact-render-to-string@6.6.3",
     "npm:rollup@^4.50.0": "4.53.3",
     "npm:sass-embedded@^1.97.2": "1.97.2",
     "npm:vite@^7.1.3": "7.2.6_sass-embedded@1.97.2_picomatch@4.0.3",
@@ -180,6 +182,9 @@
       "dependencies": [
         "jsr:@std/bytes"
       ]
+    },
+    "@std/yaml@1.0.12": {
+      "integrity": "7deabca4545bcedd07c5f69ea53acea71b8b4c67562f224e17b90d75944cb20c"
     }
   },
   "npm": {
@@ -626,7 +631,7 @@
     "@preact/signals-core@1.12.1": {
       "integrity": "sha512-BwbTXpj+9QutoZLQvbttRg5x3l5468qaV2kufh+51yha1c53ep5dY4kTuZR35+3pAZxpfQerGJiQqg34ZNZ6uA=="
     },
-    "@preact/signals@2.5.1_preact@10.28.0": {
+    "@preact/signals@2.5.1_preact@10.29.7__preact-render-to-string@6.6.3_preact-render-to-string@6.6.3__preact@10.29.7": {
       "integrity": "sha512-VPjk5YFt7i11Fi4UK0tzaEe5xLwfhUxXL3l89ocxQ5aPz7bRo8M5+N73LjBMPklyXKYKz6YsNo4Smp8n6nplng==",
       "dependencies": [
         "@preact/signals-core",
@@ -636,7 +641,7 @@
     "@prefresh/babel-plugin@0.5.2": {
       "integrity": "sha512-AOl4HG6dAxWkJ5ndPHBgBa49oo/9bOiJuRDKHLSTyH+Fd9x00shTXpdiTj1W41l6oQIwUOAgJeHMn4QwIDpHkA=="
     },
-    "@prefresh/core@1.5.9_preact@10.28.0": {
+    "@prefresh/core@1.5.9_preact@10.29.7__preact-render-to-string@6.6.3_preact-render-to-string@6.6.3__preact@10.29.7": {
       "integrity": "sha512-IKBKCPaz34OFVC+adiQ2qaTF5qdztO2/4ZPf4KsRTgjKosWqxVXmEbxCiUydYZRY8GVie+DQlKzQr9gt6HQ+EQ==",
       "dependencies": [
         "preact"
@@ -645,7 +650,7 @@
     "@prefresh/utils@1.2.1": {
       "integrity": "sha512-vq/sIuN5nYfYzvyayXI4C2QkprfNaHUQ9ZX+3xLD8nL3rWyzpxOm1+K7RtMbhd+66QcaISViK7amjnheQ/4WZw=="
     },
-    "@prefresh/vite@2.4.11_preact@10.28.0_vite@7.2.6__sass-embedded@1.97.2__picomatch@4.0.3_sass-embedded@1.97.2": {
+    "@prefresh/vite@2.4.11_preact@10.29.7__preact-render-to-string@6.6.3_vite@7.2.6__sass-embedded@1.97.2__picomatch@4.0.3_preact-render-to-string@6.6.3__preact@10.29.7": {
       "integrity": "sha512-/XjURQqdRiCG3NpMmWqE9kJwrg9IchIOWHzulCfqg2sRe/8oQ1g5De7xrk9lbqPIQLn7ntBkKdqWXIj4E9YXyg==",
       "dependencies": [
         "@babel/core",
@@ -1367,14 +1372,20 @@
         "source-map-js"
       ]
     },
-    "preact-render-to-string@6.6.3_preact@10.28.0": {
+    "preact-render-to-string@6.6.3_preact@10.29.7": {
       "integrity": "sha512-7oHG7jzjriqsFPkSPiPnzrQ0GcxFm6wOkYWNdStK5Ks9YlWSQQXKGBRAX4nKDdqX7HAQuRvI4pZNZMycK4WwDw==",
       "dependencies": [
         "preact"
       ]
     },
-    "preact@10.28.0": {
-      "integrity": "sha512-rytDAoiXr3+t6OIP3WGlDd0ouCUG1iCWzkcY3++Nreuoi17y6T5i/zRhe6uYfoVcxq6YU+sBtJouuRDsq8vvqA=="
+    "preact@10.29.7_preact-render-to-string@6.6.3": {
+      "integrity": "sha512-DCHYrK/B10yUD3ZjLfhZ3WIE/9Vf9VFUODcRE2dRomTYDpJk6z6L9wecSfhfE6M9ZTHUdyQkoC46arIDhEV84Q==",
+      "dependencies": [
+        "preact-render-to-string"
+      ],
+      "optionalPeers": [
+        "preact-render-to-string"
+      ]
     },
     "readdirp@4.1.2": {
       "integrity": "sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg=="
@@ -1684,7 +1695,30 @@
     "https://cdn.jsdelivr.net/npm/delaunator@5.0.0/+esm": "9d7397ec7b3920c77de74120dbe848e31700990d7a2cc6a283dee1dc445425ef",
     "https://cdn.jsdelivr.net/npm/internmap@2.0.0/+esm": "51b39f82a5cda5432980f6891e2775439bd0b5a808dfd419d0e028922bd2bbbc",
     "https://cdn.jsdelivr.net/npm/internmap@2.0.3/+esm": "3fb8d63cd1b484f1e3c1ff238c54cad1f5c3d73afe57325b50565dbfcc351eaf",
-    "https://cdn.jsdelivr.net/npm/robust-predicates@3.0.0/+esm": "dd41217f39ed9d7c1ace96bec896667eceeba7f71739148bc9b77b8898feb7e6"
+    "https://cdn.jsdelivr.net/npm/robust-predicates@3.0.0/+esm": "dd41217f39ed9d7c1ace96bec896667eceeba7f71739148bc9b77b8898feb7e6",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/components/CssTabPicker.tsx": "b0231c0481161e1a99e9c2c3229016e21a774aa0a082d542a5c78d8d56a12610",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/components/Key.tsx": "ee68b0d8b2bf87e7484a56f575ed256f88c2afed1c88271fdb46d19e74e9ef5a",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/components/Keyboard.tsx": "99a59ce94dd83ae9476f60a72cc5ad5dac68b893a2b9db6857412bfde466a887",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/components/KeyboardDisplay.tsx": "ab42862dbbcc5dd059f82c34c407a1fda5359ae96dcaa33a5496091b72594988",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/components/KeyboardLayout.tsx": "4cfa3bbb0f4fd874f2ca457bf89dc332586d01745253fcc76452c1713577d163",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/components/StaticKeyboardEmbed.tsx": "6d284eade5668e01bc072172338219240fae0e40adc19d8c7e884f21062c87f4",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/components/StaticKeyboardLayoutPicker.tsx": "02cad1afc3a415799e589e6632fdd4e964777fa1fe63050f8069a53877884c10",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/components/StaticKeyboardPlatformPicker.tsx": "17b781f10b820726e618ba179e37294b5f3fcbaea4342b93d6c05f709ac7851b",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/constants/key-ids.ts": "78a2a14f2881eddedd666b4dbe087b7d99aae5cf7feab5d1fc72d4ea5a28397f",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/constants/platforms.ts": "ec73a507f3217f3ac9c28c1c70e22ae4fc8acee1c13b208d3ab6fe35783b2888",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/mod.ts": "1e92f1e18010ff631238c490a3f6c917a8c8c0b946e00a97c132c92e625e5b41",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/types/keyboard-simple.ts": "b1157b1722dd218e97379c60b8e5985eeec057abf27c3b60565ef7c5571d17e8",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/utils/fetch-kbdgen.ts": "20c3b404948012f6ea2b61e9968a0089f5c4735f391c31487cf9ff8073b365a1",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/utils/github.ts": "7cae140ce5bc120230939e3334c20782516367319ba1cea333ad1d616a25c0cb",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/utils/kbdgen-transform.ts": "ef53fbe49e46b43ed02b41a7156b0b846c27534f9e11b6142e523c6c140bbacc",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/utils/key-helpers.ts": "39df62c975e57a7c74ff76f1320ccecdcc01e1400c5c0605ceeae98ab27c042c",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/utils/layer-state.ts": "850520d9ddd827130490fd04aaed8bda7b45eda35d65f041887673ea25ccad70",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/utils/list-layouts.ts": "196674773aabc180149bf1f8e9090686297972877539ba4482b9e0ec3390debd",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/utils/load-layout.ts": "f0b540b0d0c3264f39cc6b5620e076e894719842d5b011b30ecd38f7c1584a21",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/utils/modifiers.ts": "b8deb9c547fb6ea246c486d786df69d805cf10adf0582f1b0fe87309a62ff089",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/utils/params.ts": "aa4aaa05e1292115c68ccabbc34c828e6d22d5f7a067f84546caae9883372297",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/utils/tab-bar.ts": "4f8ae9ae58ad25a9df614f528c5596d49885bc64c3efb8cec61e389ebd560c5d",
+    "https://raw.githubusercontent.com/divvun/keyboard-viewer/f789f00/packages/keyboard/utils/text.ts": "162be183420eaf3d63c9b8a5016463c52534724a5b15e8a89cb67b3d9a46deff"
   },
   "workspace": {
     "dependencies": [
@@ -1700,7 +1734,7 @@
       "npm:highlight.js@^11.11.1",
       "npm:marked-highlight@^2.2.1",
       "npm:marked@12",
-      "npm:preact@^10.27.2",
+      "npm:preact@^10.29.1",
       "npm:sass-embedded@^1.97.2",
       "npm:vite@^7.1.3"
     ]
