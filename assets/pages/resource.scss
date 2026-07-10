@@ -98,6 +98,14 @@ $lg-main-breakpoint: 1280px;
       .keyboard-embed {
         margin-top: 12px;
         max-width: 900px;
+
+        // .content's blanket `h3 { margin: 0; }` above leaves this heading
+        // flush against the keyboard below it — restore spacing like
+        // .downloads' h3 does.
+        h3 {
+          margin: 0 0 12px;
+        }
+
         // Safety net: the island's own ResizeObserver keeps the keyboard
         // scaled to fit this container's actual width, but clip (rather
         // than let it push the layout wider) for the brief window before
