@@ -7,6 +7,7 @@ import { getRecentPosts } from "~lib/markdown.ts"
 import {
   autonym,
   createTranslator,
+  fallbackLocales,
   getAllLanguages,
   selectLocale,
 } from "~lib/i18n.ts"
@@ -44,12 +45,20 @@ export const handler = define.handlers({
       const kbd = resource.id.replace(/^keyboard-/, "")
       try {
         const { combos, defaultFile, defaultPlatform } =
-          await buildKeyboardComboTree({
-            kbd,
-            layout: "",
-            platform: DEFAULT_PLATFORM,
-            variant: DEFAULT_VARIANT,
-          })
+          await buildKeyboardComboTree(
+            {
+              kbd,
+              layout: "",
+              platform: DEFAULT_PLATFORM,
+              variant: DEFAULT_VARIANT,
+            },
+            {
+              preferredLangs: [
+                ctx.state.lang,
+                ...fallbackLocales(ctx.state.lang),
+              ],
+            },
+          )
         ctx.state.keyboardData = { combos, defaultFile, defaultPlatform }
       } catch (e) {
         ctx.state.keyboardData = {
