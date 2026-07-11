@@ -8,7 +8,7 @@ import type {
   PostFrontmatter,
 } from "./lib/markdown.ts"
 import type { SimplePost } from "./components/Aside.tsx"
-import type { LayoutCombo, Platform } from "@divvun/keyboard"
+import type { DeviceVariant, LayoutCombo, Platform } from "@divvun/keyboard"
 
 // This specifies the type of "ctx.state" which is used to share
 // data among middlewares, layouts and routes.
@@ -28,7 +28,12 @@ export interface State {
   /** Server-built layout x platform combo tree for the keyboard-layout
    * embed island, or an error message if the kbdgen repo lookup failed */
   keyboardData?:
-    | { combos: LayoutCombo[]; defaultFile: string; defaultPlatform: Platform }
+    | {
+      combos: LayoutCombo[]
+      defaultFile: string
+      defaultPlatform: Platform
+      defaultVariant: DeviceVariant
+    }
     | { error: string }
   /** Search results for search page */
   searchResults?: unknown[]

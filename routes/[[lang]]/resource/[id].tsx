@@ -44,7 +44,7 @@ export const handler = define.handlers({
     ) {
       const kbd = resource.id.replace(/^keyboard-/, "")
       try {
-        const { combos, defaultFile, defaultPlatform } =
+        const { combos, defaultFile, defaultPlatform, defaultVariant } =
           await buildKeyboardComboTree(
             {
               kbd,
@@ -59,7 +59,12 @@ export const handler = define.handlers({
               ],
             },
           )
-        ctx.state.keyboardData = { combos, defaultFile, defaultPlatform }
+        ctx.state.keyboardData = {
+          combos,
+          defaultFile,
+          defaultPlatform,
+          defaultVariant,
+        }
       } catch (e) {
         ctx.state.keyboardData = {
           error: e instanceof Error ? e.message : String(e),
@@ -237,6 +242,7 @@ function KeyboardLayoutEmbed({
         combos={keyboardData.combos}
         initialFile={keyboardData.defaultFile}
         initialPlatform={keyboardData.defaultPlatform}
+        initialVariant={keyboardData.defaultVariant}
         initialLayer="default"
         requestedWidth={900}
       />
