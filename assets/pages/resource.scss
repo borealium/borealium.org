@@ -26,12 +26,8 @@ $lg-main-breakpoint: 1280px;
     justify-content: space-between;
     background-color: var(--color-background-above);
     height: inherit;
-    // Flex/grid items default to a content-based automatic minimum size —
-    // without this, a wide descendant (the keyboard embed, now rendered
-    // inline instead of in an iframe that used to shield the grid from its
-    // internal width) inflates this item's min-content size, which forces
-    // the outer .resource grid to widen the 7fr column and squeeze the
-    // aside sidebar instead of letting the keyboard scale/scroll internally.
+    // Override the default content-based min-width so the keyboard embed's
+    // intrinsic width can't widen this column and squeeze the sidebar.
     min-width: 0;
 
     .content {
@@ -99,21 +95,14 @@ $lg-main-breakpoint: 1280px;
         margin-top: 12px;
         max-width: 900px;
 
-        // .content's blanket `h3 { margin: 0; }` above leaves this heading
-        // flush against the keyboard below it. Other h3s on this page (e.g.
-        // .downloads') use an 8px margin, but their effective gap ends up
-        // 16px because it collapses with a <p>'s own margin-top below — the
-        // keyboard has no such sibling margin to collapse with, so set 16px
-        // directly to match the rendered spacing, not just the CSS value.
+        // Match the 16px gap other h3s get via margin-collapsing with a
+        // following <p> — the keyboard has no sibling margin to collapse with.
         h3 {
           margin: 0 0 16px;
         }
 
-        // Safety net: the island's own ResizeObserver keeps the keyboard
-        // scaled to fit this container's actual width, but clip (rather
-        // than let it push the layout wider) for the brief window before
-        // that JS runs, or if it's ever asked to render narrower than the
-        // keyboard's minimum usable scale.
+        // Clip instead of widening the layout until the island's resize
+        // observer scales the keyboard down to fit.
         overflow-x: auto;
       }
 
