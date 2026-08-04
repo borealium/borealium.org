@@ -24,6 +24,7 @@ import {
   buildKeyboardComboTree,
   DEFAULT_PLATFORM,
   DEFAULT_VARIANT,
+  keyboardCss,
 } from "@divvun/keyboard"
 import KeyboardPickerIsland from "../../../islands/KeyboardPicker.tsx"
 
@@ -341,6 +342,9 @@ export default define.page(function ResourcePage({ state }) {
     : null
   const isPahkat = resource.type === ResourceType.Pahkat
   const ttsConfig = getTtsConfig(resource.id)
+  const showKeyboard = resource.category === "keyboard-layouts" &&
+    resource.id !== "divvun-keyboard" &&
+    !!keyboardData && !("error" in keyboardData)
 
   // Apply TTS config overrides
   const documentationUrl = ttsConfig?.documentationUrl ??
@@ -354,6 +358,12 @@ export default define.page(function ResourcePage({ state }) {
           name="description"
           content={description ?? `${name} - Language technology resource`}
         />
+        {showKeyboard && (
+          <style
+            // deno-lint-ignore react-no-danger
+            dangerouslySetInnerHTML={{ __html: keyboardCss }}
+          />
+        )}
       </Head>
 
       <div class="resource">
