@@ -4,7 +4,7 @@
     "jsr:@deno/esbuild-plugin@^1.2.0": "1.2.1",
     "jsr:@deno/loader@0.4": "0.4.0",
     "jsr:@deno/loader@~0.3.10": "0.3.14",
-    "jsr:@divvun/keyboard@0.1": "0.1.0",
+    "jsr:@divvun/keyboard@~0.1.1": "0.1.1",
     "jsr:@fresh/build-id@1": "1.0.1",
     "jsr:@fresh/core@2": "2.3.3",
     "jsr:@fresh/core@^2.3.3": "2.3.3",
@@ -82,8 +82,8 @@
     "@deno/loader@0.4.0": {
       "integrity": "6c1b18cfa18592740613ce79e15625c24268d60dbfc54bebfb5153bf512c536b"
     },
-    "@divvun/keyboard@0.1.0": {
-      "integrity": "f85ccf85da4fe8d83b49ef39382c967f82144193481a4efdce6a35b2ebe09376",
+    "@divvun/keyboard@0.1.1": {
+      "integrity": "807b69bf6dbdadeff9c24ccd2a0dce71276de5e9f00d106f331e58dc3440cd38",
       "dependencies": [
         "jsr:@std/yaml",
         "npm:preact@^10.29.1"
@@ -2116,7 +2116,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@divvun/keyboard@0.1",
+      "jsr:@divvun/keyboard@~0.1.1",
       "jsr:@fresh/core@^2.3.3",
       "jsr:@fresh/plugin-vite@^1.1.2",
       "jsr:@std/fs@^1.0.24",
