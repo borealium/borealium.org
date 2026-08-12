@@ -1,12 +1,13 @@
 import { HttpError, page } from "fresh"
 import { Head } from "fresh/runtime"
 import { marked } from "marked"
-import { define } from "../../../utils.ts"
+import { define, type State } from "../../../utils.ts"
 import { getResourceById } from "~data/resourceIndex.ts"
 import { getRecentPosts } from "~lib/markdown.ts"
 import {
   autonym,
   createTranslator,
+  fallbackLocales,
   getAllLanguages,
   selectLocale,
 } from "~lib/i18n.ts"
@@ -19,6 +20,13 @@ import { LanguageTag } from "../../../components/Tag.tsx"
 import { getUICategories } from "../../../data/categories.ts"
 import { getTtsConfig } from "~data/ttsConfig.ts"
 import TtsTest from "../../../islands/TtsTest.tsx"
+import {
+  buildKeyboardComboTree,
+  DEFAULT_PLATFORM,
+  DEFAULT_VARIANT,
+  keyboardCss,
+} from "@divvun/keyboard"
+import KeyboardPickerIsland from "../../../islands/KeyboardPicker.tsx"
 
 export const handler = define.handlers({
   async GET(ctx) {
@@ -30,6 +38,40 @@ export const handler = define.handlers({
     }
 
     ctx.state.resource = resource
+
+    if (
+      resource.category === "keyboard-layouts" &&
+      resource.id !== "divvun-keyboard"
+    ) {
+      const kbd = resource.id.replace(/^keyboard-/, "")
+      try {
+        const { combos, defaultFile, defaultPlatform, defaultVariant } =
+          await buildKeyboardComboTree(
+            {
+              kbd,
+              layout: "",
+              platform: DEFAULT_PLATFORM,
+              variant: DEFAULT_VARIANT,
+            },
+            {
+              preferredLangs: [
+                ctx.state.lang,
+                ...fallbackLocales(ctx.state.lang),
+              ],
+            },
+          )
+        ctx.state.keyboardData = {
+          combos,
+          defaultFile,
+          defaultPlatform,
+          defaultVariant,
+        }
+      } catch (e) {
+        ctx.state.keyboardData = {
+          error: e instanceof Error ? e.message : String(e),
+        }
+      }
+    }
 
     // Get recent posts for sidebar
     const recentPosts = await getRecentPosts(3)
@@ -171,6 +213,44 @@ function DownloadLinks({
   )
 }
 
+function KeyboardLayoutEmbed({
+  resource,
+  t,
+  keyboardData,
+}: {
+  resource: Resource
+  t: (key: string, opts?: { fallback?: string }) => string
+  keyboardData: State["keyboardData"]
+}) {
+  if (
+    resource.category !== "keyboard-layouts" ||
+    resource.id === "divvun-keyboard"
+  ) {
+    return null
+  }
+
+  if (!keyboardData || "error" in keyboardData) {
+    return null
+  }
+
+  const kbd = resource.id.replace(/^keyboard-/, "")
+
+  return (
+    <div class="keyboard-embed section">
+      <h3>{t("keyboard-layout", { fallback: "Keyboard layout" })}</h3>
+      <KeyboardPickerIsland
+        kbd={kbd}
+        combos={keyboardData.combos}
+        initialFile={keyboardData.defaultFile}
+        initialPlatform={keyboardData.defaultPlatform}
+        initialVariant={keyboardData.defaultVariant}
+        initialLayer="default"
+        requestedWidth={900}
+      />
+    </div>
+  )
+}
+
 function RelatedDocumentation({
   t,
   lang,
@@ -245,7 +325,7 @@ function RelatedDocumentation({
 }
 
 export default define.page(function ResourcePage({ state }) {
-  const { lang, i18n, recentPosts } = state
+  const { lang, i18n, recentPosts, keyboardData } = state
   const { t } = i18n
   const resource = state.resource as Resource
   const posts = recentPosts ?? []
@@ -262,6 +342,9 @@ export default define.page(function ResourcePage({ state }) {
     : null
   const isPahkat = resource.type === ResourceType.Pahkat
   const ttsConfig = getTtsConfig(resource.id)
+  const showKeyboard = resource.category === "keyboard-layouts" &&
+    resource.id !== "divvun-keyboard" &&
+    !!keyboardData && !("error" in keyboardData)
 
   // Apply TTS config overrides
   const documentationUrl = ttsConfig?.documentationUrl ??
@@ -275,6 +358,12 @@ export default define.page(function ResourcePage({ state }) {
           name="description"
           content={description ?? `${name} - Language technology resource`}
         />
+        {showKeyboard && (
+          <style
+            // deno-lint-ignore react-no-danger
+            dangerouslySetInnerHTML={{ __html: keyboardCss }}
+          />
+        )}
       </Head>
 
       <div class="resource">
@@ -380,6 +469,12 @@ export default define.page(function ResourcePage({ state }) {
                 }}
               />
             )}
+
+            <KeyboardLayoutEmbed
+              resource={resource}
+              t={resourceT}
+              keyboardData={keyboardData}
+            />
 
             {/* Downloads */}
             {isPahkat

@@ -4,6 +4,7 @@
     "jsr:@deno/esbuild-plugin@^1.2.0": "1.2.1",
     "jsr:@deno/loader@0.4": "0.4.0",
     "jsr:@deno/loader@~0.3.10": "0.3.14",
+    "jsr:@divvun/keyboard@~0.1.1": "0.1.1",
     "jsr:@fresh/build-id@1": "1.0.1",
     "jsr:@fresh/core@2": "2.3.3",
     "jsr:@fresh/core@^2.3.3": "2.3.3",
@@ -38,6 +39,7 @@
     "jsr:@std/semver@^1.0.6": "1.0.8",
     "jsr:@std/toml@^1.0.11": "1.0.11",
     "jsr:@std/uuid@^1.0.9": "1.1.1",
+    "jsr:@std/yaml@1": "1.1.1",
     "npm:@babel/core@^7.28.0": "7.29.7",
     "npm:@babel/preset-react@^7.27.1": "7.29.7_@babel+core@7.29.7",
     "npm:@fluent/bundle@0.18": "0.18.0",
@@ -79,6 +81,13 @@
     },
     "@deno/loader@0.4.0": {
       "integrity": "6c1b18cfa18592740613ce79e15625c24268d60dbfc54bebfb5153bf512c536b"
+    },
+    "@divvun/keyboard@0.1.1": {
+      "integrity": "807b69bf6dbdadeff9c24ccd2a0dce71276de5e9f00d106f331e58dc3440cd38",
+      "dependencies": [
+        "jsr:@std/yaml",
+        "npm:preact@^10.29.1"
+      ]
     },
     "@fresh/build-id@1.0.1": {
       "integrity": "12a2ec25fd52ae9ec68c26848a5696cd1c9b537f7c983c7e56e4fb1e7e816c20",
@@ -214,6 +223,9 @@
       "dependencies": [
         "jsr:@std/bytes"
       ]
+    },
+    "@std/yaml@1.1.1": {
+      "integrity": "a57665ecf3d17b926380593a56625d8a10cc7281802f1e993b5ebc94a48e71f8"
     }
   },
   "npm": {
@@ -2104,6 +2116,7 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@divvun/keyboard@~0.1.1",
       "jsr:@fresh/core@^2.3.3",
       "jsr:@fresh/plugin-vite@^1.1.2",
       "jsr:@std/fs@^1.0.24",

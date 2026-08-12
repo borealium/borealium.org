@@ -18,6 +18,7 @@
     "~lib/": "./lib/",
     "fresh": "jsr:@fresh/core@^2.3.3",
     "preact": "npm:preact@^10.29.1",
+    "@divvun/keyboard": "jsr:@divvun/keyboard@^0.1.1",
     "@preact/signals": "npm:@preact/signals@^2.9.0",
     "@fresh/plugin-vite": "jsr:@fresh/plugin-vite@^1.1.2",
     "vite": "npm:vite@^7.3.6",

@@ -26,11 +26,15 @@ $lg-main-breakpoint: 1280px;
     justify-content: space-between;
     background-color: var(--color-background-above);
     height: inherit;
+    // Override the default content-based min-width so the keyboard embed's
+    // intrinsic width can't widen this column and squeeze the sidebar.
+    min-width: 0;
 
     .content {
       padding: 32px;
       display: flex;
       flex-direction: column;
+      min-width: 0;
 
       h1 {
         margin: 4px 0;
@@ -85,6 +89,21 @@ $lg-main-breakpoint: 1280px;
         .description {
           margin-top: 12px;
         }
+      }
+
+      .keyboard-embed {
+        margin-top: 12px;
+        max-width: 900px;
+
+        // Match the 16px gap other h3s get via margin-collapsing with a
+        // following <p> — the keyboard has no sibling margin to collapse with.
+        h3 {
+          margin: 0 0 16px;
+        }
+
+        // Clip instead of widening the layout until the island's resize
+        // observer scales the keyboard down to fit.
+        overflow-x: auto;
       }
 
       .downloads {
