@@ -23,6 +23,11 @@ sme-jounivest-description = Online dictionary between North Sámi and Finnish
 sme-jounivest-more-info = Plain HTML dictionary from Finnish to North Sámi. The content is all on one page, and you search using the browser search function.
 sme-jounivest-links-0 = Jouni Vest Suomi Saame
 
+sme-jounivest-smefin = Jouni A Vest: Sámi–Suoma
+sme-jounivest-smefin-description = Online dictionary between North Sámi and Finnish
+sme-jounivest-smefin-more-info = Plain HTML dictionary from North Sámi to Finnish. The content is all on one page, and you search using the browser search function.
+sme-jounivest-smefin-links-0 = Jouni Vest Sámi Suoma
+
 sme-juridisk = List of legal terms
 sme-juridisk-description = Online list of legal terms in North Sámi, Norwegian and Finnish.
 sme-juridisk-more-info = Simple search interface to a list of legal terms, about 1600 entries.
