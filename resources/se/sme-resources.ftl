@@ -1,7 +1,8 @@
 sme-nds-nob-links-0 = NDS Davvi Dáru
 sme-nds-fin-description = Neahttadigisánit sátnegirji davvisámegiela ja suomagiela gaskkas.
 sme-nds-smn-description = Neahttadigisánit sátnegirji davvisámegiela ja anárašgiela gaskkas.
-sme-jounivest-links-0 = Juoni Vest suoma - davvisámi
+sme-jounivest-links-0 = Jouni Vest suoma – davvisámi
+sme-jounivest-smefin-links-0 = Jouni Vest davvisámi – suoma
 sme-juridisk = Juridihkalaš tearbmalistu
 sme-juridisk-description = Online listu mas leat juridihkalaš tearpmat davvisámi-, dáro- ja suomagiela gaskkas.
 sme-juridisk-more-info = Oktageardanis ohcanlákta juridihkalaš tearbmalistui, sullii 1600 tearbmaartihkala.
