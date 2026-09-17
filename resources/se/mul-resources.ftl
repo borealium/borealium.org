@@ -3,10 +3,10 @@ satni-description = Sámi gielaid terminologiija ja sátnegirjjit
 satni-more-info = Sátni.org:s gávdná Giellagáldu terminologiijačoakkáldaga, ja máŋga sámi sátnegirjjiid. Ohcangiettis ozat visot sisdoalu oktanaga. Jus háliida, de sáhttá sillet ohcanbohtosiid gielaid ja sátnegirjjiid bokte.
 satni-links-0 = Sátni.org
 skuolfi = Skuolffi neahttasátnegirji
-skuolfi-description = Skuolffi suoma – davvisámi – suoma neahttasátnegirji
-skuolfi-more-info = Neahttasátnegirji suomagielas davvisámegillii ja nuppi guvlui. Dát lea rabas gáldu-prošeakta, gávnnat sihke gáldokoda ja dáhtaid GitHubas.
+skuolfi-description = Skuolffi suoma - davvisámi - suoma sátnegirji
+skuolfi-more-info = Davvisámi - suoma websátnegirji. Prošeakta lea rabas gáldokoda, gáldokoda ja buot dáhtat leat GitHubas.
 skuolfi-links-0 = Skuolffi neahttasátnegirji
-skuolfi-links-1 = Skuolffi neahttasátnegirjji gáldokoda
+skuolfi-links-1 = Skuolffi sátnegirjji gáldokoda
 divvun-keyboard = Divvuma boallobeavddit
 divvun-keyboard-description = Divvuma boallobeavddit iOS ja Android várás
 divvun-keyboard-more-info = Divvuma boallobeavddit sisttisdoallá boallobeavddit eanáš sámi gielaide ja máŋga eará eamiálbmot- ja minoritehtagielaide.
@@ -21,10 +21,21 @@ divvun-manager-links-0 = Divvun Manager
 divvun-manager-links-1 = Divvun Manager
 divvunspell-libreoffice = DivvunSpell LibreOfficei
 divvunspell-libreoffice-description = Lasáhus LibreOfficei man bokte sáhttá geavahit Divvuma čállindárkkisteaddjiid.
-# divvunspell-libreoffice-more-info = test me
 divvunspell-libreoffice-links-0 = .oxt-fiila
 gramdivvun = GramDivvun
 gramdivvun-description = Divvuma grammatihkadárkkisteaddjit
 gramdivvun-more-info = GramDivvun lea MS Office ja Google Docs lasáhus mainna dárkkista máŋga gielaid grammatihkka.
 gramdivvun-links-0 = MS Office
 gramdivvun-links-1 = Google Docs
+newamigos = New Amigos
+newamigos-description = Oahpa giela njuolga eatnigielhállis.
+newamigos-more-info =
+    Sáhttá speallat New Amigos okto, bearrašiin dahje ustibiiguin, dahje oahpaheddjiin.
+    Áppa maid fallá giellakaféa, mas gitta njeallje oasseváldi sáhttet deaivvadit virtuella beavdeguoras.
+    Dasa lassin áppas lea sisahuksejuvvon čátta mas lea automáhtalaš jorgaleapmi sámegielas eará gielaide ja nubbe láhkai.
+newamigos-links-0 = New Amigos
+newamigos-links-1 = New Amigos
+newamigos-links-2 = New Amigosa neahttabáiki
+tartumt = Neurotõlge mášenjorgaleapmi
+tartumt-description = Másenjorgaleapmi sámegielas ja sámegillii Neurotõlge bokte. Estalaš Tartu universitehta lea ráhkadan  Neurotõlge.
+tartumt-links-0 = Neurotõlge mášenjorgaleapmi
