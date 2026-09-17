@@ -21,12 +21,36 @@ divvun-manager-links-0 = Divvun Manager
 divvun-manager-links-1 = Divvun Manager
 divvunspell-libreoffice = DivvunSpell LibreOfficei
 divvunspell-libreoffice-description = Lasáhus LibreOfficei man bokte sáhttá geavahit Divvuma čállindárkkisteaddjiid.
+divvunspell-libreoffice-more-info =
+    Sajáiduhte dán lasáhusa Divvun Manageriin. Sajáiduhtto automáhtalaččat jus dus juo lea LibreOffice iežat dihtoris.
+    
+    Sajáiduhttin macOS:s
+    -------------------------------
+    
+    - Sajáiduhte daid čállindárkkisteddjiid maid háliidat
+    - Viečča .oxt-fiilla maid gávnnat dás vuolábealde.
+    - Sajáiduhte lasáhusa LibreOfficiin
+    - Álggat LibreOffice ođđasit
+    
+    Go leat dán dahkan, de Divvuma čállindárkkisteaddjt gávdnojit LibreOffices.
 divvunspell-libreoffice-links-0 = .oxt-fiila
 gramdivvun = GramDivvun
 gramdivvun-description = Divvuma grammatihkadárkkisteaddjit
 gramdivvun-more-info = GramDivvun lea MS Office ja Google Docs lasáhus mainna dárkkista máŋga gielaid grammatihkka.
 gramdivvun-links-0 = MS Office
 gramdivvun-links-1 = Google Docs
+islex = ISLEX
+islex-description = Máŋggagielat neahttasátnegirji islánddagielas davviriikkalaš gielaide (dánskkagiella, girjedárogiella, ođđadárogiella, ruoŧagiella, suomagiella, fearasullogiella)
+islex-links-0 = ISLEX
+smi-mt = Sámi mášenjorgaleapmi
+smi-mt-description = Másenjorgaleapmi davvi-, julev-, lulli- ja anársámigielaid gaskkas. Eai buot kombinašuvnnat leat olamuttus.
+smi-mt-links-0 = Sámi mášenjorgaleapmi
+webdict = Giellatekno Webdict
+webdict-description = Oktageardánis ja jođánis sátnegirji, doaibmá maid offline.
+webdict-more-info =
+    Máŋga sátnegirjji oktageardánis ja vuogas webgeavahanlávttas.
+    Morfologalaš analysa váilu, eai leat liŋkkat olgguldas gálduide. Doaibma offline.
+webdict-links-0 = Webdict
 newamigos = New Amigos
 newamigos-description = Oahpa giela njuolga eatnigielhállis.
 newamigos-more-info =
