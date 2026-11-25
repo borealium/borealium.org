@@ -4,6 +4,7 @@ import {
   getCachedPahkatRepo,
   type PahkatPackage,
   type PahkatRelease,
+  type PahkatRepo,
 } from "./pahkat.ts"
 import { buildResource, type ResourceDescriptor } from "./resources.ts"
 import languagesData from "./languages.ts"
@@ -133,35 +134,26 @@ function pahkatPackageToResource(pkg: PahkatPackage): Resource | null {
 }
 
 // Cached Pahkat resources
-let pahkatResources: Resource[] | null = null
+let pahkatResources: { repo: PahkatRepo; resources: Resource[] } | null = null
 
 function getPahkatResources(): Resource[] {
-  // Return cached if available
-  if (pahkatResources !== null) {
-    return pahkatResources
-  }
-
   const repo = getCachedPahkatRepo()
   if (!repo) {
     return []
   }
 
-  pahkatResources = repo.packages
+  if (pahkatResources?.repo === repo) {
+    return pahkatResources.resources
+  }
+
+  const resources = repo.packages
     .filter((pkg) => pkg.release.length > 0)
     .map(pahkatPackageToResource)
     .filter((r): r is Resource => r !== null)
+  pahkatResources = { repo, resources }
 
-  console.log(
-    `Converted ${pahkatResources.length} Pahkat packages to resources`,
-  )
-  return pahkatResources
-}
-
-/**
- * Clear the Pahkat resources cache (called when Pahkat data is refreshed)
- */
-export function clearPahkatResourcesCache(): void {
-  pahkatResources = null
+  console.log(`Converted ${resources.length} Pahkat packages to resources`)
+  return resources
 }
 
 /**

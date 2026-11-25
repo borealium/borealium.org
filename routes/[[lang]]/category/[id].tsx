@@ -14,6 +14,14 @@ export const handler = define.handlers({
   async GET(ctx) {
     const { id } = ctx.params
 
+    // Pahkat files voices under text-to-speech; keep old links to them working.
+    if (id === "voices") {
+      return new Response(null, {
+        status: 301,
+        headers: { Location: `/${ctx.state.lang}/category/text-to-speech/` },
+      })
+    }
+
     // Validate category exists
     if (!getAllCategories().includes(id)) {
       throw new HttpError(404, `Category "${id}" not found`)

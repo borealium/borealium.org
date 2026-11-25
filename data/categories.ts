@@ -14,7 +14,6 @@ export const categoriesList: CategoryId[] = [
   "wordinfl",
   "spellers",
   "keyboard-layouts",
-  "voices",
   "speller-engines",
 ]
 
