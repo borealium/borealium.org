@@ -25,29 +25,29 @@ export const handler = define.middleware(async (ctx) => {
     })
   }
 
-  // Get the lang parameter from the URL (from [[lang]] optional segment)
+  // The [[lang]] optional segment: "" when the URL has no language
   const langParam = ctx.params.lang
+  const urlHasLang = !!langParam && isValidLanguage(langParam)
+  const lang = urlHasLang
+    ? langParam
+    : parseAcceptLanguage(ctx.req.headers.get("Accept-Language"))
 
-  let lang: string
-
-  if (langParam && isValidLanguage(langParam)) {
-    // Valid language in URL
-    lang = langParam
-  } else if (langParam) {
-    // Invalid language parameter - this might be a different route segment
-    // Let Fresh handle it normally
-    lang = parseAcceptLanguage(ctx.req.headers.get("Accept-Language"))
-  } else {
-    // No language in URL - detect from Accept-Language header
-    lang = parseAcceptLanguage(ctx.req.headers.get("Accept-Language"))
+  // Fresh matches a path with no language whose first segment is not a route
+  // under [[lang]], like /about/ or /asdasd/, to the index page with that
+  // segment as lang, rendering the homepage. Moved under a language, a real
+  // page renders and anything else is a 404.
+  if (langParam && !urlHasLang) {
+    const isFile = url.pathname.split("/").pop()!.includes(".")
+    return new Response(null, {
+      status: 302,
+      headers: {
+        Location: `/${lang}${url.pathname}${isFile ? "" : "/"}${url.search}`,
+      },
+    })
   }
 
-  // Create translation context
-  const i18n = createTranslationContext(lang)
-
-  // Set state for downstream handlers
   ctx.state.lang = lang
-  ctx.state.i18n = i18n
+  ctx.state.i18n = createTranslationContext(lang)
 
   return ctx.next()
 })
